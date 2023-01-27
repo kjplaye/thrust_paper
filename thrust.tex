@@ -2,6 +2,7 @@
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
 \usepackage{authblk}
+\usepackage{amsmath}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{fancyhdr}
 
@@ -70,8 +71,38 @@ T = \frac{h}{4\pi^2k c} a
 The equivalence principle allows us to derive a temperature for acceleration due to gravity near the event horizon of a black hole.  This corresponds to a reference frame which continues to thrust away from a black hole maintaining a given height.  Much like the Unruh radiation, we find this thrust accounts for Hawking-Bekenstien radiation.
 
 \section{Field Theoretic Considerations}
-TODO - SHOW THAT THE UNRUH MODES COME ALTERNATIVELY AS AN INHOMOGENEOUS TERM WHICH IS DRIVEN AS AN EXTERNAL SOURCE (THRUST)
+TODO - SHOW THAT THE UNRUH MODES COME ALTERNATIVELY AS AN INHOMOGENEOUS KLIEN-GORDON EQUATION TERM WHICH IS DRIVEN AS AN EXTERNAL SOURCE (THRUST)
 \cite{beisert}
+
+
+NOTE: The source can come from a term, $\rho \phi$, added to the Lagrangian.
+
+
+MORE NOTES FOLLOW. The Rindler/Unruh modes can be decomposed into functions of $u = z-t$ and of $v = z+t$.  These are extensions of the future, $u=0$, and past, $v=0$, event horizons for the $z>|t|$ Rindler wedge.  The unnormalized modes are $u^{iw}$ and $v^{iw}$ and a certain linear combination of these, for each positive $\omega$, gives analytic continuations of the Rindler modes to full Minkowski space.  The strength and details of this combination lead to the celebrated expectation of Unruh particles.
+
+The Fourier transform of these event horizon modes, when $\omega > 0$, is given for $u$ by
+\[
+\begin{aligned}
+\int_0^\infty         & e^{-i p u} u^{i\omega} du &=&             &(i p)^{-(1 + i\omega)}\Gamma(1 + i\omega)              & = a_\omega p^{-(1 + i\omega)} \\
+\int_{-\infty}^0       & e^{-i p u} u^{i\omega} du &=& e^{-\pi\omega}&(-i p)^{-(1 + i\omega)}\Gamma(1 + i\omega) & = b_\omega p^{-(1 + i\omega)} \\
+\int_{-\infty}^\infty   & e^{-i p u} u^{i\omega} du & &            & (a_\omega + b_\omega) p^{-(1 + i\omega)}               & = c_\omega p^{-(1 + i\omega)} \\
+\end{aligned}
+\]
+where the first line assumes $Im(p) < 0$, the second line assumes $Im(p) > 0$ and the third line {\bf is a lie :P}
+
+We end up with a mode $\rho(p)$
+
+CITE WOLFRAM ALPHA and maybe do the standard QFT contour integral trick(s) to make it not a lie.
+
+FINALLY, TRY TO USE THE MODES AS DRIVING SOURCES OF THE INHOMOGENOUS KLIEN-GORDON EQUATION.  This seems to lead to infrared problems.  We end up with divergent integrals like this computation of expected particle number \cite{Frodden}
+\[
+ \int_{-\infty}^\infty \frac {|\rho(p)|^2}{2p} dp = \int_{-\infty}^\infty p^{-3} dp
+\]
+Which converges at $\pm \infty$ but diverges at $p=0$.
+
+ 
+HOW DO WE SALVAGE THIS?
+
 
 \section{Prediction}
 If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the the vacuum.  It would seem that we can explain Unruh radiation instead using thrust and basic holographic information theoretic arguments alone.  LINK IN QFT SECTION. The prediction of this note is that Unruh radiation, separate from thrust, should not appear.
