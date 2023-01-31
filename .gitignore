@@ -21,7 +21,6 @@
 *.maf
 .mtc
 *.out
-*.pdf
 *.bak
 *.run.xml
 *blx.bib
