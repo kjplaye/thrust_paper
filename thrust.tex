@@ -4,9 +4,9 @@
 \usepackage{authblk}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{braket}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{fancyhdr}
-
 
 \pagestyle{fancy}
 \begin{document}
@@ -17,7 +17,7 @@
 
 \maketitle
 
-\abstract{We outline the holographic scenario in \cite{entropic} and additionally consider the dynamics of the holographic screen itself in an accelerating frame.  We consider the case where the screen's acceleration is due to mass/energy joining with the screen, increasing the entropy of the screen.  From this we derive the Unruh effect \cite{unruh} using both classical and quantum techniques.}
+\abstract{We outline the holographic scenario in \cite{entropic} and additionally consider the dynamics of the holographic screen itself in an accelerating frame.  We consider the case where the screen's acceleration is due to mass/energy joining with the screen, increasing the entropy of the screen.  Finally, we consider the field theoretic picture.  On both cases, we derive the Unruh effect\cite{unruh} using thrust.}
 
 \section{The Holographic Scenario}
 We first recall the setup outlined in \cite{entropic}. Consider a holographic screen with entropy $S$.  Let there be a test particle which is a single wavelength $\Delta x$ away from $S$.  Following Bekenstein, we can regard the particle to be simultanously near and on the screen.
@@ -49,7 +49,7 @@ Consider the case where a single photon of energy $E_p$ is joining the screen.  
 \]
 There is nothing mysterious here, we pick this constant so that we will match the constant in Unruh radiation. All of the dimensional analysis will also be seen to match up and be motivated in the next section.  We leave in universal constants mainly for context.
 
-\section{Unruh Effect Classical Derivation}
+\section{Information Theoretic Unruh Effect}
 
 We will derive the Unruh temperature equation from the information change of an accelerating screen using the thrust of photons. For a single photon, consider the Planck relation for the energy and frequency of the screen
 \[
@@ -73,42 +73,134 @@ T = \frac{h}{4\pi^2k c} a
 The equivalence principle allows us to derive a temperature for acceleration due to gravity near the event horizon of a black hole.  This corresponds to a reference frame which continues to thrust away from a black hole maintaining a given height.  Much like the Unruh radiation, we find this thrust accounts for Hawking-Bekenstien radiation.
 
 \section{Field Theoretic Considerations}
-TODO - SHOW THAT THE UNRUH MODES COME ALTERNATIVELY FROM AN INHOMOGENEOUS KLIEN-GORDON EQUATION TERM WHICH IS DRIVEN BY AN EXTERNAL SOURCE (THRUST)
-\cite{beisert}
-
-Some notes follow, the Rindler/Unruh modes can be decomposed into functions of $u = z-t$ and of $v = z+t$.  These are extensions of the future, $u=0$, and past, $v=0$, event horizons for the $z>|t|$ Rindler wedge.  The unnormalized modes are $u^{iw}$ and $v^{iw}$ and a certain linear combination gives analytic continuations of the Rindler modes to full Minkowski space.  The strength and details of the combination lead to an expectation of Unruh particles.
-
-NOTE: The source can come from a term, $\rho \phi$, added to the Lagrangian.
-
-
-MORE NOTES FOLLOW. The Rindler/Unruh modes can be decomposed into functions of $u = z-t$ and of $v = z+t$.  These are extensions of the future, $u=0$, and past, $v=0$, event horizons for the $z>|t|$ Rindler wedge.  The unnormalized ``event horizon'' modes are $u^{iw}$ and $v^{iw}$. A certain linear combination of these, for each positive $\omega$, gives analytic continuations of the Rindler modes to full Minkowski space.  The strength and details of this combination lead to the celebrated expectation of Unruh particles.
-
-The Fourier transform of these event horizon modes, when $\omega > 0$, is given for $u$ by
+\subsection{Rindler and Minkowski Modes Review}
+Consider a two dimensional spacetime\footnote{it is not informative to consider the full 4 dimensional case, so we stick to the dimensions where the linear acceleration boosts are taking place $t$ and $z$.} $(t,z)$ with ``event horizon'' coordinates $u = -t + z$ and $v = -t - z$.   Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a one dimensional Fourier expansion
 \[
-\begin{aligned}
-\int_0^\infty         & e^{-i p u} u^{i\omega} du &=&             &(i p)^{-(1 + i\omega)}\Gamma(1 + i\omega)              & = a_\omega p^{-(1 + i\omega)} \\
-\int_{-\infty}^0       & e^{-i p u} u^{i\omega} du &=& e^{-\pi\omega}&(-i p)^{-(1 + i\omega)}\Gamma(1 + i\omega) & = b_\omega p^{-(1 + i\omega)} \\
-\int_{-\infty}^\infty   & e^{-i p u} u^{i\omega} du & &            & (a_\omega + b_\omega) p^{-(1 + i\omega)}               & = c_\omega p^{-(1 + i\omega)} \\
-\end{aligned}
+f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \]
-where the first line assumes $Im(p) < 0$, the second line assumes $Im(p) > 0$ and the third line {\bf is a lie :P}
+The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full two dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- the light cone.
 
-We end up with a mode $\rho(p)$ which is supported on the light cone.  So the source is only on shell for zero mass.
-
-CITE WOLFRAM ALPHA and maybe do the standard QFT contour integral trick(s) to make it not a lie.
-
-FINALLY, TRY TO USE THE MODES AS DRIVING SOURCES OF THE INHOMOGENOUS KLIEN-GORDON EQUATION.  This seems to lead to infrared problems.  We end up with divergent integrals like this computation of expected source particle number \cite{Frodden} 
+Let $W$ be the $z>|t|$ Rindler wedge with coordinates
 \[
- \mathbb{E}[N] = \int_{-\infty}^\infty \frac {|\rho(p)|^2}{2|p|} dp = \int_{-\infty}^\infty p^{-3} dp
+t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \]
-Which converges at $\pm \infty$ but diverges at $p=0$.  (Here the $|p|$ denominator is the energy of $p$ to put us on the light cone.) 
+\[
+z = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
+\]
+where $a>0$ is an acceleration parameter.  For wave number $k$ and positive frequency $\omega_k$ consider the functions
+\[
+h^{(u)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
+\]
+\[
+h^{(v)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
+\]
+The scalar field in Rindler curved space has modes
+\[
+ r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
+\]
+which can be writen as combinations of the ``event horizon'' modes
+\[
+e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k
+\]
+Unlike the Rindler mode, the event horizon modes extend analytically from $W$ to all of spacetime.
 
- 
-HOW DO WE SALVAGE THIS?
 
+When we switch between $h_k$ and the usual Minkowski bases we find that the Minkowski vacuum has excitations coming from the Rindler modes.  More specifically, there is a positive particle number vacuum expectation of
+\begin{equation}
+\label{radeq}
+\frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
+\end{equation}
+which is interpreted as (Unruh) radation.
+
+\subsection{Fourier Transform of the Sources}
+
+Let $\phi$ be a scalar field in the flat 2 dimensional Minkowski spacetime\footnote{Note that we only consider the scalar case since generalization to other fields is straightforward and does not add any intution to the presentation.}.  We will consider $h^{(u)}_k$ and $h^{(u)}_k$ as driving $W$-event horizon sources
+\[
+\rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
+\]
+with positive real coeffiencts $(\alpha + \beta) = 1$.
+The drivers $h^{(u)}_k$ and $h^{(v)}_k$ are functions $f(u)$ of the past $W$-horizon and $g(v)$ of the future $W$-horizon respectively.  Both generate excitations, which we identify with absorption and emission thrusts respectively.
+
+
+The source can originate from a coupling term, $\rho \phi$, added to the Lagrangian.
+\[
+\mathcal{L}_{driven} = \mathcal{L}_{original} + \rho\phi 
+\]
+This leads to an inhomogenous Klein-Gordon equation
+\[
+(\Box + m^2) \phi = \rho
+\]
+\cite{beisert}. It is usually assumed that the source will only be active for some finite amount of time.  We delay ignore this issue and instead go after the general asymptotic form of our solution in Fourier space.
+
+We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive time part of the light cone.  The two positive time horizons are given by $p_u < 0$ and $p_v < 0$.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, $p_u$ drops to just $p$ for the time being to increase legibility.  We will continue to assume that $w_k$ and $a$ are positive. Let
+\[
+  A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
+\]
+and then we have
+\begin{equation}
+\label{finalnorm}
+  \hat{f}(\rho_U) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
+\end{equation}
+where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $I = L + R$.
+
+We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and contour integrals.  We are following the calculations and notations in \cite{Frodden} where we use the conjugate principal branch where $(-1)^\frac{i\omega_k}{a}$ = $e^\frac{\pi \omega_k}{a}$.   This was done to yield positive frequency solutions.
+
+The $L$ integral for real $p<0$ is
+\[
+\begin{split}
+  L(p) & = -\int_0^{i\infty} \left(\frac{ias}{-p}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p}\right)ds \\
+  & = \frac{-i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} \int_0^\infty \left(is\right) ^ \frac{i\omega_k}{a} e^{-s} ds \\
+  & = \frac{-i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} \\
+  & = \frac{1}{2} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p)\\
+\end{split}
+\]
+where
+\[
+B(p) = \frac{-2i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} 
+\]
+is as shown.  This is using a large radius contour which rotates the endpoint 90 degrees clockwise.  
+
+The same calculation for $R$ is done using a counter-clockwise countour this time.
+\[
+\begin{split}
+  R(p) = \frac{1}{2}\Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p)
+\end{split}
+\]
+
+We get back to $h_k^{(u)}$ and apply the normalization from (\ref{finalnorm})
+\[
+\hat{h_k}^{(u)}(p_u) = \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  ( L(p_u) + R(p_u) )
+\]
+So
+\begin{equation}
+\label{fourier}
+\begin{split}
+\hat{h_k}^{(u)}(p_u) & = \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)\\
+\hat{h_k}^{(u)}(p_v) &= \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)
+\end{split}
+\end{equation}
+\subsection{Interpretation}
+The driving source $\rho$ contributes excitatons to the scalar field $\phi$.  The expected number of new particles is
+\begin{equation}
+  \label{number}
+  \mathbb{E}[\Delta N] = \braket{\rho|\rho} = \int{\frac{|\rho(p)|^2}{4\pi|p|}dp}
+\end{equation}
+where the integral is on the positive time light cone with contibutions from $p_u$ on the left piece and $p_v$ on the right piece.
+
+Without being more careful about the finite time and shape of the source we end up with inferred problems.  The integral does not converge at zero where $\int{1/p^3}$ explodes.  But we can still understand the high frequency asymptotic spectral radiance $I(\omega_k)$ by factoring out the common divergant $p$ dependent part of (\ref{number}), using (\ref{fourier}), and taking a squared magnitude.
+\[
+|I(\omega_k)| \sim \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2}{\sinh\left(\frac{\pi\omega_k}{a}\right)}
+\]
+
+% https://math.stackexchange.com/questions/4518368/asymptotic-expansion-of-the-gamma-function-with-imaginary-value
+The squared magnitude of the Gamma function $\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2$ is dominated by $e^{-\frac{\pi\omega_k}{a}}$ for large $\omega_k$, see \cite{gamma}. So we recover the Unruh radiation spectrum (\ref{radeq}) 
+\[
+  \mathbb{E}[\Delta N] \sim I(\omega_k) \sim \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
+\]
+from a thrust driven field.
 
 \section{Prediction}
-If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the the vacuum.  It would seem that we can explain Unruh radiation instead using thrust and basic holographic information theoretic arguments alone.  LINK IN QFT SECTION. The prediction of this note is that Unruh radiation, separate from thrust, should not appear.
+If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum.  It would seem that we can explain Unruh radiation directly using thrust.  The prediction of this note is that Unruh radiation, separate from thrust, should not appear.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
