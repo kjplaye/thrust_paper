@@ -80,6 +80,14 @@ f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \]
 The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full two dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- the light cone.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.0]{massless_shell.png}
+\caption{}
+\label{masslessshell}
+\end{figure}
+
+
 Let $W$ be the $z>|t|$ Rindler wedge with coordinates
 \[
 t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
@@ -99,7 +107,7 @@ The scalar field in Rindler curved space has modes
  r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
 \]
 which can be writen as combinations of the ``event horizon'' modes
-\[
+x\[
 e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k
 \]
 Unlike the Rindler mode, the event horizon modes extend analytically from $W$ to all of spacetime.
@@ -132,7 +140,7 @@ This leads to an inhomogenous Klein-Gordon equation
 \]
 \cite{beisert}. It is usually assumed that the source will only be active for some finite amount of time.  We delay ignore this issue and instead go after the general asymptotic form of our solution in Fourier space.
 
-We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive time part of the light cone.  The two positive time horizons are given by $p_u < 0$ and $p_v < 0$.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, $p_u$ drops to just $p$ for the time being to increase legibility.  We will continue to assume that $w_k$ and $a$ are positive. Let
+We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive time part of the light cone.  The two positive time horizons are given by $p_u < 0$ and $p_v < 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, $p_u$ drops to just $p$ for the time being to increase legibility.  We will continue to assume that $w_k$ and $a$ are positive. Let
 \[
   A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
 \]
