@@ -161,7 +161,15 @@ and then we have
 \end{equation}
 where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $I = L + R$.
 
-We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and contour integrals.  We are following the calculations and notations in \cite{Frodden} where we use the conjugate principal branch where $(-1)^\frac{i\omega_k}{a}$ = $e^\frac{\pi \omega_k}{a}$.   This was done to yield positive frequency solutions.
+We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and contour integrals.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{contour.png}
+\caption{Using contours with large radius we convert the $L$ integral that goes to $i\infty$, and the $R$ integral that goes to $-i\infty$, to integrals with $s$ going to real $\infty$.}
+\label{fig:x cubed graph}
+\end{figure}
+
 
 The $L$ integral for real $p<0$ is
 \[
@@ -176,7 +184,7 @@ where
 \[
 B(p) = \frac{-2i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} 
 \]
-is as shown.  This is using a large radius contour which rotates the endpoint 90 degrees clockwise.  
+is as shown.  This is using a large radius contour which rotates the endpoint 90 degrees clockwise.
 
 The same calculation for $R$ is done using a counter-clockwise countour this time.
 \[
