@@ -21,7 +21,6 @@ pylab.text(-0.4,0.8,f'p{sub_u}, p{sub_v} < 0',fontsize = 'xx-large')
 """
 
 # Rindler wedge W
-"""
 def plot_xi_contour(xi):
     T = []
     Z = []
@@ -58,10 +57,12 @@ for v in range(30):
 
 pylab.ylim([-0.1,0.1])
 pylab.xlim([-0.1,0.15])
-pylab.text(-0.06,0.05, f'v = 0',fontsize = 'xx-large', rotation = -45)
-pylab.text(-0.06,-0.055, f'u = 0',fontsize = 'xx-large', rotation = 45)
-"""
+pylab.text(-0.065,0.05, f'v = 0',fontsize = 30, rotation = -45)
+pylab.text(-0.065,-0.055, f'u = 0',fontsize = 30, rotation = 45)
 
+
+# Contours
+"""
 pylab.axes().set_aspect('equal')
 X = np.array([cos(2*pi*t/4000) for t in range(1000)])
 Y = np.array([sin(2*pi*t/4000) for t in range(1000)])
@@ -76,3 +77,4 @@ pylab.arrow(1,-0.1,0,0.1,color = 'black', head_width = 0.06, length_includes_hea
 pylab.text(0.45,0.05, 's',fontsize = 'xx-large', rotation = 0)
 pylab.text(-0.15,0.5, 'L',fontsize = 'xx-large', rotation = 0)
 pylab.text(-0.15,-0.5, 'R',fontsize = 'xx-large', rotation = 0)
+"""
