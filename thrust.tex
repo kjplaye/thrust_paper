@@ -47,7 +47,7 @@ Consider the case where a single photon of energy $E_p$ is joining the screen.  
 \[
   \Delta S = 4 \pi ^ 2 k.
 \]
-There is nothing mysterious here; we pick this constant so that we will match the constant in Unruh radiation. All of the dimensional analysis will also be seen to match up and be motivated in the next section.  We leave in universal constants mainly for context.
+There is nothing mysterious here; we pick this constant so that we will match the constant in Unruh radiation.
 
 \section{Information Theoretic Unruh Effect}
 
@@ -71,13 +71,13 @@ T = \frac{h}{4\pi^2k c} a
 \section{Field Theoretic Considerations}
 Let $\hbar$ = c = 1.
 \subsection{Rindler and Minkowski Modes Review}
-Much of this section including notation and convensions are drawn directly from the overview \cite{Frodden}.
+Much of this section including notation and conventions are drawn directly from the overview \cite{Frodden}, from the original source \cite{unruh}, and from \cite{beisert}.
 
-Consider a two dimensional spacetime\footnote{It is not informative to consider the full 4 dimensional case, so we stick to the dimensions where the linear acceleration boosts are taking place $t$ and $z$.} $(t,z)$ with ``event horizon'' coordinates $u = -t + z$ and $v = -t - z$.   Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a one dimensional Fourier expansion
+Consider a $(1,1)$-dimensional spacetime\footnote{It is not useful to consider the full $(1,3)$-dimensional case, so we stick to the dimensions where the linear acceleration boosts are taking place -- $t$ and $z$.} $(t,z)$ with ``event horizon'' coordinates $u = -t + z$ and $v = -t - z$.   Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
 \[
 f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \]
-The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full two dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- ``the momentum light cone''.
+The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full 2-dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- ``the momentum light cone''.
 
 \begin{figure}[h]
 \centering
@@ -131,7 +131,7 @@ which is interpreted as (Unruh) radiation \cite{unruh}.
 
 \subsection{Fourier Transform of the Sources}
 
-Let $\phi$ be a scalar field in the flat 2 dimensional Minkowski spacetime\footnote{Note that we only consider the scalar case since generalization to other fields is straightforward and does not add any intuition to the presentation.}.  We will consider $h^{(u)}_k$ and $h^{(u)}_k$ as driving $W$-event horizon sources
+Let $\phi$ be a scalar field in the flat $(1,1)$-dimensional Minkowski spacetime\footnote{Note that we only consider the scalar case.  Generalization to other fields is straightforward and does not add any intuition to the presentation.}.  We will consider $h^{(u)}_k$ and $h^{(u)}_k$ as driving $W$-event horizon sources
 \begin{equation}
 \label{ab}
 \rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
@@ -150,7 +150,7 @@ This leads to an inhomogeneous Klein-Gordon equation
 \]
 as presented in \cite{beisert}. It is assumed that the source will only be active for some finite amount of time.  We ignore this issue and instead go after the general asymptotic form of our solution in Fourier space.
 
-We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive momentum part of the massless shell.  The two positive time horizons border $p_u <= 0$ and $p_v <= 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Let
+We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u <= 0$ and $p_v <= 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
 \[
   A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
 \]
@@ -159,7 +159,7 @@ and then we have
 \label{finalnorm}
   \hat{f}(\rho_U) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
 \end{equation}
-where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $I = L + R$.
+where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $L + R$.
 
 We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and contour integrals.
 
@@ -214,29 +214,29 @@ The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ +
     &= \frac{1}{4\pi} \int{\frac{|\rho(p)|^2}{|p|}dp} \\
     &= \frac{\alpha}{4\pi} \int{\frac{\left|\hat{h_k}^{(u)}(p_u)\right|^2}{|p_u|} dp_u} + \frac{\beta}{4\pi}\int{\frac{\left|\hat{h_k}^{(v)}(p_v)\right|^2}{|p_u|}dp_v} \\
     &= \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} \frac{1}{4\pi} \int{{\left|B(p)\right|^2}{|p|} dp} \\
-    &=  \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \pi \sinh \left({\frac{\pi\omega_k}{a}}\right)} \int{1/|p|^3 dp}\\  
+    &=  \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \pi a \sinh \left({\frac{\pi\omega_k}{a}}\right)} \int{a/|p|^3 dp}\\  
 &=I(\omega_k) P
   \end{split}
 \end{equation}
-where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{1/|p|^3}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
+where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^3}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
 
-Without being more careful about the finite time and shape of the source we end up with inferred problems.  The integrals do not converge at zero where $P$ explodes.  But this infinity cancels when we compare the relative high frequency asymptotic spectral radiances $I(\omega_k)$.
+Without being more careful about the finite time and shape of the source we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
 
 The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST:DLMF}
 \[
 \left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2 \sim \left(\frac{2 \pi \omega_k} {a}\right) e^{-\frac{\pi\omega_k}{a}}
 \]
-Plugging this into equation (\ref{number}) we find a (1,1)-dimensional version of Plank's law\footnote{There is a counting argument, in \cite{qspplanck} for instance, that depends on the dimension $(1,n)$.  In general, the formula (\ref{radeq}) get multiplied by a $\omega_k^n$ factor.}, and thus recover the Unruh radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
+Plugging this into equation (\ref{number}) we find a $(1,1)$-dimensional version of Plank's law\footnote{There is a counting argument, in \cite{qspplanck} for instance, that depends on the dimension $(1,n)$.  In general, the formula (\ref{radeq}) gets multiplied by a $\omega_k^n$ term.}, and thus recover the Unruh radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
 \[
-\frac{1}{P} \mathbb{E}[\Delta N] = I(\omega_k) \sim \left( \frac{1}{a}\right) \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
+\frac{1}{P} \mathbb{E}[\Delta N] = I(\omega_k) \sim \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \]
 
 \section{Hawking-Bekenstein Radiation and the Equivalence Principle}
 
-The equivalence principle allows us to transfer linear acceleration conclusions to accelerations due to gravity.  Unruh's temperature transfers to a temperature for acceleration due to gravity -- near the event horizon of a black hole.  This corresponds to a reference frame which continues to thrust away from a black hole maintaining a given height.  Thrust that explains Unruh radiation will also explain Hawking-Bekenstein radiation as well.
+The equivalence principle allows us to transfer linear acceleration conclusions to accelerations due to gravity.  Unruh's temperature maps to a temperature for acceleration due to gravity -- for instance near the event horizon of a black hole\footnote{This leads to the celebrated black hole radiation.  The equivalence principle is used to equate this with Unruh radiation see \cite{unruh}}.  This corresponds to a reference frame which continues to thrust away from a black hole, maintaining a given height.  Thrust that explains Unruh radiation also explains Hawking-Bekenstein radiation as well.
 
 \section{Conclusion and Prediction}
-If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in illustrative ways.  The prediction of this note is that Unruh radiation, separate from thrust, should not appear.
+If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in the illustrative ways outlined in this paper.  The prediction of this note is that Unruh radiation, separate from thrust, should not appear.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
