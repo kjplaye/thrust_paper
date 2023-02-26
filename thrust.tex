@@ -212,19 +212,18 @@ So
 \end{split}
 \end{equation}
 \subsection{Interpretation}
-The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ + $\beta$ = 1, contribute excitations to the scalar field $\phi$. Equations (\ref{ab}) and (\ref{fourier}) let us write down the expected number of new particles
+The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ + $\beta$ = 1, contribute excitations to the scalar field $\phi$. Equations (\ref{ab}) and (\ref{fourier}) let us write down the expected change of energy
 \begin{equation}  
   \label{number}
   \begin{split}
-    \mathbb{E}[\Delta N] &= \braket{\rho|\rho} \\
-    &= \frac{1}{4\pi} \int{\frac{|\rho(p)|^2}{|p|}dp} \\
-    &= \frac{\alpha}{4\pi} \int{\frac{\left|\hat{h_k}^{(u)}(p_u)\right|^2}{|p_u|} dp_u} + \frac{\beta}{4\pi}\int{\frac{\left|\hat{h_k}^{(v)}(p_v)\right|^2}{|p_u|}dp_v} \\
-    &= \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} \frac{1}{4\pi} \int{{\left|B(p)\right|^2}{|p|} dp} \\
-    &=  \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \pi a \sinh \left({\frac{\pi\omega_k}{a}}\right)} \int{a/|p|^3 dp}\\  
+    \mathbb{E}[\Delta E] &= \frac{1}{4\pi} \int{|\rho(p)|^2 dp} \\
+    &= \frac{\alpha}{4\pi} \int{\left|\hat{h_k}^{(u)}(p_u)\right|^2 dp_u} + \frac{\beta}{4\pi}\int{\left|\hat{h_k}^{(v)}(p_v)\right|^2dp_v} \\
+    &= \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} \frac{1}{4\pi} \int{{\left|B(p)\right|^2} dp} \\
+    &=  \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \pi a \sinh \left({\frac{\pi\omega_k}{a}}\right)} \int{a/|p|^2 dp}\\  
 &=I(\omega_k) P
   \end{split}
 \end{equation}
-where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^3}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
+where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^2}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
 
 Without being more careful about the finite time and shape of the source we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
 
@@ -232,9 +231,9 @@ The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST
 \[
 \left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2 \sim \left(\frac{2 \pi \omega_k} {a}\right) e^{-\frac{\pi\omega_k}{a}}
 \]
-Plugging this into equation (\ref{number}) we find a $(1,1)$-dimensional version of Plank's law\footnote{This is the average energy of the mode, not the average number of particles (see \cite{qspplanck}).  It is likely that we should replace $\mathbb{E}[\Delta N]$ with $\mathbb{E}[\Delta E]$}, and thus recover the Unruh radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
+Plugging this into equation (\ref{number}) we find a $(1,1)$-dimensional version of Plank's law\footnote{This is the average energy of the mode, not the average number of particles (see \cite{qspplanck}).}, and thus recover the Unruh radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
 \[
-\frac{1}{P} \mathbb{E}[\Delta N] = I(\omega_k) \sim \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
+\frac{1}{P} \mathbb{E}[\Delta E] = I(\omega_k) \sim \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \]
 
 \section{Hawking-Bekenstein Radiation and the Equivalence Principle}
