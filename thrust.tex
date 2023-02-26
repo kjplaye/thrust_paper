@@ -1,7 +1,3 @@
-% TODO
-%   * Figure out or rephrase the sections about divergence due to non-finite source activation
-%   * Think harder about how the holographic section appears spectrally.
-
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -142,7 +138,7 @@ Let $\phi$ be a scalar field in the flat $(1,1)$-dimensional Minkowski spacetime
 \label{ab}
 \rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
 \end{equation}
-with positive real coefficients $(\alpha + \beta) = 1$.
+with positive real convex combination $(\alpha + \beta) = 1$.
 The drivers $h^{(u)}_k$ and $h^{(v)}_k$ are functions $f(u)$ of the past $W$-horizon and $g(v)$ of the future $W$-horizon respectively.  Both generate excitations, which we identify with absorption and emission thrusts respectively.
 
 
@@ -154,7 +150,7 @@ This leads to an inhomogeneous Klein-Gordon equation
 \[
 (\Box + m^2) \phi = \rho
 \]
-as presented in \cite{beisert}. It is assumed that the source will only be active for some finite amount of time.  We ignore this issue and instead go after the general asymptotic form of our solution in Fourier space.
+as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
 
 We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u <= 0$ and $p_v <= 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
 \[
@@ -225,7 +221,7 @@ The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ +
 \end{equation}
 where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^2}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
 
-Without being more careful about the finite time and shape of the source we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
+Without being more careful about wave packets we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
 
 The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST:DLMF}
 \[
