@@ -25,7 +25,7 @@
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
 
-\abstract{We outline the holographic scenario from entropic gravity and additionally consider the dynamics of the holographic screen itself in an accelerating frame.  First we show how the screen's acceleration is due to mass/energy joining with the screen, increasing the entropy of the screen.  Next, we consider the field theoretic picture where Unruh radiation was initially uncovered.  In both cases, we demonstrate how thrust serves as a more accurate explanation for the Unruh effect, replacing the previous understanding.}
+\abstract{We outline the holographic scenario from entropic gravity and additionally consider the dynamics of the holographic screen itself in an accelerating frame.  First we show how the screen's acceleration is due to mass/energy joining with the screen, increasing the entropy of the screen.  Next, we consider the field theoretic picture where Unruh radiation was initially uncovered.  In both cases, we demonstrate how thrust serves as a more accurate and direct explanation of the Unruh effect, replacing the previous understanding.}
 
 \section{The Holographic Scenario}
 We first recall the setup outlined in \cite{entropic}. Consider a holographic screen $\mathscr{S}$ with entropy $S$.  Let there be a test particle which is a single wavelength $\Delta x$ away from $\mathscr{S}$.  Following Bekenstein \cite{bekenstein}, we can regard the particle to be simultaneously near and on the screen.
@@ -41,7 +41,7 @@ Let the screen have energy $E_\mathscr{S}$ and mass $M_\mathscr{S}$.  Suppose th
 
 
 \subsection{Emergence Overloaded}
-There are some complementary notions of ``emergence'' that we inherit from \cite{entropic}.  We supply item 3, where emergence is matter/energy coming out of the screen.
+There are some complementary notions of ``emergence'', items 1 and 2,  that we inherit from \cite{entropic}.  We supply item 3, where matter/energy emerges from the screen.
 \begin{enumerate}
   \item {\bf (statistical mechanics)} The usual thermodynamic emergence of macrostate variables (such as temperature) from microstate variables (such as energies of individual particles).  For us, this includes the emergence of Newton's laws and entropic gravity.
   \item {\bf (space-time)} The emergence of ``new'' space-time beyond holographic screens, treating screens like stretched horizons, far away from the actual event horizons.  The existence of a foliation of screens where test particles move from screen to screen.
@@ -50,7 +50,7 @@ There are some complementary notions of ``emergence'' that we inherit from \cite
 The information theoretic notions of emergence will be discussed in more detail in terms of Landauer's language in the next section.
 
 \section{Landauer Limit}
-We want to keep track of the information corresponding to degrees of freedom on the screen. It is interesting to compare this situation with the limiting case of Landauer \cite{landauer}.  The situation is similar when we let the holographic screen be the separation between the system and the heat bath (between the known and the unknown).  Forgetting (or learning) information is the same thing as letting the information ``join the screen'' (``emerge from the screen'' resp.).
+We want to keep track of the information corresponding to degrees of freedom on the screen. It is interesting to compare this situation with the limiting case of Landauer \cite{landauer}.  The situation is analogous, we let the holographic screen be the separation between the system and the heat bath (between the known and the unknown).  Forgetting (or learning) information is the same thing as letting the information ``join the screen'' (``emerge from the screen'' resp.).
 
 Let $\Delta S$ be the change in entropy before and after the particle joins the screen. We pause to note that there is nothing canonical about choosing a bit to express $\Delta S$.  To illustrate this, we follow Landauer who considered logical gates. For this example, we briefly consider the AND gate on two unbiased bits of input.  The output is a bit, but it is biased, and so it carries less than one bit of information.  The AND gate actually forgets more than a bit\footnote{It actually forgets around 1.19 bits}.  All of this is to say that the choice of $\Delta S$ is far from obvious.
 
@@ -80,24 +80,23 @@ T = \frac{h}{4\pi^2k c} a
 \]
 
 \section{The Unruh Effect from Field Theoretic Thrust}
-We consider a field theoretic version of thrust, driving sources.  From this, we derive the Unruh vacuum expectation.
+We consider a field theoretic version of thrust, driving sources.  From this, we will derive the Unruh vacuum expectation.  Let $\hbar$ = c = 1.
 
-
-Let $\hbar$ = c = 1.
 \subsection{Rindler and Minkowski Modes Review}
 Much of this section including notation and conventions are drawn directly from the overview \cite{Frodden}, from the original source \cite{unruh}, and from \cite{beisert}.
 
-Consider a $(1,1)$-dimensional spacetime\footnote{It is not useful to consider the full $(1,3)$-dimensional case, so we stick to the dimensions where the linear acceleration boosts are taking place ($t$ and $z$).} $(t,z)$ with ``event horizon'' coordinates $u = -t + z$ and $v = -t - z$.   Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
+Consider a $(1,1)$-dimensional spacetime\footnote{The full $(1,3)$-dimensional case does not add anything to the argument, so we stick to the dimensions where the linear acceleration boosts are taking place ($t$ and $z$).} $(t,z)$ with ``event horizon'' coordinates $u = -t + z$ and $v = -t - z$.   Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
 \[
 f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \]
-The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full 2-dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- ``the momentum light cone''.
+supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full 2-dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- ``the momentum light cone''.
+
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1.0]{massless_shell.png}
-\caption{}
-\label{masslessshell}
+\includegraphics[scale=0.4]{rindler_w.png}
+\caption{Rindler wedge $W$ on the right.}
+\label{rindlerw}
 \end{figure}
 
 
@@ -110,11 +109,12 @@ z = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \]
 where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}).
 
+
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{rindler_w.png}
-\caption{Rindler wedge $W$ on the right.}
-\label{rindlerw}
+\includegraphics[scale=1.0]{massless_shell.png}
+\caption{Massless shell is when $\rho_u$ = $\rho_v$ = 0}
+\label{masslessshell}
 \end{figure}
 
 
@@ -130,7 +130,7 @@ The scalar field in Rindler curved space has modes
  r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
 \]
 which can be written as combinations of the ``event horizon'' modes
-x\[
+\[
 e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k
 \]
 Unlike the Rindler mode, the event horizon modes extend analytically from $W$ to all of spacetime.
@@ -141,7 +141,7 @@ When we switch between $h_k$ and the usual Minkowski bases we find that the Mink
 \label{radeq}
 \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \end{equation}
-which is interpreted as (Unruh) radiation \cite{unruh}.
+which is usually interpreted as (Unruh) radiation \cite{unruh}.
 
 \subsection{Fourier Transform of the Sources}
 
@@ -207,7 +207,7 @@ The same calculation for $R$ is done using a counter-clockwise contour this time
 \end{split}
 \]
 
-We get back to $h_k^{(u)}$ and apply the normalization from (\ref{finalnorm})
+We get back to $h_k^{(u)}$ and apply the normalization from equation (\ref{finalnorm})
 \[
 \hat{h_k}^{(u)}(p_u) = \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  ( L(p_u) + R(p_u) )
 \]
@@ -233,7 +233,7 @@ The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ +
 \end{equation}
 where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^2}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
 
-Without being more careful about wave packets we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
+Without being more careful we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
 
 The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST:DLMF}
 \[
@@ -268,7 +268,7 @@ The 2nd transition has $\mathcal{T}$ as a ``measurable'' in $\mathcal{A}$. This 
 
 
 \section{Conclusion and Prediction}
-If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in the illustrative ways outlined in this paper.  The prediction of this note is that Unruh radiation, separate from thrust, should not appear.
+If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in the illustrative ways outlined in this paper.  The prediction of this note is that Unruh radiation and Hawking-Bekenstein radiation, separate from thrust, should not appear.
 
 \section{Acknowledgments}
 Thanks to Daniel Justice for useful discussions.
