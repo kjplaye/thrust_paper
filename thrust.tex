@@ -85,7 +85,7 @@ We consider a field theoretic version of thrust, driving sources.  From this, we
 \subsection{Rindler and Minkowski Modes Review}
 Much of this section including notation and conventions are drawn directly from the overview \cite{Frodden}, from the original source \cite{unruh}, and from \cite{beisert}.
 
-Consider a $(1,1)$-dimensional spacetime\footnote{The full $(1,3)$-dimensional case does not add anything to the argument, so we stick to the dimensions where the linear acceleration boosts are taking place ($t$ and $z$).} $(t,z)$ with ``event horizon'' coordinates $u = -t + z$ and $v = -t - z$.   Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
+Consider a $(1,1)$-dimensional spacetime\footnote{The full $(1,3)$-dimensional case does not add anything to the argument, so we stick to the dimensions where the linear acceleration boosts are taking place ($t$ and $z$).} $(t,z)$ with coordinates $u = -t + z$ and $v = -t - z$.  Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
 \[
 f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \]
@@ -107,7 +107,7 @@ t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \[
 z = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \]
-where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}).
+where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}).  We call $u$ and $v$ ``event horizon'' coordinates since they are defined along the event-horizons of an accelerating observer in $W$.
 
 
 \begin{figure}[h]
@@ -136,7 +136,7 @@ e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \s
 Unlike the Rindler mode, the event horizon modes extend analytically from $W$ to all of spacetime.
 
 
-When we switch between $h_k$ and the usual Minkowski bases we find that the Minkowski vacuum has excitations coming from the Rindler modes.  More specifically, there is a positive particle number vacuum expectation of
+When we switch between $h_k$ and the usual Minkowski bases we find that the Minkowski vacuum has excitations visible in the Rindler frame.  More specifically, there is a positive particle number vacuum expectation of
 \begin{equation}
 \label{radeq}
 \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
@@ -145,7 +145,7 @@ which is usually interpreted as (Unruh) radiation \cite{unruh}.
 
 \subsection{Fourier Transform of the Sources}
 
-Let $\phi$ be a scalar field in the flat $(1,1)$-dimensional Minkowski spacetime\footnote{Note that we only consider the scalar case.  Generalization to other fields is straightforward and does not add any intuition to the presentation.}.  We will consider $h^{(u)}_k$ and $h^{(u)}_k$ as driving $W$-event horizon sources
+Let $\phi$ be a scalar field in the flat $(1,1)$-dimensional Minkowski spacetime\footnote{Note that we only consider the scalar case.  Generalization to other fields is straightforward and does not add any intuition to the presentation.}.  We will consider $h^{(u)}_k$ and $h^{(v )}_k$ as driving $W$-event horizon sources
 \begin{equation}
 \label{ab}
 \rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
@@ -171,7 +171,7 @@ We want to integrate $\rho$ on shell in momentum space, which for a massless sou
 and then we have
 \begin{equation}
 \label{finalnorm}
-  \hat{f}(\rho_U) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
+  \hat{f}(\rho_u) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
 \end{equation}
 where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $L + R$.
 
