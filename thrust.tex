@@ -17,32 +17,41 @@
 \begin{document}
 
 %title and author details
-\title{Field Theoretic Thrust of an Accelerating Frame}
+\title{Field Theoretic Perspective on Thrust in Accelerating Frames}
 \author[1]{Kevin Player\footnote{kplayer@andrew.cmu.edu}}
 
 \maketitle
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-
-\abstract{We consider the field theoretic picture where Unruh radiation was initially uncovered. We demonstrate how
-thrust can serve as a more accurate and direct explanation of the Unruh effect and hence Hawing radiation.}
+\abstract{We analyze the quantum field theoretic framework where Unruh radiation was first described, interpreting acceleration as a driving source influencing the field. By conceptualizing this source as thrust, we provide a more intuitive mechanism for understanding radiation from accelerating frames. Using the equivalence principle, we extend this framework to Hawking radiation, highlighting the universality of the source-response relationship in curved spacetime.}
 
 \section{Introduction}
+
+TODO: Fix up the INTRO
+
+We first introduce preliminaries, ideas and notations for discussing quantum field theory in an accelerating frame.  Then we review the positive frequency modes in Rindler spacetime.  Next we introduce the idea of field theoretic driving sources.  We then extend this formalism using the Fourier transform, studying the sources as a combination of emission and absorption terms.  Finally, we work out an interpretation of thrust as Unruh radiation, and use the equivalence principle to study thrust's role in Hawking radiation as well.
+
 Much of this note including notation and conventions are drawn directly from the overview \cite{Frodden}, from the original source \cite{unruh}, and from \cite{beisert}.  As in these references, we only consider the scalar free field which is enough for the Unruh effect to become manifest.
 
 \section{The Unruh Effect from Field Theoretic Thrust}
-We consider a field theoretic version of thrust, driving sources.  From this, we will derive the Unruh vacuum expectation.  
+In this section, we introduce a field-theoretic interpretation of thrust as a driving source for particle production in non-inertial frames. By examining the dynamics of these driving sources, we derive the Unruh vacuum expectation value, highlighting its connection to acceleration and quantum field theory. This approach establishes a conceptual link between thrust, external sources, and the emergence of thermal radiation in an accelerating frame.
+
 
 
 \subsection{Rindler and Minkowski Modes Review}
-Let $\hbar$ = c = 1.
 
-Consider a $(1,1)$-dimensional spacetime\footnote{The full $(1,3)$-dimensional case does not add anything to the argument, so we stick to the dimensions where the linear acceleration boosts are taking place ($t$ and $z$).} $(t,z)$ with coordinates $u = -t + z$ and $v = -t - z$.  Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
-\[
-f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
-\]
-supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$.  The full 2-dimensional transform of combinations of $f$ and $g$ is a linear combination of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell --- ``the momentum light cone''.
+Let $\hbar$ = $c$ = 1 and consider a uniform acceleration along the $z$ axis in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $z$ where a constant linear boost is taking place.  The massless wave equation 
+
+\begin{equation}
+  \Box \phi = \frac{\partial^2 \phi}{\partial t^2} - \frac{\partial^2 \phi}{\partial z^2} = 0,
+ \label{massless-wave-eq}
+\end{equation}
+has orthonormal Fourier modes which we will discribe using a basis  $u = -t + z$ and $v = -t - z$, the null coordinates along the light cone.  Any function of purely $u$, $f(u)$, is made up of Minkowski modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
+\begin{equation}
+  f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
+\end{equation}
+supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.
 
 
 \begin{figure}[h]
@@ -54,13 +63,13 @@ supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v
 
 
 Let $W$ be the $z>|t|$ Rindler wedge with coordinates
-\[
+\begin{equation}
 t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
-\]
-\[
+\end{equation}
+\begin{equation}
 z = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
-\]
-where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}).  We call $u$ and $v$ ``event horizon'' coordinates since they are defined along the event-horizons of an accelerating observer in $W$.
+\end{equation}
+where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}) \cite{rindlerorig}.  We call $u$ and $v$ ``event horizon'' coordinates since they are defined along the event-horizons of an accelerating observer in $W$.
 
 
 \begin{figure}[h]
@@ -72,20 +81,20 @@ where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}).  We call $
 
 
 For wave number $k$ and positive frequency $\omega_k$ consider the functions
-\[
+\begin{equation}
 h^{(u)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
-\]
-\[
+\end{equation}
+\begin{equation}
 h^{(v)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
-\]
+\end{equation}
 The scalar field in Rindler curved space has modes
-\[
+\begin{equation}
  r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
-\]
+\end{equation}
 which can be written as combinations of the ``event horizon'' modes
-\[
+\begin{equation}
 e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k
-\]
+\end{equation}
 Unlike the Rindler mode, the event horizon modes extend analytically from $W$ to all of spacetime.
 
 
@@ -98,7 +107,7 @@ which is usually interpreted as (Unruh) radiation \cite{unruh}.
 
 \subsection{Fourier Transform of the Sources}
 We will take several Fourier transforms to elucidate the various modes and set up for some
-integrals.  Let $\phi$ be a scalar free field in the flat $(1,1)$-dimensional Minkowski spacetime.  We will consider $h^{(u)}_k$ and $h^{(v )}_k$ as driving $W$-event horizon sources
+integrals.  Let $\phi$ be a scalar free field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $h^{(u)}_k$ and $h^{(v )}_k$ as driving $W$-event horizon sources
 \begin{equation}
 \label{ab}
 \rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
@@ -108,19 +117,19 @@ The drivers $h^{(u)}_k$ and $h^{(v)}_k$ are functions $f(u)$ of the past $W$-hor
 
 
 The source can originate from a coupling term, $\rho \phi$, added to the Lagrangian.
-\[
+\begin{equation}
 \mathscr{L}_{driven} = \mathscr{L}_{original} + \rho\phi 
-\]
+\end{equation}
 This leads to an inhomogeneous Klein-Gordon equation
-\[
+\begin{equation}
 (\Box + m^2) \phi = \rho
-\]
+\end{equation}
 as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
 
 We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u <= 0$ and $p_v <= 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
-\[
+\begin{equation}
   A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
-\]
+\end{equation}
 and then we have
 \begin{equation}
 \label{finalnorm}
@@ -139,31 +148,31 @@ We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and 
 
 
 The $L$ integral for real $p<0$ is
-\[
+\begin{equation}
 \begin{split}
   L(p) & = -\int_0^{i\infty} \left(\frac{ias}{-p}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p}\right)ds \\
   & = \frac{-i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} \int_0^\infty \left(is\right) ^ \frac{i\omega_k}{a} e^{-s} ds \\
   & = \frac{-i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} \\
   & = \frac{1}{2} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p)\\
 \end{split}
-\]
+\end{equation}
 where
-\[
+\begin{equation}
 B(p) = \frac{-2i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} 
-\]
+\end{equation}
 is as shown.  This is using a large radius contour which rotates the endpoint 90 degrees clockwise.
 
 The same calculation for $R$ is done using a counter-clockwise contour this time.
-\[
+\begin{equation}
 \begin{split}
   R(p) = \frac{1}{2}\Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p)
 \end{split}
-\]
+\end{equation}
 
 We get back to $h_k^{(u)}$ and apply the normalization from equation (\ref{finalnorm})
-\[
+\begin{equation}
 \hat{h_k}^{(u)}(p_u) = \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  ( L(p_u) + R(p_u) )
-\]
+\end{equation}
 So
 \begin{equation}
 \label{fourier}
@@ -189,19 +198,19 @@ where the integrals are on the positive energy massless shell with contributions
 Without being more careful we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
 
 The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST:DLMF}
-\[
+\begin{equation}
 \left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2 \sim \left(\frac{2 \pi \omega_k} {a}\right) e^{-\frac{\pi\omega_k}{a}}
-\]
-Plugging this into equation (\ref{number}) we find the average energy of the mode, the (1,1) dimensional Planck distribution function, and thus recover the Unruh's radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
-\[
+\end{equation}
+Plugging this into equation (\ref{number}) we find the average energy of the mode, the $1+1$ dimensional Planck distribution function, and thus recover the Unruh's radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
+\begin{equation}
 \frac{1}{P} \mathbb{E}[\Delta E] = I(\omega_k) \sim \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
-\]
+\end{equation}
 
 \section{Conclusion and Prediction}
 If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in the illustrative ways outlined in this paper.  The prediction of this note is that Unruh radiation and Hawking-Bekenstein radiation, separate from thrust, should not appear.
 
 \section{Acknowledgments}
-Thanks to Daniel Justice for useful discussions.
+Thanks to Ben Commeau and Daniel Justice for useful discussions.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
