@@ -48,61 +48,61 @@ Let $\hbar$ = $c$ = 1 and consider a uniform linear acceleration in $1+1$ dimens
   \Box \phi = \frac{\partial^2 \phi}{\partial t^2} - \frac{\partial^2 \phi}{\partial z^2} = 0,
  \label{massless-wave-eq}
 \end{equation}
-has orthonormal Fourier modes which we describe using a basis  $u = -t + z$ and $v = -t - z$, the null coordinates along the light cone.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
+has solutions which we describe using a basis  $u = -t + z$ and $v = -t - z$, the null coordinates along the light cone.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
 \begin{equation}
   f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \end{equation}
-supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.
-
+supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.  A basis of solutions are the ``Minkowski modes''
+\begin{equation}
+  \frac{1}{\sqrt{2\omega_k (2\pi)^{n-1}}} e^{i(k x - \omega_k t)}
+\end{equation}
+where $\omega^2 = k^2$, covering the positive and negative frequency cases.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{rindler_w.png}
+\includegraphics[scale=0.2]{rindler_w.png}
 \caption{Rindler wedge $W$ on the right.}
 \label{rindlerw}
 \end{figure}
 
-
-Let $W$ be the $z>|t|$ Rindler wedge with coordinates
+The following notations and results, (\ref{sinh}) through (\ref{radeq}), are taken from \cite{Frodden}. Let $W$ be the $z>|t|$ Rindler ``wedge'' with coordinates
 \begin{equation}
-t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
+  t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
+\label{sinh}
 \end{equation}
 \begin{equation}
 z = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}) \cite{purcell}.
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1.0]{massless_shell.png}
-\caption{Massless shell is when $p_u$ = $p_v$ = 0}
-\label{masslessshell}
-\end{figure}
-
-
-For wave number $k$ and positive frequency $\omega_k$ consider the functions
+where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}). The massless Klein-Gordon equation in Rindler coordinates is
 \begin{equation}
-h^{(u)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
+  \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0.
+\end{equation}
+which has a basis of solutions 
+\begin{equation}
+ r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
+\end{equation}
+for each wave number $k$ and positive frequency $\omega_k = |k|$.  These ``Rindler modes'' do not immediately extend to the entire $(x,t)$-plane but are confined to the Rindler wedge $W$. 
+
+Consider the analytic functions on the entire $(x,t)$-plane
+\begin{equation}
+h^{(u)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)}}
 \end{equation}
 \begin{equation}
 h^{(v)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
 \end{equation}
-The scalar field in Rindler curved space has modes
-\begin{equation}
- r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
-\end{equation}
-which can be written as combinations of the ``event horizon'' modes
+These two functions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  Each $r_k$ can be extended to the entire plane as
 \begin{equation}
 e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k
 \end{equation}
-Unlike the Rindler mode, the event horizon modes extend analytically from $W$ to all of spacetime.
 
-
-When we switch between $h_k$ and the usual Minkowski bases we find that the Minkowski vacuum has excitations visible in the Rindler frame.  More specifically, there is a positive particle number vacuum expectation of
+Let $c_k^{(1)}$ and $c_k^{(2)}$ be annihilation and creation operators for the positive and negative frequency Minkowski modes respectively.  Define
+\begin{equation}
+  b_k = \frac{1}{\sqrt{2 \sinh\left(\frac{\pi \omega_k}{a}\right)}} \left( e^{\frac{\pi\omega_k}{2a}} c_k^{(1)} + e^{-\frac{\pi\omega_k}{2a}} c_{-k}^{(2) \dagger} \right).
+\end{equation}
+Then the number of particles that an accelerating observer will see in the Minkowski vacuum $\ket{0_M}$ is seen to be 
 \begin{equation}
 \label{radeq}
-\frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
+\braket{n} = \bra{0_M} b_k^\dagger b_k \ket{0_M} = \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \end{equation}
 which is usually interpreted as (Unruh) radiation \cite{unruh}.
 
@@ -113,21 +113,26 @@ integrals.  Let $\phi$ be a scalar free field in the flat $1+1$ dimensional Mink
 \label{ab}
 \rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
 \end{equation}
-with positive real convex combination $(\alpha + \beta) = 1$.
+with positive real convex combination $\alpha + \beta = 1$.
 The drivers $h^{(u)}_k$ and $h^{(v)}_k$ are functions $f(u)$ of the past $W$-horizon and $g(v)$ of the future $W$-horizon respectively.  Both generate excitations, which we identify with absorption and emission thrusts respectively.
 
 
-The source can originate from a coupling term, $\rho \phi$, added to the Lagrangian.
+The sources can originate from a coupling term, $\rho \phi$, added to the free scalar free Lagrangian.
 \begin{equation}
 \mathscr{L}_{driven} = \mathscr{L}_{original} + \rho\phi 
 \end{equation}
+where
+\begin{equation}
+  \mathscr{L}_{original} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} \phi^2.
+\end{equation}
 This leads to an inhomogeneous Klein-Gordon equation
 \begin{equation}
-(\Box + m^2) \phi = \rho
+\Box  \phi = \rho
 \end{equation}
 as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
 
 We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u <= 0$ and $p_v <= 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
+
 \begin{equation}
   A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
 \end{equation}
@@ -138,11 +143,19 @@ and then we have
 \end{equation}
 where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $L + R$.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{massless_shell.png}
+\caption{Massless shell is when $p_u$ = $p_v$ = 0}
+\label{masslessshell}
+\end{figure}
+
+
 We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and contour integrals.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.6]{contour.png}
+\includegraphics[scale=0.3]{contour.png}
 \caption{Using contours with large radius we convert the $L$ integral that goes to $i\infty$, and the $R$ integral that goes to $-i\infty$, to integrals with $s$ going to real $\infty$.}
 \label{fig:x cubed graph}
 \end{figure}
@@ -196,16 +209,17 @@ The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ +
 \end{equation}
 where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^2}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
 
-Without being more careful we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances $I(\omega_k)$ to each other.
+Without being more careful we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances to each other, $I(\omega_{k_1}) / I(\omega_{k_2})$.
 
 The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST:DLMF}
 \begin{equation}
 \left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2 \sim \left(\frac{2 \pi \omega_k} {a}\right) e^{-\frac{\pi\omega_k}{a}}
 \end{equation}
-Plugging this into equation (\ref{number}) we find the average energy of the mode, the $1+1$ dimensional Planck distribution function, and thus recover the Unruh's radiation spectrum\footnote{Compare to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.} from a thrust driven field.
+Plugging this into equation (\ref{number}) we find the average energy of the mode, the $1+1$ dimensional Planck distribution function, and thus recover the Unruh's radiation spectrum from a thrust driven field.
 \begin{equation}
 \frac{1}{P} \mathbb{E}[\Delta E] = I(\omega_k) \sim \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \end{equation}
+Compare this to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.
 
 \section{Conclusion and Prediction}
 If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in the illustrative ways outlined in this paper.  The prediction of this note is that Unruh radiation and Hawking-Bekenstein radiation, separate from thrust, should not appear.
