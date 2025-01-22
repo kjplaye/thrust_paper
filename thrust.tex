@@ -17,7 +17,7 @@
 \begin{document}
 
 %title and author details
-\title{Field Theoretic Perspective on Thrust in Accelerating Frames}
+\title{Field Theoretic Perspective on Thrust of an Accelerating Frame}
 \author[1]{Kevin Player\footnote{kplayer@andrew.cmu.edu}}
 
 \maketitle
@@ -29,18 +29,11 @@
 
 \section{Introduction}
 
-TODO: Fix up the INTRO
+We begin by introducing the preliminaries, concepts, and notations for discussing quantum field theory in an accelerating frame, with a focus on positive frequency modes in Rindler spacetime. Building on this foundation, we introduce the concept of field-theoretic driving sources and extend the formalism using the Fourier transform to analyze these sources as a combination of emission and absorption terms. This framework allows us to develop a field-theoretic interpretation of thrust as a driving source for particle production in non-inertial frames. By examining the dynamics of these driving sources, we derive the Unruh vacuum expectation value, highlighting its connection to acceleration and quantum field theory. Finally, we interpret thrust as Unruh radiation and leverage the equivalence principle to explore its role in Hawking radiation, establishing a conceptual link between thrust, external sources, and the emergence of thermal radiation in an accelerating frame.
 
-We first introduce preliminaries, ideas and notations for discussing quantum field theory in an accelerating frame.  Then we review the positive frequency modes in Rindler spacetime.  Next we introduce the idea of field theoretic driving sources.  We then extend this formalism using the Fourier transform, studying the sources as a combination of emission and absorption terms.  Finally, we work out an interpretation of thrust as Unruh radiation, and use the equivalence principle to study thrust's role in Hawking radiation as well.
+Much of the content, including notation and conventions, is directly adapted from the overview in \cite{Frodden}, the foundational work in \cite{unruh}, and the detailed treatment in \cite{beisert}. Consistent with these references, our focus is restricted to the free scalar field, which suffices to elucidate the Unruh effect.
 
-Much of this note including notation and conventions are drawn directly from the overview \cite{Frodden}, from the original source \cite{unruh}, and from \cite{beisert}.  As in these references, we only consider the scalar free field which is enough for the Unruh effect to become manifest.
-
-\section{The Unruh Effect from Field Theoretic Thrust}
-In this section, we introduce a field-theoretic interpretation of thrust as a driving source for particle production in non-inertial frames. By examining the dynamics of these driving sources, we derive the Unruh vacuum expectation value, highlighting its connection to acceleration and quantum field theory. This approach establishes a conceptual link between thrust, external sources, and the emergence of thermal radiation in an accelerating frame.
-
-
-
-\subsection{Rindler and Minkowski Modes Review}
+\section{Rindler and Minkowski Modes Review}
 
 Let $\hbar$ = $c$ = 1 and consider a uniform linear acceleration in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $z$ where the boost is taking place.  The massless Klein-Gordon equation 
 
@@ -56,7 +49,7 @@ supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v
 \begin{equation}
   \frac{1}{\sqrt{2\omega_k (2\pi)^{n-1}}} e^{i(k x - \omega_k t)}
 \end{equation}
-where $\omega^2 = k^2$, covering the positive and negative frequency cases.
+where $\omega^2 = k^2$, covering both the positive and negative frequency cases $\omega = \pm k$.
 
 \begin{figure}[h]
 \centering
@@ -65,7 +58,7 @@ where $\omega^2 = k^2$, covering the positive and negative frequency cases.
 \label{rindlerw}
 \end{figure}
 
-The following notations and results, (\ref{sinh}) through (\ref{radeq}), are taken from \cite{Frodden}. Let $W$ be the $z>|t|$ Rindler ``wedge'' with coordinates
+The following notations and results for the rest of this section are taken from \cite{Frodden}. Let $W$ be the $z>|t|$ Rindler ``wedge'' with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -104,26 +97,26 @@ Then the number of particles that an accelerating observer will see in the Minko
 \label{radeq}
 \braket{n} = \bra{0_M} b_k^\dagger b_k \ket{0_M} = \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \end{equation}
-which is usually interpreted as (Unruh) radiation \cite{unruh}.
+which is usually interpreted as (Unruh) radiation.
 
 \section{Fourier Transform of the Sources}
-We will take several Fourier transforms to elucidate the various modes and set up for some
-integrals.  Let $\phi$ be a scalar free field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $h^{(u)}_k$ and $h^{(v )}_k$ as driving $W$-event horizon sources
+We will take several Fourier transforms to study the various modes and set up for some
+integrals.  Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $h^{(u)}_k$ and $h^{(v )}_k$ as driving $W$-event horizon sources
 \begin{equation}
 \label{ab}
 \rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
 \end{equation}
-with positive real convex combination $\alpha + \beta = 1$.
+with non-negative real convex combination $\alpha + \beta = 1$.
 The drivers $h^{(u)}_k$ and $h^{(v)}_k$ are functions $f(u)$ of the past $W$-horizon and $g(v)$ of the future $W$-horizon respectively.  Both generate excitations, which we identify with absorption and emission thrusts respectively.
 
 
-The sources can originate from a coupling term, $\rho \phi$, added to the free scalar free Lagrangian.
+The sources can originate from a coupling term, $\rho \phi$, added to the free scalar Lagrangian.
 \begin{equation}
-\mathscr{L}_{driven} = \mathscr{L}_{original} + \rho\phi 
+\mathscr{L}_{driven} = \mathscr{L}_{free} + \rho\phi 
 \end{equation}
 where
 \begin{equation}
-  \mathscr{L}_{original} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} \phi^2.
+  \mathscr{L}_{free} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} \phi^2.
 \end{equation}
 This leads to an inhomogeneous Klein-Gordon equation
 \begin{equation}
@@ -222,7 +215,7 @@ Plugging this into equation (\ref{number}) we find the average energy of the mod
 Compare this to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.
 
 \section{Conclusion and Prediction}
-If we do not account for the thrust required to accelerate a detector, then we recover it instead as a thermal unknown in the vacuum, Unruh radiation.  But, it would seem that we can explain Unruh radiation directly using thrust in the illustrative ways outlined in this paper.  The prediction of this note is that Unruh radiation and Hawking-Bekenstein radiation, separate from thrust, should not appear.
+If the thrust required to accelerate a detector is not explicitly accounted for, it manifests instead as an apparent thermal feature of the vacuum—Unruh radiation. However, as demonstrated in this paper, Unruh radiation can be directly explained as a consequence of thrust. This perspective leads to the prediction that neither Unruh radiation nor Hawking-Bekenstein radiation should appear independently of the thrust that drives the system.
 
 \section{Acknowledgments}
 Thanks to Ben Commeau and Daniel Justice for useful discussions.
