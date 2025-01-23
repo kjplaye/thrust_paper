@@ -29,27 +29,27 @@
 
 \section{Introduction}
 
-We begin by introducing the preliminaries, concepts, and notations for discussing quantum field theory in an accelerating frame, with a focus on positive frequency modes in Rindler spacetime. Building on this foundation, we introduce the concept of field-theoretic driving sources and extend the formalism using the Fourier transform to analyze these sources as a combination of emission and absorption terms. This framework allows us to develop a field-theoretic interpretation of thrust as a driving source for particle production in non-inertial frames. By examining the dynamics of these driving sources, we derive the Unruh vacuum expectation value, highlighting its connection to acceleration and quantum field theory. Finally, we interpret thrust as Unruh radiation and leverage the equivalence principle to explore its role in Hawking radiation, establishing a conceptual link between thrust, external sources, and the emergence of thermal radiation in an accelerating frame.
+The objective of this paper is to show how Unruh radiation can be interpreted a thrust. We begin in Section 2 with preliminaries, following \cite{Frodden}, including a review of Rindler coordinates, wave equations, and their solutions in 1+1-dimensional Minkowski and Rindler spacetimes. Section 3 introduces field-theoretic driving forces, following \cite{beisert}, and extends the formalism using Fourier transforms to analyze sources as a combination of emission and absorption terms. In Section 4, we reinterpret Unruh radiation as thrust. Finally, Section 5 discusses Hawking radiation through the lens of the equivalence principle."
 
 Much of the content, including notation and conventions, is directly adapted from the overview in \cite{Frodden}, the foundational work in \cite{unruh}, and the detailed treatment in \cite{beisert}. Consistent with these references, our focus is restricted to the free scalar field, which suffices to elucidate the Unruh effect.
 
 \section{Rindler and Minkowski Modes Review}
 
-Let $\hbar$ = $c$ = 1 and consider a uniform linear acceleration in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $z$ where the boost is taking place.  The massless Klein-Gordon equation 
+Let $\hbar$ = $c$ = 1 and consider a uniform linear acceleration in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  The massless Klein-Gordon equation 
 
 \begin{equation}
-  \Box \phi = \frac{\partial^2 \phi}{\partial t^2} - \frac{\partial^2 \phi}{\partial z^2} = 0,
+  \Box \phi = \frac{\partial^2 \phi}{\partial t^2} - \frac{\partial^2 \phi}{\partial x^2} = 0,
  \label{massless-wave-eq}
 \end{equation}
-has solutions which we describe using a basis  $u = -t + z$ and $v = -t - z$, the null coordinates along the light cone.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
+has solutions which we describe using a basis  $u = -t + x$ and $v = -t - x$, the null coordinates along the light cone.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
 \begin{equation}
   f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \end{equation}
 supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.  A basis of solutions are the ``Minkowski modes''
 \begin{equation}
-  \frac{1}{\sqrt{2\omega_k (2\pi)^{n-1}}} e^{i(k x - \omega_k t)}
+  \varphi_k(x,t) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i(k x - \omega_k t)}
 \end{equation}
-where $\omega^2 = k^2$, covering both the positive and negative frequency cases $\omega = \pm k$.
+along with their complex conjugates, where $\omega^2 = k^2$, covering both the positive and negative frequency cases $\omega = \pm k$.
 
 \begin{figure}[h]
 \centering
@@ -58,35 +58,36 @@ where $\omega^2 = k^2$, covering both the positive and negative frequency cases 
 \label{rindlerw}
 \end{figure}
 
-The following notations and results for the rest of this section are taken from \cite{Frodden}. Let $W$ be the $z>|t|$ Rindler ``wedge'' with coordinates
+The following notations and results for the rest of this section are taken from \cite{Frodden}. Let $W$ be the $x>|t|$ Rindler ``wedge'' with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
 \end{equation}
 \begin{equation}
-z = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
+x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}). The massless Klein-Gordon equation in Rindler coordinates is
+where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}). These are hyperbolic polar coordinates with an exponential "radius".  The massless Klein-Gordon equation in Rindler coordinates is
 \begin{equation}
-  \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0.
+  \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0
 \end{equation}
 which has a basis of solutions 
 \begin{equation}
- r_k = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
+ r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
 \end{equation}
-for each wave number $k$ and positive frequency $\omega_k = |k|$.  These ``Rindler modes'' do not immediately extend to the entire $(x,t)$-plane but are confined to the Rindler wedge $W$. 
+(along with conjugates) for each wave number $k$ and positive frequency $\omega_k = |k|$.  These ``Rindler modes'' do not immediately extend to the entire $(x,t)$-plane but are confined to the Rindler wedge $W$. 
 
 Consider the analytic functions on the entire $(x,t)$-plane
 \begin{equation}
-h^{(u)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)}}
+f_k(u) = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)}}
 \end{equation}
 \begin{equation}
-h^{(v)}_k = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
+g_k(v) = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
 \end{equation}
 These two functions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  Each $r_k$ can be extended to the entire plane as
 \begin{equation}
-e^\frac{\pi\omega_k}{2a} h^{(u)}_k - e^{-\frac{\pi\omega_k}{2a}} h^{(v)}_k  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k
+e^\frac{\pi\omega_k}{2a} f_k(u) - e^{-\frac{\pi\omega_k}{2a}} g_k(v)  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k(\eta,\xi)
 \end{equation}
+see \cite{Frodden}.
 
 Let $c_k^{(1)}$ and $c_k^{(2)}$ be annihilation and creation operators for the positive and negative frequency Minkowski modes respectively.  Define
 \begin{equation}
@@ -101,22 +102,22 @@ which is usually interpreted as (Unruh) radiation.
 
 \section{Fourier Transform of the Sources}
 We will take several Fourier transforms to study the various modes and set up for some
-integrals.  Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $h^{(u)}_k$ and $h^{(v )}_k$ as driving $W$-event horizon sources
+integrals.  Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $f_k(u)$ and $g_k(v)$ as driving $W$-event horizon sources
 \begin{equation}
 \label{ab}
-\rho = \alpha h^{(u)}_k + \beta h^{(v)}_k.
+\rho(u,v) = \alpha f_k(u) + \beta g_k(v).
 \end{equation}
 with non-negative real convex combination $\alpha + \beta = 1$.
-The drivers $h^{(u)}_k$ and $h^{(v)}_k$ are functions $f(u)$ of the past $W$-horizon and $g(v)$ of the future $W$-horizon respectively.  Both generate excitations, which we identify with absorption and emission thrusts respectively.
+The drivers $f_k(u)$ and $g_k(v)$ are functions $f_k(u)$ of the past $W$-horizon and $g_k(v)$ of the future $W$-horizon respectively.  Both generate excitations, which we identify with absorption and emission thrusts respectively.
 
 
-The sources can originate from a coupling term, $\rho \phi$, added to the free scalar Lagrangian.
+The sources can originate from a coupling term, $\rho \phi$, added to the free scalar Lagrangian
 \begin{equation}
 \mathscr{L}_{driven} = \mathscr{L}_{free} + \rho\phi 
 \end{equation}
 where
 \begin{equation}
-  \mathscr{L}_{free} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} \phi^2.
+  \mathscr{L}_{free} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi.
 \end{equation}
 This leads to an inhomogeneous Klein-Gordon equation
 \begin{equation}
@@ -124,7 +125,7 @@ This leads to an inhomogeneous Klein-Gordon equation
 \end{equation}
 as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
 
-We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u <= 0$ and $p_v <= 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
+We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
 
 \begin{equation}
   A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
@@ -176,16 +177,16 @@ The same calculation for $R$ is done using a counter-clockwise contour this time
 \end{split}
 \end{equation}
 
-We get back to $h_k^{(u)}$ and apply the normalization from equation (\ref{finalnorm})
+We get back to $f_k(u)$ and apply the normalization from equation (\ref{finalnorm})
 \begin{equation}
-\hat{h_k}^{(u)}(p_u) = \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  ( L(p_u) + R(p_u) )
+\widehat{f_k}(p_u) = \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  ( L(p_u) + R(p_u) )
 \end{equation}
 So
 \begin{equation}
 \label{fourier}
 \begin{split}
-\hat{h_k}^{(u)}(p_u) & = \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)\\
-\hat{h_k}^{(v)}(p_v) &= \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)
+\widehat{f_k}(p_u) & = \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)\\
+\widehat{g_k}(p_v) &= \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)
 \end{split}
 \end{equation}
 \section{Interpretation}
@@ -194,7 +195,7 @@ The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ +
   \label{number}
   \begin{split}
     \mathbb{E}[\Delta E] &= \frac{1}{4\pi} \int{|\rho(p)|^2 dp} \\
-    &= \frac{\alpha}{4\pi} \int{\left|\hat{h_k}^{(u)}(p_u)\right|^2 dp_u} + \frac{\beta}{4\pi}\int{\left|\hat{h_k}^{(v)}(p_v)\right|^2dp_v} \\
+    &= \frac{\alpha}{4\pi} \int{\left|\widehat{f_k}(p_u)\right|^2 dp_u} + \frac{\beta}{4\pi}\int{\left|\widehat{g_k}(p_v)\right|^2dp_v} \\
     &= \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} \frac{1}{4\pi} \int{{\left|B(p)\right|^2} dp} \\
     &=  \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \pi a \sinh \left({\frac{\pi\omega_k}{a}}\right)} \int{a/|p|^2 dp}\\  
 &=I(\omega_k) P
