@@ -18,7 +18,7 @@
 
 %title and author details
 \title{Field Theoretic Perspective on Thrust of an Accelerating Frame}
-\author[1]{Kevin Player\footnote{kplayer@andrew.cmu.edu}}
+\author[1]{Kevin Player\footnote{kplaye@gmail.com}}
 
 \maketitle
 
@@ -26,10 +26,21 @@
 
 \abstract{We analyze the quantum field theoretic framework where Unruh radiation was first described, interpreting acceleration as a driving source influencing the field. By conceptualizing this source as thrust, we provide a more intuitive mechanism for understanding radiation in accelerating frames.  Using the equivalence principle, we extend this framework to Hawking radiation as well, demonstrating how a common source-response relationship manifests in accelerating frames.}
 
-
 \section{Introduction}
+Buchholz and Verch \cite{Buchholz_2016} explain Unruh radiation as a thermal bath where an account is given
 
-The objective of this paper is to show how Unruh radiation can be interpreted a thrust. We begin in Section 2 with preliminaries, following \cite{Frodden}, including a review of Rindler coordinates, wave equations, and their solutions in 1+1-dimensional Minkowski and Rindler spacetimes. Section 3 introduces field-theoretic driving forces, following \cite{beisert}, and extends the formalism using Fourier transforms to analyze sources as a combination of emission and absorption terms. In Section 4, we reinterpret Unruh radiation as thrust. Finally, Section 5 discusses Hawking radiation through the lens of the equivalence principle."
+\begin{quote}
+  ...the increase of temperature of accelerated thermometers is due to systematic quantum effects induced by the local coupling between the thermometer and the vacuum. This coupling inevitably creates excitations of the vacuum which transfer energy to the thermometer, gained by the acceleration, and thereby affect its readings.
+\end{quote}
+Frodden and Vald{\'{e}}s \cite{Frodden} further state that 
+\begin{quote}
+...the interpretation of the Unruh effect as a thermal bath state for accelerated observers is controversial.  
+\end{quote}
+We present an argument that Unruh and Hawking radiation can be interpreted as a coupling to thrust particles instead of the vacuum. That the particles predicted for an accelerated observer are due to a driving force instead of thermal radiation, see Figure \ref{rocket}. In this note we start with thrust as a driving force and show how it can instead account for the transfer of energy to a detector.  We pick the driving source to give the same distribution of energy as the radiation, but additionally show that more arbitary driving sources can be used. (<-- TODO)
+
+We begin in Section 2 with preliminaries, following \cite{Frodden}, including a review of Rindler coordinates, wave equations, and their solutions in 1+1-dimensional Minkowski and Rindler spacetimes. Section 3 introduces field-theoretic driving forces, following \cite{beisert}, and extends the formalism using Fourier transforms to analyze sources as a combination of emission and absorption terms. In Section 4, we reinterpret Unruh radiation as thrust. Finally, Section 5 discusses Hawking radiation through the lens of the equivalence principle."
+
+
 
 Much of the content, including notation and conventions, is directly adapted from the overview in \cite{Frodden}, the foundational work in \cite{unruh}, and the detailed treatment in \cite{beisert}. Consistent with these references, our focus is restricted to the free scalar field, which suffices to elucidate the Unruh effect.
 
@@ -98,7 +109,13 @@ Then the number of particles that an accelerating observer will see in the Minko
 \label{radeq}
 \braket{n} = \bra{0_M} b_k^\dagger b_k \ket{0_M} = \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
 \end{equation}
-which is usually interpreted as (Unruh) radiation.
+which is usually interpreted as (Unruh) radiation, for instance:
+
+\begin{quote}
+  An accelerated observer measures her surrounding fields in excited thermal states. A simple thermometer carried by the observer marks a temperature directly proportional to the acceleration she is moving with. The more she accelerates, the higher the temperature.
+\end{quote}
+We take the view that the thermometer is accelerated by thrust.  This is a different interpretation of the apparent radiation.  To make this explicit, we formalize thrust as field theoretic driving forces.
+
 
 \section{Fourier Transform of the Sources}
 We will take several Fourier transforms to study the various modes and set up for some
@@ -222,7 +239,7 @@ If the thrust required to accelerate a detector is not explicitly accounted for,
 \centering
 \includegraphics[scale=0.5]{rocket.png}
 \caption{Black hole radiating on the left, rocket thrusting on the right.}
-\label{masslessshell}
+\label{rocket}
 \end{figure}
 
 \section{Acknowledgments}
