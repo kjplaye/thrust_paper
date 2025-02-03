@@ -99,8 +99,9 @@ These two functions are functions of $u$ and $v$ respectively, and so are soluti
   {(-az)}^{\frac{i\omega_k}{a}} &= e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(az)\right)}  \\
                            &= e^{\frac{\pi \omega_k}{a}} {(az)}^{\frac{i\omega_k}{a}} \\
 \end{aligned}
+\label{factor}
 \end{equation}
-where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. Each $r_k$ with can be extended to the entire plane as
+where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. Each $r_k$ can be extended to the entire plane as
 \begin{equation}
   r_k = \left\{\begin{array}{cc}
       {(au)}^{\frac{i\omega_k}{a}} & \text{ if } k > 0 \\
@@ -110,9 +111,10 @@ where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. Each $r_k$ with ca
 see Figure \ref{analytic}.
 
 \begin{figure}[h]
-\centering
+  \centering
+  \captionsetup{width=0.8\linewidth}
 \includegraphics[scale=0.3]{analytic.png}
-\caption{Phase of a Rindler mode $r_k$ with $k<0$ analyticlly extended to the whole $x/t$ or $u/v$ plane as ${(av)}^{\frac{i\omega_k}{a}}$.}
+\caption{Phase of a Rindler mode $r_k$ with $k<0$ analytically extended to the whole $UV$ or $TX$ plane as $ {(av)}^{\frac{i\omega_k}{a}} = {(-t-x)}^{\frac{i\omega_k}{a}}$.  The magnitude for the wedges I and II where $v<0$ are off by a factor of $e^{\frac{\pi \omega_k}{a}}$ from the wedges III and IV where $v>0$ (see equation (\ref{factor})).  The $k>0$ case is a reflection about $t=0$ or about $x=0$ of this picture.}
 \label{analytic}
 \end{figure}
 
