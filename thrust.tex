@@ -93,11 +93,29 @@ f_k(u) = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{
 \begin{equation}
 g_k(v) = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
 \end{equation}
-These two functions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  Each $r_k$ can be extended to the entire plane as
+These two functions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  For $z = u$ or $z = v$ there is a choice of branch of the log
 \begin{equation}
-e^\frac{\pi\omega_k}{2a} f_k(u) - e^{-\frac{\pi\omega_k}{2a}} g_k(v)  = \sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} r_k(\eta,\xi)
+\begin{aligned}
+  {(-az)}^{\frac{i\omega_k}{a}} &= e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(az)\right)}  \\
+                           &= e^{\frac{\pi \omega_k}{a}} {(az)}^{\frac{i\omega_k}{a}} \\
+\end{aligned}
 \end{equation}
-see \cite{Frodden}.
+where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. Each $r_k$ with can be extended to the entire plane as
+\begin{equation}
+  r_k = \left\{\begin{array}{cc}
+      {(au)}^{\frac{i\omega_k}{a}} & \text{ if } k > 0 \\
+      {(av)}^{\frac{i\omega_k}{a}} & \text{ if } k < 0 \\  
+    \end{array}\right.
+\end{equation}
+see Figure \ref{analytic}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{analytic.png}
+\caption{Phase of a Rindler mode $r_k$ with $k<0$ analyticlly extended to the whole $x/t$ or $u/v$ plane as ${(av)}^{\frac{i\omega_k}{a}}$.}
+\label{analytic}
+\end{figure}
+
 
 Let $c_k^{(1)}$ and $c_k^{(2)}$ be annihilation and creation operators for the positive and negative frequency Minkowski modes respectively.  Define
 \begin{equation}
