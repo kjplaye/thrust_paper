@@ -45,13 +45,13 @@ Much of the content, including notation and conventions, is directly adapted fro
 
 \section{Rindler and Minkowski Modes Review}
 
-Let $\hbar$ = $c$ = 1 and consider a uniform linear acceleration in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  The massless Klein-Gordon equation 
+Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  The massless Klein-Gordon equation 
 
 \begin{equation}
   \Box \phi = \frac{\partial^2 \phi}{\partial t^2} - \frac{\partial^2 \phi}{\partial x^2} = 0,
  \label{massless-wave-eq}
 \end{equation}
-has solutions which we describe using a basis  $u = -t + x$ and $v = -t - x$, the null coordinates along the light cone.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
+has solutions which we describe using a basis  $u = -t + x$ and $v = -t - x$, the light cone coordinates.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
 \begin{equation}
   f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \end{equation}
@@ -96,7 +96,7 @@ see Figure \ref{analytic} for a picture of these types of modes.
   \centering
   \captionsetup{width=0.8\linewidth}
 \includegraphics[scale=0.3]{analytic.png}
-\caption{Phase of a Rindler mode $r_k$ analytically extended to the whole $(t,x)$-plane. For $k>0$, $r_k$ is a function of $u$, the future horizon of $I = W$ which corrosponds to emission.  Wedges I and II are off by a factor of $e^{\frac{\pi \omega_k}{a}}$ from wedges III and IV analytically continued around the singular $u=0$.  A similar situation exists for $k<0$, absorption with $v$, and I, III vs. II, IV.}
+\caption{Phase of a Rindler mode $r_k$ analytically extended to the whole $(t,x)$-plane. For $k>0$, $r_k$ is a function of $u$, the future horizon of $I = W$ which corrosponds to emission.  Wedges I and II are off by a factor of $e^{\pm \frac{\pi \omega_k}{a}}$ from wedges III and IV analytically continued around the singular $u=0$.  A similar situation exists for $k<0$, absorption with $v$, and I, III vs. II, IV.}
 \label{analytic}
 \end{figure}
 These extentions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  For $z = u$ or $z = v$ there is a choice of branch of the log
@@ -158,15 +158,15 @@ This leads to an inhomogeneous Klein-Gordon equation
 \end{equation}
 as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
 
-We will want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
+We will want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f_k(u)$.  (WLOG since $g_k(v)$ is of the same form.)  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
 
 \begin{equation}
-  A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
+  A = e^{-i p_u u} (au)^\frac{i\omega_k}{a} du
 \end{equation}
 and then we have
 \begin{equation}
 \label{finalnorm}
-  \hat{f}(p_u) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
+  \hat{f_k}(p_u) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
 \end{equation}
 where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $L + R$.
 
@@ -177,9 +177,6 @@ where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right side
 \label{masslessshell}
 \end{figure}
 
-
-We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and contour integrals.
-
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{contour.png}
@@ -187,26 +184,26 @@ We rewrite the integrals using a complex changes of variables, $s$ = $ipu$, and 
 \label{fig:x cubed graph}
 \end{figure}
 
-
-The $L$ integral for real $p<0$ is
+We rewrite the integrals using a complex changes of variables, $s$ = $ip_uu$, and contour integrals.
+The $L$ integral for real $p_u<0$ is
 \begin{equation}
 \begin{split}
-  L(p) & = -\int_0^{i\infty} \left(\frac{ias}{-p}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p}\right)ds \\
-  & = \frac{-i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} \int_0^\infty \left(is\right) ^ \frac{i\omega_k}{a} e^{-s} ds \\
-  & = \frac{-i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} \\
-  & = \frac{1}{2} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p)\\
+  L(p_u) & = -\int_0^{i\infty} \left(\frac{ias}{-p_u}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p_u}\right)ds \\
+  & = \frac{-i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} \int_0^\infty \left(is\right) ^ \frac{i\omega_k}{a} e^{-s} ds \\
+  & = \frac{-i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} \\
+  & = \frac{1}{2} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p_u)\\
 \end{split}
 \end{equation}
 where
 \begin{equation}
-B(p) = \frac{-2i}{a} \left(\frac{a}{-p}\right)^{\frac{i\omega_k}{a} + 1} 
+B(p_u) = \frac{-2i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} 
 \end{equation}
 is as shown.  This is using a large radius contour which rotates the endpoint 90 degrees clockwise.
 
 The same calculation for $R$ is done using a counter-clockwise contour this time.
 \begin{equation}
 \begin{split}
-  R(p) = \frac{1}{2}\Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p)
+  R(p_u) = \frac{1}{2}\Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p_u)
 \end{split}
 \end{equation}
 
