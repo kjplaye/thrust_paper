@@ -17,14 +17,14 @@
 \begin{document}
 
 %title and author details
-\title{Field Theoretic Perspective on Thrust of an Accelerating Frame}
+\title{Field Theoretic Thrust of an Accelerating Frame}
 \author[1]{Kevin Player\footnote{kplaye@gmail.com}}
 
 \maketitle
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We analyze the quantum field theoretic framework where Unruh radiation was first described, interpreting acceleration as a driving source influencing the field. By conceptualizing this source as thrust, we provide a more intuitive mechanism for understanding radiation in accelerating frames.  Using the equivalence principle, we extend this framework to Hawking radiation as well, demonstrating how a common source-response relationship manifests in accelerating frames.}
+\abstract{We analyze the quantum field theoretic framework where Unruh radiation was first described, interpreting thrust as a driving source influencing the field. By conceptualizing thrust in this way, we provide a more intuitive mechanism for understanding radiation in accelerating frames.  Using the equivalence principle, we extend this framework to Hawking radiation as well, demonstrating how a common source-response relationship manifests in accelerating frames.}
 
 \section{Introduction}
 Buchholz and Verch \cite{Buchholz_2016} explain Unruh radiation as a thermal bath where an account is given
@@ -55,11 +55,11 @@ has solutions which we describe using a basis  $u = -t + x$ and $v = -t - x$, th
 \begin{equation}
   f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
 \end{equation}
-supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.  A basis of solutions are the ``Minkowski modes''
+supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.  A basis of solutions are the ``Minkowski modes'' when $\omega \ge 0$
 \begin{equation}
-  \varphi_k(x,t) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i(k x - \omega_k t)}
+  \varphi_k(t,x) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i(k x - \omega_k t)}
 \end{equation}
-along with their complex conjugates, where $\omega^2 = k^2$, covering both the positive and negative frequency cases $\omega = \pm k$.
+along with their complex conjugates, $\omega = |k|$.
 
 \begin{figure}[h]
 \centering
@@ -68,7 +68,7 @@ along with their complex conjugates, where $\omega^2 = k^2$, covering both the p
 \label{rindlerw}
 \end{figure}
 
-The following notations and results for the rest of this section are taken from \cite{Frodden}. Let $W$ be the $x>|t|$ Rindler ``wedge'' with coordinates
+The following notations and results for the rest of this section are taken from \cite{Frodden}. Let $W$ be the $x>|t|$ Rindler ``wedge'' $W$ with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -84,16 +84,22 @@ which has a basis of solutions
 \begin{equation}
  r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
 \end{equation}
-(along with conjugates) for each wave number $k$ and positive frequency $\omega_k = |k|$.  These ``Rindler modes'' do not immediately extend to the entire $(x,t)$-plane but are confined to the Rindler wedge $W$. 
-
-Consider the analytic functions on the entire $(x,t)$-plane
+(along with conjugates) for each wave number $k$ and positive frequency $\omega_k = |k|$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Each $r_k$ can be extended to the entire $(t,x)$-plane as
 \begin{equation}
-f_k(u) = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)}}
+  r_k = \left\{\begin{array}{cc}
+      {(au)}^{\frac{i\omega_k}{a}} & \text{ if } k > 0 \\
+      {(av)}^{\frac{i\omega_k}{a}} & \text{ if } k < 0 \\  
+    \end{array}\right.
 \end{equation}
-\begin{equation}
-g_k(v) = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
-\end{equation}
-These two functions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  For $z = u$ or $z = v$ there is a choice of branch of the log
+see Figure \ref{analytic} for a picture of these types of modes.
+\begin{figure}[h]
+  \centering
+  \captionsetup{width=0.8\linewidth}
+\includegraphics[scale=0.3]{analytic.png}
+\caption{Phase of a Rindler mode $r_k$ analytically extended to the whole $(t,x)$-plane. For $k>0$, $r_k$ is a function of $u$, the future horizon of $I = W$ which corrosponds to emission.  Wedges I and II are off by a factor of $e^{\frac{\pi \omega_k}{a}}$ from wedges III and IV analytically continued around the singular $u=0$.  A similar situation exists for $k<0$, absorption with $v$, and I, III vs. II, IV.}
+\label{analytic}
+\end{figure}
+These extentions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  For $z = u$ or $z = v$ there is a choice of branch of the log
 \begin{equation}
 \begin{aligned}
   {(-az)}^{\frac{i\omega_k}{a}} &= e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(az)\right)}  \\
@@ -101,23 +107,7 @@ These two functions are functions of $u$ and $v$ respectively, and so are soluti
 \end{aligned}
 \label{factor}
 \end{equation}
-where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. Each $r_k$ can be extended to the entire plane as
-\begin{equation}
-  r_k = \left\{\begin{array}{cc}
-      {(au)}^{\frac{i\omega_k}{a}} & \text{ if } k > 0 \\
-      {(av)}^{\frac{i\omega_k}{a}} & \text{ if } k < 0 \\  
-    \end{array}\right.
-\end{equation}
-see Figure \ref{analytic}.
-
-\begin{figure}[h]
-  \centering
-  \captionsetup{width=0.8\linewidth}
-\includegraphics[scale=0.3]{analytic.png}
-\caption{Phase of a Rindler mode $r_k$ analytically extended to the whole $UV$ or $TX$ plane. For $k>0$, $r_k$ is a function of $u$, the future horizon of $I = W$ which corrosponds to emission.  Wedges I and II are off by a factor of $e^{\frac{\pi \omega_k}{a}}$ from wedges III and IV analytically continued around the singular $u=0$.  A similar situation exists for $k<0$, absorption with $v$, and I, III vs. II, IV.}
-\label{analytic}
-\end{figure}
-
+where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. 
 
 Let $c_k^{(1)}$ and $c_k^{(2)}$ be annihilation and creation operators for the positive and negative frequency Minkowski modes respectively.  Define
 \begin{equation}
@@ -133,12 +123,20 @@ which is usually interpreted as (Unruh) radiation, for instance:
 \begin{quote}
   An accelerated observer measures her surrounding fields in excited thermal states. A simple thermometer carried by the observer marks a temperature directly proportional to the acceleration she is moving with. The more she accelerates, the higher the temperature.
 \end{quote}
-We take the view that the thermometer is accelerated by thrust.  This is a different interpretation of the apparent radiation.  To make this explicit, we formalize thrust as field theoretic driving forces.
+We take the view that a detector is accelerated by thrust.  This is a different interpretation of the apparent radiation.  To make this explicit, we formalize thrust as field theoretic driving forces.
 
 
-\section{Fourier Transform of the Sources}
-We will take several Fourier transforms to study the various modes and set up for some
-integrals.  Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $f_k(u)$ and $g_k(v)$ as driving $W$-event horizon sources
+\section{Driving Sources}
+In this section we consider driving sources in the sense of Schwinger \cite{schwinger}. TODO - say more about this.
+
+Consider these multiples of Rindler modes on the entire $(t,x)$-plane
+\begin{equation}
+f_k(u) = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)}}
+\end{equation}
+\begin{equation}
+g_k(v) = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
+\end{equation}
+Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $f_k(u)$ and $g_k(v)$ as driving sources
 \begin{equation}
 \label{ab}
 \rho(u,v) = \alpha f_k(u) + \beta g_k(v).
@@ -160,7 +158,7 @@ This leads to an inhomogeneous Klein-Gordon equation
 \end{equation}
 as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
 
-We want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
+We will want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f(u)$\footnote{WLOG since $g(v)$ is of the same form.}, we drop $p_u$ to just $p$ for the time being to increase legibility.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
 
 \begin{equation}
   A = e^{-i p u} (au)^\frac{i\omega_k}{a} du
@@ -168,7 +166,7 @@ We want to integrate $\rho$ on shell in momentum space, which for a massless sou
 and then we have
 \begin{equation}
 \label{finalnorm}
-  \hat{f}(\_u) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
+  \hat{f}(p_u) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
 \end{equation}
 where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $L + R$.
 
@@ -221,7 +219,7 @@ So
 \label{fourier}
 \begin{split}
 \widehat{f_k}(p_u) & = \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)\\
-\widehat{g_k}(p_v) &= \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)
+\widehat{g_k}(p_v) &= \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_v)
 \end{split}
 \end{equation}
 \section{Interpretation}
