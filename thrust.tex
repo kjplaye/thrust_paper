@@ -156,9 +156,9 @@ This leads to an inhomogeneous Klein-Gordon equation
 \begin{equation}
 \Box  \phi = \rho
 \end{equation}
-as presented in \cite{beisert}\footnote{In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seem to be adaptable to $\rho$.}
+as presented in \cite{beisert}.  In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seems to be adaptable to $\rho$.
 
-We will want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f_k(u)$.  (WLOG since $g_k(v)$ is of the same form.)  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
+We will want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f_k(u)$.  WLOG since $g_k(v)$ is of the same form.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
 
 \begin{equation}
   A = e^{-i p_u u} (au)^\frac{i\omega_k}{a} du
@@ -188,7 +188,7 @@ We rewrite the integrals using a complex changes of variables, $s$ = $ip_uu$, an
 The $L$ integral for real $p_u<0$ is
 \begin{equation}
 \begin{split}
-  L(p_u) & = -\int_0^{i\infty} \left(\frac{ias}{-p_u}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p_u}\right)ds \\
+  L(p_u) & = -\int_0^{i\infty} e^{-s}\left(\frac{ias}{-p_u}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p_u}\right)ds \\
   & = \frac{-i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} \int_0^\infty \left(is\right) ^ \frac{i\omega_k}{a} e^{-s} ds \\
   & = \frac{-i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} \\
   & = \frac{1}{2} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p_u)\\
@@ -198,7 +198,7 @@ where
 \begin{equation}
 B(p_u) = \frac{-2i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} 
 \end{equation}
-is as shown.  This is using a large radius contour which rotates the endpoint 90 degrees clockwise.
+The change of $i\infty$ to $\infty$ is made by using a large radius contour which rotates the endpoint 90 degrees clockwise.  The term $e^{-s}$ goes to zero around the large radius circle.
 
 The same calculation for $R$ is done using a counter-clockwise contour this time.
 \begin{equation}
