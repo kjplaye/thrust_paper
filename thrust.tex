@@ -1,3 +1,6 @@
+% TODOS
+% Does J need to be normalized, wrt Rindler and Minkowski
+% Work out details of Green's function
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -10,7 +13,13 @@
 \usepackage[mathscr]{euscript}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{fancyhdr}
-
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
 \setlength{\epigraphwidth}{0.8\textwidth}
 
 % \pagestyle{fancy}
@@ -24,51 +33,44 @@
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We analyze the quantum field theoretic framework where Unruh radiation was first described, interpreting thrust as a driving source influencing the field. By conceptualizing thrust in this way, we provide a more intuitive mechanism for understanding radiation in accelerating frames.  Using the equivalence principle, we extend this framework to Hawking radiation as well, demonstrating how a common source-response relationship manifests in accelerating frames.}
+ \abstract{We analyze the quantum field theoretic framework where Unruh radiation was first described, interpreting thrust as a driving source field. The driving modes in the Rindler frame exhibit a smeared-out frequency spectrum due to red-blue shifting and thermodynamic ignorance, resulting in a thermalized response. To refine this picture, we construct an interpolation between these long-lived modes and more localized wave packets with a peaked Fourier transform, which do not exhibit this smeared-out property.}
 
 \section{Introduction}
-Buchholz and Verch \cite{Buchholz_2016} explain Unruh radiation as a thermal bath where an account is given
+We first present some notation and review the Unruh effect.  We then introduce a source field that exactly captures the Bogoliubov operator particle creation for Rindler modes extended to Minkowski spave.  Then we interpolate between the eternal Rindler mode source to a more localized wace packet version.
 
-\begin{quote}
-  ...the increase of temperature of accelerated thermometers is due to systematic quantum effects induced by the local coupling between the thermometer and the vacuum. This coupling inevitably creates excitations of the vacuum which transfer energy to the thermometer, gained by the acceleration, and thereby affect its readings.
-\end{quote}
-Frodden and Vald{\'{e}}s \cite{Frodden} further state that 
-\begin{quote}
-...the interpretation of the Unruh effect as a thermal bath state for accelerated observers is controversial.  
-\end{quote}
-We present an argument that Unruh and Hawking radiation can be interpreted as a coupling to thrust particles instead of the vacuum. That the particles predicted for an accelerated observer are due to a driving force instead of thermal radiation, see Figures \ref{rocket_inertial} and \ref{rocket}. In this note we start with thrust as a driving force and show how it can instead account for the transfer of energy to a detector.  We pick the driving source to give the same distribution of energy as the radiation, but additionally show that more arbitrary driving sources can also be used.
+\section{Unruh Effect Review and Notation}
 
-In Section 2, we present the preliminaries, following \cite{Frodden}, with a review of Rindler coordinates, wave equations, and their solutions in 1+1-dimensional Minkowski and Rindler spacetimes. Section 3 introduces the concept of field-theoretic driving forces, drawing on \cite{beisert}, and extends the formalism by employing Fourier transforms to analyze sources as a combination of emission and absorption terms. In Section 4, we reinterpret Unruh radiation as thrust, providing a novel perspective on this phenomenon. Section 5 explores other types of driving sources, with Section 6 focusing specifically on the Ricci scalar as a driving source. Section 7 delves into the implications for interacting fields, and Section 8 concludes by examining Hawking radiation through the lens of the equivalence principle.
+We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{Frodden}.
 
+Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimensional spacetime and use metric signature $(-1,1)$. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  Also, for clarity sake, we stick to the simplest case where $\phi$ is a free massless scalar field.  Even in this simple toy case, we can present our argument.
 
-Much of the content, including notation and conventions, is directly adapted from the overview in \cite{Frodden}, the foundational work in \cite{unruh}, and the detailed treatment in \cite{beisert}. Consistent with these references, our focus is restricted to the free scalar field, which suffices to elucidate the Unruh effect.
-
-\section{Rindler and Minkowski Modes Review}
-
-Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimensional spacetime. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  The massless Klein-Gordon equation 
+Consider the free scalar massless Lagrangian
+\begin{equation}
+\mathscr{L} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi.
+\end{equation}
+We consider positive frequency modes with dispersion relation $\omega_k = |k| > 0$ as solutions to the resulting Klein-Gordon equation 
 
 \begin{equation}
   \Box \phi = \frac{\partial^2 \phi}{\partial t^2} - \frac{\partial^2 \phi}{\partial x^2} = 0,
  \label{massless-wave-eq}
 \end{equation}
-has solutions which we describe using a basis  $u = -t + x$ and $v = -t - x$, the light cone coordinates.  Any function of purely $u$, $f(u)$, is made up of modes that are constant on $v$.  That is they are given by a 1-dimensional Fourier expansion
-\begin{equation}
-  f(u) = \frac{1}{2\pi} \int{e^{i p_u u} \hat{f}(p_u) dp_u}.
-\end{equation}
-supported on $p_v = 0$.  The same is true for $v$, $g(v)$, $p_v$, and $\hat{g}(v)$ supported on $p_u = 0$.  The full space of solutions to equation (\ref{massless-wave-eq}) are combinations of $f$ and $g$, linear combinations of $\hat{f}(p_u) \delta(p_v)$ and $\hat{g}(p_v) \delta(p_u)$.  These are supported on the massless shell $E = \pm p$.  A basis of solutions are the ``Minkowski modes'' when $\omega \ge 0$
-\begin{equation}
-  \varphi_k(t,x) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i(k x - \omega_k t)}
-\end{equation}
-along with their complex conjugates, $\omega = |k| > 0$.
+where we expand $\phi$ as usual in terms of ladder operators $a_k, a_k^\dagger$
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.2]{rindler_w.png}
-\caption{Rindler wedge $W$ on the right.}
-\label{rindlerw}
-\end{figure}
+\begin{equation}
+  \int \diff k \, a_k \varphi_k(x,t) + h.c.
+\end{equation}
+where
 
-The following notations and results for the rest of this section are taken from \cite{Frodden}. Let $W$ be the $x>|t|$ Rindler ``wedge'' $W$ with coordinates
+\begin{equation}
+  \varphi(x,t) = \frac{1}{4\pi\omega_k} e^{i(kx - \omega_k t)}.
+\label{amode}
+\end{equation}
+are positive frequency modes normalized with respect to the Klien-Gordon inner product at time $t = 0$
+\begin{equation}
+  \left<f, g\right>_{KG} = i \int \diff x (f^* \partial_t g - \partial_t f^* g)
+\end{equation}
+
+Consider the $x>|t|$ Rindler ``wedge'' with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -76,58 +78,123 @@ The following notations and results for the rest of this section are taken from 
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-where $a>0$ is an acceleration parameter (see Figure \ref{rindlerw}). These are hyperbolic polar coordinates with an exponential "radius".  The massless Klein-Gordon equation in Rindler coordinates is
+where $a>0$ is an acceleration parameter (see $I$ in Figure \ref{rindlerw}). These are hyperbolic polar coordinates with an exponential ``radius''.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{rindler_w.png}
+\caption{Rindler wedge $I$ on the right.}
+\label{rindlerw}
+\end{figure}
+
+The massless Klein-Gordon equation in Rindler coordinates is
 \begin{equation}
   \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0
 \end{equation}
-which has a basis of solutions 
+which being the same as equation (\ref{massless-wave-eq}) up to a conformal factor, has a basis of solutions with the same form as equation (\ref{amode})
 \begin{equation}
- r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)}
+ r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)} + h.c.
 \end{equation}
-(along with conjugates) for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Each $r_k$ can be extended to the entire $(t,x)$-plane as
+for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $I$.
+
+
+Let $u = -t + x$ and $v = -t - x$ be light cone coordinates.  Each $r_k$ can be extended non-uniquely to the entire $(t,x)$-plane as
 \begin{equation}
-  r_k = \left\{\begin{array}{cc}
-      {(au)}^{\frac{i\omega_k}{a}} & \text{ if } k > 0 \\
-      {(av)}^{\frac{i\omega_k}{a}} & \text{ if } k < 0 \\  
+  \sqrt{4 \pi \omega_k} r_k(x,t) = \left\{\begin{array}{lll}
+      g_k^{(1)} h_k^{(1)}(u)&={(au)}^{\frac{i\omega_k}{a}} &=  e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(au)\right)}\\
+      g_k^{(2)} h_k^{(2)}(v)&={(av)}^{\frac{i\omega_k}{a}} &= e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(av)\right)}\\  
     \end{array}\right.
 \end{equation}
-see Figure \ref{analytic} for a picture of these types of modes.
+where there is a choice of two branches of the log for each of the two forms of extensions $h_k^{(1)}$ and $h_k^{(2)}$ and the $g_k^{(1)}$ and $g_k^{(2)}$ are normalization factors to be discussed critically shortly. These extensions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}). We choose $\log(-1) = -i \pi$ following \cite{Frodden}, and then $h_k^{(1)}$ and $h_k^{(2)}$ are positive frequency modes which once normalized form an alternative basis to the usual $\varphi_k(x,t)$. We then expand
+\begin{equation}
+  \phi = \int \diff k( c_k^{(1)} h_k^{(1)} + c_k^{(2)} h_k^{(2)}) + h.c.  
+\end{equation}
+for alternate Minkowski ladder operators $c_k^{(1)}$, $c_k^{(2)}$, $c_k^{(1)\dagger}$, and $c_k^{(2)^\dagger}$. See Figure \ref{analytic} for a picture and summary of these types of modes.
 \begin{figure}[h]
   \centering
   \captionsetup{width=0.8\linewidth}
 \includegraphics[scale=0.3]{analytic.png}
-\caption{Phase of a Rindler mode $r_k$ analytically extended to the whole $(t,x)$-plane. For $k>0$, $r_k$ is a function of $u$, the future horizon of $I = W$ which corrosponds to emission.  Wedges I and II are off by a factor of $e^{\pm \frac{\pi \omega_k}{a}}$ from wedges III and IV analytically continued around the singular $u=0$.  A similar situation exists for $k<0$, absorption with $v$, and I, III vs. II, IV.}
+\caption{Phase of a Rindler mode $r_k$ analytically extended to the whole $(t,x)$-plane. For $k>0$, $r_k$ is a function of $u$, the future horizon of $I$ which corrosponds to emission.  Wedges I and II are off by a factor of $e^{\pm \frac{\pi \omega_k}{a}}$ from wedges III and IV analytically continued around the singular $u=0$.  A similar situation exists for $k<0$, absorption with $v$, and I, III vs. II, IV.}
 \label{analytic}
 \end{figure}
-These extentions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}).  For $z = u$ or $z = v$ there is a choice of branch of the log
-\begin{equation}
-\begin{aligned}
-  {(-az)}^{\frac{i\omega_k}{a}} &= e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(az)\right)}  \\
-                           &= e^{\frac{\pi \omega_k}{a}} {(az)}^{\frac{i\omega_k}{a}} \\
-\end{aligned}
-\label{factor}
-\end{equation}
-where we choose $\log(-1) = -i \pi$ following \cite{Frodden}. 
 
-Let $c_k^{(1)}$ and $c_k^{(2)}$ be annihilation and creation operators for the positive and negative frequency Minkowski modes respectively.  Define
+The $\log(-1)$ converts what would otherwise be a pure phase into an exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$ a Wick-like rotation.  To be more specific for $k>0$, let $f_k^{(1)} = \restr{g_k^{(1)} h_k^{(1)}}{I}$ and $f_k^{(2)} = \restr{g_k^{(2)} h_k^{(2)}}{IV}$ be the restrictions to the right and left wedges respectively so that $\left|f_k^{(1)}\right| = \left|f_k^{(2)}\right| = 1$ and one can show that
 \begin{equation}
-  b_k = \frac{1}{\sqrt{2 \sinh\left(\frac{\pi \omega_k}{a}\right)}} \left( e^{\frac{\pi\omega_k}{2a}} c_k^{(1)} + e^{-\frac{\pi\omega_k}{2a}} c_{-k}^{(2) \dagger} \right).
+  \begin{array}{l}
+    \restr{g_k^{(1)} h_k^{(1)}}{I \cup IV} = f_k^{(1)} + e^{- \frac{\pi \omega_k}{a}} f_{-k}^{(2)} \\
+    \restr{g_k^{(2)} h_k^{(2)}}{I \cup IV} = f_k^{(2)} + e^{- \frac{\pi \omega_k}{a}} f_{-k}^{(1)}
+  \end{array}
 \end{equation}
-Then the number of particles that an accelerating observer will see in the Minkowski vacuum $\ket{0_M}$ is seen to be 
+
+Finally, we turn our attention to the normalization factors $g_k$ and notice that the Klien-Gordan dot product on full Minskowsi space is the sum of the dot product on the left and right Rinder wedges.  A negative sign also appears in the sum since $\diff x \rightarrow -\diff x$ from right to left wedges:
 \begin{equation}
-\label{radeq}
-\braket{n} = \bra{0_M} b_k^\dagger b_k \ket{0_M} = \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1}
+ \begin{array}{ll}
+  \left< r_k, r_k \right>_{KG} &= \left< r_k, r_k \right>_{I} + \left< r_k, r_k \right>_{IV} \\
+  &= \left< r_k, r_k \right>_{I} - e^{- \frac{2\pi \omega_k}{a}} \left< r_k, r_k \right>_{I} \\
+  &= e^{-\frac{\pi \omega_k}{a}} (2 \sinh \frac{\pi \omega}{a}) \left< r_k, r_k \right>_{I}
+  \end{array}
 \end{equation}
-which is usually interpreted as (Unruh) radiation, for instance:
+So $r_k$ is normalized differently on $I \cup IV$ than on $I$ and $IV$.  This sets $h_k$ as
+\begin{equation}
+  \begin{array}{ll}
+    h_k^{(1)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \\
+    h_k^{(2)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \\
+  \end{array}
+\end{equation}  
+This normalization issue is the root cause for Unruh radiation since we pick up a $\sinh$ factor in the cross term in the Bogoliubov transform
+\begin{equation}
+  b_k = \frac{1}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^\frac{\pi \omega_k}{2a} c_k^{(1)} + e^\frac{\pi \omega_k}{2a} c_{-k}^{(2)\dagger} \right)
+\label{bogo}
+\end{equation}
+for
+\begin{equation}
+  \int \diff k \, b_k r_k(\xi,\eta) + h.c.
+\end{equation}
+in the Rindler wedge.
 
-\begin{quote}
-  An accelerated observer measures her surrounding fields in excited thermal states. A simple thermometer carried by the observer marks a temperature directly proportional to the acceleration she is moving with. The more she accelerates, the higher the temperature.
-\end{quote}
-We take the view that a detector is accelerated by thrust.  This is a different interpretation of the apparent radiation.  To make this explicit, we formalize thrust as field theoretic driving forces.
-
+Then the number of particles that an accelerating Rindler observer will see in the Minkowski vacuum $\ket{0_M}$ is seen to be 
+\begin{equation}
+  \label{radeq}
+  \begin{array}{ll}
+    \braket{n} &= \bra{0_M} b_k^\dagger b_k \ket{0_M} \\
+               &= \frac{e^{-\frac{\pi \omega_k}{a}}}{2 \sinh \frac{\pi i \omega_k}{a}}\bra{0_M}  c_{-k}^{(2)} c_{-k}^{(2)\dagger} \ket{0_M} \\
+               &= \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1} \\
+  \end{array}
+\end{equation}
+which is interpreted as Unruh radiation.
 
 \section{Driving Sources}
-In this section we consider driving sources in the sense of Schwinger \cite{schwinger}. TODO - say more about this.
+
+We can ask {\bf ``What exactly is accelerating the observer?''}.  So far we have not tried to answer this question.  In our ignorance, we have recovered, in the math, that something is going on in normalization when restricting from Minkowski space to Rindler space that causes a cross term in the Bogoliubov transform.  If we provide an answer to this question, than we will see that the radiation term shifts away, back into the source field.  The math is the same, but the interpretation changes.
+
+To that end, consider a driving source field $J$ in the sense of Schwinger \cite{schwinger} 
+
+\begin{equation}
+  J(k) = c_{-k}^{(2)\dagger} \frac{e^\frac{-\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k(x,t) \theta(T - t) \theta(T+t)
+\end{equation}
+using an extended Rindler mode $r_k$.  It is active for some finite amount of time $-T \le t \le T$ and is crafted to exactly compensate for the cross term in equation (\ref{bogo}) as we aim to see.  The form of $J$ is invariant under right or left shift as functions of $u$ or $v$ so that the Klein Gordon dot product will be invariant also.
+
+We add the source term to the Lagrangian
+
+\begin{equation}
+\mathscr{L} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi + J\phi
+\end{equation}
+The Euler-Lagrange equation leads to an inhomogeneous Klein-Gordon equation
+\begin{equation}
+  \Box  \phi = J
+\end{equation}
+%Consider the retarded Green's function $G_R$, as in \cite{beisert} for instance, in momentum space
+%\begin{equation}
+%  G_R(k) = 1 / k^2 ???
+%\end{equation}
+Let $a_k = a_k^{in}$ be the annihilation operator for $t<-T$ and let $a_k^{(out)}$ be the annihilation operator for time $t > T$.  Then one can find using the retarded Green's function, as in \cite{beisert} for instance, that $a_k^{out} = a_k^{in} + i J(k)$.
+
+
+
+%%%%%%%%%%%%%%%%%%
+BREAK BREAK BREAK
+%%%%%%%%%%%%%%%%%%
+
 
 Consider these multiples of Rindler modes on the entire $(t,x)$-plane
 \begin{equation}
@@ -141,20 +208,16 @@ Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacet
 \label{ab}
 \rho(u,v) = \alpha f_k(u) + \beta g_k(v).
 \end{equation}
-with non-negative real convex combination $\alpha + \beta = 1$. The drivers $f_k$ and $g_k$ are functions of $u$, the future $W$-horizon and of $v$, the past $W$-horizon respectively.  Both generate excitations, which we identify with emission and absorption thrusts respectively.
+with non-negative real convex combination $\alpha + \beta = 1$. The drivers $f_k$ and $g_k$ are functions of $u$, the future $I$-horizon and of $v$, the past $I$-horizon respectively.  Both generate excitations, which we identify with emission and absorption thrusts respectively.
 
 
-The sources can originate from a coupling term, $\rho \phi$, added to the free scalar Lagrangian
+The sources can originate from a coupling term, $\rho \phi$, added to the free scalar Lagrangian.  We also add in a $i \epsilon$ term so that our integrals converge.
 \begin{equation}
-\mathscr{L}_{driven} = \mathscr{L}_{free} + \rho\phi 
+\mathscr{L} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi + \rho\phi + \frac{i \epsilon}{2}  \phi^2
 \end{equation}
-where
+The Euler-Lagrange equation leads to an inhomogeneous Klein-Gordon equation
 \begin{equation}
-  \mathscr{L}_{free} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi.
-\end{equation}
-This leads to an inhomogeneous Klein-Gordon equation
-\begin{equation}
-\Box  \phi = \rho
+  \Box  \phi = \rho + i \epsilon \phi
 \end{equation}
 as presented in \cite{beisert}.  In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seems to be adaptable to $\rho$.
 
