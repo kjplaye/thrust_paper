@@ -33,10 +33,10 @@
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We analyze the quantum field theoretic framework in which Unruh radiation arises, interpreting the radiation as sourced by a driving field. In the Rindler frame, these driving modes span an extended region of proper time and exhibit a red- and blue-shifted frequency spread due to their support over the full wedge, resulting in a thermalized response. To refine this picture, we construct an interpolation between these long-lived driving modes and localized wave packets with peaked Fourier spectra that do not display such frequency smearing. This allows us to reinterpret Unruh radiation in terms of thrust—a localized driving effect that excites the field without inducing a thermal response, thereby offering a complementary, nonthermal perspective on acceleration-induced radiation.}
+\abstract{We analyze the quantum field theoretic framework in which Unruh radiation arises, interpreting the radiation as sourced by a driving field. In the Rindler frame, these driving modes span an extended region of time and exhibit a red- and blue-shifted frequency spread due to their support over the full Rindler wedge, resulting in a thermalized response. To refine this picture, we construct an interpolation between these long-lived driving modes and localized wave packets with peaked Fourier spectra that do not display such frequency smearing. This allows us to reinterpret Unruh radiation in terms of thrust—a localized driving effect that excites the field without inducing a thermal response, thereby offering a complementary, nonthermal perspective on acceleration-induced radiation.}
 
 \section{Introduction}
-We first present some notation and review the Unruh effect in section 2.  We then introduce in section 3 a source field that exactly captures the Bogoliubov operator particle creation for Rindler modes extended to Minkowski spave.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wace packet version, and in section 5 we interpret the results.
+We first present some notation and review the Unruh effect in section 2.  We then introduce a source field in section 3 that exactly captures the particle creation in the cross term of the Bogoliubov transform for Rindler modes extended to Minkowski spave.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wave packet version, and in section 5 we interpret the results.
 
 \section{Unruh Effect Review and Notation}
 
@@ -114,11 +114,11 @@ with alternate Minkowski ladder operators $c_k^{(1)}$, $c_k^{(2)}$, $c_k^{(1)\da
   \centering
   \captionsetup{width=0.8\linewidth}
 \includegraphics[scale=0.3]{analytic.png}
-\caption{Grey scale shows the phase of a Rindler mode $r_k$ analytically extended to the whole $(t,x)$-plane. For $k>0$, $r_k$ is a function of $u$ with a branch in the log at the future horizon of I where $-t + x =u= 0$ and $r_k$ is analytically continued around this $u=0$. $r_k$ can be thought of as an emission, blue shifted infinitly into the future. $r_k$ on wedges I and III are off by a factor of $e^{\pm \frac{\pi \omega_k}{a}}$ in magnitude from wedges II and IV.  A similar situation exists for $k<0$, absorption from the past horizon with $v$, and I, II vs. III, IV having the $e^{\pm \frac{\pi \omega_k}{a}}$ factor.}
+\caption{The phase of a Rindler mode $r_k$ is shown in gray scale. For $k>0$, $r_k$ is a function of $u$, with a branch of the log at the future horizon of I where $-t + x = u = 0$. $r_k$ is analytically continued around this horizon and can be thought of as an emission from the Rindler observer, blue shifted infinitely into the future in the Minkowski frame. On wedges I and III, $r_k$ is off by a factor of $e^{\pm \frac{\pi \omega_k}{a}}$ in magnitude from wedges II and IV.  A similar situation exists for $k<0$, thought of as absorption by the observer, red shifted from the past horizon, a function of $v$, where I, II vs. III, IV have the $e^{\pm \frac{\pi \omega_k}{a}}$ factor.}
 \label{analytic}
 \end{figure}
 
-The $\log(-1)$ converts what would otherwise be a pure phase into an exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$ a Wick rotation like factor.  To be more specific for $k>0$, let $f_k^{(1)} = \restr{g_k^{(1)} h_k^{(1)}}{I}$ and $f_k^{(2)} = \restr{g_k^{(2)} h_k^{(2)}}{IV}$ be the restrictions to the right and left wedges respectively so that $\left|f_k^{(1)}\right| = \left|f_k^{(2)}\right| = 1$ and one can show that
+The $\log(-1)$ converts what would otherwise be a pure phase into a exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$.  To be more specific for $k>0$, let $f_k^{(1)} = \restr{g_k^{(1)} h_k^{(1)}}{I}$ and $f_k^{(2)} = \restr{g_k^{(2)} h_k^{(2)}}{IV}$ be the restrictions to the right and left wedges respectively so that $\left|f_k^{(1)}\right| = \left|f_k^{(2)}\right| = 1$ and one can show that
 \begin{equation}
   \begin{array}{l}
     \restr{g_k^{(1)} h_k^{(1)}}{I \cup IV} = f_k^{(1)} + e^{- \frac{\pi \omega_k}{a}} f_{-k}^{(2)} \\
@@ -126,7 +126,7 @@ The $\log(-1)$ converts what would otherwise be a pure phase into an exponential
   \end{array}
 \end{equation}
 
-Finally, we turn our attention to the normalization factors $g_k$ and notice that the Klien-Gordan dot product on full Minskowsi space is the sum of the dot product on the left and right Rinder wedges.  A negative sign also appears in the sum since $\diff x \rightarrow -\diff x$ from right to left wedges:
+Finally, we turn our attention to the normalization factors $g_k$ and realize the Klien-Gordan dot product on full Minskowsi space as the sum of the dot product on the left and right Rinder wedges.  A negative sign also appears in the sum since $\diff x \rightarrow -\diff x$ from right to left wedges:
 \begin{equation}
  \begin{array}{ll}
   \left< r_k, r_k \right>_{KG} &= \left< r_k, r_k \right>_{I} + \left< r_k, r_k \right>_{IV} \\
@@ -134,25 +134,23 @@ Finally, we turn our attention to the normalization factors $g_k$ and notice tha
   &= e^{-\frac{\pi \omega_k}{a}} (2 \sinh \frac{\pi \omega}{a}) \left< r_k, r_k \right>_{I}
   \end{array}
 \end{equation}
-So $r_k$ is normalized differently on $I \cup IV$ than on $I$ and $IV$.  This sets $h_k$ as
+So $r_k$ is normalized differently on all of $I \cup IV$ than on $I$ and $IV$ seperatly.  This sets $h_k$ as
 \begin{equation}
   \begin{array}{ll}
-    h_k^{(1)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \\
-    h_k^{(2)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \\
+    h_k^{(1)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \text{ for } k>0\\
+    h_k^{(2)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \text{ for } k<0\\
   \end{array}
 \end{equation}  
-This normalization issue is the root cause for Unruh radiation since we pick up a $\sinh$ factor in the cross term in the Bogoliubov transform
+This normalization issue is the root cause for Unruh radiation since we pick up a {\bf sinh} factor in the cross term in the Bogoliubov transform
 \begin{equation}
   b_k = \frac{1}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^\frac{\pi \omega_k}{2a} c_k^{(1)} + e^\frac{\pi \omega_k}{2a} c_{-k}^{(2)\dagger} \right)
 \label{bogo}
 \end{equation}
-for
+where
 \begin{equation}
   \int \diff k \, b_k r_k(\xi,\eta) + h.c.
 \end{equation}
-in the Rindler wedge.
-
-Then the number of particles that an accelerating Rindler observer will see in the Minkowski vacuum $\ket{0_M}$ is seen to be 
+in the Rindler wedge. Then the number of particles that an accelerating Rindler observer will see in the Minkowski vacuum $\ket{0_M}$ is seen to be 
 \begin{equation}
   \label{radeq}
   \begin{array}{ll}
@@ -165,7 +163,7 @@ which is interpreted as Unruh radiation.
 
 \section{Driving Sources}
 
-We can ask {\bf ``What exactly is accelerating the observer?''}.  So far we have not tried to answer this question.  In our ignorance, we have recovered, in the math, that something is going on in normalization when restricting from Minkowski space to Rindler space that causes a cross term in the Bogoliubov transform.  If we provide an answer to this question, than we will see that the radiation term shifts away, back into the source field.  The math is the same, but the interpretation changes.
+We can ask {\bf ``What exactly is accelerating the observer?''}.  So far we have not tried to answer this question.  In our ignorance, we have recovered, in the math, that something thermal is going on in terms of particle creation.  More specifically, Figure \ref{analytic} depicts the situation where a Rindler mode $r_k$ is either a left moving {\bf emission} from the Rindler observer or a right moving {\bf absorption} by the Rindler observer.  We will next provide an answer to this question, using a driving source to capture the thrust. Then we will see that the radiation term shifts away, back into the source field.  The math is the same, but the interpretation will change.
 
 
 %%%%%%%%%%%%%%%%%%
