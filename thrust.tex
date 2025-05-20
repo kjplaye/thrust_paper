@@ -118,7 +118,18 @@ with alternate Minkowski ladder operators $c_k^{(1)}$, $c_k^{(2)}$, $c_k^{(1)\da
 \label{analytic}
 \end{figure}
 
-The $\log(-1)$ converts what would otherwise be a pure phase into a exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$.  To be more specific for $k>0$, let $f_k^{(1)} = \restr{g_k^{(1)} h_k^{(1)}}{I}$ and $f_k^{(2)} = \restr{g_k^{(2)} h_k^{(2)}}{IV}$ be the restrictions to the right and left wedges respectively so that $\left|f_k^{(1)}\right| = \left|f_k^{(2)}\right| = 1$ and one can show that
+The $\log(-1)$ converts what would otherwise be a pure phase into a exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$.  To be more specific for $k>0$, let
+\begin{equation}
+\begin{array}{l}
+f_k^{(1)}(t,x) = \left\{ \begin{array}{ll}
+  g_k^{(1)} h_k^{(1)} & \text{for } (t,x) \in I \\
+    0 & \text{else} \\ \end{array} \right. \\
+f_k^{(2)}(t,x) = \left\{ \begin{array}{ll}
+  g_k^{(2)} h_k^{(2)} & \text{for } (t,x) \in IV \\
+  0 & \text{else} \\ \end{array} \right. \\
+\end{array}
+\end{equation}
+Note that $\left|f_k^{(1)}\right| = 1$ on $I$ and $\left|f_k^{(2)}\right| = 1$ on $IV$ and one can show that
 \begin{equation}
   \begin{array}{l}
     \restr{g_k^{(1)} h_k^{(1)}}{I \cup IV} = f_k^{(1)} + e^{- \frac{\pi \omega_k}{a}} f_{-k}^{(2)} \\
@@ -131,7 +142,7 @@ Finally, we turn our attention to the normalization factors $g_k$ and realize th
  \begin{array}{ll}
   \left< r_k, r_k \right>_{KG} &= \left< r_k, r_k \right>_{I} + \left< r_k, r_k \right>_{IV} \\
   &= \left< r_k, r_k \right>_{I} - e^{- \frac{2\pi \omega_k}{a}} \left< r_k, r_k \right>_{I} \\
-  &= e^{-\frac{\pi \omega_k}{a}} (2 \sinh \frac{\pi \omega}{a}) \left< r_k, r_k \right>_{I}
+  &= e^{-\frac{\pi \omega_k}{a}} (2 \sinh \frac{\pi \omega_k}{a}) \left< r_k, r_k \right>_{I}
   \end{array}
 \end{equation}
 So $r_k$ is normalized differently on all of $I \cup IV$ than on $I$ and $IV$ seperatly.  This sets $h_k$ as
