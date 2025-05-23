@@ -13,6 +13,7 @@
 \usepackage[mathscr]{euscript}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{fancyhdr}
+\newcommand{\dv}[1]{\mathrm{d} #1 \text{ }}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand\restr[2]{{% we make the whole thing an ordinary symbol
   \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
@@ -70,6 +71,8 @@ are positive frequency modes normalized with respect to the Klien-Gordon inner p
   \left<f, g\right>_{KG} = i \int \diff x (f^* \partial_t g - \partial_t f^* g).
 \end{equation}
 
+\subsection{Rindler Coordinates}
+
 Consider the $x>|t|$ Rindler ``wedge'' with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
@@ -118,6 +121,7 @@ with alternate Minkowski ladder operators $c_k^{(1)}$, $c_k^{(2)}$, $c_k^{(1)\da
 \label{analytic}
 \end{figure}
 
+\subsection{Analytic Continuation of Rindler Mode in Minkowksi Space}
 The $\log(-1)$ converts what would otherwise be a pure phase into a exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$.  To be more specific for $k>0$, let
 \begin{equation}
 \begin{array}{l}
@@ -151,7 +155,9 @@ So $r_k$ is normalized differently on all of $I \cup IV$ than on $I$ and $IV$ se
     h_k^{(1)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \text{ for } k>0\\
     h_k^{(2)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \text{ for } k<0\\
   \end{array}
-\end{equation}  
+\end{equation}
+
+\subsection{Normalization and Unruh Radiation}
 This normalization issue is the root cause for Unruh radiation since we pick up a {\bf sinh} factor in the cross term in the Bogoliubov transform
 \begin{equation}
   b_k = \frac{1}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^\frac{\pi \omega_k}{2a} c_k^{(1)} + e^\frac{\pi \omega_k}{2a} c_{-k}^{(2)\dagger} \right)
@@ -171,6 +177,68 @@ in the Rindler wedge. Then the number of particles that an accelerating Rindler 
   \end{array}
 \end{equation}
 which is interpreted as Unruh radiation.
+
+\subsection{Bogoliubov Transforms}
+
+We compute the Bogoliubov coefficients for
+\begin{equation}
+  \begin{array}{ll}
+  a^{(c)}_k &= \int \dv{q} \alpha^{(Mc)}_{qk} a^{M}_q + \beta^{(Mc)}_{qk} a^{(M)\dagger}_q \\
+  &= \int \dv{q} \alpha^{(0c)}_{qk} a^{(0)}_q + \beta^{(0c)}_{qk} a^{(0)\dagger}_q
+  \end{array}
+\end{equation}
+as
+\begin{equation}
+  \begin{array}{ccl}
+    \alpha^{(Mc)}_{qk} &= \left<\varphi_q, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{i\omega_k}{a}} e^{\frac{\pi \omega_k}{a}} \Gamma\left(\frac{i\omega_k}{a}\right) \\
+    \beta^{(Mc)}_{qk} &= \left<\varphi_q^*, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{-i\omega_k}{a}} e^{\frac{-\pi \omega_k}{a}} \Gamma\left(\frac{-i\omega_k}{a}\right) \\
+    \alpha^{(0c)}_{qk} &= \left<r_q^{(0)}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i(\omega_q - \omega_k)}{a}\right) \\
+    \beta^{(0c)}_{qk} &= \left<r_q^{(0)*}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q + \omega_k)}{a}} B\left(\frac{-i\omega_k}{a}, \frac{i(\omega_q + \omega_k)}{a}\right) \\
+
+  \end{array}
+\end{equation}
+We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $q$ or $c$
+\begin{equation}
+  \begin{array}{cc}
+    \left|\beta_{qk}^{(Mc_1)}\right|^2 = \left|\beta_{qk}^{(Mc_2)}\right|^2 & \\
+    \left|\beta_{qk}^{(Mc_1)}\right|^2 = \left|\beta_{qk}^{(Mc_2)}\right|^2 & \\
+    \left|\beta_{qk}^{(Mc)}\right|^2 / \left|\alpha_{qk}^{(Mc)}\right|^2 = e^{\frac{-2\pi\omega_k}{a}}  & \text{   (thermal factor)} \\
+ \end{array}
+\end{equation}
+The $c$ independence is expected since Unruh radiation is translation invariant. The $q$ independence can be strengthened as the expected number of particles in mode $k$
+\begin{equation}
+ \int \dv{q} \left|\beta_{qk}^{(Mc)}\right|^2 = \frac{e^{\frac{-2 \pi \omega_k}{a}}}{2 \sinh \frac{\pi \omega_k}{a}} \int \dv{q} \frac{2}{a\pi |q|}
+\end{equation}
+where we factor out the divergent factor to recover the radiation equation again.
+
+We next turn to $W_c$ v.s. $W_0$ and also find $c$ independence there 
+\begin{equation}
+  \begin{array}{c}
+    \left|\alpha_{qk}^{(0c_1)}\right| = \left|\alpha_{qk}^{(0c_2)}\right| \vspace{4pt}\\
+    \left|\beta_{qk}^{(0c_1)}\right| = \left|\beta_{qk}^{(0c_2)}\right| \\
+  \end{array}
+\end{equation}
+\begin{equation}
+  \begin{array}{ll}
+      \left|\beta_{qk}^{(0c)}\right|^2 / \left|\alpha_{qk}^{(0c)}\right|^2 \vspace{4pt} &= \left|\Gamma\left(\frac{i(\omega_q + \omega_a)}{a}\right)\right|^2 / \left|\Gamma\left(\frac{i(\omega_q - \omega_a)}{a}\right)\right|^2 \vspace{4pt} \\
+  & = \frac{(\omega_q - \omega_k) \sinh \pi (\omega_q - \omega_k)}{(\omega_q + \omega_k) \sinh \pi (\omega_q + \omega_k)} \\
+  \end{array}
+\end{equation}
+which is somewhat more surprising since this implies that $\int \dv{q} \left|\beta_{qk}^{(c_1c_2)}\right|^2$ is a $c_1$ and $c_2$ independent factor  for every shifted wedge inclusion.  In other words, the expected number of particles for a mode $r^{(c_2)}_k$ of $W_{c_2}$ in $W_{c_1}$'s vacuum is independent of the choice of shift $c_2$ and $c_1$.
+
+
+DO THIS NEXT PART BETTER IF EVEN POSSIBLE?
+
+
+Applying this transitively implies a surprizing result, that each subset relation $W_{c_i} \subseteq W_{c_j}$ of $W_{c_n} \subseteq \cdots \subseteq W_{c_2} \subseteq W_{c_1}$ involves particle production with a fixed squared magnitude coorosponding to $\sinh^2 \theta_R$. This must mean that the Bogoliubov transforms live in a 1 parameter subgroup $G$ of $\mathfrak{su}(1,1)$ with a fixed $|\beta_q|^2 = \int \dv{q} \left|\beta_{qk}\right|^2$ term
+\begin{equation}
+  G = \left\{
+  \begin{bmatrix}
+    1 + |A|i & A \\
+    A^* & 1 - |A|i \\
+  \end{bmatrix} : |A|^2 = \sinh^2 \theta_R
+  \right\}.
+\end{equation}
 
 \section{Driving Sources}
 
