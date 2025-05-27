@@ -43,7 +43,7 @@ We first present some notation and review the Unruh effect in section 2.  We the
 
 We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{Frodden}.
 
-Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimensional spacetime and use metric signature $\eta = (-1,1)$. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  Also, for clarity sake, we stick to the simplest case where $\phi$ is a free massless scalar field.  Even in this simple toy case, we can present our argument.
+Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimensional spacetime and use metric signature $\eta = (-1,1)$. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  Let $\phi$ be a free massless scalar field.
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
@@ -73,7 +73,11 @@ are positive frequency modes normalized with respect to the Klien-Gordon inner p
 
 \subsection{Rindler Coordinates}
 
-Consider the $x>|t|$ Rindler ``wedge'' with coordinates
+Consider the Rindler ``wedge''
+\begin{equation}
+  W_c = \{(x,t) : x-c>|t|\}
+\end{equation}
+with apex at $t=0, x=c$.  We start with $W = W_0$ which is region $I$ pictured in Figure \ref{rindlerw})); with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -81,7 +85,7 @@ Consider the $x>|t|$ Rindler ``wedge'' with coordinates
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-where $a>0$ is an acceleration parameter (see $I$ in Figure \ref{rindlerw}). These are hyperbolic polar coordinates with an exponential ``radius''.
+where $a>0$ is an acceleration parameter. These are hyperbolic polar coordinates with an exponential ``radius''.
 
 \begin{figure}[h]
 \centering
@@ -94,89 +98,11 @@ The massless Klein-Gordon equation in Rindler coordinates is
 \begin{equation}
   \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0
 \end{equation}
-which being the same as equation (\ref{massless-wave-eq}) up to a conformal factor, has a basis of solutions with the same form as equation (\ref{amode})
+which being the same form as equation (\ref{massless-wave-eq}), up to a conformal factor, has a basis of solutions with the same form as equation (\ref{amode})
 \begin{equation}
  r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)} + h.c.
 \end{equation}
-for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $I$.
-
-
-Let $u = -t + x$ and $v = -t - x$ be coordinates defined along the light cone.  Each $r_k$ can be extended non-uniquely to the entire $(t,x)$-plane as
-\begin{equation}
-  \sqrt{4 \pi \omega_k} r_k(x,t) = \left\{\begin{array}{lll}
-      g_k^{(1)} h_k^{(1)}(u)&={(au)}^{\frac{i\omega_k}{a}} &=  e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(au)\right)} \text{ for } k>0\\
-      g_k^{(2)} h_k^{(2)}(v)&={(av)}^{\frac{i\omega_k}{a}} &= e^{\frac{i\omega_k}{a} \left(\log(-1) + \log(av)\right)} \text{ for } k<0\\  
-    \end{array}\right.
-\end{equation}
-where there is a choice of two branches of the log for each of the two forms of extensions $h_k^{(1)}$ and $h_k^{(2)}$ and the $g_k^{(1)}$ and $g_k^{(2)}$ are normalization factors to be discussed critically shortly. These extensions are functions of $u$ and $v$ respectively, and so are solutions to equation (\ref{massless-wave-eq}). We choose $\log(-1) = -i \pi$ following \cite{Frodden}, and then $h_k^{(1)}$ and $h_k^{(2)}$ are positive frequency modes which once normalized form an alternative basis to the usual $\varphi_k(x,t)$. We then expand
-\begin{equation}
-  \phi = \int \diff k( c_k^{(1)} h_k^{(1)} + c_k^{(2)} h_k^{(2)}) + h.c.  
-\end{equation}
-with alternate Minkowski ladder operators $c_k^{(1)}$, $c_k^{(2)}$, $c_k^{(1)\dagger}$, and $c_k^{(2)^\dagger}$. See Figure \ref{analytic} for a picture and summary of these types of modes.
-\begin{figure}[h]
-  \centering
-  \captionsetup{width=0.8\linewidth}
-\includegraphics[scale=0.3]{analytic.png}
-\caption{The phase of a Rindler mode $r_k$ is shown in gray scale. For $k>0$, $r_k$ is a function of $u$, with a branch of the log at the future horizon of I where $-t + x = u = 0$. $r_k$ is analytically continued around this horizon and can be thought of as an emission from the Rindler observer, blue shifted infinitely into the future in the Minkowski frame. On wedges I and III, $r_k$ is off by a factor of $e^{\pm \frac{\pi \omega_k}{a}}$ in magnitude from wedges II and IV.  A similar situation exists for $k<0$, thought of as absorption by the observer, red shifted from the past horizon, a function of $v$, where I, II vs. III, IV have the $e^{\pm \frac{\pi \omega_k}{a}}$ factor.}
-\label{analytic}
-\end{figure}
-
-\subsection{Analytic Continuation of Rindler Mode in Minkowksi Space}
-The $\log(-1)$ converts what would otherwise be a pure phase into a exponential factor $e^{\pm \frac{\pi \omega_k}{a}}$.  To be more specific for $k>0$, let
-\begin{equation}
-\begin{array}{l}
-f_k^{(1)}(t,x) = \left\{ \begin{array}{ll}
-  g_k^{(1)} h_k^{(1)} & \text{for } (t,x) \in I \\
-    0 & \text{else} \\ \end{array} \right. \\
-f_k^{(2)}(t,x) = \left\{ \begin{array}{ll}
-  g_k^{(2)} h_k^{(2)} & \text{for } (t,x) \in IV \\
-  0 & \text{else} \\ \end{array} \right. \\
-\end{array}
-\end{equation}
-Note that $\left|f_k^{(1)}\right| = 1$ on $I$ and $\left|f_k^{(2)}\right| = 1$ on $IV$ and one can show that
-\begin{equation}
-  \begin{array}{l}
-    \restr{g_k^{(1)} h_k^{(1)}}{I \cup IV} = f_k^{(1)} + e^{- \frac{\pi \omega_k}{a}} f_{-k}^{(2)} \\
-    \restr{g_k^{(2)} h_k^{(2)}}{I \cup IV} = f_k^{(2)} + e^{- \frac{\pi \omega_k}{a}} f_{-k}^{(1)}
-  \end{array}
-\end{equation}
-
-Finally, we turn our attention to the normalization factors $g_k$ and realize the Klien-Gordan dot product on full Minskowsi space as the sum of the dot product on the left and right Rinder wedges.  A negative sign also appears in the sum since $\diff x \rightarrow -\diff x$ from right to left wedges:
-\begin{equation}
- \begin{array}{ll}
-  \left< r_k, r_k \right>_{KG} &= \left< r_k, r_k \right>_{I} + \left< r_k, r_k \right>_{IV} \\
-  &= \left< r_k, r_k \right>_{I} - e^{- \frac{2\pi \omega_k}{a}} \left< r_k, r_k \right>_{I} \\
-  &= e^{-\frac{\pi \omega_k}{a}} (2 \sinh \frac{\pi \omega_k}{a}) \left< r_k, r_k \right>_{I}
-  \end{array}
-\end{equation}
-So $r_k$ is normalized differently on all of $I \cup IV$ than on $I$ and $IV$ seperatly.  This sets $h_k$ as
-\begin{equation}
-  \begin{array}{ll}
-    h_k^{(1)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \text{ for } k>0\\
-    h_k^{(2)} &= \frac{e^\frac{\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k \text{ for } k<0\\
-  \end{array}
-\end{equation}
-
-\subsection{Normalization and Unruh Radiation}
-This normalization issue is the root cause for Unruh radiation since we pick up a {\bf sinh} factor in the cross term in the Bogoliubov transform
-\begin{equation}
-  b_k = \frac{1}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^\frac{\pi \omega_k}{2a} c_k^{(1)} + e^\frac{\pi \omega_k}{2a} c_{-k}^{(2)\dagger} \right)
-\label{bogo}
-\end{equation}
-where
-\begin{equation}
-  \int \diff k \, b_k r_k(\xi,\eta) + h.c.
-\end{equation}
-in the Rindler wedge. Then the number of particles that an accelerating Rindler observer will see in the Minkowski vacuum $\ket{0_M}$ is seen to be 
-\begin{equation}
-  \label{radeq}
-  \begin{array}{ll}
-    \braket{n} &= \bra{0_M} b_k^\dagger b_k \ket{0_M} \\
-               &= \frac{e^{-\frac{\pi \omega_k}{a}}}{2 \sinh \frac{\pi i \omega_k}{a}}\bra{0_M}  c_{-k}^{(2)} c_{-k}^{(2)\dagger} \ket{0_M} \\
-               &= \frac{1}{e^{\frac{2 \pi \omega_k}{a}}-1} \\
-  \end{array}
-\end{equation}
-which is interpreted as Unruh radiation.
+for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  
 
 \subsection{Unruh Modes}
 For $\omega_k = k > 0$, and
@@ -186,23 +112,37 @@ For $\omega_k = k > 0$, and
     \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}}, \\
   \end{array}
 \end{equation}
-noting that $\alpha_k^2 - \beta_k^2 = 1$.  Define
+noting that $\alpha_k^2 - \beta_k^2 = 1$. We analyticaly continue $r_k$, $r_{-k}$ to the $t,x$ plane as
+\begin{equation}
+  \begin{array}{ll}
+    r_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta - k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t + x + i \epsilon))^{\frac{i \omega_k}{a}} \\
+    r_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta + k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t - x + i \epsilon))^{\frac{-i \omega_k}{a}} \\
+  \end{array}
+\end{equation}
+Define also
 \begin{equation}
   \begin{array}{ll}
     \varphi_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k t - k x)}\\
     \varphi_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k t + k x)}\\
-    r_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta - k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t + x + i \epsilon))^{\frac{i \omega_k}{a}} \\
-    r_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta + k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t - x + i \epsilon))^{\frac{-i \omega_k}{a}} \\
-    U^R_k &= \alpha_k (r_k - r_{-k}^*) \\
+    \mu^R_k &= \alpha_k (r_k - r_{-k}^*) \\
     &= \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left(r_k - r_{-k}^* \right) \\
     &= \frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{i\omega_k}{a}} + e^{\frac{-\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{i\omega_k}{a}} \right) \\
-    U^L_k &= \beta_k (r_k^* - r_{-k} )\\
+    \mu^L_k &= \beta_k (r_k^* - r_{-k} )\\
     &=\frac{e^{\frac{-\pi \omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left(r_k^* - r_{-k} \right) \\
     &=\frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{-\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{-i\omega_k}{a}} + e^{\frac{\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{-i\omega_k}{a}} \right) \\
   \end{array}
 \end{equation}
 %TODO (verify U = r_k expressions)
-and we have a Bogoliubov transformation matrix from $W_0$ to $M$ of
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{unruh_mode_rainbow.png}
+\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$.  Color is phase and brightness is magnitude. Rainbow order over time is consistent for $\varphi$ and $\mu$ since these are made up of positive frequency Minkowski modes. ($r_k$ is not consistent across the log branch.)}
+\label{masslessshell}
+\end{figure}
+
+\subsection{Bogoliubov Transforms}
+We have a Bogoliubov transformation matrix from $M$ to $W_0$ of
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(0)}_k \\
@@ -228,15 +168,6 @@ and we have a Bogoliubov transformation matrix from $W_0$ to $M$ of
  \end{array} \right]
 \end{equation}
 for a change of basis from $a^{(M)}$ to $c^R$ and $c^L$. 
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{unruh_mode_rainbow.png}
-\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & U^R_k \\ \varphi_{-k} & r_{-k} & U^L_k \end{array} \right]$.  Color is phase and brightness is magnitude. Rainbow order over time is consistent for $\varphi$ and $U$ since these are made up of positive frequency Minkowski modes. ($r_k$ is not consistent across the log branch.)}
-\label{masslessshell}
-\end{figure}
-
-\subsection{Bogoliubov Transforms}
 
 We compute the Bogoliubov coefficients for
 \begin{equation}
@@ -285,7 +216,7 @@ We next turn to $W_c$ v.s. $W_0$ and also find $c$ independence there
 \end{equation}
 which is somewhat more surprising since this implies that $\int \dv{q} \left|\beta_{kq}^{(c_2c_1)}\right|^2$ is a $c_1$ and $c_2$ independent factor  for every shifted wedge inclusion.  In other words, the expected number of particles for a mode $r^{(c_2)}_k$ of $W_{c_2}$ in $W_{c_1}$'s vacuum is independent of the choice of shift $c_2$ and $c_1$.
 
-More explicitly we have a transform matrix of $\Lambda_c$ from $W_c$ to $W_0$ 
+More explicitly we have a transform matrix of $\Lambda_c$ from $W_0$ to $W_c$ 
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(c)}_k \\
@@ -310,65 +241,60 @@ More explicitly we have a transform matrix of $\Lambda_c$ from $W_c$ to $W_0$
     a^{(0)\dagger}_{-q} \\
  \end{array} \right]
 \end{equation}
-where $A_c = \alpha_{kq}^{(c0)} = P_{c,k} A_0 P_{c,-q}$  and $B_c = \beta_{kq}^{(c0)} = P_{c,k} B_0 P_{c,q}$ for a diagonal phase factor matrix
+where $A_c = \alpha_{kq}^{(c0)} = P_c A_1 P_c^{-1}$  and $B_c = \beta_{kq}^{(c0)} = P_c B_1 P_c$ for a diagonal phase factor matrix
 \begin{equation}
-  P_{c,r} = P_{c,rs} = \delta(r - s) c^{\frac{i\omega_r}{a}}
+  P_c = P_{c,rs} = \delta(r - s) c^{\frac{i\omega_r}{a}} = e^{\frac{i H}{a} \log c}
 \end{equation}
 We can write $\Lambda_c$ out compactly out as
 \begin{equation}
-  \Lambda_c = Q_{c,k} \Lambda_0 Q_{c,-q}
+  \Lambda_c = Q_c \Lambda_1 Q_c^{-1}
 \end{equation}
 where
 \begin{equation}
-  Q_{c,k} = \left[\begin{array}{cccc}
-        P_{c,k} & 0 & 0 & 0 \\
-        0 & P_{c,k} & 0 & 0 \\
-        0 & 0 & P_{c,-k} & 0 \\
-        0 & 0 & 0 & P_{c,-k} \\
-\end{array} \right] 
+  Q_c = \left[\begin{array}{cccc}
+        P_c, & 0 & 0 & 0 \\
+        0 & P_c & 0 & 0 \\
+        0 & 0 & P_c^{-1} & 0 \\
+        0 & 0 & 0 & P_c^{-1} \\
+    \end{array} \right] 
 \end{equation}
-
-Note here that $\Lambda_0$ is {\bf not the identity} since the limit of $\alpha_{kq}^{(c0)}$ and $\beta_{kq}^{(c0)}$ as $c$ goes to 0 are in general mixed\footnote{To see this, look at equation (\ref{nonzero_ratio}) which is generically not zero.} beta function values.  Even an infinitesimal shift results in non trivial particle production.
-
-Applying this transitively implies a surprising result, that each subset relation $W_{c_i} \subseteq W_{c_j}$ of $W_{c_n} \subseteq \cdots \subseteq W_{c_2} \subseteq W_{c_1}$ involves particle production with a fixed squared magnitude. Moreover, the composition of Bogoliubov transforms shows that
+Note that $\lim_{c\to 0} \Lambda_c = 1$ since the limit of $\lim_{c\to 0} \alpha_{kq}^{(c0)} = 1$ and $\lim_{c\to 0} \beta_{kq}^{(c0)} = 0$, which corresponds nicely to $\lim_{c\to 0} W_c = W_0$. The composition of Bogoliubov transforms, $\Lambda_{nc} = \Lambda_c^n$, yields
 \begin{equation}
-  \begin{array}{ll}
-  Q_{2c,k} \Lambda_0 Q_{2c,-q}  &= \Lambda_{2c,0} \\
-  &= \Lambda_{2c,c} \Lambda_{c,0} \\
-  &= \left( Q_{c,k} \Lambda_0 Q_{c,r} \right) \left( Q_{c,-r} \Lambda_0 Q_{c,-q}\right) \\
-  &=  Q_{c,k} \Lambda_0^2 Q_{c,-q} \\
+  \begin{array}{ll}    
+    Q_{nc} \Lambda_1 Q_{nc}^{-1}  &= \Lambda_{nc} \\
+         &= \left(Q_c \Lambda_{c} Q_c\right) \left( Q_c^{-1} \Lambda_{c} Q_c\right) \cdots \left(Q_c \Lambda_{c} Q_c\right) \\
+  &= Q_c \Lambda_c^n Q_c^{-1} \\
   \end{array}
 \end{equation}
-So $\Lambda_0^2 = Q_{c,k} \Lambda_0 Q_{c,k}$.
-
-Finally we calculate the expected number of $W_c$ particles for mode $k$ in $W_0$'s vacuum
+so that
 \begin{equation}
-  \bra{0_{W_0}} a^{(c)\dagger}_k a^{(c)}_k \ket{0_{W_0}} = \frac{1}{2 \pi a m \sinh m} \int_{x=0}^\infty \frac{x \sinh x}{(x+m) \sinh(x+m)}
+  \begin{array}{ll}
+  \Lambda_c^n &= Q_c^{-1} Q_{nc} \Lambda_1 Q_{nc}^{-1} Q{c} \\
+  &= Q_n \Lambda_1 Q_n^{-1}
+  \end{array}
 \end{equation}
-where $m = \frac{\pi k}{m}$, which diverges.  The integrand goes to $e^{-m}$ as $x$ gets large, so we can see that the expected number of particles in ratio goes to
+and more generally we have a one parameter group given by
+\begin{equation}
+  \left\{\Lambda_0^x = Q_x \Lambda_0 Q_x^{-1} : x \in \mathbb{R} \right\}.
+\end{equation}
+This is an explicit version of modular flow, due to the von Neumann algebra modular automorphism associated with the translation $W_0 \rightarrow W_c$, studied in detail in Tomita-Takesaki theory \cite{Borchers2000}.  There we find thermal KMS states between open set inclusions in a much more general setting.
+
+
+Consider a sequence
+\begin{equation}
+  W_{c_n} \subseteq \cdots \subseteq W_{c_i} \subseteq \cdots \subseteq W_{c_j} \subseteq W_{c_2} \subseteq W_{c_1}
+\end{equation}
+Then each $W_{c_i} \subseteq W_{c_j}$ involves particle production with a fixed squared magnitude for mode $k$.  We calculate this expected number of $W_{c_i}$ particles for mode $k$ in $W_{c_j}$'s vacuum
+\begin{equation}
+  \bra{0_{W_{c_j}}} a^{(c_i)\dagger}_k a^{(c_i)}_k \ket{0_{W_{c_j}}} = \frac{1}{2 \pi^2 k \sinh \frac{\pi k}{a}} \int_{x=0}^\infty \frac{x \sinh x}{(x+\frac{\pi k}{a}) \sinh(x+\frac{\pi k}{a})}
+\end{equation}
+which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large, so we can see that the expected number of particles in ratio goes to
 \begin{equation}
   \frac{1}{m (e^{2m} + 1)} = \frac{1}{k (e^{\frac{2\pi \omega_k}{a}} - 1)}.
 \end{equation}
 
-BREAK
 
-DO THIS NEXT PART BETTER IF EVEN POSSIBLE?
-
-
-
-
-
-This must mean that the Bogoliubov transforms live in a 1 parameter subgroup $G$ of $\mathfrak{su}(1,1)$ with a fixed $|\beta_q|^2 = \int \dv{q} \left|\beta_{kq}\right|^2$ term
-\begin{equation}
-  G = \left\{
-  \begin{bmatrix}
-    1 + |A|i & A \\
-    A^* & 1 - |A|i \\
-  \end{bmatrix} : |A|^2 = \sinh^2 \theta_R
-  \right\}.
-\end{equation}
-
-\section{Formulas}
+\section{Appendix Formulas}
 Some useful formula
 \begin{equation}
   \int_{c}^\infty x^a (x-c)^b \dv{x} = c^{a+b+1} B(b+1, -a-b-1)
@@ -385,7 +311,15 @@ Then
 \begin{equation}
   \left< f_{k,b_k,d_k}, f_{q,d_q,d_q}\right> = \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} (ac)^\frac{i(d_k\omega_k - d_q \omega_q)}{a} \left((-d_k)\frac{b_k + b_q}{2} \right) B\left(\frac{id_k\omega_k}{a}, \frac{-i(d_k\omega_k - d_q \omega_q)}{a}\right)
 \end{equation}
+We frequently use
+\begin{equation}
+  |\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}
+\end{equation}
+
+
 \section{Driving Sources}
+
+THE REST OF THIS NEEDS WORK
 
 We can ask {\bf ``What exactly is accelerating the observer?''}.  So far we have not tried to answer this question.  In our ignorance, we have recovered, in the math, that something thermal is going on in terms of particle creation.  More specifically, Figure \ref{analytic} depicts the situation where a Rindler mode $r_k$ is either a left moving {\bf emission} from the Rindler observer or a right moving {\bf absorption} by the Rindler observer.  We will next provide an answer to this question, using a driving source to capture the thrust. Then we will see that the radiation term shifts away, back into the source field.  The math is the same, but the interpretation will change.
 
