@@ -326,12 +326,18 @@ The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-ter
 \begin{equation}
   c _k^{L\dagger} = \left<\phi, \mu_k^{L*}\right> = \int \dv{x} \mu_k^{L*}(x) \phi(x)
 \end{equation}
-and the orthogonality of the mode functions in the Klein-Gordon inner product. In the generating functional formalism, setting $J(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J}Z[J]|_{J=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)^*$ thus projects onto $c_k^{L\dagger}$.
+and the orthogonality of the mode functions in the Klein-Gordon inner product. In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J_k^L}Z[J_k^L]|_{J_k^L=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)$ thus projects onto $c_k^{L\dagger}$ and we have\footnote{The remaining $\alpha_k$ factor reflects the mismatch between the squeezed Unruh vacuum and the coherent state prepared by the source.}
+\begin{equation}
+\begin{array}{ll}
+  a_k^{(0)J} &= \alpha_k c_q^R + \beta_k c_q^{L\dagger} -  \beta_k c_q^{L\dagger} \\
+  &= \alpha_k c_q^R
+\end{array}
+\end{equation}
 
 In Rindler coordinates, this source term prepares a modified field state in which the Rindler mode occupation differs from the thermal distribution of the Minkowski vacuum. Rather than simply adding energy, the source introduces a coherent excitation that cancels the mode structure induced by the Bogoliubov $\beta$-terms, effectively replacing their contribution. This lets us construct a state where the Rindler response is vacuum-like for mode k
 
 \begin{equation}
-  \bra{J}  b_k^{\dagger} b_k \ket{J} = 0
+  \bra{J_k^L}  b_k^{\dagger} b_k \ket{J_k^L} = \bra{0_M}  b_k^{J_k^L \dagger} b^{J_k^L}_k \ket{0_M} = 0
 \end{equation}
 
 \section{Appendix Formulas}
