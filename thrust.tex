@@ -37,7 +37,7 @@
 \abstract{We analyze the quantum field theoretic framework in which Unruh radiation arises, interpreting the radiation as sourced by a driving field. In the Rindler frame, these driving modes span an extended region of time and exhibit a red- and blue-shifted frequency spread due to their support over the full Rindler wedge, resulting in a thermalized response. To refine this picture, we construct an interpolation between these long-lived driving modes and localized wave packets with peaked Fourier spectra that do not display such frequency smearing. This allows us to reinterpret Unruh radiation in terms of thrust—a localized driving effect that excites the field without inducing a thermal response, thereby offering a complementary, nonthermal perspective on acceleration-induced radiation.}
 
 \section{Introduction}
-We first present some notation and review the Unruh effect in section 2.  We then introduce a source field in section 3 that exactly captures the particle creation in the cross term of the Bogoliubov transform for Rindler modes extended to Minkowski spave.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wave packet version, and in section 5 we interpret the results.
+We first present some notation and review the Unruh effect in section 2.  We then introduce a source in section 3 that exactly captures the particle creation in the cross term of the Bogoliubov transform for Rindler modes extended to Minkowski spave.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wave packet version, and in section 5 we interpret the results.
 
 \section{Unruh Effect Review and Notation}
 
@@ -47,7 +47,7 @@ Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimension
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
-\mathscr{L} = -\frac{1}{2} \eta^{\mu\nu}\partial_\mu \phi \partial_\nu \phi.
+\mathscr{L}_{free} = -\frac{1}{2} \eta^{\mu\nu}\partial_\mu \phi \partial_\nu \phi.
 \end{equation}
 We consider positive frequency modes with dispersion relation $\omega_k = |k| > 0$ as solutions to the resulting Klein-Gordon equation 
 
@@ -77,7 +77,7 @@ Consider the Rindler ``wedge''
 \begin{equation}
   W_c = \{(x,t) : x-c>|t|\}
 \end{equation}
-with apex at $t=0, x=c$.  We start with $W = W_0$ which is region $I$ pictured in Figure \ref{rindlerw})); with coordinates
+with apex at $(t,x)=(0,c)$.  We start with $W = W_0$ which is region $I$ pictured in Figure \ref{rindlerw})); with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -111,6 +111,7 @@ For $\omega_k = k > 0$, and
     \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} \\
     \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}}, \\
   \end{array}
+  \label{alpha_beta}
 \end{equation}
 noting that $\alpha_k^2 - \beta_k^2 = 1$. We analyticaly continue $r_k$, $r_{-k}$ to the $t,x$ plane as
 \begin{equation}
@@ -137,8 +138,8 @@ Define also
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
-\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$.  Color is phase and brightness is magnitude. Rainbow order over time is consistent for $\varphi$ and $\mu$ since these are made up of positive frequency Minkowski modes. ($r_k$ is not consistent across the log branch.)}
-\label{masslessshell}
+\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$.  Color is phase and brightness is magnitude. Rainbow order over time is consistent for $\varphi$ and $\mu$ since these are made up of positive frequency Minkowski modes. ($r_k$ is not consistent across the log branch.) The left moving Rindler modes $r_k$(top) correspond to emission and the right moving mode $r_{-k}$ (bottom) to absorption.}
+\label{unruh_rainbow}
 \end{figure}
 
 \subsection{Bogoliubov Transforms}
@@ -167,7 +168,16 @@ We have a Bogoliubov transformation matrix from $M$ to $W_0$ of
     c^{L\dagger}_q \\
  \end{array} \right]
 \end{equation}
-for a change of basis from $a^{(M)}$ to $c^R$ and $c^L$. 
+for a change of basis from $a^{(M)}$ to $c^R$ and $c^L$
+\begin{equation}
+  \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + h.c.
+  \label{c_ladder}
+\end{equation}
+From this we compute the usual Unruh radiation equation with Planck spectrum (compare $\beta_k$ with equation (\ref{alpha_beta})) to obtain
+\begin{equation}
+  a_k^{(0)} = \alpha_k c_q^R + \beta_k c_q^{L\dagger}
+\label{a_in_c}
+\end{equation}
 
 We compute the Bogoliubov coefficients for
 \begin{equation}
@@ -293,6 +303,36 @@ which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large,
   \frac{1}{m (e^{2m} + 1)} = \frac{1}{k (e^{\frac{2\pi \omega_k}{a}} - 1)}.
 \end{equation}
 
+\section{Driving Sources}
+
+We can ask, {\bf ``What exactly is accelerating the observer?''}. Up to now we have not specified any physical mechanism for the acceleration.  We also have not specified the location of the observer in the wedge, just that it exists in the accelerating frame.  And we also do not know where in the wedge the particles should appear. These unknowns reflect an effective lack of information about the observer’s precise location and the origin of excitations, a feature that underpins the thermal nature of the Unruh effect.
+
+Figure \ref{emit_absorb} illustrates the situation: The Rindler mode $r_k$ corresponds to left-moving modes propagating toward the future horizon (interpreted as emission), and $r_{-k}$ to a right-moving modes originating from the past horizon (interpreted as absorption). The Rindler modes are constructed as superpositions of Minkowski modes, effectively smeared over a range of frequencies. This is visually evident in Figure \ref{unruh_rainbow}, where the local frequencies increase (blue-shift) near the horizons. This is made explicitly by the Bogoliubov coefficients $\alpha_{kq}^{(cM)}$ and $\beta_{kq}^{(cM)}$ which encode the Fourier decomposition of the Rindler modes through their Klein-Gordon inner products with the Minkowski modes $\varphi_q$ and $\varphi_q^*$, respectively. This frequency delocalization, tied to the observer's acceleration horizon, underlies the apparent thermal character of the radiation.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.5]{emit_absorb.png}
+\caption{
+The frequency $\omega_k$ of a Rindler mode appears green from the observer's point of view, representing a mid-spectrum excitation. The mode is depicted as striking a mirror at the tail end of a rocket, where it is reflected as a combination of absorption and emission processes. The emitted component is blue-shifted as it propagates toward the future horizon, while the absorbed component is red-shifted, having originated from the past horizon and traveled toward the observer.}
+\label{emit_absorb}
+\end{figure}
+
+
+We offer a concrete answer to our initial question by introducing a driving source; a physical mechanism representing the thrust behind the acceleration. As we will see, this reframes the interpretation: the radiation term is no longer spontaneous, but instead effectively shifts back into the source that drives the motion.
+
+A correlator is expressed as a time-ordered chain of creation and annihilation operators. Here, we aim to simulate the effect of a creation operator by introducing a source term $J(x)$ into the Lagrangian, which directly excites the field in a specific mode. Since $J(x)$ couples linearly, it prepares a coherent state that excites the chosen mode in a controlled, phase-coherent manner. To replicate the action of a creation operator, the source must be engineered such that its overlap with the mode functions $u_k(x)$ matches the operator’s action on the field.
+
+The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by Rindler observers. Without loss of generality\footnote{We only consider a fixed frequency and the $L$-mode, and extend the argument linearly.}, we simulate the effect of a creation operator $c_k^{L \dagger}$ using
+\begin{equation}
+  c _k^{L\dagger} = \left<\phi, \mu_k^{L*}\right> = \int \dv{x} \mu_k^{L*}(x) \phi(x)
+\end{equation}
+and the orthogonality of the mode functions in the Klein-Gordon inner product. In the generating functional formalism, setting $J(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J}Z[J]|_{J=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)^*$ thus projects onto $c_k^{L\dagger}$.
+
+In Rindler coordinates, this source term prepares a modified field state in which the Rindler mode occupation differs from the thermal distribution of the Minkowski vacuum. Rather than simply adding energy, the source introduces a coherent excitation that cancels the mode structure induced by the Bogoliubov $\beta$-terms, effectively replacing their contribution. This lets us construct a state where the Rindler response is vacuum-like for mode k
+
+\begin{equation}
+  \bra{J}  b_k^{\dagger} b_k \ket{J} = 0
+\end{equation}
 
 \section{Appendix Formulas}
 Some useful formula
@@ -316,173 +356,6 @@ We frequently use
   |\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}
 \end{equation}
 
-
-\section{Driving Sources}
-
-THE REST OF THIS NEEDS WORK
-
-We can ask {\bf ``What exactly is accelerating the observer?''}.  So far we have not tried to answer this question.  In our ignorance, we have recovered, in the math, that something thermal is going on in terms of particle creation.  More specifically, Figure \ref{analytic} depicts the situation where a Rindler mode $r_k$ is either a left moving {\bf emission} from the Rindler observer or a right moving {\bf absorption} by the Rindler observer.  We will next provide an answer to this question, using a driving source to capture the thrust. Then we will see that the radiation term shifts away, back into the source field.  The math is the same, but the interpretation will change.
-
-
-%%%%%%%%%%%%%%%%%%
-BREAK BREAK BREAK
-%%%%%%%%%%%%%%%%%%
-
-
-To that end, consider a driving source field $J$ in the sense of Schwinger \cite{schwinger} 
-
-\begin{equation}
-  J(k) = c_{-k}^{(2)\dagger} \frac{e^\frac{-\pi \omega_k}{2a}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} r_k(x,t) \theta(T - t) \theta(T+t)
-\end{equation}
-using an extended Rindler mode $r_k$.  It is active for some finite amount of time $-T \le t \le T$ and is crafted to exactly compensate for the cross term in equation (\ref{bogo}) as we aim to see.  The form of $J$ is invariant under right or left shift as functions of $u$ or $v$ so that the Klein Gordon dot product will be invariant also.
-
-We add the source term to the Lagrangian
-
-\begin{equation}
-\mathscr{L} = -\frac{1}{2} \eta^{\mu\nu}\partial_\mu \phi \partial_\nu \phi - J\phi
-\end{equation}
-The Euler-Lagrange equation leads to an inhomogeneous Klein-Gordon equation
-\begin{equation}
-  \Box  \phi = J
-\end{equation}
-%Consider the retarded Green's function $G_R$, as in \cite{beisert} for instance, in momentum space
-%\begin{equation}
-%  G_R(k) = 1 / k^2 ???
-%\end{equation}
-Let $a_k = a_k^{in}$ be the annihilation operator for $t<-T$ and let $a_k^{(out)}$ be the annihilation operator for time $t > T$.  Then one can find using the retarded Green's function, as in \cite{beisert} for instance, that $a_k^{out} = a_k^{in} + i J(k)$.
-
-
-
-%%%%%%%%%%%%%%%%%%
-BREAK BREAK BREAK
-%%%%%%%%%%%%%%%%%%
-
-
-Consider these multiples of Rindler modes on the entire $(t,x)$-plane
-\begin{equation}
-f_k(u) = \frac{e^{\frac{\pi \omega_k}{2a}} {(au)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)}}
-\end{equation}
-\begin{equation}
-g_k(v) = \frac{e^{\frac{\pi \omega_k}{2a}} {(av)}^{\frac{i\omega_k}{a}}}{ \sqrt{2\sinh\left(\frac{\pi\omega_k}{a}\right)} }
-\end{equation}
-Let $\phi$ be a free scalar field in the flat $1+1$ dimensional Minkowski spacetime.  We will consider $f_k(u)$ and $g_k(v)$ as driving sources
-\begin{equation}
-\label{ab}
-\rho(u,v) = \alpha f_k(u) + \beta g_k(v).
-\end{equation}
-with non-negative real convex combination $\alpha + \beta = 1$. The drivers $f_k$ and $g_k$ are functions of $u$, the future $I$-horizon and of $v$, the past $I$-horizon respectively.  Both generate excitations, which we identify with emission and absorption thrusts respectively.
-
-
-The sources can originate from a coupling term, $\rho \phi$, added to the free scalar Lagrangian.  We also add in a $i \epsilon$ term so that our integrals converge.
-\begin{equation}
-\mathscr{L} = -\frac{1}{2} \partial^\mu \phi \partial_\mu \phi + \rho\phi + \frac{i \epsilon}{2}  \phi^2
-\end{equation}
-The Euler-Lagrange equation leads to an inhomogeneous Klein-Gordon equation
-\begin{equation}
-  \Box  \phi = \rho + i \epsilon \phi
-\end{equation}
-as presented in \cite{beisert}.  In \cite{beisert} it is assumed that the source is only active for a finite amount of time.  We let $\rho$ be active for all time.  The argument in \cite{beisert} seems to be adaptable to $\rho$.
-
-We will want to integrate $\rho$ on shell in momentum space, which for a massless source is the positive energy part of the massless shell.  The two positive energy ``horizons'' border $p_u \le 0$ and $p_v \le 0$, see Figure \ref{masslessshell}.  Proceeding to take the Fourier transform of the function $f_k(u)$.  WLOG since $g_k(v)$ is of the same form.  We will continue to assume that $\omega_k$ and $a$ are positive. Define the kernel
-
-\begin{equation}
-  A = e^{-i p_u u} (au)^\frac{i\omega_k}{a} du
-\end{equation}
-and then we have
-\begin{equation}
-\label{finalnorm}
-  \hat{f_k}(p_u) =  \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  \int_{-\infty}^\infty A
-\end{equation}
-where $L=\int_{-\infty}^0 A$ and $R=\int_0^\infty A$ are the left and right sides of the total integral $L + R$.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{massless_shell.png}
-\caption{Massless shell is when $p_u$ = $p_v$ = 0}
-\label{masslessshell}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.3]{contour.png}
-\caption{Using contours with large radius we convert the $L$ integral that goes to $i\infty$, and the $R$ integral that goes to $-i\infty$, to integrals with $s$ going to real $\infty$.}
-\label{fig:x cubed graph}
-\end{figure}
-
-We rewrite the integrals using a complex changes of variables, $s$ = $ip_uu$, and contour integrals.
-The $L$ integral for real $p_u<0$ is
-\begin{equation}
-\begin{split}
-  L(p_u) & = -\int_0^{i\infty} e^{-s}\left(\frac{ias}{-p_u}\right)^\frac{i\omega_k}{a} \left(\frac{i}{-p_u}\right)ds \\
-  & = \frac{-i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} \int_0^\infty \left(is\right) ^ \frac{i\omega_k}{a} e^{-s} ds \\
-  & = \frac{-i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} \\
-  & = \frac{1}{2} \Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p_u)\\
-\end{split}
-\end{equation}
-where
-\begin{equation}
-B(p_u) = \frac{-2i}{a} \left(\frac{a}{-p_u}\right)^{\frac{i\omega_k}{a} + 1} 
-\end{equation}
-The change of $i\infty$ to $\infty$ is made by using a large radius contour which rotates the endpoint 90 degrees clockwise.  The term $e^{-s}$ goes to zero around the large radius circle.
-
-The same calculation for $R$ is done using a counter-clockwise contour this time.
-\begin{equation}
-\begin{split}
-  R(p_u) = \frac{1}{2}\Gamma\left(\frac{i\omega_k}{a} + 1\right) e^{-\frac{\pi \omega_k}{2a}} B(p_u)
-\end{split}
-\end{equation}
-
-We get back to $f_k(u)$ and apply the normalization from equation (\ref{finalnorm})
-\begin{equation}
-\widehat{f_k}(p_u) = \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}}  ( L(p_u) + R(p_u) )
-\end{equation}
-So
-\begin{equation}
-\label{fourier}
-\begin{split}
-\widehat{f_k}(p_u) & = \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_u)\\
-\widehat{g_k}(p_v) &= \frac{\Gamma\left(\frac{i\omega_k}{a} + 1\right)}{\sqrt{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)}} B(p_v)
-\end{split}
-\end{equation}
-\section{Interpretation}
-The driving source $\rho$, with mixed absorption and emission thrusts $\alpha$ + $\beta$ = 1, contribute excitations to the scalar field $\phi$. Equations (\ref{ab}) and (\ref{fourier}) let us write down the expected change of energy
-\begin{equation}  
-  \label{number}
-  \begin{split}
-    \mathbb{E}[\Delta E] &= \frac{1}{4\pi} \int{|\rho(p)|^2 dp} \\
-    &= \frac{\alpha}{4\pi} \int{\left|\widehat{f_k}(p_u)\right|^2 dp_u} + \frac{\beta}{4\pi}\int{\left|\widehat{g_k}(p_v)\right|^2dp_v} \\
-    &= \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \sinh \left({\frac{\pi\omega_k}{a}}\right)} \frac{1}{4\pi} \int{{\left|B(p)\right|^2} dp} \\
-    &=  \frac{\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right)\right|^2}{2 \pi a \sinh \left({\frac{\pi\omega_k}{a}}\right)} \int{a/|p|^2 dp}\\  
-&=I(\omega_k) P
-  \end{split}
-\end{equation}
-where the integrals are on the positive energy massless shell with contributions from $p_u$ on the left piece and $p_v$ on the right piece.  We factored out $P = \int{a/|p|^2}$ with a remaining $p$ independent positive real coefficient $I(\omega_k)$.
-
-Without being more careful we end up with inferred problems --- The integrals do not converge at zero, where $P$ explodes.  But this infinity cancels when we compare the spectral radiances to each other, $I(\omega_{k_1}) / I(\omega_{k_2})$.
-
-The magnitude of our Gamma function has known asymptotics \cite[Eq.~5.11.9]{NIST:DLMF}
-\begin{equation}
-\left|\Gamma\left(\frac{i\omega_k}{a} + 1\right) \right|^2 \sim \left(\frac{2 \pi \omega_k} {a}\right) e^{-\frac{\pi\omega_k}{a}}
-\end{equation}
-Plugging this into equation (\ref{number}) we find the average energy of the mode, the $1+1$ dimensional Planck distribution function, and thus recover the Unruh's radiation spectrum from a thrust driven field.
-\begin{equation}
-\frac{1}{P} \mathbb{E}[\Delta E] = I(\omega_k) \sim \frac{\omega_k}{e^{\frac{2 \pi \omega_k}{a}}-1}
-\end{equation}
-Compare this to equation (\ref{radeq}) and references \cite{unruh} and \cite{Frodden}.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{rocket_inertial.png}
-\caption{Unruh picture of an event horizon radiating in accelerating frame radiating on the left. Our picture of a rocket under inertial acceleration thrusting on the right.}
-\label{rocket_inertial}
-\end{figure}
-
-\section{Other Types of Driving Sources}
-TODO
-\section{Ricci Scalar as a Driving Source}
-TODO
-\section{Fields with Interaction}
-TODO
 
 \section{Conclusion and Prediction}
 If the thrust required to accelerate a detector is not explicitly accounted for, it manifests instead as an apparent thermal feature of the vacuum—Unruh radiation. However, as demonstrated in this paper, Unruh radiation can be directly explained as a consequence of thrust. This perspective leads to the prediction that neither Unruh radiation nor Hawking-Bekenstein radiation should appear independently of the thrust that drives the system.
