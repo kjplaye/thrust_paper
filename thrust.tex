@@ -27,23 +27,24 @@
 \begin{document}
 
 %title and author details
-\title{The Role of Thrust in Unruh Radiation}
+\title{Localized Driving and the Role of Thrust in Unruh Radiation}
 \author[1]{Kevin Player\footnote{kplaye@gmail.com}}
 
 \maketitle
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We analyze Unruh radiation, interpreting the radiation as sourced by a driving field. In the Rindler frame, these driving modes span an extended region of time and exhibit a red- and blue-shifted frequency spread due to their support over the full Rindler wedge, resulting in a thermalized response. To refine this picture, we construct an interpolation between these long-lived driving modes and localized wave packets with peaked Fourier spectra that do not display such frequency smearing. This allows us to reinterpret Unruh radiation in terms of thrust, a localized driving effect that excites the field without inducing a thermal response, thereby offering a complementary, nonthermal perspective on acceleration-induced radiation.}
+\abstract{We analyze Unruh radiation, interpreting the radiation as sourced by a driving field. In the Rindler frame, the driving modes extend over long durations and experience redshift and blueshift due to their extended support across the wedge, leading to a mixed-frequency response interpreted thermally.  To refine this picture, we construct an interpolation between these long-lived driving modes and localized wave packets with peaked Fourier spectra that do not display such frequency smearing. This allows us to reinterpret Unruh radiation in terms of thrust, a localized driving effect that excites the field without inducing a thermal response, thereby offering a complementary, nonthermal perspective on acceleration-induced radiation.}
 
 \section{Introduction}
-We first present some notation and review the Unruh effect in section 2.  We then introduce a source in section 3 that exactly captures the particle creation in the cross term of the Bogoliubov transform for Rindler modes extended to Minkowski spave.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wave packet version, and in section 5 we interpret the results.
+We first present some notation and review the Unruh effect in section 2.  We then introduce a source in section 3 that exactly captures the particle creation in the cross term of the Bogoliubov transform for Rindler modes extended to Minkowski space.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wave packet version, and in section 5 we interpret the results.
 
 \section{Unruh Effect Review and Notation}
 
 We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{Frodden}.
 
-Let $\hbar$ = $c$ = 1. Consider a uniform linear acceleration in $1+1$ dimensional spacetime and use metric signature $\eta = (-1,1)$. The full $1+3$ dimensional case does not add anything to the discussion, so without loss of generality we stick to the dimensions time $t$ and space $x$ where the boost is taking place.  Let $\phi$ be a free massless scalar field.
+
+Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost occurs.
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
@@ -58,7 +59,7 @@ We consider positive frequency modes with dispersion relation $\omega_k = |k| > 
 where $\Box = \eta^{\mu\nu} \partial_\mu \partial_\nu$. We expand $\phi$ in terms of ladder operators $a_k, a_k^\dagger$
 
 \begin{equation}
-  \int \diff k \, a_k \varphi_k(x,t) + h.c.
+  \phi(x,t) = \int \diff k \, a_k \varphi_k(x,t) + \text{h.c.}
 \end{equation}
 where
 
@@ -66,18 +67,18 @@ where
   \varphi(x,t) = \frac{1}{\sqrt{4\pi\omega_k}} e^{i(kx - \omega_k t)}.
 \label{amode}
 \end{equation}
-are positive frequency modes normalized with respect to the Klien-Gordon inner product at any time slice, say $t = 0$,
+are pure Minkowkski positive frequency waves normalized with respect to the Klein-Gordon inner product at any time slice, say $t = 0$,
 \begin{equation}
   \left<f, g\right>_{KG} = i \int \diff x (f^* \partial_t g - \partial_t f^* g).
 \end{equation}
 
 \subsection{Rindler Coordinates}
 
-Consider the Rindler ``wedge''
+To describe the physics from the point of view of a uniformly accelerating observer, we introduce Rindler coordinates covering a right wedge 
 \begin{equation}
   W_c = \{(x,t) : x-c>|t|\}
 \end{equation}
-with apex at $(t,x)=(0,c)$.  We start with $W = W_0$ which is region $I$ pictured in Figure \ref{rindlerw})); with coordinates
+with apex at $(t,x)=(0,c)$.  We start with $W = W_0$ which is region $I$ pictured in Figure \ref{rindlerw}; with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -85,7 +86,7 @@ with apex at $(t,x)=(0,c)$.  We start with $W = W_0$ which is region $I$ picture
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-where $a>0$ is an acceleration parameter. These are hyperbolic polar coordinates with an exponential ``radius''.
+where $a>0$ is an acceleration parameter. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with worldlines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
 
 \begin{figure}[h]
 \centering
@@ -98,18 +99,18 @@ The massless Klein-Gordon equation in Rindler coordinates is
 \begin{equation}
   \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0
 \end{equation}
-which being the same form as equation (\ref{massless-wave-eq}), up to a conformal factor, has a basis of solutions with the same form as equation (\ref{amode})
+The wave equation retains the same structure as the Minkowski case, up to the overall conformal factor $e^{-2a\xi}$. Since this factor does not affect the null structure of the equation, the mode solutions retain the same plane wave form in the Rindler time coordinate.
 \begin{equation}
- r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)} + h.c.
+ r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)} + \text{h.c.}
 \end{equation}
-for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  
+for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover region I (the right wedge), these modes are not defined globally in Minkowski space. This leads to an inequivalence between the Minkowski and Rindler quantizations.
 
 \subsection{Unruh Modes}
 For $\omega_k = k > 0$, and
 \begin{equation}
-  \begin{array}{lll}
-    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} \\
-    \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}}, \\
+  \begin{array}{llll}
+    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} & \quad \text{(thermal form)} \\
+    \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}} & \quad \text{(thermal form)} \\
   \end{array}
   \label{alpha_beta}
 \end{equation}
@@ -139,12 +140,12 @@ Define also
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
 \captionsetup{width=0.9\textwidth}
-\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$.  Color is phase and brightness is magnitude. Rainbow order over time is consistent for $\varphi$ and $\mu$ since these are made up of positive frequency Minkowski modes. ($r_k$ is not consistent across the log branch.) The left moving Rindler modes $r_k$(top) correspond to emission and the right moving mode $r_{-k}$ (bottom) to absorption.}
+\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color represents phase; brightness shows magnitude. The consistent "rainbow" phase structure in $\varphi_k$ and $\mu_k$ reflects their pure positive frequency content in Minkowski time, unlike $r_k$, which varies across branches. The left moving Rindler modes $r_k$(top) correspond to emission and the right moving mode $r_{-k}$ (bottom) to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
 \subsection{Bogoliubov Transforms}
-We have a Bogoliubov transformation matrix from $M$ to $W_0$ of
+Let the superscripts $(0)$, $(0c)$, $(M)$ etc represent frames of reference. We have a Bogoliubov transformation matrix from $M$ to $W_0$ of
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(0)}_k \\
@@ -171,7 +172,7 @@ We have a Bogoliubov transformation matrix from $M$ to $W_0$ of
 \end{equation}
 for a change of basis from $a^{(M)}$ to $c^R$ and $c^L$
 \begin{equation}
-  \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + h.c.
+  \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
 \end{equation}
 From this we compute the usual Unruh radiation equation with Planck spectrum (compare $\beta_k$ with equation (\ref{alpha_beta})) to obtain
@@ -220,7 +221,7 @@ We next turn to $W_c$ v.s. $W_0$ and also find $c$ independence there
 \end{equation}
 \begin{equation}
   \begin{array}{ll}
-      \left|\beta_{kq}^{(0c)}\right|^2 / \left|\alpha_{kq}^{(0c)}\right|^2 \vspace{4pt} &= \left|\Gamma\left(\frac{i(\omega_q + \omega_a)}{a}\right)\right|^2 / \left|\Gamma\left(\frac{i(\omega_q - \omega_a)}{a}\right)\right|^2 \vspace{4pt} \\
+      \left|\beta_{kq}^{(0c)}\right|^2 / \left|\alpha_{kq}^{(0c)}\right|^2 \vspace{4pt} &= \left|\Gamma\left(\frac{i(\omega_q + \omega_k)}{a}\right)\right|^2 / \left|\Gamma\left(\frac{i(\omega_q - \omega_k)}{a}\right)\right|^2 \vspace{4pt} \\
   & = \frac{(\omega_q - \omega_k) \sinh \pi (\omega_q - \omega_k)}{(\omega_q + \omega_k) \sinh \pi (\omega_q + \omega_k)} \\
   \end{array}
   \label{nonzero_ratio}
@@ -288,7 +289,7 @@ and more generally we have a one parameter group given by
 \begin{equation}
   \left\{\Lambda_0^x = Q_x \Lambda_0 Q_x^{-1} : x \in \mathbb{R} \right\}.
 \end{equation}
-This is an explicit version of modular flow, due to the von Neumann algebra modular automorphism associated with the translation $W_0 \rightarrow W_c$, studied in detail in Tomita-Takesaki theory \cite{Borchers2000}.  There we find thermal KMS states between open set inclusions in a much more general setting.
+These Bogoliubov transformations between shifted wedges define a one-parameter group, reflecting an underlying symmetry structure. This naturally connects to modular flow as studied in algebraic QFT, where such transformations correspond to automorphisms generated by the modular operator. This is an explicit realization of modular flow, due to the von Neumann algebra modular automorphism associated with the translation $W_0 \rightarrow W_c$, studied in detail in Tomita-Takesaki theory \cite{Borchers2000}.  There we find thermal KMS states between open set inclusions in a much more general setting.
 
 
 Consider a sequence
@@ -306,27 +307,26 @@ which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large,
 
 \section{Driving Sources}
 
-We can ask, {\bf ``What exactly is accelerating the observer?''}. Up to now we have not specified any physical mechanism for the acceleration.  We also have not specified the location of the observer in the wedge, just that it exists in the accelerating frame.  And we also do not know where in the wedge the particles should appear. These unknowns reflect an effective lack of information about the observer’s precise location and the origin of excitations, a feature that underpins the thermal nature of the Unruh effect.
+We now ask a fundamental question: {\bf ``What exactly is accelerating the observer?''} Until this point, we've treated acceleration as a coordinate choice, without invoking any underlying physical mechanism. We have also not specified the observer’s precise location within the Rindler wedge, nor the spatial origin of the observed excitations. These ambiguities reflect the effective coarse-graining over the observer's details, a feature that contributes to the thermal character of the Unruh effect.
 
-Figure \ref{emit_absorb} illustrates the situation: The Rindler mode $r_k$ corresponds to left-moving modes propagating toward the future horizon (interpreted as emission), and $r_{-k}$ to a right-moving modes originating from the past horizon (interpreted as absorption). The Rindler modes are constructed as superpositions of Minkowski modes, effectively smeared over a range of frequencies. This is visually evident in Figure \ref{unruh_rainbow}, where the local frequencies increase (blue-shift) near the horizons. This is made explicitly by the Bogoliubov coefficients $\alpha_{kq}^{(cM)}$ and $\beta_{kq}^{(cM)}$ which encode the Fourier decomposition of the Rindler modes through their Klein-Gordon inner products with the Minkowski modes $\varphi_q$ and $\varphi_q^*$, respectively. This frequency delocalization, tied to the observer's acceleration horizon, underlies the apparent thermal character of the radiation.
+Figure \ref{emit_absorb} illustrates the situation for a sharply peaked frequency wave packet made of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and are interpreted as {\bf emission}. The $r_{-k}$ modes are right-moving, originating from the past horizon and are interpreted as {\bf absorption}. The Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared over a range of frequencies. This is visually evident in Figure \ref{unruh_rainbow}, where the local frequencies increase (blue-shift) near the horizons. This is made explicitly by the Bogoliubov coefficients $\alpha_{kq}^{(cM)}$ and $\beta_{kq}^{(cM)}$ which encode the Fourier decomposition of the Rindler modes through their Klein-Gordon inner products with the Minkowski modes $\varphi_q$ and $\varphi_q^*$, respectively. This frequency delocalization, tied to the observer's acceleration horizon, underlies the apparent thermal character of the radiation.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1.5]{emit_absorb.png}
-\captionsetup{width=0.9\textwidth}
+\captionsetup{width=0.7\textwidth}
 \caption{
-The frequency $\omega_k$ of a Rindler mode appears green from the observer's point of view, representing a mid-spectrum excitation. The mode is depicted as striking a mirror at the tail end of a rocket, where it is reflected as a combination of absorption and emission processes. The emitted component is blue-shifted as it propagates toward the future horizon, while the absorbed component is red-shifted, having originated from the past horizon and traveled toward the observer.}
+  A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon. We diagram a particle as if it were striking a mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
 \label{emit_absorb}
 \end{figure}
 
+To address this, we introduce a driving source, a physical mechanism responsible for the field's excitation and, indirectly, for the observer's acceleration. This reframes the interpretation: the radiation is not spontaneous but instead emerges as a coherent response to the source. The apparent thermality, then, is tied to our ignorance of the source's detailed structure.
 
-We offer a concrete answer to our initial question by introducing a driving source; a physical mechanism representing the thrust behind the acceleration. As we will see, this reframes the interpretation: the radiation term is no longer spontaneous, but instead effectively shifts back into the source that drives the motion.
+We aim to encode the effect of a creation operator by introducing a source term $J(x)$ into the Lagrangian at some distant time in the past, which directly excites the field in a specific mode. Since $J(x)$ couples linearly, it prepares a coherent state that excites the chosen mode in a controlled, phase-coherent manner. To replicate the action of a creation operator, the source must be engineered such that its overlap with the mode functions $u_k(x)$ matches the operator’s action on the field.
 
-A correlator is expressed as a time-ordered chain of creation and annihilation operators. Here, we aim to simulate the effect of a creation operator by introducing a source term $J(x)$ into the Lagrangian, which directly excites the field in a specific mode. Since $J(x)$ couples linearly, it prepares a coherent state that excites the chosen mode in a controlled, phase-coherent manner. To replicate the action of a creation operator, the source must be engineered such that its overlap with the mode functions $u_k(x)$ matches the operator’s action on the field.
-
-The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by Rindler observers. Without loss of generality\footnote{We only consider a fixed frequency and the $L$-mode, and extend the argument linearly.}, we simulate the effect of a creation operator $c_k^{L \dagger}$ using
+The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by Rindler observers. Without loss of generality\footnote{We only consider a fixed frequency and the $L$-mode, and extend the argument linearly to any positive frequency Minkowski modes.}, we encode the effect of a creation operator $c_k^{L \dagger}$ using
 \begin{equation}
-  c _k^{L\dagger} = \left<\phi, \mu_k^{L*}\right> = \int \dv{x} \mu_k^{L*}(x) \phi(x)
+  c _k^{L\dagger} = \left<\phi, \mu_k^{L*}\right>_{KG} = \int \dv{x} \mu_k^{L*}(x) \phi(x)
 \end{equation}
 and the orthogonality of the mode functions in the Klein-Gordon inner product. In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J_k^L}Z[J_k^L]|_{J_k^L=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)$ thus projects onto $c_k^{L\dagger}$ and we have\footnote{The remaining $\alpha_k$ factor reflects the mismatch between the squeezed Unruh vacuum and the coherent state prepared by the source.}
 \begin{equation}
