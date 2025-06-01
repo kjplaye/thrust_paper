@@ -344,7 +344,8 @@ In Rindler coordinates, this source term prepares a modified field state in whic
 
 \section{Localization}
 
-Consider the two wedges $W_0$ and $W_c$ shown in Figure \ref{restrict}.  The grayscale part is the Rindler mode $r_q$ of $W_0$ (analytically continued to $M$).  The rainbow piece is $r_q$ restricted to $W_c$.  This restriction is missing the higher frequencies of $r_q$ that occur near the future event horizon\footnote{The same thing happens for $r_{-q}$ but with the past event horizon instead.}.
+
+Consider the two nested Rindler wedges $W_0$ and $W_c$, with $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a positive-frequency Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The grayscale region illustrates the full support of $r_q$, while the rainbow segment shows the restriction of this mode to the smaller wedge $W_c$.
 
 \begin{figure}[h]
   \centering
@@ -353,16 +354,18 @@ Consider the two wedges $W_0$ and $W_c$ shown in Figure \ref{restrict}.  The gra
 \label{restrict}
 \end{figure}
 
-We have somewhat localized $r_q$ by considering its restriction to $W_c$.  The localization is not complete, the observer can still be anywhere within the wedge $W_c$, but we have at least isolated it from the wild oscillations of $r_q$ near the $W_0$ horizons. To further study the situation, consider $\alpha^{(c0)}_{kq}$ from equation (\ref{bogo}).  We fix $q$ and find that
+By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the excitation. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and there is still some thermal character of $r_k$ to contend with and lower frequency oscillations of the modes as well.
+
+To further study the situation, consider the modulus squared dot product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as $\left|\alpha^{(c0)}_{kq}\right|$, from equation (\ref{bogo}).  We fix $q$ and find that
 \begin{equation}
-  \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a \sinh \frac{\pi \omega_k}{a} (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}}
+  \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \omega_q$.  We still find the thermal term from before $\sinh \frac{\pi \omega_k}{a}$ contributing a spread near $\omega_k = 0$ and the $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ near the peak at $\omega_k = \omega_q$, but the large scale peaked response itself is due to the localization.
+See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \omega_q$.  We still find the thermal term from before, $\sinh \frac{\pi \omega_k}{a}$, contributing a spread near $\omega_k = 0$ and the thermal spread of $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ near the peak at $\omega_k = \omega_q$; but the large scale peaked response itself is due to the localization.
 
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_k$ at $\omega_k = \omega_q$.}
+\caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_q$ at $\omega_k = \omega_q$.}
 \label{peaked}
 \end{figure}
 
