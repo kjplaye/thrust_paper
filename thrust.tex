@@ -109,7 +109,7 @@ for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``R
 For $\omega_k = k > 0$, and
 \begin{equation}
   \begin{array}{llll}
-    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} & \quad \text{(thermal form)} \\
+    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} &  \\
     \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}} & \quad \text{(thermal form)} \\
   \end{array}
   \label{alpha_beta}
@@ -195,8 +195,8 @@ as
     \beta^{(cM)}_{kq} &= \left<\varphi_q^*, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{-i\omega_k}{a}} e^{\frac{-\pi \omega_k}{a}} \Gamma\left(\frac{-i\omega_k}{a}\right) \\
     \alpha^{(c0)}_{kq} &= \left<r_q^{(0)}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i(\omega_q - \omega_k)}{a}\right) \\
     \beta^{(c0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q + \omega_k)}{a}} B\left(\frac{-i\omega_k}{a}, \frac{i(\omega_q + \omega_k)}{a}\right) \\
-
   \end{array}
+  \label{bogo}
 \end{equation}
 We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $q$ or $c$
 \begin{equation}
@@ -341,6 +341,31 @@ In Rindler coordinates, this source term prepares a modified field state in whic
 \begin{equation}
   \bra{J_k^L}  b_k^{\dagger} b_k \ket{J_k^L} = \bra{0_M}  b_k^{J_k^L \dagger} b^{J_k^L}_k \ket{0_M} = 0
 \end{equation}
+
+\section{Localization}
+
+Consider the two wedges $W_0$ and $W_c$ shown in Figure \ref{restrict}.  The grayscale part is the Rindler mode $r_q$ of $W_0$ (analytically continued to $M$).  The rainbow piece is $r_q$ restricted to $W_c$.  This restriction is missing the higher frequencies of $r_q$ that occur near the future event horizon\footnote{The same thing happens for $r_{-q}$ but with the past event horizon instead.}.
+
+\begin{figure}[h]
+  \centering
+\includegraphics[scale=0.3]{wedge_in_wedge.png}
+\caption{A Wedge $W_c$ (blue) inside of the wedge $W_0$ (red). Rindler mode $r_q$ of $W_0$ (grayscale) restricted to $W_c$ (rainbow).}
+\label{restrict}
+\end{figure}
+
+We have somewhat localized $r_q$ by considering its restriction to $W_c$.  The localization is not complete, the observer can still be anywhere within the wedge $W_c$, but we have at least isolated it from the wild oscillations of $r_q$ near the $W_0$ horizons. To further study the situation, consider $\alpha^{(c0)}_{kq}$ from equation (\ref{bogo}).  We fix $q$ and find that
+\begin{equation}
+  \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a \sinh \frac{\pi \omega_k}{a} (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}}
+\end{equation}
+See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \omega_q$.  We still find the thermal term from before $\sinh \frac{\pi \omega_k}{a}$ contributing a spread near $\omega_k = 0$ and the $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ near the peak at $\omega_k = \omega_q$, but the large scale peaked response itself is due to the localization.
+
+\begin{figure}[h]
+  \centering
+\includegraphics[scale=0.6]{peaked.png}
+\caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_k$ at $\omega_k = \omega_q$.}
+\label{peaked}
+\end{figure}
+
 
 \section{Appendix Formulas}
 Some useful formula
