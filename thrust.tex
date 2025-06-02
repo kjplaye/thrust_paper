@@ -106,7 +106,7 @@ The wave equation retains the same structure as the Minkowski case, up to the ov
 for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover region I (the right wedge), these modes are not defined globally in Minkowski space. This leads to an inequivalence between the Minkowski and Rindler quantizations.
 
 \subsection{Unruh Modes}
-For $\omega_k = k > 0$, and
+For $\omega_k = k > 0$ define
 \begin{equation}
   \begin{array}{llll}
     \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} &  \\
@@ -139,13 +139,13 @@ Define also
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
-\captionsetup{width=0.9\textwidth}
+\captionsetup{width=0.7\textwidth}
 \caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color represents phase; brightness shows magnitude. The consistent "rainbow" phase structure in $\varphi_k$ and $\mu_k$ reflects their pure positive frequency content in Minkowski time, unlike $r_k$, which varies across branches. The left moving Rindler modes $r_k$(top) correspond to emission and the right moving mode $r_{-k}$ (bottom) to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
 \subsection{Bogoliubov Transforms}
-Let the superscripts $(0)$, $(0c)$, $(M)$ etc represent frames of reference. We have a Bogoliubov transformation matrix from $M$ to $W_0$ of
+Let the superscripts $(0)$, $(c0)$, $(M)$ etc represent frames of reference. We have a Bogoliubov transformation matrix from $M$ to $W_0$ or $(M0)$ of
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(0)}_k \\
@@ -175,53 +175,82 @@ for a change of basis from $a^{(M)}$ to $c^R$ and $c^L$
   \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
 \end{equation}
-From this we compute the usual Unruh radiation equation with Planck spectrum (compare $\beta_k$ with equation (\ref{alpha_beta})) to obtain
+So that we can compute the usual Unruh radiation equation with Planck spectrum (compare $\beta_k$ with equation (\ref{alpha_beta})) to obtain
 \begin{equation}
   a_k^{(0)} = \alpha_k c_q^R + \beta_k c_q^{L\dagger}
 \label{a_in_c}
 \end{equation}
 
-We compute the Bogoliubov coefficients for
+We next compute the more general mixed Bogoliubov transformations.
 \begin{equation}
   \begin{array}{ll}
   a^{(c)}_k &= \int \dv{q} \alpha^{(cM)}_{kq} a^{M}_q + \beta^{(cM)}_{kq} a^{(M)\dagger}_q \\
   &= \int \dv{q} \alpha^{(c0)}_{kq} a^{(0)}_q + \beta^{(c0)}_{kq} a^{(0)\dagger}_q
   \end{array}
 \end{equation}
-as
+We make use of a gamma function for $(cM)$ and a beta function for $(c0)$. These occur naturally in the KG dot products as integrals over an exponential phase from $\varphi_k$, $x$-powers from $r_k^{(0)}$, and $(x-c)$ powers from $r_k^{(c)}$.
+
+To go after $(cM)$ we start with a useful formula obtained by taming Fourier oscillations and doing a contour integral
+\begin{equation}
+  \int_{-\infty}^\infty e^{ikx} x^b \dv{x} = -\frac{2i}{k^{b+1}} e^{\frac{-\pi b}{2}} \Gamma(b+1)
+\end{equation}
+to obtain the Bogoliubov transform
 \begin{equation}
   \begin{array}{ccl}
     \alpha^{(cM)}_{kq} &= \left<\varphi_q, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{i\omega_k}{a}} e^{\frac{\pi \omega_k}{a}} \Gamma\left(\frac{i\omega_k}{a}\right) \\
     \beta^{(cM)}_{kq} &= \left<\varphi_q^*, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{-i\omega_k}{a}} e^{\frac{-\pi \omega_k}{a}} \Gamma\left(\frac{-i\omega_k}{a}\right) \\
+  \end{array}
+  \label{bogo1}
+\end{equation}
+
+We next consider products of shifted powers to go after $(c0)$. We make use of a beta function for $(c0)$ which occurs natrually in the KG dot products as integrals over powers of $x$ and $x-c$, from $r_k^{(0)}$ and $r_k^{(c)}$ respecitvely
+\begin{equation}
+  \int_{c}^\infty x^a (x-c)^b \dv{x} = c^{a+b+1} B(b+1, -a-b-1)
+\end{equation}
+and over sign choices $b,d \in \{-1,1\}$
+\begin{equation}
+  f_{k,b,d} = \left(a\left(b(t-i\epsilon)+x\right)\right)^\frac{id\omega_k}{a}
+\end{equation}
+we have the dot product
+\begin{equation}
+  \left< f_{k,b_k,d_k}, f_{q,d_q,d_q}\right> = \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} (ac)^\frac{i(d_k\omega_k - d_q \omega_q)}{a} \left((-d_k)\frac{b_k + b_q}{2} \right) B\left(\frac{id_k\omega_k}{a}, \frac{-i(d_k\omega_k - d_q \omega_q)}{a}\right)
+\end{equation}
+from which we compute the Bogoliubov coefficients as
+\begin{equation}
+  \begin{array}{ccl}
     \alpha^{(c0)}_{kq} &= \left<r_q^{(0)}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i(\omega_q - \omega_k)}{a}\right) \\
     \beta^{(c0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q + \omega_k)}{a}} B\left(\frac{-i\omega_k}{a}, \frac{i(\omega_q + \omega_k)}{a}\right) \\
   \end{array}
-  \label{bogo}
+  \label{bogo2}
 \end{equation}
 We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $q$ or $c$
 \begin{equation}
   \begin{array}{cc}
     \left|\beta_{kq}^{(c_1M)}\right|^2 = \left|\beta_{kq}^{(c_2M)}\right|^2 & \\
     \left|\beta_{kq}^{(c_1M)}\right|^2 = \left|\beta_{kq}^{(c_2M)}\right|^2 & \\
-    \left|\beta_{kq}^{(cM)}\right|^2 / \left|\alpha_{kq}^{(cM)}\right|^2 = e^{\frac{-2\pi\omega_k}{a}}  & \text{   (thermal factor)} \\
  \end{array}
 \end{equation}
+and in fact
+\begin{equation}
+    \left|\beta_{kq}^{(cM)}\right|^2 / \left|\alpha_{kq}^{(cM)}\right|^2 = e^{\frac{-2\pi\omega_k}{a}} \\
+\end{equation}
+
 The $c$ independence is expected since Unruh radiation is translation invariant. The $q$ independence can be strengthened as the expected number of particles in mode $k$
 \begin{equation}
  \int \dv{q} \left|\beta_{kq}^{(cM)}\right|^2 = \frac{e^{\frac{-2 \pi \omega_k}{a}}}{2 \sinh \frac{\pi \omega_k}{a}} \int \dv{q} \frac{2}{a\pi |q|}
 \end{equation}
-where we factor out the divergent part to recover the radiation equation again.
+where we factor out the divergent part to recover the radiation equation again \footnote{We frequently use here and elsewhere $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$}.
 
 We next turn to $W_c$ v.s. $W_0$ and also find $c$ independence there 
 \begin{equation}
   \begin{array}{c}
-    \left|\alpha_{kq}^{(0c_1)}\right| = \left|\alpha_{kq}^{(0c_2)}\right| \vspace{4pt}\\
-    \left|\beta_{kq}^{(0c_1)}\right| = \left|\beta_{kq}^{(0c_2)}\right| \\
+    \left|\alpha_{kq}^{(c0_1)}\right| = \left|\alpha_{kq}^{(c0_2)}\right| \vspace{4pt}\\
+    \left|\beta_{kq}^{(c0_1)}\right| = \left|\beta_{kq}^{(c0_2)}\right| \\
   \end{array}
 \end{equation}
 \begin{equation}
   \begin{array}{ll}
-      \left|\beta_{kq}^{(0c)}\right|^2 / \left|\alpha_{kq}^{(0c)}\right|^2 \vspace{4pt} &= \left|\Gamma\left(\frac{i(\omega_q + \omega_k)}{a}\right)\right|^2 / \left|\Gamma\left(\frac{i(\omega_q - \omega_k)}{a}\right)\right|^2 \vspace{4pt} \\
+      \left|\beta_{kq}^{(c0)}\right|^2 / \left|\alpha_{kq}^{(c0)}\right|^2 \vspace{4pt} &= \left|\Gamma\left(\frac{i(\omega_q + \omega_k)}{a}\right)\right|^2 / \left|\Gamma\left(\frac{i(\omega_q - \omega_k)}{a}\right)\right|^2 \vspace{4pt} \\
   & = \frac{(\omega_q - \omega_k) \sinh \pi (\omega_q - \omega_k)}{(\omega_q + \omega_k) \sinh \pi (\omega_q + \omega_k)} \\
   \end{array}
   \label{nonzero_ratio}
@@ -356,7 +385,7 @@ Consider the two nested Rindler wedges $W_0$ and $W_c$, with $W_c \subseteq W_0$
 
 By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the excitation. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and there is still some thermal character of $r_k$ to contend with and lower frequency oscillations of the modes as well.
 
-To further study the situation, consider the modulus squared dot product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as $\left|\alpha^{(c0)}_{kq}\right|$, from equation (\ref{bogo}).  We fix $q$ and find that
+To further study the situation, consider the modulus squared dot product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as $\left|\alpha^{(c0)}_{kq}\right|$, from equation (\ref{bogo2}).  We fix $q$ and find that
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
@@ -368,30 +397,6 @@ See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \o
 \caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_q$ at $\omega_k = \omega_q$.}
 \label{peaked}
 \end{figure}
-
-
-\section{Appendix Formulas}
-Some useful formula
-\begin{equation}
-  \int_{c}^\infty x^a (x-c)^b \dv{x} = c^{a+b+1} B(b+1, -a-b-1)
-\end{equation}
-TODO, check this next one
-\begin{equation}
-  \int_{-\infty}^\infty e^{ikx} x^b \dv{x} = -\frac{2i}{k^{b+1}} e^{\frac{-\pi b}{2}} \Gamma(b+1)
-\end{equation}
-This is useful for the shifted wedge inner products. Let
-\begin{equation}
-  f_{k,b,d} = \left(a\left(b(t-i\epsilon)+x\right)\right)^\frac{id\omega_k}{a}
-\end{equation}
-Then
-\begin{equation}
-  \left< f_{k,b_k,d_k}, f_{q,d_q,d_q}\right> = \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} (ac)^\frac{i(d_k\omega_k - d_q \omega_q)}{a} \left((-d_k)\frac{b_k + b_q}{2} \right) B\left(\frac{id_k\omega_k}{a}, \frac{-i(d_k\omega_k - d_q \omega_q)}{a}\right)
-\end{equation}
-We frequently use
-\begin{equation}
-  |\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}
-\end{equation}
-
 
 \section{Conclusion and Prediction}
 If the thrust required to accelerate a detector is not explicitly accounted for, it manifests instead as an apparent thermal feature of the vacuum—Unruh radiation. However, as demonstrated in this paper, Unruh radiation can be directly explained as a consequence of thrust. This perspective leads to the prediction that neither Unruh radiation nor Hawking-Bekenstein radiation should appear independently of the thrust that drives the system.
