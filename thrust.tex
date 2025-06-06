@@ -29,13 +29,13 @@
 
 %title and author details
 \title{Localization of the Unruh Effect}
-\author[1]{Kevin Player\footnote{kplaye@gmail.com}}
+\author[1]{Kevin Player\footnote{kjplaye@gmail.com}}
 
 \maketitle
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We explore a method to interpolate the Unruh effect between a fully thermal response to a completely localized driving source. In a uniformly accelerating frame, modes extend over long duration and experience red- and blue-shifts due to their extended support across the Rindler wedge, leading to a mixed-frequency response that appears thermal. To refine this picture, we develop a partially localized perspective using modular automorphisms to map modes between nested Rindler wedges. We then interpolate further to fully localized wave packets using parabolic cylindrical coordinates. This framework enables a reinterpretation of Unruh radiation in terms of thrust, a localized, frequency-peaked driving effect that excites the field without producing a thermal response. This offers a complementary, non-thermal perspective on acceleration-observed radiation.}
+\abstract{We explore a method to interpolate the Unruh effect between a fully thermal response to a completely localized driving source. In a uniformly accelerating frame, modes extend over long duration and experience red- and blue-shifts due to their extended support across the Rindler wedge, leading to a mixed-frequency response that appears thermal. To refine this picture, we develop a partially localized perspective using modular automorphisms to map modes between nested Rindler wedges. We then interpolate further to fully localized wave packets using parabolic cylinder functions. This framework enables a reinterpretation of Unruh radiation in terms of thrust, a localized, frequency-peaked driving effect that excites the field without producing a thermal response. This offers a complementary, non-thermal perspective on acceleration-observed radiation.}
 
 \section{Introduction}
 
@@ -46,7 +46,7 @@ We begin in Section 2 by introducing notation and reviewing the Unruh effect, in
 We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{Frodden}.
 
 
-Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost occurs.
+Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost is occuring.
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
@@ -80,7 +80,7 @@ To describe the physics from the point of view of a uniformly accelerating obser
 \begin{equation}
   W_c = \{(x,t) : x-c>|t|\}
 \end{equation}
-with apex at $(t,x)=(0,c)$.  We start with the wedge at (0,0), $W = W_0$, which is region $I$ pictured in Figure \ref{rindlerw}; with coordinates
+with apex at $(t,x)=(0,c)$.  We begin with the wedge at the origon, $W = W_0$, which coorosponds to region I pictured\footnote{All spacetime diagrams have time moving up and space to the right.} in Figure \ref{rindlerw}; with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -88,12 +88,12 @@ with apex at $(t,x)=(0,c)$.  We start with the wedge at (0,0), $W = W_0$, which 
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-where $a>0$ is an acceleration parameter. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with worldlines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
+and $a$ is a constant with dimensions of acceleration that sets the proper acceleration of the reference trajectory at fixed $\xi$.  The parameter $a$ is introduced explicitly to make the dependence of the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with worldlines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.2]{rindler_w.png}
-\caption{Rindler wedge $I$ on the right.}
+\caption{Rindler wedge I on the right.}
 \label{rindlerw}
 \end{figure}
 
@@ -110,34 +110,38 @@ for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``R
 \subsection{Unruh Modes}
 For $\omega_k = k > 0$ define
 \begin{equation}
-  \begin{array}{llll}
-    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} &  \\
-    \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} &= \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}} & \quad \text{(thermal form)} \\
-  \end{array}
+  \begin{aligned}
+    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}}  \\
+    \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}} \quad \text{(thermal form)} \\
+  \end{aligned}
   \label{alpha_beta}
 \end{equation}
-noting that $\alpha_k^2 - \beta_k^2 = 1$. We analyticaly continue $r_k$, $r_{-k}$ to the $t,x$ plane\footnote{We shift the time coordinate by $t \rightarrow t - i\epsilon$ so that positive frequency modes are analytic and bounded on the lower half plane $\operatorname{Im}(t) < 0$.} as
+These coefficients satisfy $\alpha_k^2 - \beta_k^2 = 1$, reflecting the normalization condition for Bogoliubov transformations.
+
+We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\mp t + x) = e^{a(\pm \eta + \xi)}$}  $r_k$ and $r_{-k}$ to the $(t,x)$ plane using the standard $i\epsilon$ prescription to define a specific branch of the log:
 \begin{equation}
-  \begin{array}{ll}
+  \begin{aligned}
     r_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta - k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t + x + i \epsilon))^{\frac{i \omega_k}{a}} \\
-    r_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta + k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t - x + i \epsilon))^{\frac{-i \omega_k}{a}} \\
-  \end{array}
+    r_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta + k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a( t + x - i \epsilon))^{\frac{-i \omega_k}{a}} \\
+  \end{aligned}
 \end{equation}
-Define also
+Though $r_k$ and $r_{-k}$ are positive frequency in Rindler time $\eta$, they flip to negative frequency in Minkowski time $t$ when analytically continued across the log branch to the left wedge; see the middle column in Figure \ref{unruh_rainbow}. We mention again the standard Minkowski positive-frequency plane wave modes:
 \begin{equation}
-  \begin{array}{ll}
+  \begin{aligned}
     \varphi_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k t - k x)}\\
     \varphi_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k t + k x)}\\
-    \mu^R_k &= \alpha_k (r_k - r_{-k}^*) \\
-    &= \frac{e^{\frac{\pi \omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left(r_k - r_{-k}^* \right) \\
-    &= \frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{i\omega_k}{a}} + e^{\frac{-\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{i\omega_k}{a}} \right) \\
-    \mu^L_k &= \beta_k (r_k^* - r_{-k} )\\
-    &=\frac{e^{\frac{-\pi \omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left(r_k^* - r_{-k} \right) \\
-    &=\frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{-\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{-i\omega_k}{a}} + e^{\frac{\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{-i\omega_k}{a}} \right) \\
-  \end{array}
+  \end{aligned}
 \end{equation}
-which are positive frequency modes in Minkowksi space. The functions $\mu_k^R$ and $\mu_k^L$ provide an alternative basis of mode solutions, distinct from the conventional $\varphi_{+k}$ and $\varphi_{-k}$ modes.
-%TODO (verify U = r_k expressions)
+We next construct the Unruh modes
+\begin{equation}
+  \begin{aligned}
+    \mu^R_k &= \alpha_k (r_{+k} - r_{-k}^*) \\
+    &= \frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{i\omega_k}{a}} + e^{\frac{-\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{i\omega_k}{a}} \right) \\
+    \mu^L_k &= \beta_k (r_{+k}^* - r_{-k} )  \\
+    &=\frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{-\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{-i\omega_k}{a}} + e^{\frac{\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{-i\omega_k}{a}} \right) \\
+  \end{aligned}
+\end{equation}
+The functions $\mu^R_k$ and $\mu^L_k$ are analytic in the lower-half complex $t$-plane and decay at infinity, so they qualify as positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. Most importantly, the Unruh modes diagonalize the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
 \begin{figure}[h]
 \centering
