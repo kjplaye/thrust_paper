@@ -1,4 +1,5 @@
 % TODOS
+% Check that r_+-k and mu^R/L are correct.
 % Does J need to be normalized, wrt Rindler and Minkowski
 % Work out details of Green's function
 \documentclass[12pt,a4paper]{article}
@@ -34,10 +35,11 @@
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We explore a method to interpolate the Unruh effect between a fully thermal response to a completely localized driving source. In the Rindler frame, modes extend over long durations and experience red- and blue-shifts due to their extended support across the wedge, leading to a mixed-frequency response that appears thermal. To refine this picture, we develop a partially localized perspective using modular automorphisms to map modes between nested Rindler wedges. We then interpolate further to fully localized wave packets using parabolic cylindrical coordinates. This framework enables a reinterpretation of Unruh radiation in terms of thrust, a localized, frequency-peaked driving effect that excites the field without producing a thermal response. This offers a complementary, nonthermal perspective on acceleration-induced radiation.}
+\abstract{We explore a method to interpolate the Unruh effect between a fully thermal response to a completely localized driving source. In a uniformly accelerating frame, modes extend over long duration and experience red- and blue-shifts due to their extended support across the Rindler wedge, leading to a mixed-frequency response that appears thermal. To refine this picture, we develop a partially localized perspective using modular automorphisms to map modes between nested Rindler wedges. We then interpolate further to fully localized wave packets using parabolic cylindrical coordinates. This framework enables a reinterpretation of Unruh radiation in terms of thrust, a localized, frequency-peaked driving effect that excites the field without producing a thermal response. This offers a complementary, non-thermal perspective on acceleration-observed radiation.}
 
 \section{Introduction}
-We first present some notation and review the Unruh effect in section 2.  We then introduce a source in section 3 that exactly captures the particle creation in the cross term of the Bogoliubov transform for Rindler modes extended to Minkowski space.  In section 4,  we interpolate between the eternal Rindler mode source to a more localized wave packet version, and in section 5 we interpret the results.
+
+We begin in Section 2 by introducing notation and reviewing the Unruh effect, including Rindler coordinates and explicit Bogoliubov transformations. In Section 3, we introduce a source in a standard way that exactly reproduces the particle creation associated with the Bogoliubov transformation for Rindler modes extended to Minkowski space. Section 4 explores partial localization by considering Rindler subwedges related by a spacelike translation, corresponding to a modular automorphism of the associated von Neumann algebra. We then use parabolic cylinder functions to interpolate between eternal Rindler modes and fully localized wave packets. Finally, in Section 5, we interpret and discuss the implications of these results.
 
 \section{Unruh Effect Review and Notation}
 
@@ -67,9 +69,9 @@ where
   \varphi(x,t) = \frac{1}{\sqrt{4\pi\omega_k}} e^{i(kx - \omega_k t)}.
 \label{amode}
 \end{equation}
-are pure Minkowkski positive frequency waves normalized with respect to the Klein-Gordon inner product at any time slice, say $t = 0$,
+are pure Minkowkski positive frequency waves normalized with respect to the Klein-Gordon inner product over a Cauchy surface $\Sigma$ (usually $t = 0$)
 \begin{equation}
-  \left<f, g\right>_{KG} = i \int \diff x (f^* \partial_t g - \partial_t f^* g).
+  \left<f, g\right>_{KG} = i \int_\Sigma \diff x (f^* \partial_t g - \partial_t f^* g).
 \end{equation}
 
 \subsection{Rindler Coordinates}
@@ -78,7 +80,7 @@ To describe the physics from the point of view of a uniformly accelerating obser
 \begin{equation}
   W_c = \{(x,t) : x-c>|t|\}
 \end{equation}
-with apex at $(t,x)=(0,c)$.  We start with $W = W_0$ which is region $I$ pictured in Figure \ref{rindlerw}; with coordinates
+with apex at $(t,x)=(0,c)$.  We start with the wedge at (0,0), $W = W_0$, which is region $I$ pictured in Figure \ref{rindlerw}; with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -99,11 +101,11 @@ The massless Klein-Gordon equation in Rindler coordinates is
 \begin{equation}
   \Box \phi = e^{-2a \xi}(-\partial_\eta^2 + \partial_\xi^2) \phi = 0
 \end{equation}
-The wave equation retains the same structure as the Minkowski case, up to the overall conformal factor $e^{-2a\xi}$. Since this factor does not affect the null structure of the equation, the mode solutions retain the same plane wave form in the Rindler time coordinate.
+The wave equation retains the same structure as the Minkowski case, up to the overall conformal factor $e^{-2a\xi}$. Since this factor does not affect the null structure of the equation, the mode solutions retain the same plane wave form but in the Rindler coordinates
 \begin{equation}
  r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)} + \text{h.c.}
 \end{equation}
-for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover region I (the right wedge), these modes are not defined globally in Minkowski space. This leads to an inequivalence between the Minkowski and Rindler quantizations.
+for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover region I (the right wedge), these modes are not defined globally in Minkowski space.
 
 \subsection{Unruh Modes}
 For $\omega_k = k > 0$ define
@@ -114,7 +116,7 @@ For $\omega_k = k > 0$ define
   \end{array}
   \label{alpha_beta}
 \end{equation}
-noting that $\alpha_k^2 - \beta_k^2 = 1$. We analyticaly continue $r_k$, $r_{-k}$ to the $t,x$ plane as
+noting that $\alpha_k^2 - \beta_k^2 = 1$. We analyticaly continue $r_k$, $r_{-k}$ to the $t,x$ plane\footnote{We shift the time coordinate by $t \rightarrow t - i\epsilon$ so that positive frequency modes are analytic and bounded on the lower half plane $\operatorname{Im}(t) < 0$.} as
 \begin{equation}
   \begin{array}{ll}
     r_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta - k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t + x + i \epsilon))^{\frac{i \omega_k}{a}} \\
@@ -134,18 +136,19 @@ Define also
     &=\frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{-\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{-i\omega_k}{a}} + e^{\frac{\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{-i\omega_k}{a}} \right) \\
   \end{array}
 \end{equation}
+which are positive frequency modes in Minkowksi space. The functions $\mu_k^R$ and $\mu_k^L$ provide an alternative basis of mode solutions, distinct from the conventional $\varphi_{+k}$ and $\varphi_{-k}$ modes.
 %TODO (verify U = r_k expressions)
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color represents phase; brightness shows magnitude. The consistent "rainbow" phase structure in $\varphi_k$ and $\mu_k$ reflects their pure positive frequency content in Minkowski time, unlike $r_k$, which varies across branches. The left moving Rindler modes $r_k$(top) correspond to emission and the right moving mode $r_{-k}$ (bottom) to absorption.}
+\caption{Space time diagrams for $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color represents phase; brightness shows magnitude. The consistent ``rainbow'' phase structure in $\varphi_k$ and $\mu_k$ reflects their pure positive frequency content in Minkowski time, unlike $r_k$, which flips across log branch. The left moving Rindler modes $r_k$(top) correspond to emission and the right moving mode $r_{-k}$ (bottom) to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
 \subsection{Bogoliubov Transforms}
-Let the superscripts $(0)$, $(c0)$, $(M)$ etc represent frames of reference. We have a Bogoliubov transformation matrix from $M$ to $W_0$ or $(M0)$ of
+Let the superscripts $(0)$, $(c)$, $(M)$ represent the $W_0$, $W_c$, and Minkowski frames of reference respectively.  $(0c)$ represents a map from the Von Neumann algebras of $W_c$ to $W_0$ and $(cM)$ represents a map from the algebras of $M$ to $W_c$.  We have a Bogoliubov transformation matrix from $M$ to $W_0$
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(0)}_k \\
@@ -170,7 +173,7 @@ Let the superscripts $(0)$, $(c0)$, $(M)$ etc represent frames of reference. We 
     c^{L\dagger}_q \\
  \end{array} \right]
 \end{equation}
-for a change of basis from $a^{(M)}$ to $c^R$ and $c^L$
+for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
 \begin{equation}
   \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
@@ -372,7 +375,7 @@ In Rindler coordinates, this source term prepares a modified field state in whic
 \end{equation}
 
 \section{Localization}
-
+\subsection{Modular Automorphism}
 
 Consider the two nested Rindler wedges $W_0$ and $W_c$, with $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a positive-frequency Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The grayscale region illustrates the full support of $r_q$, while the rainbow segment shows the restriction of this mode to the smaller wedge $W_c$.
 
@@ -397,6 +400,8 @@ See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \o
 \caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_q$ at $\omega_k = \omega_q$.}
 \label{peaked}
 \end{figure}
+
+\subsection{Wave Packet Interpolation}
 
 \section{Conclusion and Prediction}
 If the thrust required to accelerate a detector is not explicitly accounted for, it manifests instead as an apparent thermal feature of the vacuum—Unruh radiation. However, as demonstrated in this paper, Unruh radiation can be directly explained as a consequence of thrust. This perspective leads to the prediction that neither Unruh radiation nor Hawking-Bekenstein radiation should appear independently of the thrust that drives the system.
