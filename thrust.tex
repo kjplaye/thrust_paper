@@ -44,7 +44,7 @@ The Unruh effect reveals that uniformly accelerated observers perceive the Minko
 
 In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response. In Section 2, we begin with a review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a standard source construction to inject particles into the field. When aimed at negative-frequency Unruh modes, this reproduces the Rindler particle spectrum predicted by the Bogoliubov transformation.
 
-Section 4 explores partial localization by considering Rindler sub-wedges related by a space-like translations and reflections, corresponding to a modular automorphism of the associated von Neumann algebras. We then use parabolic cylinder functions to interpolate between eternal Rindler modes and fully localized wave packets. Finally, in Section 5, we interpret and discuss the implications of these results. This leads to a novel interpretation: the Unruh effect can be seen not only as a thermal phenomenon but also as a limiting case of localized, non-thermal field excitations resembling a thrust-like driving force.
+Section 4 explores partial localization by considering Rindler sub-wedges related by a space-like translations and reflections, corresponding to a modular automorphism of the associated von Neumann algebras. We then use parabolic cylinder functions to interpolate between eternal Rindler modes and fully localized wave packets. Finally, in Section 5, we interpret and discuss the implications of these results. This leads to a novel interpretation: the Unruh effect manifests as localized, non-thermal field excitations that act like a thrust-like driving force.
 
 \section{Preliminaries}
 
@@ -93,7 +93,7 @@ with apex at the origin, corresponding to region I pictured\footnote{All diagram
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-The parameter $a$ is a constant with dimensions of acceleration that sets the proper acceleration of the reference trajectory at a fixed $\xi$.  $a$ is introduced explicitly to make the dependence of the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with world-lines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
+The constant acceleration parameter $a$ is introduced explicitly to make the dependence of the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with world-lines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
 
 \begin{figure}[h]
 \centering
@@ -148,16 +148,17 @@ We next construct the Unruh modes
     \mu^L_k &= \beta_k \widetilde{r_{+k}^*} + \alpha_k r_{-k}  = -\beta_k l_{+k} + \alpha_k r_{-k} \\
     &=\frac{1}{\sqrt{4 \pi \omega_k}\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} \left( e^{\frac{-\pi \omega_k}{2a}} \left(a(-t+x+i\epsilon)\right)^{\frac{-i\omega_k}{a}} + e^{\frac{\pi \omega_k}{2a}} \left(a(t+x-i\epsilon)\right)^{\frac{-i\omega_k}{a}} \right) \\
   \end{aligned}
+  \label{unruh_mode_def}
 \end{equation}
 Here, the tilde denotes opposite analytic continuation across the logarithmic branch cut, corresponding to the conjugate $i \epsilon$ prescription. Operationally, this captures the mode's behavior in the left wedge and is often written using left Rindler modes $l_k$ and $l_{-k}$, which have opposite sign and live in coordinates related by $t \to -t$, $x \to -x$ .
 
-The functions $\mu^R_k$ and $\mu^L_k$ are analytic in the lower-half complex $t$-plane and decay at infinity, so they qualify as positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. Most importantly, the Unruh modes diagonalize the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
+The functions $\mu^R_k$ and $\mu^L_k$ are analytic in the lower-half complex $t$-plane and decay at infinity, so they qualify as positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Spacetime diagrams of the mode functions $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Minkowski modes $\varphi_k$ and Unruh modes $\mu_k$ display consistent {\it rainbow} phase structure at $t=0$, reflecting their global positive-frequency character. In contrast, the Rindler modes $r_k$ flip phase across the horizon due to the analytic structure of the logarithm. The left-moving mode $r_k$ corresponds to emission; the right-moving $r_{-k}$ to absorption.}
+\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Minkowski modes $\varphi_k$ and Unruh modes $\mu_k$ display consistent {\it rainbow} phase structure at $t=0$, reflecting their global positive-frequency character. In contrast, the Rindler modes $r_k$ flip phase across the horizon due to the analytic structure of the logarithm. The left-moving mode $r_k$ corresponds to emission; the right-moving $r_{-k}$ to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
@@ -170,11 +171,11 @@ and a reflected (left) wedge $\widetilde{W_c}$ with apex $(0,c)$
 \begin{equation}
  \widetilde{W_c} = \{(t,x) : x - c < -|t|\}.
 \end{equation}
-Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W_c}$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an inclusion from $A$ to $B$.
+Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W_c}$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion $A \subseteq B$.
 
 In the Haag-Kastler framework of algebraic quantum field theory, the assignment of von Neumann algebras to spacetime regions defines a covariant functor: the inclusion of regions $A \rightarrow B$ induces an inclusion of algebras $\mathcal{A}(A) \rightarrow \mathcal{A}(B)$. Conversely, the Bogoliubov transformation given by $\alpha^{(A \rightarrow B)}$ and $\beta^{(A \rightarrow B)}$ defines a contravariant functor, acting on algebras via pullback. 
 
-Since the analytically extended Rindler modes remain solutions of the Klein–Gordon equation, their inner products are preserved under continuation from the wedge to Minkowski space.  This allows us to directly compute from $W_0 \rightarrow M$ Bogoliubov coefficients 
+Since the analytically extended Rindler modes remain solutions of the Klein–Gordon equation, their inner products are preserved under continuation from the wedge to Minkowski space.  This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients from equation (\ref{unruh_mode_def})
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(0)}_k \\
@@ -204,7 +205,7 @@ for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
   \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
 \end{equation}
-So that we can compute the usual Unruh radiation equation with Planck spectrum (compare $\beta_k$ with equation (\ref{alpha_beta})) to obtain
+So that we can summarize the transform as
 \begin{equation}
   a_k^{(0)} = \alpha_k c_q^R + \beta_k c_q^{L\dagger}
 \label{a_in_c}
@@ -212,12 +213,13 @@ So that we can compute the usual Unruh radiation equation with Planck spectrum (
 
 We next compute the more general mixed Bogoliubov transformations.
 \begin{equation}
-  \begin{array}{ll}
-  a^{(c)}_k &= \int \dv{q} \alpha^{(c \rightarrow M)}_{kq} a^{M}_q + \beta^{(c \rightarrow M)}_{kq} a^{(M)\dagger}_q \\
-  &= \int \dv{q} \alpha^{(c \rightarrow 0)}_{kq} a^{(0)}_q + \beta^{(c \rightarrow 0)}_{kq} a^{(0)\dagger}_q
+  \begin{array}{rll}
+  (c \rightarrow M) : & a^{(c)}_k &= \int \dv{q} \alpha^{(c \rightarrow M)}_{kq} a^{M}_q + \beta^{(c \rightarrow M)}_{kq} a^{(M)\dagger}_q \\
+  (c \rightarrow 0) : &   a^{(c)}_k &= \int \dv{q} \alpha^{(c \rightarrow 0)}_{kq} a^{(0)}_q + \beta^{(c \rightarrow 0)}_{kq} a^{(0)\dagger}_q \\
+  (\widetilde{c} \rightarrow 0) : &   a^{(\tilde{c})}_k &= \int \dv{q} \alpha^{(\widetilde{c} \rightarrow 0)}_{kq} a^{(0)}_q + \beta^{(\widetilde{c} \rightarrow 0)}_{kq} a^{(0)\dagger}_q \\
   \end{array}
 \end{equation}
-We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally in the KG dot products as integrals over an exponential phase from $\varphi_k$, and $(x-c)$ powers from $r_k^{(c)}$:
+We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally in the KG dot product as an integral over an exponential phase from $\varphi_k$, and a $(x-c)$ power from $r_k^{(c)}$:
 \begin{equation}
   \begin{array}{ccl}
     \alpha^{(c \rightarrow M)}_{kq} &= \left<\varphi_q, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{i\omega_k}{a}} e^{\frac{\pi \omega_k}{a}} \Gamma\left(\frac{i\omega_k}{a}\right) \\
@@ -225,8 +227,7 @@ We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally i
   \end{array}
   \label{bogo1}
 \end{equation}
-
-We next consider products of shifted powers to go after $(c \rightarrow 0)$. We make use of a beta function for $(c \rightarrow 0)$ which occurs naturally in the KG dot products as integrals over powers of $x$ and $x-c$, from $r_k^{(0)}$ and $r_k^{(c)}$ respectively.  We compute the Bogoliubov coefficients as
+Next we consider products of shifted powers to go after $(c \rightarrow 0)$. We make use of a beta function for $(c \rightarrow 0)$ which occurs naturally in the KG dot product as an integral over a power of $x$ and of $x-c$, from $r_k^{(0)}$ and $r_k^{(c)}$ respectively.  We compute the Bogoliubov coefficients as
 \begin{equation}
   \begin{array}{ccl}
     \alpha^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i(\omega_q - \omega_k)}{a}\right) \\
@@ -234,6 +235,16 @@ We next consider products of shifted powers to go after $(c \rightarrow 0)$. We 
   \end{array}
   \label{bogo2}
 \end{equation}
+The reflected diamond wedge version also yields a beta function, but with a different form
+\begin{equation}
+  \begin{array}{ccl}
+    \alpha^{(\widetilde{c} \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(\widetilde{c})} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i\omega_k}{a}\right) \\
+    \beta^{(\widetilde{c} \rightarrow 0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(\widetilde{c})} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q + \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, -\frac{i\omega_q}{a}\right) \\
+  \end{array}
+  \label{bogo2}
+\end{equation}
+
+
 We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $q$ or $c$
 \begin{equation}
   \begin{array}{cc}
@@ -241,34 +252,22 @@ We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't de
     \left|\beta_{kq}^{(c_1 \rightarrow M)}\right|^2 = \left|\beta_{kq}^{(c_2 \rightarrow M)}\right|^2 & \\
  \end{array}
 \end{equation}
-and in fact
-\begin{equation}
-    \left|\beta_{kq}^{(c \rightarrow M)}\right|^2 / \left|\alpha_{kq}^{(c \rightarrow M)}\right|^2 = e^{\frac{-2\pi\omega_k}{a}} \\
-\end{equation}
-
 The $c$ independence is expected since Unruh radiation is translation invariant. The $q$ independence can be strengthened as the expected number of particles in mode $k$
 \begin{equation}
  \int \dv{q} \left|\beta_{kq}^{(c \rightarrow M)}\right|^2 = \frac{e^{\frac{-2 \pi \omega_k}{a}}}{2 \sinh \frac{\pi \omega_k}{a}} \int \dv{q} \frac{2}{a\pi |q|}
 \end{equation}
 where we factor out the divergent part to recover the radiation equation again\footnote{We frequently use here and elsewhere $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$}.
 
-We next turn to $W_c$ v.s. $W_0$ and also find $c$ independence there 
+We next turn to $(c \rightarrow 0)$ and also find $c$ independence there 
 \begin{equation}
   \begin{array}{c}
-    \left|\alpha_{kq}^{(c_1 \rightarrow 0)}\right| = \left|\alpha_{kq}^{(c_2 \rightarrow 0)}\right| \vspace{4pt}\\
+    \left|\alpha_{kq}^{(c_1 \rightarrow 0)}\right| = \left|\alpha_{kq}^{(c_2 \rightarrow 0)}\right| \vspace{4pt} \\
     \left|\beta_{kq}^{(c_1 \rightarrow 0)}\right| = \left|\beta_{kq}^{(c_2 \rightarrow 0)}\right| \\
   \end{array}
 \end{equation}
-\begin{equation}
-  \begin{array}{ll}
-      \left|\beta_{kq}^{(c \rightarrow 0)}\right|^2 / \left|\alpha_{kq}^{(c \rightarrow 0)}\right|^2 \vspace{4pt} &= \left|\Gamma\left(\frac{i(\omega_q + \omega_k)}{a}\right)\right|^2 / \left|\Gamma\left(\frac{i(\omega_q - \omega_k)}{a}\right)\right|^2 \vspace{4pt} \\
-  & = \frac{(\omega_q - \omega_k) \sinh \pi (\omega_q - \omega_k)}{(\omega_q + \omega_k) \sinh \pi (\omega_q + \omega_k)} \\
-  \end{array}
-  \label{nonzero_ratio}
-\end{equation}
-which is somewhat more surprising since this implies that $\int \dv{q} \left|\beta_{kq}^{(c_2 \rightarrow c_1)}\right|^2$ is a $c_1$ and $c_2$ independent factor  for every shifted wedge inclusion.  In other words, the expected number of particles for a mode $r^{(c_2)}_k$ of $W_{c_2}$ in $W_{c_1}$'s vacuum is independent of the choice of shift $c_2$ and $c_1$.
+which is somewhat more surprising since this implies that $\int \dv{q} \left|\beta_{kq}^{(c_2 \rightarrow c_1)}\right|^2$ are $c_1$ and $c_2$ independent quantities for every shifted (and reflected resp.) wedge inclusion.
 
-More explicitly we have a transform matrix of $\Lambda_c$ from $W_0$ to $W_c$ 
+In other words, for shifted wedges\footnote{Similar statements are true for reflected (diamond) wedge inclusions}, the expected number of particles for a mode $r^{(c_2)}_k$ of $W_{c_2}$ in $W_{c_1}$'s vacuum is independent of the choice of shift $c_2$ and $c_1$. More explicitly we have a transform matrix of $\Lambda_c$ from $W_0$ to $W_c$ 
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(c)}_k \\
@@ -340,7 +339,7 @@ Then each $W_{c_i} \subseteq W_{c_j}$ involves particle production with a fixed 
 \begin{equation}
   \bra{0_{W_{c_j}}} a^{(c_i)\dagger}_k a^{(c_i)}_k \ket{0_{W_{c_j}}} = \frac{1}{2 \pi^2 k \sinh \frac{\pi k}{a}} \int_{x=0}^\infty \frac{x \sinh x}{(x+\frac{\pi k}{a}) \sinh(x+\frac{\pi k}{a})}
 \end{equation}
-which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large, so we can see that the expected number of particles in ratio goes to
+which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large, so we can see that the expected number of particles in ratio goes to another thermal form
 \begin{equation}
   \frac{1}{m (e^{2m} + 1)} = \frac{1}{k (e^{\frac{2\pi \omega_k}{a}} - 1)}.
 \end{equation}
