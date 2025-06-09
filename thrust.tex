@@ -359,9 +359,16 @@ Figure \ref{emit_absorb} illustrates the situation for a sharply peaked frequenc
 \label{emit_absorb}
 \end{figure}
 
-To address this, we introduce a driving source, a physical mechanism responsible for the field's excitation and, indirectly, for the observer's acceleration. This reframes the interpretation: the radiation is not spontaneous but instead emerges as a coherent response to the source. The apparent thermality, then, is tied to our ignorance of the source's detailed structure.
+To address this, we introduce a driving source, a physical mechanism responsible for the field's excitation and, indirectly, for the observer's acceleration. This reframes the interpretation: the radiation is not spontaneous but instead emerges as a coherent response to the source, see illustration in Figure \ref{rocket_inertial}. The apparent thermality, then, is tied to our ignorance of the source's detailed structure.
 
 We aim to encode the effect of a creation operator by introducing a source term $J(x)$ into the Lagrangian at some distant time in the past, which directly excites the field in a specific mode. Since $J(x)$ couples linearly, it prepares a coherent state that excites the chosen mode in a controlled, phase-coherent manner. To replicate the action of a creation operator, the source must be engineered such that its overlap with the mode functions $u_k(x)$ matches the operator’s action on the field.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{rocket_inertial.png}
+\caption{Conceptual illustration of thermal v.s. localized acceleration.}
+\label{rocket_inertial}
+\end{figure}
 
 The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by Rindler observers. For clarity, we first present the construction for a single positive-frequency $\mu^{L*}_k$-mode. Because the Unruh modes form a complete orthonormal set under the Klein-Gordon inner product, this construction extends linearly and independently to the full family of modes. We encode the effect of a creation operator $c_k^{L \dagger}$ using
 \begin{equation}
@@ -414,7 +421,9 @@ We now find a peaked response at $\omega_k = \omega_q$ as a pole of order 2, see
 \label{peaked}
 \end{figure}
 
-We can further localize by considering a reflected wedge $\widetilde{W_{2c}}$.  This is a much more localized diamond picture in Figure \ref{diamond}.  The mode $r_q$ is further restricted to be in the intersection of $W_c$ and $\widetilde{W_{2c}}$ and we don't encounter the infinite spread of lower frequencies.  The inner product is just the incomplete version of the beta function in equation (\ref{bogo2}).  We show several plot of what this looks like in Figure \ref{peaked}, we can see that the main peak remains and the thermal response at zero is attenuated.
+\subsection{Modular Automorphism \textemdash{} Reflection}
+
+We can further localize by considering a reflected wedge $\widetilde{W_{2c}}$.  This yields a much more localized diamond region pictured in Figure \ref{diamond}.  The mode $r_q$ is further restricted to be in the intersection of $W_c$ and $\widetilde{W_{2c}}$ and we no longer encounter the infinite spread of lower frequencies.  The inner product is just the incomplete version of the beta function in equation (\ref{bogo2}) that coorosponds to integrating from $c$ to a $2c$.  We show several plots of the spectral response from the incomplete beta integrals in Figure \ref{peaked}. We can see that the main peak remains and the thermal response at zero is attenuated.  This coorosponds to a series of maps, first from $r_q$ over $W_0$ to $W_c$, and then to the reflection $\widetilde{W_{2c}}$.
 
 \begin{figure}[h]
   \centering
@@ -423,7 +432,6 @@ We can further localize by considering a reflected wedge $\widetilde{W_{2c}}$.  
 \label{diamond}
 \end{figure}
 
-\subsection{Modular Automorphism \textemdash{} Reflection}
 
 
 
