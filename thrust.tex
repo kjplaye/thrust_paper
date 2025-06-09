@@ -229,18 +229,18 @@ We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally i
 \end{equation}
 Next we consider products of shifted powers to go after $(c \rightarrow 0)$. We make use of a beta function for $(c \rightarrow 0)$ which occurs naturally in the KG dot product as an integral over a power of $x$ and of $x-c$, from $r_k^{(0)}$ and $r_k^{(c)}$ respectively.  We compute the Bogoliubov coefficients as
 \begin{equation}
-  \begin{array}{ccl}
-    \alpha^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i(\omega_q - \omega_k)}{a}\right) \\
-    \beta^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(c)} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q + \omega_k)}{a}} B\left(\frac{-i\omega_k}{a}, \frac{i(\omega_q + \omega_k)}{a}\right) \\
-  \end{array}
+  \begin{aligned}
+    \alpha^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(c)} \right> = \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{i(\omega_k - \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, \frac{-i(\omega_k - \omega_q)}{a}\right) \\
+    \beta^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(c)} \right> = \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{i(\omega_k + \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, \frac{-i(\omega_k + \omega_q)}{a}\right) \\
+  \end{aligned}
   \label{bogo2}
 \end{equation}
 The reflected diamond wedge version also yields a beta function, but with a different form
 \begin{equation}
-  \begin{array}{ccl}
-    \alpha^{(\widetilde{c} \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(\widetilde{c})} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q - \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i\omega_k}{a}\right) \\
-    \beta^{(\widetilde{c} \rightarrow 0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(\widetilde{c})} \right> &= \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{-i(\omega_q + \omega_k)}{a}} B\left(\frac{i\omega_k}{a}, -\frac{i\omega_q}{a}\right) \\
-  \end{array}
+  \begin{aligned}
+    \alpha^{(\widetilde{c} \rightarrow 0)}_{kq}     &= \left<r_q^{(0)*}, r_k^{(\widetilde{c})} \right> = \frac{1}{2 \pi a}\frac{\sqrt{\omega_k \omega_q}}{\omega_q - \omega_k} (ac)^{\frac{i(\omega_k - \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, -\frac{i\omega_q}{a}\right) \\
+    \beta^{(\widetilde{c} \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(\widetilde{c})} \right> = \frac{1}{2 \pi a}\frac{\sqrt{\omega_k \omega_q}}{\omega_q + \omega_k} (ac)^{\frac{i(\omega_k + \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i\omega_q}{a}\right) \\
+  \end{aligned}
   \label{bogo2}
 \end{equation}
 
@@ -419,6 +419,15 @@ See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \o
 
 
 \subsection{Wave Packet Interpolation}
+Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ then using the Parabolic cylindrical function\footnote{$\int_{t=0}^\infty e^{-zt} t^{a-\frac{1}{2}} e^{-\frac{1}{2} t^2} \dv{t} = e^{\frac{1}{4}z^2} \Gamma\left(a + \frac{1}{2}\right) D_{-a - \frac{1}{2}}\left(z\right)$, and $U(a,z) = D_{-a - \frac{1}{2}}\left(z\right)$} $D_\nu(z)$ we have
+
+\begin{equation}
+  \left< \varphi_q N, r_k \right> = \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{-\frac{1}{4}\left(i q \sigma - \frac{\mu}{\sigma}\right)^2} e^{-\frac{1}{2} i q} \Gamma\left(\frac{i \omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}\left(iq\sigma - \frac{\mu}{\sigma}\right)
+\end{equation}
+and then
+\begin{equation}
+  \left|\left< \varphi_q N, r_k \right>\right|^2 = \frac{1}{4a\omega_q} e^{-\frac{1}{2} \left(\frac{\mu^2}{\sigma^2} - a^2 \sigma^2\right)} \frac{\left| D_{-\frac{i\omega_k}{a}}\left(iq\sigma - \frac{\mu}{\sigma}\right) \right|^2}{\sinh \frac{\pi \omega_k}{a}}
+\end{equation}
 
 \section{Conclusion and Prediction}
 If the thrust required to accelerate a detector is not explicitly accounted for, it manifests instead as an apparent thermal feature of the vacuum—Unruh radiation. However, as demonstrated in this paper, Unruh radiation can be directly explained as a consequence of thrust. This perspective leads to the prediction that neither Unruh radiation nor Hawking-Bekenstein radiation should appear independently of the thrust that drives the system.
@@ -436,7 +445,7 @@ Thanks to Ben Commeau and Daniel Justice for useful discussions.
 \section{Notes}
 To go after $(c \rightarrow M)$ we start with a useful formula obtained by taming Fourier oscillations and doing contour integrals
 \begin{equation}
-  \int_{-\infty}^\infty e^{ikx} x^b \dv{x} = -\frac{2i}{k^{b+1}} e^{\frac{-\pi b}{2}} \Gamma(b+1)
+  \int_{-\infty}^\infty e^{ikx} (x \pm i \epsilon) ^b \dv{x} = -\frac{2i}{k^{b+1}} e^{\frac{-\pi b}{2}} \Gamma(b+1)
 \end{equation}
 
 \begin{equation}
@@ -450,7 +459,9 @@ we have the dot product
 \begin{equation}
   \left< f_{k,b_k,d_k}, f_{q,d_q,d_q}\right> = \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} (ac)^\frac{i(d_k\omega_k - d_q \omega_q)}{a} \left((-d_k)\frac{b_k + b_q}{2} \right) B\left(\frac{id_k\omega_k}{a}, \frac{-i(d_k\omega_k - d_q \omega_q)}{a}\right)
 \end{equation}
-from which 
+
+
+
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
 
