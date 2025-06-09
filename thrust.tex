@@ -394,24 +394,33 @@ Consider the two nested Rindler wedges $W_0$ and $W_c$, with $W_c \subseteq W_0$
 
 \begin{figure}[h]
   \centering
-\includegraphics[scale=0.3]{wedge_in_wedge.png}
-\caption{A Wedge $W_c$ (blue) inside of the wedge $W_0$ (red). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c$ (rainbow).}
+\includegraphics[scale=0.4]{wedge_in_wedge.png}
+\caption{A Wedge $W_c$ (blue) inside of the wedge $W_0$ (white). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c$ (rainbow).}
 \label{restrict}
 \end{figure}
 
-By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the excitation. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and there is still some thermal character of $r_k$ to contend with and lower frequency oscillations of the modes as well.
+By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the excitation. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and there is still some corresponding thermal character of $r_k$ to contend with and lower frequency oscillations of the modes as well.
 
 To further study the situation, consider the modulus squared dot product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|$, from equation (\ref{bogo2}).  We fix $q$ and find that
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-See Figure $\ref{peaked}$, where we now find a peaked response at $\omega_k = \omega_q$.  We still find the thermal term from before, $\sinh \frac{\pi \omega_k}{a}$, contributing a spread near $\omega_k = 0$ and the thermal spread of $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ near the peak at $\omega_k = \omega_q$; but the large scale peaked response itself is due to the localization.
+We now find a peaked response at $\omega_k = \omega_q$ as a pole of order 2, see Figure $\ref{peaked}$.  We still find the thermal $\sinh$ terms as before, a simple pole from $\sinh \frac{\pi \omega_k}{a}$, contributing a spread near $\omega_k = 0$ and the thermal spread of $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ near the peak at $\omega_k = \omega_q$; but the large scale peaked response itself is due to the localization.
 
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_q$ at $\omega_k = \omega_q$.}
+\caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_q$ at $\omega_k = \omega_q$.  The incomplete beta function picks out the spectral peak supressing the peak at zero.}
 \label{peaked}
+\end{figure}
+
+We can further localize by considering a reflected wedge $\widetilde{W_{2c}}$.  This is a much more localized diamond picture in Figure \ref{diamond}.  The mode $r_q$ is further restricted to be in the intersection of $W_c$ and $\widetilde{W_{2c}}$ and we don't encounter the infinite spread of lower frequencies.  The inner product is just the incomplete version of the beta function in equation (\ref{bogo2}).  We show several plot of what this looks like in Figure \ref{peaked}, we can see that the main peak remains and the thermal response at zero is attenuated.
+
+\begin{figure}[h]
+  \centering
+\includegraphics[scale=0.4]{diamond_in_wedge.png}
+\caption{ The same situation as in Figure \ref{restrict} but we further intersect with a reflected wedge $\widetilde{W_{2c}}$ (green). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c \cap \widetilde{W_{2c}}$ (rainbow).}
+\label{diamond}
 \end{figure}
 
 \subsection{Modular Automorphism \textemdash{} Reflection}
