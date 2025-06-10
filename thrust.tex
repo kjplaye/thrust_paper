@@ -1,7 +1,3 @@
-% TODOS
-% Check that r_+-k and mu^R/L are correct.
-% Does J need to be normalized, wrt Rindler and Minkowski
-% Work out details of Green's function
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -167,11 +163,11 @@ We generalize the wedge $W$ to a translated wedge $W_c$ with apex $(0,c)$
 \begin{equation}
  W_c = \{(t,x) : x - c > |t|\} 
 \end{equation}
-and a reflected (left) wedge $\widetilde{W_c}$ with apex $(0,c)$
+and a reflected (left) wedge $\widetilde{W}_c$ with apex $(0,c)$
 \begin{equation}
- \widetilde{W_c} = \{(t,x) : x - c < -|t|\}.
+ \widetilde{W}_c = \{(t,x) : x - c < -|t|\}.
 \end{equation}
-Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W_c}$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion $A \subseteq B$.
+Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W}_c$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion $A \subseteq B$.
 
 In the Haag-Kastler framework of algebraic quantum field theory, the assignment of von Neumann algebras to spacetime regions defines a covariant functor: the inclusion of regions $A \rightarrow B$ induces an inclusion of algebras $\mathcal{A}(A) \rightarrow \mathcal{A}(B)$. Conversely, the Bogoliubov transformation given by $\alpha^{(A \rightarrow B)}$ and $\beta^{(A \rightarrow B)}$ defines a contravariant functor, acting on algebras via pullback. 
 
@@ -225,7 +221,7 @@ We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally i
     \alpha^{(c \rightarrow M)}_{kq} &= \left<\varphi_q, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{i\omega_k}{a}} e^{\frac{\pi \omega_k}{a}} \Gamma\left(\frac{i\omega_k}{a}\right) \\
     \beta^{(c \rightarrow M)}_{kq} &= \left<\varphi_q^*, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{-i\omega_k}{a}} e^{\frac{-\pi \omega_k}{a}} \Gamma\left(\frac{-i\omega_k}{a}\right) \\
   \end{array}
-  \label{bogo1}
+  \label{bogoCM}
 \end{equation}
 Next we consider products of shifted powers to go after $(c \rightarrow 0)$. We make use of a beta function for $(c \rightarrow 0)$ which occurs naturally in the KG dot product as an integral over a power of $x$ and of $x-c$, from $r_k^{(0)}$ and $r_k^{(c)}$ respectively.  We compute the Bogoliubov coefficients as
 \begin{equation}
@@ -233,7 +229,7 @@ Next we consider products of shifted powers to go after $(c \rightarrow 0)$. We 
     \alpha^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(c)} \right> = \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{i(\omega_k - \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, \frac{-i(\omega_k - \omega_q)}{a}\right) \\
     \beta^{(c \rightarrow 0)}_{kq} &= \left<r_q^{(0)*}, r_k^{(c)} \right> = \frac{1}{2 \pi a}\sqrt{\frac{\omega_k}{\omega_q}} (ac)^{\frac{i(\omega_k + \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, \frac{-i(\omega_k + \omega_q)}{a}\right) \\
   \end{aligned}
-  \label{bogo2}
+  \label{bogoC0}
 \end{equation}
 The reflected diamond wedge version also yields a beta function, but with a different form
 \begin{equation}
@@ -241,7 +237,7 @@ The reflected diamond wedge version also yields a beta function, but with a diff
     \alpha^{(\widetilde{c} \rightarrow 0)}_{kq}     &= \left<r_q^{(0)*}, r_k^{(\widetilde{c})} \right> = \frac{1}{2 \pi a}\frac{\sqrt{\omega_k \omega_q}}{\omega_q - \omega_k} (ac)^{\frac{i(\omega_k - \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, -\frac{i\omega_q}{a}\right) \\
     \beta^{(\widetilde{c} \rightarrow 0)}_{kq} &= \left<r_q^{(0)}, r_k^{(\widetilde{c})} \right> = \frac{1}{2 \pi a}\frac{\sqrt{\omega_k \omega_q}}{\omega_q + \omega_k} (ac)^{\frac{i(\omega_k + \omega_q)}{a}} B\left(\frac{i\omega_k}{a}, \frac{i\omega_q}{a}\right) \\
   \end{aligned}
-  \label{bogo2}
+  \label{bogoTC0}
 \end{equation}
 
 
@@ -394,10 +390,10 @@ In Rindler coordinates, this source term prepares a modified field state in whic
 
 As a result, the source reproduces the exact Rindler particle spectrum predicted by the Rindler–Minkowski Bogoliubov transformation, provided the excited modes are drawn from a Klein-Gordon orthonormal basis such as the Unruh modes; this holds when using causal (retarded) or time-ordered (Feynman) Green’s functions, both of which allow linear superpositions of negative-frequency modes to generate particle injection.
 
-\section{Localization}
-\subsection{Modular Automorphism \textemdash{} Translation}
+\section{Subregion Localization in Rindler Space}
+\subsection{Localization via Translated Wedge Inclusion}
 
-Consider the two nested Rindler wedges $W_0$ and $W_c$, with $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a positive-frequency Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region illustrates the full support of $r_q$, while the rainbow segment shows the restriction of this mode to the smaller wedge $W_c$.
+Consider the two nested Rindler wedges $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a positive-frequency analytically continued Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the smaller wedge $W_c$.
 
 \begin{figure}[h]
   \centering
@@ -406,29 +402,33 @@ Consider the two nested Rindler wedges $W_0$ and $W_c$, with $W_c \subseteq W_0$
 \label{restrict}
 \end{figure}
 
-By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the excitation. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and there is still some corresponding thermal character of $r_k$ to contend with and lower frequency oscillations of the modes as well.
+By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics and low-frequency oscillations.
 
-To further study the situation, consider the modulus squared dot product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|$, from equation (\ref{bogo2}).  We fix $q$ and find that
+To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|$, from equation (\ref{bogoC0}).  We fix $q$ and view
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-We now find a peaked response at $\omega_k = \omega_q$ as a pole of order 2, see Figure $\ref{peaked}$.  We still find the thermal $\sinh$ terms as before, a simple pole from $\sinh \frac{\pi \omega_k}{a}$, contributing a spread near $\omega_k = 0$ and the thermal spread of $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ near the peak at $\omega_k = \omega_q$; but the large scale peaked response itself is due to the localization.
+as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked spectral response, see Figure $\ref{peaked}$. The thermal character is evident in the $\sinh$ terms: $\sinh \frac{\pi \omega_k}{a}$ introduces a broadening near $\omega_k = 0$, while $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ contributes thermal spreading near the peak at $\omega_k = \omega_q$. The large scale peaked response itself is due to the localization. This reflects how restricting the mode to a smaller wedge introduces a preferred frequency response
 
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ have peaked spectral response to $r_q$ at $\omega_k = \omega_q$.  The incomplete beta function picks out the spectral peak supressing the peak at zero.}
+\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The incomplete beta function picks out the spectral peak supressing the peak at zero.}
 \label{peaked}
 \end{figure}
 
-\subsection{Modular Automorphism \textemdash{} Reflection}
+\subsection{Diamond Localization via Reflected Wedge Intersection}
 
-We can further localize by considering a reflected wedge $\widetilde{W_{2c}}$.  This yields a much more localized diamond region pictured in Figure \ref{diamond}.  The mode $r_q$ is further restricted to be in the intersection of $W_c$ and $\widetilde{W_{2c}}$ and we no longer encounter the infinite spread of lower frequencies.  The inner product is just the incomplete version of the beta function in equation (\ref{bogo2}) that coorosponds to integrating from $c$ to a $2c$.  We show several plots of the spectral response from the incomplete beta integrals in Figure \ref{peaked}. We can see that the main peak remains and the thermal response at zero is attenuated.  This coorosponds to a series of maps, first from $r_q$ over $W_0$ to $W_c$, and then to the reflection $\widetilde{W_{2c}}$.
+Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$, where the reflection is taken about the origin. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared divergence previously associated with the unrestricted wedge.
+
+The inner product now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral evaluated from $c$ to $2c$ rather than extending to infinity. The resulting spectral response, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
+
+Rather than viewing $r_q$ as an element in a Bogoliubov transformation between full mode bases, we can instead interpret it as a driving source defined originally over the wedge $W_0$. The restriction to $W_c$ then acts to filter this source, removing its high-frequency behavior near the horizon, while the further restriction to the diamond $W_c \cap \widetilde{W}_{2c}$ suppresses long-wavelength contributions that would extend outside the compact region. In this sense, the diamond does not host a new mode basis per se, but serves as a localized detection region for the filtered signal. The observed spectral response in the diamond thus reflects the interplay between the support of the original source and the geometric constraints imposed by the intersection. This perspective shifts the emphasis from complete mode decompositions to causal influence and spectral imprint within a localized domain.
 
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.4]{diamond_in_wedge.png}
-\caption{ The same situation as in Figure \ref{restrict} but we further intersect with a reflected wedge $\widetilde{W_{2c}}$ (green). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c \cap \widetilde{W_{2c}}$ (rainbow).}
+\caption{The same situation as in Figure \ref{restrict} but we further intersect with a reflected (left) wedge $\widetilde{W}_{2c}$ (green). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c \cap \widetilde{W}_{2c}$ (rainbow).}
 \label{diamond}
 \end{figure}
 
