@@ -393,7 +393,7 @@ As a result, the source reproduces the exact Rindler particle spectrum predicted
 \section{Subwedge Localization in Rindler Space}
 \subsection{Localization via Translated Wedge Inclusion}
 
-Consider the two nested Rindler wedges $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the smaller wedge $W_c$.
+Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the smaller wedge $W_c$.
 
 \begin{figure}[h]
   \centering
@@ -404,11 +404,11 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ as shown in Figure \r
 
 By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending throughout the wedge.
 
-To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|$, from equation (\ref{bogoC0}).  We fix $q$ and view
+To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and view
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked spectral response, see Figure $\ref{peaked}$. The thermal character is evident in the $\sinh$ terms: $\sinh \frac{\pi \omega_k}{a}$ introduces a broadening near $\omega_k = 0$, while $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ contributes thermal spreading near the peak at $\omega_k = \omega_q$. However, the pronounced spectral peak at $\omega_k = \omega_q$ arises not from thermal effects but from the localization itself.
+as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked spectral response, see Figure $\ref{peaked}$. The thermal character is evident in the $\sinh$ terms: $\sinh \frac{\pi \omega_k}{a}$ introduces a broadening near $\omega_k = 0$, while $\sinh \frac{\omega_q - \omega_k}{a}$ contributes thermal spreading near the peak at $\omega_k = \omega_q$. However, the pronounced spectral peak at $\omega_k = \omega_q$ arises not from thermal effects but from the localization itself.
 
 \begin{figure}[h]
   \centering
@@ -419,11 +419,11 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 
 \subsection{Diamond Localization via Reflected Wedge Intersection}
 
-Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$, where the reflection is taken about the origin. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared divergence previously associated with the unrestricted wedge.
+Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared divergence previously associated with the unrestricted wedge.
 
-The inner product now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral evaluated from $c$ to $2c$ rather than extending to infinity. The resulting spectral response, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
+The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the beta function in equation (\ref{bogoTC0}) to compute the same inner product using the alternative incomplete beta function.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however coorospond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case we would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
 
-Rather than viewing $r_q$ as an element in a Bogoliubov transformation between full mode bases, we can instead interpret it as a driving source defined originally over the wedge $W_0$. The restriction to $W_c$ then acts to filter this source, removing its high-frequency behavior near the horizon, while the further restriction to the diamond $W_c \cap \widetilde{W}_{2c}$ suppresses long-wavelength contributions that would extend outside the compact region. In this sense, the diamond does not host a new mode basis per se, but serves as a localized detection region for the filtered signal. The observed spectral response in the diamond thus reflects the interplay between the support of the original source and the geometric constraints imposed by the intersection. This perspective shifts the emphasis from complete mode decompositions to causal influence and spectral imprint within a localized domain.
+Instead, we can take the viewpoint that the diamond is a localized driving source, as in Section 3; we are no longer interpreting $r_q$ as a solution to the free Klein-Gordon equation everywhere, but as a compact test function that drives a response in the field. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
 
 \begin{figure}[h]
   \centering
