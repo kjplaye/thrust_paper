@@ -390,10 +390,10 @@ In Rindler coordinates, this source term prepares a modified field state in whic
 
 As a result, the source reproduces the exact Rindler particle spectrum predicted by the Rindler–Minkowski Bogoliubov transformation, provided the excited modes are drawn from a Klein-Gordon orthonormal basis such as the Unruh modes; this holds when using causal (retarded) or time-ordered (Feynman) Green’s functions, both of which allow linear superpositions of negative-frequency modes to generate particle injection.
 
-\section{Subregion Localization in Rindler Space}
+\section{Subwedge Localization in Rindler Space}
 \subsection{Localization via Translated Wedge Inclusion}
 
-Consider the two nested Rindler wedges $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a positive-frequency analytically continued Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the smaller wedge $W_c$.
+Consider the two nested Rindler wedges $W_c \subseteq W_0$ as shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the smaller wedge $W_c$.
 
 \begin{figure}[h]
   \centering
@@ -402,13 +402,13 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ as shown in Figure \r
 \label{restrict}
 \end{figure}
 
-By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics and low-frequency oscillations.
+By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending throughout the wedge.
 
 To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|$, from equation (\ref{bogoC0}).  We fix $q$ and view
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked spectral response, see Figure $\ref{peaked}$. The thermal character is evident in the $\sinh$ terms: $\sinh \frac{\pi \omega_k}{a}$ introduces a broadening near $\omega_k = 0$, while $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ contributes thermal spreading near the peak at $\omega_k = \omega_q$. The large scale peaked response itself is due to the localization. This reflects how restricting the mode to a smaller wedge introduces a preferred frequency response
+as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked spectral response, see Figure $\ref{peaked}$. The thermal character is evident in the $\sinh$ terms: $\sinh \frac{\pi \omega_k}{a}$ introduces a broadening near $\omega_k = 0$, while $(\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a}$ contributes thermal spreading near the peak at $\omega_k = \omega_q$. However, the pronounced spectral peak at $\omega_k = \omega_q$ arises not from thermal effects but from the localization itself.
 
 \begin{figure}[h]
   \centering
