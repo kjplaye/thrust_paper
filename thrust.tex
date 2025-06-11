@@ -433,10 +433,16 @@ Instead, we can take the viewpoint that the diamond is a localized driving sourc
 \end{figure}
 
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{rocket.png}
+\caption{Hawking picture of black hole radiating on the left. Our picture of a rocket thrusting on the right.}
+\label{rocket}
+\end{figure}
 
 
 \subsection{Wave Packet Interpolation}
-Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ then using the Parabolic cylindrical function\footnote{$\int_{t=0}^\infty e^{-zt} t^{a-\frac{1}{2}} e^{-\frac{1}{2} t^2} \dv{t} = e^{\frac{1}{4}z^2} \Gamma\left(a + \frac{1}{2}\right) D_{-a - \frac{1}{2}}\left(z\right)$, and $U(a,z) = D_{-a - \frac{1}{2}}\left(z\right)$} $D_\nu(z)$ we have
+Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a wave packet\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the Parabolic cylindrical function\footnote{$\int_{t=0}^\infty e^{-zt} t^{a-\frac{1}{2}} e^{-\frac{1}{2} t^2} \dv{t} = e^{\frac{1}{4}z^2} \Gamma\left(a + \frac{1}{2}\right) D_{-a - \frac{1}{2}}\left(z\right)$, and $U(a,z) = D_{-a - \frac{1}{2}}\left(z\right)$} $D_\nu(z)$ we have
 
 \begin{equation}
   \left< \varphi_q N, r_k \right> = \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{-\frac{1}{4}\left(i q \sigma - \frac{\mu}{\sigma}\right)^2} e^{-\frac{1}{2} i q} \Gamma\left(\frac{i \omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}\left(iq\sigma - \frac{\mu}{\sigma}\right)
@@ -447,20 +453,23 @@ and then
 \end{equation}
 From \cite{Olver1959UniformAE} we have
 \begin{equation}
-  U(a, -z) = e^{-i\pi(a + \frac{1}{2})}z^{-a - \frac{1}{2}}e^{-\frac{1}{4}z^2} \{ 1 + O(|z|^{-2}) \} + \frac{(2 \pi)^{\frac{1}{2}}}{\Gamma(\frac{1}{2} + a)} z^{a-\frac{1}{2}} e^{\frac{1}{4}z^2} \{1 + O(|z|^{-2})\}
+  D_\nu(-z) = e^{-i\pi(\nu)}z^{\nu}e^{-\frac{1}{4}z^2} \{ 1 + O(|z|^{-2}) \} + \frac{(2 \pi)^{\frac{1}{2}}}{\Gamma(-\nu)} z^{-\nu - 1} e^{\frac{1}{4}z^2} \{1 + O(|z|^{-2})\}
 \end{equation}
-when $-\frac{3}{4}\pi + \epsilon \le \arg z \le \frac{1}{4} \pi - \epsilon$.
-
-\section{Conclusion and Prediction}
-
-This work reframes the Unruh effect as a localized, mechanistic response to directed energy input, thrust, rather than as a consequence of horizon thermality. By restricting Rindler modes to subwedges and their intersections via modular automorphisms, we show that the apparent thermal behavior arises from nonlocal mode mixing, not fundamental statistics. Using parabolic cylinder functions, we construct smooth, localized wave packets that interpolate between global and compact support, revealing how detector response depends on localization scale. While our results focus on flat spacetime, the framework naturally suggests a path forward: the same techniques may shed light on Hawking radiation by modeling localized excitations near black hole horizons. This possibility is illustrated in Figure \ref{rocket}, which shows how similar localization might be applied.
+for $\nu = -\frac{i \omega_k}{a}$ and $-z = iq\sigma - \frac{\mu}{\sigma}$ when $-\frac{3}{4}\pi + \epsilon \le \arg z \le \frac{1}{4} \pi - \epsilon$.  The second $e^{\frac{1}{4}z^2}$ term dominates for $z \to \infty$ as $\sigma \to 0$ and the first  $e^{-\frac{1}{4}z^2}$ term dominates for $z \to -i \infty$ as $\sigma \to \infty$.  This is the Stokes phenomenon; and we cross the Stokes curve on the line $\arg z = -\frac{\pi}{4}$; The situation is picture in Figure \ref{stokes}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{rocket.png}
-\caption{Hawking picture of black hole radiating on the left. Our picture of a rocket thrusting on the right.}
-\label{rocket}
+\includegraphics[scale=0.5]{stokes.png}
+\caption{Stokes phenomenon for the Parabolic Cylinder Function as $\sigma$ interpolates between $\infty$ and $0$.  The Stokes curves is passed at $\arg z = -\frac{\pi}{4}$.}
+\label{stokes}
 \end{figure}
+
+
+
+\section{Conclusion and Prediction}
+
+This work reframes the Unruh effect as a localized, detector-based response to directed energy input, such as acceleration-induced coupling—rather than as a consequence of global horizon thermality. By restricting Rindler modes to sub-wedge regions and their intersections, motivated by modular theory, we demonstrate that apparent thermal behavior can emerge from non-local mode mixing rather than a thermal density matrix. Using parabolic cylinder functions, we construct smooth, spatially localized wave packets that interpolate between global and compact support, revealing how detector response depends sensitively on localization scale. Although our results are developed in flat spacetime, the equivalence principle suggests a natural extension to curved spacetimes. In particular, this framework may shed light on Hawking radiation by modeling localized excitations near black hole horizons, as illustrated in Figure \ref{rocket}.
+
 
 \section{Acknowledgments}
 Thanks to Ben Commeau and Daniel Justice for useful discussions.
