@@ -433,24 +433,32 @@ Instead, we can take the viewpoint that the diamond is a localized driving sourc
 \end{figure}
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{rocket.png}
-\caption{Conceptual illustration of thermal Hawking radiation v.s. local acceleration.}
-\label{rocket}
-\end{figure}
-
-
 \subsection{Wave Packet Interpolation}
-Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a wave packet\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the Parabolic cylindrical function\footnote{$\int_{t=0}^\infty e^{-zt} t^{a-\frac{1}{2}} e^{-\frac{1}{2} t^2} \dv{t} = e^{\frac{1}{4}z^2} \Gamma\left(a + \frac{1}{2}\right) D_{-a - \frac{1}{2}}\left(z\right)$, and $U(a,z) = D_{-a - \frac{1}{2}}\left(z\right)$} $D_\nu(z)$ we have
+Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a wave packet\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the parabolic cylindrical function\footnote{$\int_{t=0}^\infty e^{-zt} t^{a-\frac{1}{2}} e^{-\frac{1}{2} t^2} \dv{t} = e^{\frac{1}{4}z^2} \Gamma\left(a + \frac{1}{2}\right) D_{-a - \frac{1}{2}}\left(z\right)$, and $U(a,z) = D_{-a - \frac{1}{2}}\left(z\right)$} $D_\nu(-z)$ we have
 \begin{equation}
-  \left< \varphi_q N, r_k \right> = \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{-\frac{1}{4} z^2} e^{-\frac{1}{2} i q} \Gamma(-\nu) D_\nu(z)
+  \left< \varphi_q N, r_k \right> = \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{-\frac{1}{4} z^2} e^{-\frac{1}{2} i q} \Gamma(-\nu) D_\nu(-z)
 \end{equation}
 for $\nu = -\frac{i \omega_k}{a}$ and $-z = iq\sigma - \frac{\mu}{\sigma}$. And then
 \begin{equation}
-  \left|\left< \varphi_q N, r_k \right>\right|^2 = \frac{\omega_k}{4\pi^2a^2\omega_q} \left| e^{-\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(z) \right|^2
+  \left|\left< \varphi_q N, r_k \right>\right|^2 = \frac{\omega_k}{4\pi^2a^2\omega_q} \left| e^{-\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(-z) \right|^2
 \label{pcf}
 \end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{stokes.png}
+\caption{Stokes phenomenon for the Parabolic Cylinder Function as $\sigma$ interpolates between $\infty$ and $0$.  The Stokes curve is passed at $\arg z = -\frac{\pi}{4}$. Some values for $\sigma$ are marked, see also corresponding Figure \ref{pcf_sigma_curves}.}
+\label{stokes}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{pcf.png}
+\caption{$\left|\left< \varphi_q N, r_k \right>\right|^2$ for various values of $\sigma$. See also corresponding Figure \ref{stokes}.}
+\label{pcf_sigma_curves}
+\end{figure}
+
+
 From \cite{Olver1959UniformAE} we have
 \begin{equation}
   D_\nu(-z) = e^{-i\pi\nu}z^{\nu}e^{-\frac{1}{4}z^2} \{ 1 + O(|z|^{-2}) \} + \frac{(2 \pi)^{\frac{1}{2}}}{\Gamma(-\nu)} z^{-\nu - 1} e^{\frac{1}{4}z^2} \{1 + O(|z|^{-2})\}
@@ -459,21 +467,26 @@ From \cite{Olver1959UniformAE} we have
 when $-\frac{3}{4}\pi + \epsilon \le \arg z \le \frac{1}{4} \pi - \epsilon$.  The second $e^{\frac{1}{4}z^2}$ term dominates for $z \to \infty$ as $\sigma \to 0$ and the first  $e^{-\frac{1}{4}z^2}$ term dominates for $z \to -i \infty$ as $\sigma \to \infty$.  This is the Stokes phenomenon which flips over as we cross the Stokes line $\arg z = -\frac{\pi}{4}$. The situation is pictured in Figure \ref{stokes}. Combining equations (\ref{pcf}) and (\ref{asym}) we find that the asympotics of the inner product interpolate between a thermal character and a localized character.
 \begin{equation}
   \left|\left< \varphi_q N, r_k \right>\right|^2 \rightarrow \left\{ \begin{array}{lll}
-    \frac{1}{4\pi a\omega_q}  \frac{z^{2\nu} \left| e^{-z^2} \right|}{\sinh \frac{\pi \omega_k}{a}}    & \text{as} & \sigma \to \infty     \vspace{10pt}
+    \frac{\left| e^{-z^2} \right|}{4\pi a\omega_q} \cdot \frac{1}{e^{\frac{\pi \omega_k}{2a} - 1}}    & \text{as} & \sigma \to \infty     \vspace{10pt}
 \\
-    \frac{\omega_k}{2\pi a^2\omega_q} z^{-\nu - 1} & \text{as} & \sigma \to 0 \\
+    \frac{\omega_k}{2\pi a^2\omega_q} z^{-2\nu - 2} & \text{as} & \sigma \to 0 \\
   \end{array}  \right.  
 \end{equation}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{stokes.png}
-\caption{Stokes phenomenon for the Parabolic Cylinder Function as $\sigma$ interpolates between $\infty$ and $0$.  The Stokes curve is passed at $\arg z = -\frac{\pi}{4}$.}
-\label{stokes}
-\end{figure}
+See Figure \ref{pcf_sigma_curves} for a plot for various values of $\sigma$.
+
 
 \section{Conclusion}
 
 This work reframes the Unruh phenomenon as a localized effect. By restricting Rindler modes to translated, reflected wedges, and their intersections, we demonstrated that the apparent thermal behavior could begin to appear as a localized driving source. We showed how the thermal properties could be partially eliminated as we localized the Rindler modes to get a spectrally peaked response. We then smoothly interpolated between the global thermal behavior and a compactly supported localized description using wave packets and parabolic cylinder functions.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{rocket.png}
+\caption{Conceptual illustration of thermal Hawking radiation v.s. local acceleration.}
+\label{rocket}
+\end{figure}
+
 
 While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway to extending this framework to curved spacetimes. In particular, future work could be to apply this framework to Hawking radiation by modeling localized excitations near black hole horizons, as illustrated schematically in Figure \ref{rocket}, which depicts a localized thrust near a black hole horizon.
 
