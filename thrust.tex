@@ -434,7 +434,9 @@ Instead, we can take the viewpoint that the diamond is a localized driving sourc
 
 
 \subsection{Wave Packet Interpolation}
-Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a wave packet\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the parabolic cylindrical function\cite{AbramowitzStegun1964} $D_\nu(-z)$ we have
+We will next formulate a method to interpolate between the thermal and and the localizes pictures using parabolic cylinder functions\cite{AbramowitzStegun1964}, see \cite{hashiba2021stokes} for a similar approach.
+
+Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a wave packet\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the parabolic cylindrical function $D_\nu(-z)$ we have
 \begin{equation}
   \left< \varphi_q N, r_k \right> = \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{-\frac{1}{4} z^2} e^{-\frac{1}{2} i q} \Gamma(-\nu) D_\nu(-z)
 \end{equation}
