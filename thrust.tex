@@ -441,27 +441,25 @@ D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty e^
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
 
-Without loss of generality, let $N_{\mu, \sigma} = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion, so we do not track normalization factors. We will multiply $\varphi$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect.  For clarity, since this setup may be non-standard, we carry out the calculations explicity in this section
+Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion, so we do not track normalization factors. We will multiply $\varphi$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect.  For clarity, since this setup may be non-standard, we carry out the calculations explicity in this section
 
 \begin{equation}
   \begin{aligned}
-    \left< \varphi_q^* N_{\mu,\sigma}, r_k\right> &= \frac{1}{4\pi \sqrt{\omega_q \omega_k}\sqrt{2\pi}\sigma} 2i \int_\Sigma e^{-i(\omega_q t - q x)} e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}} \partial_t (a(x-t))^\frac{i\omega_k}{a} \\
-    &= \frac{1}{(2\pi)^{\frac{3}{2}}\sigma} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2} + i q x} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
-    &= \frac{1}{(2\pi)^{\frac{3}{2}}\sigma} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{\left(-\frac{1}{2\sigma^2}\right) x^2 + \left(\frac{\mu}{\sigma^2} + i q \right) x + \left( -\frac{\mu^2}{2\sigma^2}\right)} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
-    &= \frac{1}{(2\pi)^{\frac{3}{2}}\sigma a} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} } e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} \int_0^\infty e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \dv{s}\\
-    &= \frac{1}{(2\pi)^{\frac{3}{2}}\sigma a} \sqrt{\frac{\omega_k}{\omega_q}} {(\sigma a)}^{\frac{i \omega_k}{a}}  e^{-\frac{\mu^2}{2 \sigma^2}}e^{\frac{1}{4}(-i q \sigma - \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
-    &=  \frac{1}{(2\pi)^{\frac{3}{2}}a \sigma e^{\frac{\mu^2}{2 \sigma^2}}} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{\frac{1}{4} z^2} \Gamma(-\nu) D_\nu(-z)
+    \left< \varphi_q^* N_{\mu,\sigma}, r_k\right> &= \frac{1}{4\pi \sqrt{\omega_q \omega_k}} 2i \int_\Sigma e^{-i(\omega_q t - q x)} e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}} \partial_t (a(x-t))^\frac{i\omega_k}{a} \\
+    &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2} + i q x} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
+    &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{\left(-\frac{1}{2\sigma^2}\right) x^2 + \left(\frac{\mu}{\sigma^2} + i q \right) x + \left( -\frac{\mu^2}{2\sigma^2}\right)} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
+    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} } e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} \int_0^\infty e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \dv{s}\\
+    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} {(\sigma a)}^{\frac{i \omega_k}{a}}  e^{-\frac{\mu^2}{2 \sigma^2}}e^{\frac{1}{4}(-i q \sigma - \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
+    &=  \frac{1}{2\pi a e^{\frac{\mu^2}{2 \sigma^2}}} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{\frac{1}{4} z^2} \Gamma(-\nu) D_\nu(-z)
   \end{aligned}
 \end{equation}
 where $\Sigma$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$ and $x = \sigma s$ for $z = i q \sigma + \frac{\mu}{\sigma}$, $\nu = -\frac{i \omega_k}{a}$. And then
 \begin{equation}
   \begin{aligned}
-    \left|\left< \varphi_q N_{\mu,\sigma}, r_k \right>\right|^2 &= \frac{\omega_k}{8\pi^3a^2\sigma^2 e^{\frac{\mu^2}{\sigma^2}}\omega_q} \left| e^{\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(-z) \right|^2 \\
-     &= \frac{\omega_k}{2\pi a} M \left| e^{\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(-z) \right|^2 \\
+    \left|\left< \varphi_q N_{\mu,\sigma}, r_k \right>\right|^2 &= \frac{1}{2\pi\omega_q} \frac{\omega_k}{2\pi a} e^{-\frac{\mu^2}{\sigma^2}} \left| e^{\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(-z) \right|^2 \\
   \end{aligned}
 \label{pcf}
 \end{equation}
-where we absorb a $\omega_k$ independent part into $M$.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{stokes.png}
@@ -482,21 +480,30 @@ From \cite{Olver1959UniformAE} we have
 when $-\frac{1}{4}\pi + \epsilon \le \arg z \le \frac{3}{4} \pi - \epsilon$.  The second $e^{\frac{1}{4}z^2}$ term dominates for $z \to \infty$ as $\sigma \to 0$ and the first  $e^{-\frac{1}{4}z^2}$ term dominates for $z \to i \infty$ as $\sigma \to \infty$.  This is a Stokes phenomenon\footnote{See \cite{hashiba2021stokes} for a similar approach where the Stokes phenomenon is applied to particle production in simple expanding backgrounds, preheating after $R^2$ inflation, and a transition model with smoothly changing mass.} which flips over as we cross the Stokes line at $\arg z = \frac{\pi}{4}$. The situation is pictured in Figure \ref{stokes}.
 
 
-We next combine equations (\ref{pcf}) and (\ref{asym}), and in particular the thermal part comes from the $e^{-\frac{1}{4}z^2}$ term where
+We next combine equations (\ref{pcf}) and (\ref{asym}).  First for the thermal part that comes from the $e^{-\frac{1}{4}z^2}$ term we have
 \begin{equation}
- \begin{aligned}
-   \frac{\omega_k}{2 \pi a} \left|e^{-i\pi \nu} z^\nu\Gamma\left(\frac{i\omega_k}{a}\right)\right|^2   &= \frac{\omega_k}{2 \pi a} e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{(\frac{\mu}{\sigma} + iq\sigma)}}\right|^2  \frac{\pi}{\frac{\omega_k}{a} \sinh \frac{\pi \omega_k}{a}} \\
-  &\to  e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{(i)}}\right|^2  \frac{\pi}{2\sinh \frac{\pi \omega_k}{a}} \\
-  & = e^{\frac{-2\pi \omega_k}{a}} e^{\frac{\pi \omega_k}{a}}  \frac{1}{ \left( e^{\frac{\pi \omega_k}{a}} - e^{\frac{-\pi \omega_k}{a}} \right)} \\
-  & = \frac{1}{e^{\frac{2\pi\omega_k}{a}} - 1} \\
+  \begin{aligned}
+    2\pi\omega_q \left|\left< \varphi_q N, r_k \right>\right|^2 &= \frac{\omega_k}{2 \pi a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{-i\pi \nu} z^\nu\Gamma\left(\frac{i\omega_k}{a}\right)\right|^2   \\
+    &= \frac{\omega_k}{2 \pi a} e^{-\frac{\mu^2}{\sigma^2}}  e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{(\frac{\mu}{\sigma} + iq\sigma)}}\right|^2  \frac{\pi}{\frac{\omega_k}{a} \sinh \frac{\pi \omega_k}{a}} \\
+  &\to  e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{i}}\right|^2  \frac{\pi}{2\sinh \frac{\pi \omega_k}{a}} \\
+  & =  e^{\frac{-2\pi \omega_k}{a}} e^{\frac{\pi \omega_k}{a}}  \frac{1}{ \left( e^{\frac{\pi \omega_k}{a}} - e^{\frac{-\pi \omega_k}{a}} \right)} \\
+  & =  \frac{1}{e^{\frac{2\pi\omega_k}{a}} - 1} \\
   \end{aligned}
 \end{equation}
-And we find that the asymptotics of the inner product interpolate between a thermal character and a localized character.
+and for the localized part that comes from the $e^{\frac{1}{4}z^2}$ term we have
 \begin{equation}
-  \left|\left< \varphi_q N_{\mu,\sigma}, r_k \right>\right|^2 \rightarrow M \left\{ \begin{array}{lll}
-    \frac{1}{e^{\frac{2\pi \omega_k}{a} - 1}}    & \text{as} & \sigma \to \infty     \vspace{10pt}
+  \begin{aligned}
+    \frac{1}{2\pi\omega_q} \left|\left< \varphi_q N, r_k \right>\right|^2 &= \frac{\omega_k}{a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{z^2}z ^ {2(-\nu - 1)}\right|^2 \\
+    &= \frac{\omega_k}{a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{ \left(  iq\sigma + \frac{\mu}{\sigma} \right)^2 } e^{{2\left(\frac{i\omega_k}{a} - 1\right)\log{ \left(  iq\sigma + \frac{\mu}{\sigma} \right)   }   }   }\right|^2 \\
+    &\to \frac{\omega_k}{a} \frac{\sigma^2}{\mu^2} \\
+  \end{aligned}
+\end{equation}
+And altogether we find that the asymptotics of the inner product interpolate between a thermal character and a localized character.
+\begin{equation}
+  \left|\left< \varphi_q N_{\mu,\sigma}, r_k \right>\right|^2 \rightarrow \left\{ \begin{array}{lll}
+    \frac{1}{2\pi\omega_q} \frac{1}{e^{\frac{2\pi \omega_k}{a} - 1}}    & \text{as} & \sigma \to \infty     \vspace{10pt}
 \\
-    \frac{\omega_k}{a} e^{\frac{\mu^2}{\sigma^2}} & \text{as} & \sigma \to 0 \\
+    \frac{1}{2\pi\omega_q} \frac{\omega_k}{a} \frac{\sigma^2}{\mu^2}& \text{as} & \sigma \to 0 \\
   \end{array}  \right.  
 \end{equation}
 We should stop short of $\sigma$ actually reaching zero, since that is localization to an extreme, where $N_{\mu,\sigma}$ becomes a delta function. See Figure \ref{pcf_sigma_curves} for a plot for various values of $\sigma$.
