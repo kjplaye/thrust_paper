@@ -32,19 +32,19 @@
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
 
-\abstract{We present a framework that interpolates between the conventional thermal description of the Unruh effect and a fully localized, non-thermal excitation. In a uniformly accelerating frame, the extended support of Rindler modes across the wedge leads to red- and blue-shifted components, mixing frequencies in a manner that gives rise to the familiar thermal response. To refine this picture, we introduce a partially localized perspective: using modular automorphisms, we map modes between nested Rindler wedges and analyze their localization properties. We further interpolate to compactly supported wave packets using parabolic cylinder functions, enabling a smooth transition from global to local behavior. While the standard interpretation attributes particle detection to horizon thermality, our construction suggests an alternative mechanism, modeling the observed response as arising from thrust: a localized, directed energy input into the field. This provides a mechanistic account that complements the statistical explanation typically associated with the effect.}
+\abstract{We present a framework that interpolates between the conventional thermal description of the Unruh effect and a fully localized, non-thermal excitation. In a uniformly accelerating frame, the extended support of Rindler modes across the wedge leads to red- and blue-shifted components, mixing frequencies in a manner that gives rise to the familiar thermal response. To refine this picture, we introduce a partially localized perspective: using modular automorphisms, we map modes between nested Rindler wedges and analyze their localization properties. We further interpolate to compactly supported wave modes using parabolic cylinder functions, enabling a smooth transition from global to local behavior. While the standard interpretation attributes particle detection to horizon thermality, our construction suggests an alternative mechanism, modeling the observed response as arising from thrust: a localized, directed energy input into the field. This provides a mechanistic account that complements the statistical explanation typically associated with the effect.}
 
 \section{Introduction}
 
-The Unruh effect\cite{unruh} reveals that uniformly accelerated observers perceive the Minkowski vacuum as a thermal state, detecting a bath of particles where inertial observers see none. This phenomenon is often presented by comparing positive-frequency Minkowski modes to Rindler modes, leading to Bogoliubov transformations that mix creation and annihilation operators\cite{crispino2008unruh}. The standard explanation relies on the global nature of Rindler modes, which span the entire wedge and undergo both red-shift and blue-shift along their support.
+The Unruh effect\cite{unruh1976notes} reveals that uniformly accelerated observers perceive the Minkowski vacuum as a thermal state, detecting a bath of particles where inertial observers see none. This phenomenon is often presented by comparing positive-frequency Minkowski modes to Rindler modes, leading to Bogoliubov transformations that mix creation and annihilation operators\cite{crispino2008unruh}. The standard explanation relies on the global nature of Rindler modes, which span the entire wedge and undergo both red-shift and blue-shift along their support.
 
-In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{schwinger} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
+In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{Schwinger_1966} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
 
-Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct smooth interpolations between eternal Rindler modes and fully localized wave packets. Finally, in Section 5, we interpret the implications of this construction. These results suggest an alternative interpretation: that the Unruh effect may be understood in terms of localized, non-thermal field excitations that resemble a thrust-like driving force on the field.
+Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct smooth interpolations between eternal Rindler modes and fully localized modes. Finally, in Section 5, we interpret the implications of this construction. These results suggest an alternative interpretation: that the Unruh effect may be understood in terms of localized, non-thermal field excitations that resemble a thrust-like driving force on the field.
 
 \section{Preliminaries}
 
-We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{Frodden} and T. Jacobson \cite{jacobson2005introduction}.
+We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh} and T. Jacobson \cite{jacobson2005introduction}.
 
 
 Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost is occurring.
@@ -77,7 +77,7 @@ are pure Minkowkski positive frequency waves normalized with respect to the Klei
 
 \subsection{Rindler Coordinates}
 
-To describe the physics from the point of view of a uniformly accelerating observer, we introduce Rindler coordinates \cite{Frodden,rindlerorig} covering a right wedge 
+To describe the physics from the point of view of a uniformly accelerating observer, we introduce Rindler coordinates \cite{frodden2018unruh,rindler1966kruskal} covering a right wedge 
 \begin{equation}
   W = \{(x,t) : x>|t|\}
 \end{equation}
@@ -322,7 +322,7 @@ and more generally we have a one parameter group given by
 \begin{equation}
   \left\{\Lambda_0^x = Q_x \Lambda_0 Q_x^{-1} : x \in \mathbb{R} \right\}.
 \end{equation}
-These Bogoliubov transformations between shifted wedges define a one-parameter group, reflecting an underlying symmetry structure. This naturally connects to modular flow as studied in algebraic QFT, where such transformations correspond to automorphisms generated by the modular operator. This is an explicit realization of modular flow, due to the von Neumann algebra modular automorphism associated with the translation $W_0 \rightarrow W_c$, studied in detail in Tomita-Takesaki theory \cite{Borchers2000}.  There we find thermal KMS states between open set inclusions in a much more general setting.  A key distinction from the standard approach is that, rather than focusing on Lorentz boosts within a fixed wedge, we examine modular structures associated with spacetime translations and reflections across different wedges.
+These Bogoliubov transformations between shifted wedges define a one-parameter group, reflecting an underlying symmetry structure. This naturally connects to modular flow as studied in algebraic QFT, where such transformations correspond to automorphisms generated by the modular operator. This is an explicit realization of modular flow, due to the von Neumann algebra modular automorphism associated with the translation $W_0 \rightarrow W_c$, studied in detail in Tomita-Takesaki theory \cite{borchers2000revolutionizing}.  There we find thermal KMS states between open set inclusions in a much more general setting.  A key distinction from the standard approach is that, rather than focusing on Lorentz boosts within a fixed wedge, we examine modular structures associated with spacetime translations and reflections across different wedges.
 
 
 Consider a sequence
@@ -355,7 +355,7 @@ The mathematical underpinning of this effect is encoded in the Bogoliubov coeffi
 \label{emit_absorb}
 \end{figure}
 
-To address this, we introduce a driving source \cite{schwinger} \cite{ryder1996quantum}, a physical mechanism that excites the field and, indirectly, accounts for the observer's acceleration. This reframes the interpretation: the observed radiation is not spontaneous, but emerges as a coherent, dynamical response to an external influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics.
+To address this, we introduce a driving source \cite{Schwinger_1966} \cite{ryder1996quantum}, a physical mechanism that excites the field and, indirectly, accounts for the observer's acceleration. This reframes the interpretation: the observed radiation is not spontaneous, but emerges as a coherent, dynamical response to an external influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics.
 
 To model this process, we aim to match the effect of a field-theoretic creation operator by introducing a classical source term $J(x)$ into the Lagrangian, applied at an early time. The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $u_k(x)$ matches the effect of the creation operator acting on the vacuum.
 
@@ -433,10 +433,10 @@ Instead, we can take the viewpoint that the diamond is a localized driving sourc
 \end{figure}
 
 
-\subsection{Wave Packet Interpolation}
-We will next formulate a method to interpolate between the thermal and and the localizes pictures using parabolic cylinder functions\cite{AbramowitzStegun1964}, see \cite{hashiba2021stokes} for a similar approach.
+\subsection{Thermal to  Interpolation}
+We will next formulate a method to interpolate between the thermal and and the localized pictures using parabolic cylinder functions\cite{AbramowitzStegun1964}, see \cite{hashiba2021stokes} for a similar approach.
 
-Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a wave packet\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the parabolic cylindrical function $D_\nu(-z)$ we have
+Let $N = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a Gaussian kernel that we will use to shape a envelope-shaped mode\footnote{We multiply $\varphi$ by $N$ but we could just as easily multiply $r_k$ by $N$ for the same effect.}. Then using the parabolic cylindrical function $D_\nu(-z)$ we have
 \begin{equation}
   \left< \varphi_q N, r_k \right> = \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{-\frac{1}{4} z^2} e^{-\frac{1}{2} i q} \Gamma(-\nu) D_\nu(-z)
 \end{equation}
@@ -479,7 +479,7 @@ See Figure \ref{pcf_sigma_curves} for a plot for various values of $\sigma$.
 
 \section{Conclusion}
 
-This work explored the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated, reflected wedges, and their intersections, we demonstrated that the apparent thermal behavior could begin to appear as a localized driving source. We showed how the thermal properties could be partially eliminated as we localized the Rindler modes to get a spectrally peaked response. We then smoothly interpolated between the global thermal behavior and a compactly supported localized description using wave packets and parabolic cylinder functions.
+This work explored the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated, reflected wedges, and their intersections, we demonstrated that the apparent thermal behavior could begin to appear as a localized driving source. We showed how the thermal properties could be partially eliminated as we localized the Rindler modes to get a spectrally peaked response. We then smoothly interpolated between the global thermal behavior and a compactly supported localized description using parabolic cylinder functions.
 
 \begin{figure}[h]
 \centering
