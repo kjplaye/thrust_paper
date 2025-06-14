@@ -441,16 +441,16 @@ D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty e^
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
 
-Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion, so we do not track normalization factors. We will multiply $\varphi$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect.  For clarity, since this setup may be non-standard, we carry out the calculations explicity in this section
+Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion, so we do not track normalization factors. We will multiply $\varphi$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect.  For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section
 
 \begin{equation}
   \begin{aligned}
     \left< \varphi_q^* N_{\mu,\sigma}, r_k\right> &= \frac{1}{4\pi \sqrt{\omega_q \omega_k}} 2i \int_\Sigma e^{-i(\omega_q t - q x)} e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}} \partial_t (a(x-t))^\frac{i\omega_k}{a} \\
     &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2} + i q x} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
     &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{\left(-\frac{1}{2\sigma^2}\right) x^2 + \left(\frac{\mu}{\sigma^2} + i q \right) x + \left( -\frac{\mu^2}{2\sigma^2}\right)} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
-    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} } e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} \int_0^\infty e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \dv{s}\\
-    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} {(\sigma a)}^{\frac{i \omega_k}{a}}  e^{-\frac{\mu^2}{2 \sigma^2}}e^{\frac{1}{4}(-i q \sigma - \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
-    &=  \frac{1}{2\pi a e^{\frac{\mu^2}{2 \sigma^2}}} \sqrt{\frac{\omega_k}{\omega_q}} (\sigma a)^\frac{i\omega_k}{a} e^{\frac{1}{4} z^2} \Gamma(-\nu) D_\nu(-z)
+    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} a^{\frac{i \omega_k}{a} }  \int_0^\infty e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \dv{s}\\
+    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} {(\sigma a)}^{\frac{i \omega_k}{a}} e^{\frac{1}{4}(-i q \sigma - \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
+    &=  \frac{1}{2\pi a } \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}}  (\sigma a)^\frac{i\omega_k}{a} e^{\frac{1}{4} z^2} \Gamma(-\nu) D_\nu(-z)
   \end{aligned}
 \end{equation}
 where $\Sigma$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$ and $x = \sigma s$ for $z = i q \sigma + \frac{\mu}{\sigma}$, $\nu = -\frac{i \omega_k}{a}$. And then
@@ -498,15 +498,7 @@ and for the localized part that comes from the $e^{\frac{1}{4}z^2}$ term we have
     &\to \frac{\omega_k}{a} \frac{\sigma^2}{\mu^2} \\
   \end{aligned}
 \end{equation}
-And altogether we find that the asymptotics of the inner product interpolate between a thermal character and a localized character.
-\begin{equation}
-  \left|\left< \varphi_q N_{\mu,\sigma}, r_k \right>\right|^2 \rightarrow \left\{ \begin{array}{lll}
-    \frac{1}{2\pi\omega_q} \frac{1}{e^{\frac{2\pi \omega_k}{a} - 1}}    & \text{as} & \sigma \to \infty     \vspace{10pt}
-\\
-    \frac{1}{2\pi\omega_q} \frac{\omega_k}{a} \frac{\sigma^2}{\mu^2}& \text{as} & \sigma \to 0 \\
-  \end{array}  \right.  
-\end{equation}
-We should stop short of $\sigma$ actually reaching zero, since that is localization to an extreme, where $N_{\mu,\sigma}$ becomes a delta function. See Figure \ref{pcf_sigma_curves} for a plot for various values of $\sigma$.
+where the thermal pole at zero has disappeared. We should stop short of $\sigma$ actually reaching zero, since that is a localization to an extreme, where $N_{\mu,\sigma}$ shrinks to a bump with infinitesimal width; This is not a delta function, it is a vanishing source.  We should not worry too much about the final form\footnote{As long as we let $\sigma$ be much smaller than $\mu$ we can slowly move $\mu$ to shape the functional dependence on $\omega_k$ as $\sigma$ goes to 0.  This doesn't really matter though since we are more concerned with small but nonzero $\sigma$ where the thermal character has disappeared.}, but once we pass the Stokes line we find ourselves in a localized setting for small nonzero $\sigma$. For an example, see Figure \ref{pcf_sigma_curves} for a plot for various values of $\sigma$.
 
 
 \section{Conclusion}
