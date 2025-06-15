@@ -441,7 +441,7 @@ D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty e^
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
 
-Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit, though relative magnitudes may be compared later. We will multiply $\varphi$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect.  For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section
+Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit, though relative magnitudes may be compared later.   For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
 
 \begin{equation}
   \begin{aligned}
@@ -449,14 +449,14 @@ Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\m
     &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2} + i q x} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
     &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{\left(-\frac{1}{2\sigma^2}\right) x^2 + \left(\frac{\mu}{\sigma^2} + i q \right) x + \left( -\frac{\mu^2}{2\sigma^2}\right)} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
     &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} a^{\frac{i \omega_k}{a} }  \int_0^\infty e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \dv{s}\\
-    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} {(\sigma a)}^{\frac{i \omega_k}{a}} e^{\frac{1}{4}(-i q \sigma - \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
+    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} {(\sigma a)}^{\frac{i \omega_k}{a}} e^{\frac{1}{4}(i q \sigma + \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
     &=  \frac{1}{2\pi a } \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}}  (\sigma a)^\frac{i\omega_k}{a} e^{\frac{1}{4} z^2} \Gamma(-\nu) D_\nu(-z)
   \end{aligned}
 \end{equation}
 where $\Sigma_W$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$,  $x = \sigma s$, $z = i q \sigma + \frac{\mu}{\sigma}$, and $\nu = -\frac{i \omega_k}{a}$. And then
 \begin{equation}
   \begin{aligned}
-    \left|\left< \varphi_q N_{\mu,\sigma}, r_k \right>\right|^2 &= \frac{1}{2\pi\omega_q} \frac{\omega_k}{2\pi a} e^{-\frac{\mu^2}{\sigma^2}} \left| e^{\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(-z) \right|^2 \\
+    \left|\left< \varphi^*_q N_{\mu,\sigma}, r_k \right>\right|^2 &= \frac{1}{2\pi a \omega_q} \frac{\omega_k}{2\pi a} e^{-\frac{\mu^2}{\sigma^2}} \left| e^{\frac{1}{2} z^2} \right| \left| \Gamma(-\nu) \right|^2 \left| D_\nu(-z) \right|^2 \\
   \end{aligned}
 \label{pcf}
 \end{equation}
@@ -469,7 +469,7 @@ where $\Sigma_W$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$,  $x = 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{pcf.png}
-\caption{$\left|\left< \varphi_q N, r_k \right>\right|^2$ for various values of $\sigma$ (probability density is scaled for comparision). $\omega_q = 1$, $q = 1$, $a=1$, $\mu = 1$. See also corresponding Figure \ref{stokes}.}
+\caption{$\left|\left< \varphi^*_q N, r_k \right>\right|^2$ for various values of $\sigma$ (probability density is scaled for comparision). $\omega_q = 1$, $q = 1$, $a=1$, $\mu = 1$. See also corresponding Figure \ref{stokes}.}
 \label{pcf_sigma_curves}
 \end{figure}
 From \cite{Olver1959UniformAE} we have
@@ -483,9 +483,9 @@ when $-\frac{1}{4}\pi + \epsilon \le \arg z \le \frac{3}{4} \pi - \epsilon$.  Th
 We next combine equations (\ref{pcf}) and (\ref{asym}).  First for the thermal part that comes from the $e^{-\frac{1}{4}z^2}$ term where $\sigma \to \infty$ we have
 \begin{equation}
   \begin{aligned}
-    2\pi\omega_q \left|\left< \varphi_q N, r_k \right>\right|^2 &= \frac{\omega_k}{2 \pi a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{-i\pi \nu} z^\nu\Gamma\left(\frac{i\omega_k}{a}\right)\right|^2   \\
+    2\pi a \omega_q \left|\left< \varphi^*_q N, r_k \right>\right|^2 &= \frac{\omega_k}{2 \pi a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{-i\pi \nu} z^\nu\Gamma\left(\frac{i\omega_k}{a}\right)\right|^2   \\
     &= \frac{\omega_k}{2 \pi a} e^{-\frac{\mu^2}{\sigma^2}}  e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{(\frac{\mu}{\sigma} + iq\sigma)}}\right|^2  \frac{\pi}{\frac{\omega_k}{a} \sinh \frac{\pi \omega_k}{a}} \\
-  &\to  e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{i}}\right|^2  \frac{\pi}{2\sinh \frac{\pi \omega_k}{a}} \\
+  &\to  e^{\frac{-2\pi \omega_k}{a}} \left|e^{\frac{-2i\omega_k}{a} \log{i}}\right|^2  \frac{1}{2\sinh \frac{\pi \omega_k}{a}} \\
   & =  e^{\frac{-2\pi \omega_k}{a}} e^{\frac{\pi \omega_k}{a}}  \frac{1}{ \left( e^{\frac{\pi \omega_k}{a}} - e^{\frac{-\pi \omega_k}{a}} \right)} \\
   & =  \frac{1}{e^{\frac{2\pi\omega_k}{a}} - 1} \\
   \end{aligned}
@@ -493,7 +493,7 @@ We next combine equations (\ref{pcf}) and (\ref{asym}).  First for the thermal p
 which we expect by construction. For the localized part that comes from the $e^{\frac{1}{4}z^2}$ term where $\sigma \to 0$ we have
 \begin{equation}
   \begin{aligned}
-    \frac{1}{2\pi\omega_q} \left|\left< \varphi_q N, r_k \right>\right|^2 &= \frac{\omega_k}{a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{z^2}z ^ {2(-\nu - 1)}\right| \\
+    2\pi a \omega_q \left|\left< \varphi^*_q N, r_k \right>\right|^2 &= \frac{\omega_k}{a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{z^2}z ^ {2(-\nu - 1)}\right| \\
     &= \frac{\omega_k}{a} e^{-\frac{\mu^2}{\sigma^2}} \left|e^{ \left(  iq\sigma + \frac{\mu}{\sigma} \right)^2 } e^{{2\left(\frac{i\omega_k}{a} - 1\right)\log{ \left(  iq\sigma + \frac{\mu}{\sigma} \right)   }   }   }\right| \\
     &\to \frac{\omega_k}{a} \frac{\sigma^2}{\mu^2} \\
   \end{aligned}
@@ -503,7 +503,7 @@ where the thermal pole at zero has disappeared. We should stop short of $\sigma$
 
 \section{Conclusion}
 
-This work explored the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated, reflected wedges, and their intersections, we demonstrated that the apparent thermal behavior could begin to appear as a localized driving source. We showed how the thermal properties could be partially eliminated as we localized the Rindler modes to get a spectrally peaked response. We then smoothly interpolated between the global thermal behavior and a compactly supported localized description using parabolic cylinder functions.
+This work explored the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated, reflected wedges, and their intersections, we demonstrated that the apparent thermal behavior could be partially eliminated as we localized the Rindler modes to get a spectrally peaked response in the Rindler sub-wedges. We then showed that the mixed Bogoliubov inner product between Minkowski and Rindler modes admits a smooth interpolation from global thermality to a localized spectral structure, with parabolic cylinder functions encoding this transition in analytic form.
 
 \begin{figure}[h]
 \centering
