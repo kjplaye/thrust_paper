@@ -38,7 +38,7 @@
 
 The Unruh effect\cite{unruh1976notes} reveals that uniformly accelerated observers perceive the Minkowski vacuum as a thermal state, detecting a bath of particles where inertial observers see none. This phenomenon is often presented by comparing positive-frequency Minkowski modes to Rindler modes, leading to Bogoliubov transformations that mix creation and annihilation operators\cite{crispino2008unruh}. The standard explanation relies on the global nature of Rindler modes, which span the entire wedge and undergo both red-shift and blue-shift along their support.
 
-In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{Schwinger_1966} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
+In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response as sourced. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{Schwinger_1966} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
 
 Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct smooth interpolations between eternal Rindler modes and fully localized modes. Finally, in Section 5, we interpret the implications of this construction. These results suggest an alternative interpretation: that the Unruh effect may be understood in terms of localized, non-thermal field excitations that resemble a thrust-like driving force on the field.
 
@@ -354,7 +354,7 @@ The mathematical underpinning of this effect is encoded in the Bogoliubov coeffi
 \label{emit_absorb}
 \end{figure}
 
-To address this, we introduce a driving source \cite{Schwinger_1966} \cite{ryder1996quantum}, a physical mechanism that excites the field and, indirectly, accounts for the observer's acceleration. This reframes the interpretation: the observed radiation is not spontaneous, but emerges as a coherent, dynamical response to an external influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics.
+To address this, we introduce a driving source \cite{Schwinger_1966} \cite{ryder1996quantum}, a physical mechanism that excites the field and, indirectly, accounts for the observer's acceleration. This reframes the interpretation: the observed radiation is not spontaneous, but emerges as a coherent sourced influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics.
 
 To model this process, we aim to match the effect of a field-theoretic creation operator by introducing a classical source term $J(x)$ into the Lagrangian, applied at an early time. The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $u_k(x)$ matches the effect of the creation operator acting on the vacuum.
 
@@ -432,8 +432,8 @@ Instead, we can take the viewpoint that the diamond is a localized driving sourc
 \end{figure}
 
 
-\subsection{Thermal to Localized Mode Interpolation}
-We will next explore a method to interpolate between thermal and localized modes. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
+\subsection{Stokes Transition -- Thermal to Localized Mode Structure}
+To probe how global thermal structure transitions into a localized excitation profile, we consider the behavior of Rindler-to-Minkowski Bogoliubov coefficients when weighted by a Gaussian source envelope. This allows us to interpolate between delocalized (thermal) and localized (spectrally peaked) behavior. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
 
 \begin{equation}
 D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty e^{zs} s^{-\nu - 1} e^{-\frac{1}{2} s^2} \dv{s}, \mathfrak{R}\nu < 0,
@@ -463,7 +463,7 @@ where $\Sigma_W$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$,  $x = 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{stokes.png}
-\caption{Stokes phenomenon for the parabolic cylinder function as $\sigma$ interpolates between $\infty$ and $0$.  The Stokes curve is passed at $\arg z = \frac{\pi}{4}$. Some values for $\sigma$ are marked, see also corresponding Figure \ref{pcf_sigma_curves}.}
+\caption{Trajectory of $z = i q \sigma + \frac{\mu}{\sigma}$ as $\sigma$ interpolates between thermal and localized regimes. As $\sigma \to \infty$, the trajectory approaches the imaginary axis, aligning with the dominant thermal (KMS-like) component of the excitation. As $\sigma \to 0$, the system crosses a Stokes line and transitions into a sharply localized, source-driven configuration, where thermal character disappears. See also corresponding Figure \ref{pcf_sigma_curves}.}
 \label{stokes}
 \end{figure}
 \begin{figure}
@@ -477,7 +477,9 @@ From \cite{Olver1959UniformAE} we have
   D_\nu(-z) = e^{-i\pi\nu}z^{\nu}e^{-\frac{1}{4}z^2} \{ 1 + O(|z|^{-2}) \} + \frac{(2 \pi)^{\frac{1}{2}}}{\Gamma(-\nu)} z^{-\nu - 1} e^{\frac{1}{4}z^2} \{1 + O(|z|^{-2})\}
 \label{asym}
 \end{equation}
-when $-\frac{1}{4}\pi + \epsilon \le \arg z \le \frac{3}{4} \pi - \epsilon$.  The second $e^{\frac{1}{4}z^2}$ term dominates for $z \to \infty$ as $\sigma \to 0$ and the first  $e^{-\frac{1}{4}z^2}$ term dominates for $z \to i \infty$ as $\sigma \to \infty$.  This is a Stokes phenomenon\footnote{See \cite{hashiba2021stokes} for a similar approach where the Stokes phenomenon is applied to particle production in simple expanding backgrounds, preheating after $R^2$ inflation, and a transition model with smoothly changing mass.} which flips over as we cross the Stokes line at $\arg z = \frac{\pi}{4}$. The situation is pictured in Figure \ref{stokes}.
+when $-\frac{1}{4}\pi + \epsilon \le \arg z \le \frac{3}{4} \pi - \epsilon$.
+
+The two asymptotic regimes correspond to physically distinct interpretations: The second $e^{\frac{1}{4}z^2}$ term dominates for $z \to \infty$ as $\sigma \to 0$ and the first  $e^{-\frac{1}{4}z^2}$ term dominates for $z \to i \infty$ as $\sigma \to \infty$.  This is a Stokes phenomenon\footnote{See \cite{hashiba2021stokes} for a similar approach where the Stokes phenomenon is applied to particle production in simple expanding backgrounds, preheating after $R^2$ inflation, and a transition model with smoothly changing mass.} which flips over as we cross the Stokes line at $\arg z = \frac{\pi}{4}$. The situation is pictured in Figure \ref{stokes}.
 
 
 We next combine equations (\ref{pcf}) and (\ref{asym}).  First for the thermal part that comes from the $e^{-\frac{1}{4}z^2}$ term where $\sigma \to \infty$ we have
@@ -503,19 +505,20 @@ where the thermal pole at zero has disappeared. We should stop short of $\sigma$
 
 \section{Conclusion}
 
-This work explored the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated, reflected wedges, and their intersections, we demonstrated that the apparent thermal behavior could be partially eliminated as we localized the Rindler modes to get a spectrally peaked response in the Rindler sub-wedges. We then showed that the mixed Bogoliubov inner product between Minkowski and Rindler modes admits a smooth interpolation from global thermality to a localized spectral structure, with parabolic cylinder functions encoding this transition in analytic form.
+This work examined the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated and reflected wedges, and their intersections, we showed that the apparent thermal behavior can be partially eliminated. As these modes become localized, the traditional detector response is replaced by a source-driven excitation profile with spectral support confined to the sub-wedges. We then showed that the mixed Bogoliubov inner product between Minkowski and Rindler modes provides a smooth interpolation from global thermality to a localized spectral structure, with parabolic cylinder functions encoding this transition in analytic form.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{rocket.png}
-\caption{Conceptual illustration of thermal Hawking radiation v.s. local acceleration.}
+\caption{Conceptual illustration contrasting global Hawking radiation (left) with a localized, source-driven excitation near a black hole (right).}
 \label{rocket}
 \end{figure}
 
-While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway for extending this framework to curved spacetimes. In particular, future work could apply this approach to the context of Hawking radiation by modeling localized excitations near black hole horizons. This is illustrated schematically in Figure \ref{rocket}, which depicts a representative localized response in the near-horizon region.
+While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway for extending this framework to curved geometries. In particular, future work could explore applications to Hawking radiation by modeling localized excitations near black hole horizons. Figure \ref{rocket} offers a schematic illustration of this idea, emphasizing a shift from thermal emission to localized, physically sourced excitations in the near-horizon region.
 
 \section{Acknowledgments}
-Thanks to Ben Commeau, Daniel Justice, and Edward Randtke for useful discussions.
+I thank Frodden and Valdés for their excellent exposition \cite{frodden2018unruh}, and Beisert for his insightful lecture notes \cite{beisert2012quantum}. I'm also grateful to Ben Commeau, Daniel Justice, and Edward Randtke for helpful discussions.
+
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
