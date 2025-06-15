@@ -341,7 +341,7 @@ which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large,
 
 We now turn to a foundational question: {\bf ``What, physically, is accelerating the observer?''} Up to this point, acceleration has been introduced as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
-Figure \ref{emit_absorb} illustrates the structure of a sharply peaked frequency wave packet composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies. This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the local frequencies shift, blue-shifting near the horizons due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates a wave packet composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies. This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitly near the horizons and red-shift infinitly at spatial infinity, due to the geometry of the wedge.
 
 The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
 
@@ -354,9 +354,9 @@ The mathematical underpinning of this effect is encoded in the Bogoliubov coeffi
 \label{emit_absorb}
 \end{figure}
 
-To address this, we introduce a driving source \cite{Schwinger_1966} \cite{ryder1996quantum}, a physical mechanism that excites the field and, indirectly, accounts for the observer's acceleration. This reframes the interpretation: the observed radiation is not spontaneous, but emerges as a coherent sourced influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics.
+To address this, we introduce a driving source \cite{Schwinger_1966} \cite{ryder1996quantum}, a physical mechanism that excites the field and, directly, accounts for the observer's acceleration. This reframes the interpretation: rather than a spontaneous thermal response associated with entanglement across a causal horizon, the observed radiation emerges as a coherent sourced influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics. In this view, the Unruh effect is not a passive revelation of hidden particles in the vacuum, but a measurable consequence of {\it thrust}.
 
-To model this process, we aim to match the effect of a field-theoretic creation operator by introducing a classical source term $J(x)$ into the Lagrangian, applied at an early time. The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $u_k(x)$ matches the effect of the creation operator acting on the vacuum.
+To model this process, we aim to match the effect of a field-theoretic creation operator by introducing a classical source term $J(x)$ into the Lagrangian, applied at a finite time interval. The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $\mu_k(x)$ matches the effect of the creation operator acting on the vacuum.
 
 \begin{figure}[h]
 \centering
@@ -373,7 +373,7 @@ and the orthogonality of the mode functions in the Klein-Gordon inner product.
 
 Although the Unruh modes involve both left- and right-moving Rindler components, associated with emission and absorption in the accelerated frame, they are constructed to have purely negative frequency with respect to Minkowski time. This ensures that the source couples to physical creation operators and injects particles into the field in a well-defined way. The resulting excitation respects the correct Minkowski vacuum structure while encoding the full Rindler response.
 
-In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J_k^L}Z[J_k^L]|_{J_k^L=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)$ thus projects onto $c_k^{L\dagger}$ and we have\footnote{The remaining $\alpha_k$ factor reflects the mismatch between the squeezed Unruh vacuum and the coherent state prepared by the source.}
+In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J_k^L}Z[J_k^L]|_{J_k^L=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)$ thus projects onto $c_k^{L\dagger}$ and we have
 \begin{equation}
 \begin{array}{ll}
   a_k^{(0)J} &= \alpha_k c_q^R + \beta_k c_q^{L\dagger} -  \beta_k c_q^{L\dagger} \\
@@ -381,18 +381,19 @@ In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ t
 \end{array}
 \end{equation}
 
-In Rindler coordinates, the presence of this source term prepares a modified field state in which the Rindler mode occupation deviates from the thermal distribution that characterizes the Minkowski vacuum. Rather than simply injecting energy into the field, the source introduces a coherent excitation that interferes with the mode structure induced by the Bogoliubov $\beta$-terms. In effect, the source replaces the contribution of these terms for the selected mode, allowing us to construct a state in which the Rindler detector response becomes vacuum-like for a given mode $k$:
-
+In Rindler coordinates, the presence of this source term prepares a modified field state in which the Rindler mode occupation deviates from the thermal distribution that characterizes the Minkowski vacuum. Rather than simply injecting energy into the field, the source introduces a coherent excitation that interferes with the mode structure induced by the Bogoliubov $\beta$-terms. Effectively, the source cancels the thermal contribution of the Bogoliubov $\beta$-term for the targeted mode, allowing construction of a modified field state in which a Rindler detector registers no particles at that frequency.
 \begin{equation}
   \bra{J_k^L}  b_k^{\dagger} b_k \ket{J_k^L} = \bra{0_M}  b_k^{J_k^L \dagger} b^{J_k^L}_k \ket{0_M} = 0
 \end{equation}
+Thus, while the spectrum observed by accelerated observers matches that predicted by the thermal Bogoliubov analysis, it is here derived from a definite, localized dynamical cause, not an entangled vacuum.
 
-This construction reproduces the Rindler particle spectrum predicted by the Bogoliubov transformation, but with a key difference: the observed response now results from a well-defined dynamical process rather than a statistical average over inaccessible degrees of freedom. Provided the excited modes form a Klein-Gordon orthonormal basis—such as the Unruh modes—this equivalence holds when using causal (retarded) or time-ordered (Feynman) Green’s functions. These propagators allow linear superpositions of negative-frequency components to act as physically realizable particle injections.
 
-\section{Sub-wedge Localization in Rindler Space}
+This construction reproduces the Rindler particle spectrum predicted by the Bogoliubov transformation, but with a key difference: the observed response now results from a well-defined dynamical process rather than a statistical average over inaccessible degrees of freedom. Provided the excited modes form a Klein-Gordon orthonormal basis, such as the Unruh modes, this equivalence holds when using causal (retarded) or time-ordered (Feynman) Green’s functions. These propagators allow linear superpositions of negative-frequency components to act as physically realizable particle injections.
+
+\section{Localization}
 \subsection{Localization via Translated Wedge Inclusion}
 
-Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the smaller wedge $W_c$.
+Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
 
 \begin{figure}[h]
   \centering
@@ -405,9 +406,9 @@ By considering the restriction of $r_q$ to $W_c$, we have partially localized th
 
 To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and view
 \begin{equation}
-  \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
+  \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \pi \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked spectral response, see Figure $\ref{peaked}$. The thermal character is evident in the $\sinh$ terms: $\sinh \frac{\pi \omega_k}{a}$ introduces a broadening near $\omega_k = 0$, while $\sinh \frac{\omega_q - \omega_k}{a}$ contributes thermal spreading near the peak at $\omega_k = \omega_q$. However, the pronounced spectral peak at $\omega_k = \omega_q$ arises not from thermal effects but from the localization itself.
+as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked feature, see Figure $\ref{peaked}$. Although the $\sinh$ terms encode aspects of the familiar thermal distribution, especially broadening near $\omega_k = 0$, the existence of the peak itself at $\omega_k = \omega_q$ originates from the geometric restriction, not from a detector’s passive response to the vacuum, but as the active spectral footprint of a localized source.
 
 \begin{figure}[h]
   \centering
@@ -420,9 +421,9 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 
 Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared divergence previously associated with the unrestricted wedge.
 
-The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the beta function in equation (\ref{bogoTC0}) to compute the same inner product using the alternative incomplete beta function.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case we would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
+The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the beta function in equation (\ref{bogoTC0}) to compute the same inner product using the alternative incomplete beta function.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case the mode would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
 
-Instead, we can take the viewpoint that the diamond is a localized driving source, as in Section 3; we are no longer interpreting $r_q$ as a solution to the free Klein-Gordon equation everywhere, but as a compact test function that drives a response in the field. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
+This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section 3. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
 
 \begin{figure}[h]
   \centering
@@ -432,7 +433,7 @@ Instead, we can take the viewpoint that the diamond is a localized driving sourc
 \end{figure}
 
 
-\subsection{Stokes Transition -- Thermal to Localized Mode Structure}
+\subsection{Thermal to Localized Interpolation}
 To probe how global thermal structure transitions into a localized excitation profile, we consider the behavior of Rindler-to-Minkowski Bogoliubov coefficients when weighted by a Gaussian source envelope. This allows us to interpolate between delocalized (thermal) and localized (spectrally peaked) behavior. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
 
 \begin{equation}
