@@ -32,7 +32,7 @@
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
 
-\abstract{We present a framework that interpolates between the conventional thermal description of the Unruh effect and a fully localized, non-thermal excitation. In a uniformly accelerating frame, the extended support of Rindler modes across the wedge leads to red- and blue-shifted components, mixing frequencies in a manner that gives rise to the familiar thermal response. To refine this picture, we introduce a partially localized perspective: using modular automorphisms, we map modes between nested Rindler wedges and analyze their localization properties. We further interpolate to compactly supported wave modes using parabolic cylinder functions, enabling a smooth transition from global to local behavior. While the standard interpretation attributes particle detection to horizon thermality, our construction suggests an alternative mechanism, modeling the observed response as arising from thrust: a localized, directed energy input into the field. This provides a mechanistic account that complements the statistical explanation typically associated with the effect.}
+\abstract{We present a framework that interpolates between the conventional thermal description of the Unruh effect and a fully localized, non-thermal excitation. In a uniformly accelerating frame, the extended support of Rindler modes across the wedge leads to red- and blue-shifted components, mixing frequencies in a manner that gives rise to the familiar thermal response. To refine this picture, we introduce a partially localized perspective: using modular automorphisms, we map modes between nested Rindler wedges and analyze their localization properties. We further interpolate to compactly supported wave modes using parabolic cylinder functions, enabling a smooth transition from global to local behavior. While the standard interpretation attributes particle detection to horizon thermality, our construction suggests an alternative mechanism, modeling the observed response as arising from thrust: a localized, directed energy input into the field. While the standard interpretation attributes particle detection to horizon thermality and vacuum entanglement, our construction instead reproduces the response through a localized, source-driven injection of field excitations. This provides a mechanistic account that complements the statistical explanation typically associated with the effect.}
 
 \section{Introduction}
 
@@ -40,13 +40,11 @@ The Unruh effect\cite{unruh1976notes} reveals that uniformly accelerated observe
 
 In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response as sourced. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{Schwinger_1966} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
 
-Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct smooth interpolations between eternal Rindler modes and fully localized modes. Finally, in Section 5, we interpret the implications of this construction. These results suggest an alternative interpretation: that the Unruh effect may be understood in terms of localized, non-thermal field excitations that resemble a thrust-like driving force on the field.
+Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Section 5, we interpret the implications of our construction. These results suggest an alternative interpretation: that the Unruh effect may be understood in terms of localized, non-thermal field excitations that resemble a thrust-like driving force on the field.
 
 \section{Preliminaries}
 
-We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh} and T. Jacobson \cite{jacobson2005introduction}.
-
-Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost is occurring.
+We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh} and T. Jacobson \cite{jacobson2005introduction}. Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost is occurring.  We only consider free scalar fields in this note.
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
@@ -147,7 +145,7 @@ We next construct the Unruh modes
 \end{equation}
 Here, the tilde denotes opposite analytic continuation across the logarithmic branch cut, corresponding to the conjugate $i \epsilon$ prescription. Operationally, this captures the mode's behavior in the left wedge and is often written using left Rindler modes $l_k$ and $l_{-k}$, which have opposite sign and live in coordinates related by $t \to -t$, $x \to -x$ .
 
-The functions $\mu^R_k$ and $\mu^L_k$ are analytic in the lower-half complex $t$-plane and decay at infinity, so they qualify as positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
+The functions $\mu^R_k$ and $\mu^L_k$ are analytic in the lower-half complex $t$-plane and decay at infinity, so they qualify as positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
 \begin{figure}[h]
 \centering
@@ -166,7 +164,7 @@ and a reflected (left) wedge $\widetilde{W}_c$ with apex $(0,c)$
 \begin{equation}
  \widetilde{W}_c = \{(t,x) : x - c < -|t|\}.
 \end{equation}
-Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W}_c$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion $A \subseteq B$ \footnote{In the Haag-Kastler framework\cite{haag1964algebraic} of algebraic quantum field theory, the assignment of von Neumann algebras to spacetime regions defines a covariant functor: the inclusion of regions $A \rightarrow B$ induces an inclusion of algebras $\mathcal{A}(A) \rightarrow \mathcal{A}(B)$. Conversely, the Bogoliubov transformation, when defined, given by $\alpha^{(A \rightarrow B)}$ and $\beta^{(A \rightarrow B)}$ defines a contravariant map in this paper.}.
+Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W}_c$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion\footnote{In the algebraic formulation of QFT, spacetime regions correspond to operator algebras. Here, we adopt a complementary (though formally contravariant) perspective, whereby shifts in the wedge induce Bogoliubov transformations between operator algebras.} $A \subseteq B$.
 
 Since the analytically extended Rindler modes remain solutions of the Klein–Gordon equation, their inner products are preserved under continuation from the wedge to Minkowski space.  This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients from equation (\ref{unruh_mode_def})
 \begin{equation}
@@ -191,7 +189,8 @@ Since the analytically extended Rindler modes remain solutions of the Klein–Go
     \hline
     c^{R\dagger}_q \\
     c^{L\dagger}_q \\
- \end{array} \right]
+  \end{array} \right]
+\label{diag}
 \end{equation}
 for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
 \begin{equation}
@@ -212,7 +211,7 @@ We next compute the more general mixed Bogoliubov transformations.
   (\widetilde{c} \rightarrow 0) : &   a^{(\tilde{c})}_k &= \int \dv{q} \alpha^{(\widetilde{c} \rightarrow 0)}_{kq} a^{(0)}_q + \beta^{(\widetilde{c} \rightarrow 0)}_{kq} a^{(0)\dagger}_q \\
   \end{array}
 \end{equation}
-We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally in the KG dot product as an integral over an exponential phase from $\varphi_k$ (the Mellin transform of $e^{ikx}$ \cite{bracewell1966fourier}) and a $(x-c)$ power from $r_k^{(c)}$:
+We make use of a gamma function for $(c \rightarrow M)$. This occurs naturally in the KG dot product as an integral over an exponential phase from $\varphi_k$ and a $(x-c)$ power from $r_k^{(c)}$ (the Mellin transform of $e^{ikx}$ \cite{bracewell1966fourier}):
 \begin{equation}
   \begin{array}{ccl}
     \alpha^{(c \rightarrow M)}_{kq} &= \left<\varphi_q, r_k^{(c)} \right> &= \frac{1}{a \pi} \sqrt{\frac{\omega_k}{\omega_q}} \left(\frac{a}{q}\right)^{\frac{i\omega_k}{a}} e^{\frac{\pi \omega_k}{a}} \Gamma\left(\frac{i\omega_k}{a}\right) \\
@@ -237,35 +236,34 @@ The reflected diamond wedge version also yields a beta function, but with a diff
   \label{bogoTC0}
 \end{equation}
 
+\subsection{Modular Automorphisms}
 
-We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $q$ or $c$
+We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $c$
 \begin{equation}
   \begin{array}{cc}
-    \left|\beta_{kq}^{(c_1 \rightarrow M)}\right|^2 = \left|\beta_{kq}^{(c_2 \rightarrow M)}\right|^2 & \\
+    \left|\alpha_{kq}^{(c_1 \rightarrow M)}\right|^2 = \left|\alpha_{kq}^{(c_2 \rightarrow M)}\right|^2 & \\
     \left|\beta_{kq}^{(c_1 \rightarrow M)}\right|^2 = \left|\beta_{kq}^{(c_2 \rightarrow M)}\right|^2 & \\
  \end{array}
 \end{equation}
-The $c$ independence is expected since Unruh radiation is translation invariant. The $q$ independence can be strengthened as the expected number of particles in mode $k$
-\begin{equation}
- \int \dv{q} \left|\beta_{kq}^{(c \rightarrow M)}\right|^2 = \frac{e^{\frac{-2 \pi \omega_k}{a}}}{2 \sinh \frac{\pi \omega_k}{a}} \int \dv{q} \frac{2}{a\pi |q|}
-\end{equation}
-where we factor out the divergent part to recover the radiation equation again\footnote{We frequently use here and elsewhere $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$}.
-
-We next turn to $(c \rightarrow 0)$ and also find $c$ independence there 
+The $c$ independence is expected in this case since Unruh radiation is translation invariant. We next turn to $(c \rightarrow 0)$ and also find $c$ independence there 
 \begin{equation}
   \begin{array}{c}
     \left|\alpha_{kq}^{(c_1 \rightarrow 0)}\right| = \left|\alpha_{kq}^{(c_2 \rightarrow 0)}\right| \vspace{4pt} \\
     \left|\beta_{kq}^{(c_1 \rightarrow 0)}\right| = \left|\beta_{kq}^{(c_2 \rightarrow 0)}\right| \\
   \end{array}
 \end{equation}
-which is somewhat more surprising since this implies that $\int \dv{q} \left|\beta_{kq}^{(c_2 \rightarrow c_1)}\right|^2$ are $c_1$ and $c_2$ independent quantities for every shifted (and reflected resp.) wedge inclusion.
+This invariance is more surprising than in the Minkowski case, as it implies that
+\begin{equation}
+  \int \dv{q} |\beta^{(c_2 \rightarrow c_1)}_{kq}|^2
+\end{equation}
+the expected number of excitations for a mode $r_k^{(c_2)}$ when expressed in the vacuum of $W{c_1}$, is invariant\footnote{Similar statements are true for reflected (diamond) wedges.} under changes in both $c_1$ and $c_2$.
 
-In other words, for shifted wedges\footnote{Similar statements are true for reflected (diamond) wedge inclusions}, the expected number of particles for a mode $r^{(c_2)}_k$ of $W_{c_2}$ in $W_{c_1}$'s vacuum is independent of the choice of shift $c_2$ and $c_1$. More explicitly we have a transform matrix of $\Lambda_c$ from $W_0$ to $W_c$ 
+More explicitly using the form of the $c$ term in equations (\ref{bogoC0}) and (\ref{bogoTC0}) we have a transform matrix of $\Lambda_c$ from $W_0$ to $W_c$ 
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(c)}_k \\
     a^{(c)}_{-k} \\
-    \hline
+    \hline 
     a^{(c)\dagger}_k \\
     a^{(c)\dagger}_{-k} \\
  \end{array} \right] = \underbrace{
@@ -273,7 +271,7 @@ In other words, for shifted wedges\footnote{Similar statements are true for refl
 \begin{array}{rr|rr}
     A_c        &       0   &  B_c            &  0 \\
     0        &      -A_c   &  0            & -B_c \\
-    \hline
+    \hline 
     \overline{B_c}        &    0      &  \overline{A_c} & 0 \\
     0 &    -\overline{B_c}      &   0           & -\overline{A_c} \\
 \end{array} \right]_{k,q} }_{\Lambda_c}
@@ -289,7 +287,7 @@ where $A_c = \alpha_{kq}^{(c \rightarrow 0)} = P_c A_1 P_c^{-1}$  and $B_c = \be
 \begin{equation}
   P_c = P_{c,rs} = \delta(r - s) c^{\frac{i\omega_r}{a}} = e^{\frac{i H}{a} \log c}
 \end{equation}
-We can write $\Lambda_c$ out compactly out as
+where $H$ is the Rindler Hamiltonian associated with mode frequency $\omega_k$. We can write $\Lambda_c$ out compactly out as
 \begin{equation}
   \Lambda_c = Q_c \Lambda_1 Q_c^{-1}
 \end{equation}
@@ -302,7 +300,7 @@ where
         0 & 0 & 0 & P_c^{-1} \\
     \end{array} \right] 
 \end{equation}
-Note that $\lim_{c\to 0} \Lambda_c = 1$ since the limit of $\lim_{c\to 0} \alpha_{kq}^{(c \rightarrow 0)} = 1$ and $\lim_{c\to 0} \beta_{kq}^{(c \rightarrow 0)} = 0$, which corresponds nicely to $\lim_{c\to 0} W_c = W_0$. The composition of Bogoliubov transforms, $\Lambda_{nc} = \Lambda_c^n$, yields
+The composition of Bogoliubov transforms, $\Lambda_{nc} = \Lambda_c^n$, yields
 \begin{equation}
   \begin{array}{ll}    
     Q_{nc} \Lambda_1 Q_{nc}^{-1}  &= \Lambda_{nc} \\
@@ -317,31 +315,24 @@ so that
   &= Q_n \Lambda_1 Q_n^{-1}
   \end{array}
 \end{equation}
-and more generally we have a one parameter group given by
+and more generally we have a one parameter unitary group under the modular parameter $x = \log c$, with generator $H/a$ given by
 \begin{equation}
   \left\{\Lambda_0^x = Q_x \Lambda_0 Q_x^{-1} : x \in \mathbb{R} \right\}.
 \end{equation}
-These Bogoliubov transformations between shifted wedges define a one-parameter group, reflecting an underlying symmetry structure. This naturally connects to modular flow as studied in algebraic QFT, where such transformations correspond to automorphisms generated by the modular operator. This is an explicit realization of modular flow, due to the von Neumann algebra modular automorphism associated with the translation $W_0 \rightarrow W_c$, studied in detail in Tomita-Takesaki theory \cite{borchers2000revolutionizing}.  There we find thermal KMS states between open set inclusions in a much more general setting.  A key distinction from the standard approach is that, rather than focusing on Lorentz boosts within a fixed wedge, we examine modular structures associated with spacetime translations and reflections across different wedges.
-
+So these Bogoliubov transformations between shifted wedges form a one-parameter group under translations of the apex, exhibiting a symmetry that parallels modular automorphism flow in algebraic QFT \cite{borchers2000revolutionizing}. In contrast to traditional treatments emphasizing Lorentz boosts within a fixed wedge, this formulation reveals modular structure via spatial translations, highlighting the physical role of dynamical sources localized across different wedges.
 
 Consider a sequence
 \begin{equation}
   W_{c_n} \subseteq \cdots \subseteq W_{c_i} \subseteq \cdots \subseteq W_{c_j} \subseteq W_{c_2} \subseteq W_{c_1}
+  \label{chain}
 \end{equation}
-Then each $W_{c_i} \subseteq W_{c_j}$ involves particle production with a fixed squared magnitude for mode $k$.  We calculate this expected number of $W_{c_i}$ particles for mode $k$ in $W_{c_j}$'s vacuum
-\begin{equation}
-  \bra{0_{W_{c_j}}} a^{(c_i)\dagger}_k a^{(c_i)}_k \ket{0_{W_{c_j}}} = \frac{1}{2 \pi^2 k \sinh \frac{\pi k}{a}} \int_{x=0}^\infty \frac{x \sinh x}{(x+\frac{\pi k}{a}) \sinh(x+\frac{\pi k}{a})}
-\end{equation}
-which diverges.  The integrand goes to $e^{-\frac{\pi k}{a}}$ as $x$ gets large, so we can see that the expected number of particles in ratio goes to another thermal form
-\begin{equation}
-  \frac{1}{m (e^{2m} + 1)} = \frac{1}{k (e^{\frac{2\pi \omega_k}{a}} - 1)}.
-\end{equation}
+The concluding discovery is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields particle production with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the absolute values of $c_i$ or $c_j$.  We will see this independence in a future section where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independant of the subwedge translation involved, and in the next ``Driving Sources'' section.
 
 \section{Driving Sources}
 
 We now turn to a foundational question: {\bf ``What, physically, is accelerating the observer?''} Up to this point, acceleration has been introduced as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
-Figure \ref{emit_absorb} illustrates a wave packet composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies. This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitly near the horizons and red-shift infinitly at spatial infinity, due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates a wave packet composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies. This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
 
 The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
 
@@ -385,7 +376,7 @@ In Rindler coordinates, the presence of this source term prepares a modified fie
 \begin{equation}
   \bra{J_k^L}  b_k^{\dagger} b_k \ket{J_k^L} = \bra{0_M}  b_k^{J_k^L \dagger} b^{J_k^L}_k \ket{0_M} = 0
 \end{equation}
-Thus, while the spectrum observed by accelerated observers matches that predicted by the thermal Bogoliubov analysis, it is here derived from a definite, localized dynamical cause, not an entangled vacuum.
+Thus, while the spectrum observed by accelerated observers matches that predicted by the thermal Bogoliubov analysis, it is here derived from a definite, localized dynamical cause, not an entangled vacuum. In this perspective, the chain of inclusions in equation (\ref{chain}) is realized as a causal sequence, not of vacuum correlations, but of physically sourced particle injections propagating between shifted wedges. The $c$-independence of the modular automorphism, often taken as a structural symmetry, is then reinterpreted as a manifestation of transitivity among these injections: particle content transmitted from $W_{c_i}$ to $W_{c_j}$ is invariant under intermediate steps.
 
 
 This construction reproduces the Rindler particle spectrum predicted by the Bogoliubov transformation, but with a key difference: the observed response now results from a well-defined dynamical process rather than a statistical average over inaccessible degrees of freedom. Provided the excited modes form a Klein-Gordon orthonormal basis, such as the Unruh modes, this equivalence holds when using causal (retarded) or time-ordered (Feynman) Green’s functions. These propagators allow linear superpositions of negative-frequency components to act as physically realizable particle injections.
@@ -404,7 +395,7 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{
 
 By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending throughout the wedge.
 
-To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and view
+To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and view \footnote{$|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$}.
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \pi \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
@@ -413,7 +404,7 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The incomplete beta function picks out the spectral peak suppressing the peak at zero.}
+\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The green complete beta function curve is actually independent of the choice of translation $c$, see Modular Automorphism section 2.4. The incomplete beta function picks out the spectral peak suppressing the peak at zero.}
 \label{peaked}
 \end{figure}
 
@@ -434,10 +425,10 @@ This motivates a shift in perspective: rather than interpreting $r_q$ as part of
 
 
 \subsection{Thermal to Localized Interpolation}
-To probe how global thermal structure transitions into a localized excitation profile, we consider the behavior of Rindler-to-Minkowski Bogoliubov coefficients when weighted by a Gaussian source envelope. This allows us to interpolate between delocalized (thermal) and localized (spectrally peaked) behavior. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
+To probe how global thermal structure transitions into a localized excitation profile, we consider the behavior of Rindler-to-Minkowski Bogoliubov coefficients when weighted by a Gaussian source envelope. This allows us to interpolate between de-localized (thermal) and localized (spectrally peaked) behavior. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
 
 \begin{equation}
-D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty e^{zs} s^{-\nu - 1} e^{-\frac{1}{2} s^2} \dv{s}, \mathfrak{R}\nu < 0,
+D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty  \dv{s} e^{zs} s^{-\nu - 1} e^{-\frac{1}{2} s^2}, \mathfrak{R}\nu < 0,
 \end{equation}
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
@@ -447,9 +438,9 @@ Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\m
 \begin{equation}
   \begin{aligned}
     \left< \varphi_q^* N_{\mu,\sigma}, r_k\right> &= \frac{1}{4\pi \sqrt{\omega_q \omega_k}} 2i \int_{\Sigma_W} e^{-i(\omega_q t - q x)} e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}} \partial_t (a(x-t))^\frac{i\omega_k}{a} \\
-    &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2} + i q x} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
-    &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty e^{\left(-\frac{1}{2\sigma^2}\right) x^2 + \left(\frac{\mu}{\sigma^2} + i q \right) x + \left( -\frac{\mu^2}{2\sigma^2}\right)} x^{\frac{i\omega_k}{a} - 1} \dv{x} \\
-    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} a^{\frac{i \omega_k}{a} }  \int_0^\infty e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \dv{s}\\
+    &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty  \dv{x} e^{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2} + i q x} x^{\frac{i\omega_k}{a} - 1} \\
+    &= \frac{1}{2\pi} \sqrt{\frac{\omega_k}{\omega_q}} a^{\frac{i \omega_k}{a} - 1} \int_0^\infty \dv{x} e^{\left(-\frac{1}{2\sigma^2}\right) x^2 + \left(\frac{\mu}{\sigma^2} + i q \right) x + \left( -\frac{\mu^2}{2\sigma^2}\right)} x^{\frac{i\omega_k}{a} - 1}  \\
+    &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} \sigma^{\frac{i\omega_k}{a}} a^{\frac{i \omega_k}{a} }  \int_0^\infty \dv{s} e^{(\frac{\mu}{\sigma} + i q \sigma)s} s^{\frac{i\omega_k}{a} - 1} e^{-\frac{1}{2} s^2} \\
     &= \frac{1}{2\pi a} \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}} {(\sigma a)}^{\frac{i \omega_k}{a}} e^{\frac{1}{4}(i q \sigma + \frac{\mu}{\sigma})^2} \Gamma\left(\frac{i\omega_k}{a}\right) D_{-\frac{i\omega_k}{a}}(-i q\sigma - \frac{\mu}{\sigma}) \\
     &=  \frac{1}{2\pi a } \sqrt{\frac{\omega_k}{\omega_q}} e^{-\frac{\mu^2}{2 \sigma^2}}  (\sigma a)^\frac{i\omega_k}{a} e^{\frac{1}{4} z^2} \Gamma(-\nu) D_\nu(-z)
   \end{aligned}
@@ -470,7 +461,7 @@ where $\Sigma_W$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$,  $x = 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{pcf.png}
-\caption{$\left|\left< \varphi^*_q N, r_k \right>\right|^2$ for various values of $\sigma$ (probability density is scaled for comparision). $\omega_q = 1$, $q = 1$, $a=1$, $\mu = 1$. See also corresponding Figure \ref{stokes}.}
+\caption{$\left|\left< \varphi^*_q N, r_k \right>\right|^2$ for various values of $\sigma$ (probability density is scaled for comparison). $\omega_q = 1$, $q = 1$, $a=1$, $\mu = 1$. See also corresponding Figure \ref{stokes}.}
 \label{pcf_sigma_curves}
 \end{figure}
 From \cite{Olver1959UniformAE} we have
