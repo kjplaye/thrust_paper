@@ -32,7 +32,7 @@
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
 
-\abstract{We present a framework that interpolates between the conventional thermal description of the Unruh effect and a fully localized, non-thermal excitation. In a uniformly accelerating frame, the extended support of Rindler modes across the wedge leads to red- and blue-shifted components, mixing frequencies in a manner that gives rise to the familiar thermal response. To refine this picture, we introduce a partially localized perspective: using modular automorphisms, we map modes between nested Rindler wedges and analyze their localization properties. We further interpolate to compactly supported wave modes using parabolic cylinder functions, enabling a smooth transition from global to local behavior. While the standard interpretation attributes particle detection to horizon thermality, our construction suggests an alternative mechanism, modeling the observed response as arising from thrust: a localized, directed energy input into the field. While the standard interpretation attributes particle detection to horizon thermality and vacuum entanglement, our construction instead reproduces the response through a localized, source-driven injection of field excitations. This provides a mechanistic account that complements the statistical explanation typically associated with the effect.}
+\abstract{We present a framework that interpolates between the conventional thermal description of the Unruh effect and a fully localized, non-thermal excitation. In a uniformly accelerating frame, the extended support of Rindler modes across the wedge leads to red- and blue-shifted components, mixing frequencies in a manner that gives rise to the familiar thermal response. To refine this picture, we introduce a partially localized perspective: using modular automorphisms, we map modes between nested Rindler wedges and analyze their localization properties. We further interpolate to compactly supported wave modes using parabolic cylinder functions, enabling a smooth transition from global to local behavior. While the standard interpretation attributes particle detection to horizon thermality, our construction suggests an alternative mechanism, modeling the observed response as arising from thrust: a localized, directed energy input into the field.}
 
 \section{Introduction}
 
@@ -78,7 +78,7 @@ To describe the physics from the point of view of a uniformly accelerating obser
 \begin{equation}
   W = \{(x,t) : x>|t|\}
 \end{equation}
-with apex at the origin, corresponding to region I pictured\footnote{All diagrams follow the convention of $t$ increasing upward and $x$ increasing to the right.} in Figure \ref{rindlerw}; with coordinates
+with apex at the origin, pictured\footnote{All diagrams follow the convention of $t$ increasing upward and $x$ increasing to the right.} in Figure \ref{rindlerw}; with coordinates
 \begin{equation}
   t = \frac{1}{a}e^{a\xi}\sinh{(a\eta)}
 \label{sinh}
@@ -91,7 +91,7 @@ The constant acceleration parameter $a$ is introduced explicitly to make the dep
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.2]{rindler_w.png}
-\caption{Rindler wedge I on the right.}
+\caption{Rindler wedge $W$ on the right.}
 \label{rindlerw}
 \end{figure}
 
@@ -103,7 +103,7 @@ The wave equation retains the same structure as the Minkowski case, up to the ov
 \begin{equation}
  r_k(\eta,\xi) = \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta -k \xi)} + \text{h.c.}
 \end{equation}
-for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover region I (the right wedge), these modes are not defined globally in Minkowski space.
+for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover $W$ (the right wedge), these modes are not defined globally in Minkowski space.
 
 \subsection{Unruh Modes}
 To understand how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes, analytic combinations of Rindler modes that correspond to positive-frequency solutions with respect to Minkowski time.
@@ -117,7 +117,7 @@ From now on let $\omega_k = k > 0$. Bogoliubov coefficients satisfy $\alpha_k^2 
   \label{alpha_beta}
 \end{equation}
 
-We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\mp t + x) = e^{a(\pm \eta + \xi)}$.} the Rindler modes $r_k$ and $r_{-k}$ into the $(t,x)$ plane, with $i \epsilon$ prescription, to understand their frequency content with respect to Minkowski time. This continuation reveals a change in frequency character (positive to negative) across the branch cut\footnote{Specifically $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$.}
+We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\pm t + x) = e^{a(\pm \eta + \xi)}$ and then $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$..} the Rindler modes $r_k$ and $r_{-k}$ into the $(t,x)$ plane, with an $i \epsilon$ prescription\footnote{In the lower-half complex $t$-plane these modes decay at infinity, so they qualify as positive-frequency Minkowski modes on $W$.} which makes them positive frequency modes on $W$
 \begin{equation}
   \begin{aligned}
     r_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta - k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t + x + i \epsilon))^{\frac{i \omega_k}{a}} \\
@@ -145,7 +145,7 @@ We next construct the Unruh modes
 \end{equation}
 Here, the tilde denotes opposite analytic continuation across the logarithmic branch cut, corresponding to the conjugate $i \epsilon$ prescription. Operationally, this captures the mode's behavior in the left wedge and is often written using left Rindler modes $l_k$ and $l_{-k}$, which have opposite sign and live in coordinates related by $t \to -t$, $x \to -x$ .
 
-The functions $\mu^R_k$ and $\mu^L_k$ are analytic in the lower-half complex $t$-plane and decay at infinity, so they qualify as positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
+The functions $\mu^R_k$ and $\mu^L_k$ are positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
 \begin{figure}[h]
 \centering
@@ -509,7 +509,7 @@ This work examined the Unruh phenomenon from a localized perspective, emphasizin
 While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway for extending this framework to curved geometries. In particular, future work could explore applications to Hawking radiation by modeling localized excitations near black hole horizons. Figure \ref{rocket} offers a schematic illustration of this idea, emphasizing a shift from thermal emission to localized, physically sourced excitations in the near-horizon region.
 
 \section{Acknowledgments}
-I thank Frodden and Valdés for their excellent exposition \cite{frodden2018unruh}, and Beisert for his insightful lecture notes \cite{beisert2012quantum}. I'm also grateful to Ben Commeau, Daniel Justice, and Edward Randtke for helpful discussions.
+I thank Frodden and Valdés for their excellent exposition \cite{frodden2018unruh}, and Beisert for his insightful lecture notes \cite{beisert2012quantum}. I'm also grateful to Ben Commeau, Daniel Justice, Edward Randtke, and ChatGPT for helpful discussions.
 
 
 \bibliographystyle{ieeetr}
