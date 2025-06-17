@@ -38,7 +38,7 @@
 
 The Unruh effect\cite{unruh1976notes} reveals that uniformly accelerated observers perceive the Minkowski vacuum as a thermal state, detecting a bath of particles where inertial observers see none. This phenomenon is often presented by comparing positive-frequency Minkowski modes to Rindler modes, leading to Bogoliubov transformations that mix creation and annihilation operators\cite{crispino2008unruh}. The standard explanation relies on the global nature of Rindler modes, which span the entire wedge and undergo both red-shift and blue-shift along their support.
 
-In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the response as sourced. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{Schwinger_1966} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
+In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the field. In Section 2, we review of the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction \cite{Schwinger_1966} to inject particles into the field. When targeted at negative-frequency Unruh modes, this setup reproduces the familiar Rindler particle spectrum predicted by the Bogoliubov analysis.
 
 Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Section 5, we interpret the implications of our construction. These results suggest an alternative interpretation: that the Unruh effect may be understood in terms of localized, non-thermal field excitations that resemble a thrust-like driving force on the field.
 
@@ -326,7 +326,7 @@ Consider a sequence
   W_{c_n} \subseteq \cdots \subseteq W_{c_i} \subseteq \cdots \subseteq W_{c_j} \subseteq W_{c_2} \subseteq W_{c_1}
   \label{chain}
 \end{equation}
-The concluding discovery is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields particle production with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  We will see this independence in a future section where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independant of the subwedge translation involved.
+The result is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields the same ``amount'' and ``type'' of particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  We will see this independence in a future section where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independent of the sub-wedge translation involved.
 
 \section{Driving Sources}
 
@@ -347,7 +347,11 @@ The mathematical underpinning of this effect is encoded in the Bogoliubov coeffi
 
 To address this, we introduce a driving source \cite{Schwinger_1966} \cite{ryder1996quantum}, a physical mechanism that excites the field and, directly, accounts for the observer's acceleration. This reframes the interpretation: rather than a spontaneous thermal response associated with entanglement across a causal horizon, the observed radiation emerges as a coherent sourced influence. An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises not from intrinsic properties of the vacuum, but from an effective ignorance of the source's detailed structure and dynamics. In this view, the Unruh effect is not a passive revelation of hidden particles in the vacuum, but a measurable consequence of {\it thrust}.
 
-To model this process, we aim to match the effect of a field-theoretic creation operator by introducing a classical source term $J(x)$ into the Lagrangian, applied at a finite time interval. The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $\mu_k(x)$ matches the effect of the creation operator acting on the vacuum.
+To model this process, we aim to match the effect of a field-theoretic creation operator by introducing a classical source term $J(x)$ into the Lagrangian, applied at a finite time interval.
+\begin{equation}
+\mathscr{L}_{sourced} = \mathscr{L}_{free} + J\phi
+\end{equation}
+The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $\mu_k(x)$ matches the effect of the creation operator acting on the vacuum.
 
 \begin{figure}[h]
 \centering
@@ -404,15 +408,15 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The green complete beta function curve is actually independent of the choice of translation $c$, see Modular Automorphism section 2.4. The incomplete beta function picks out the spectral peak suppressing the peak at zero.}
+\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The green (complete) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge spacelike inclusion (see Modular Automorphism section 2.4). The incomplete beta function picks out the spectral peak suppressing the peak at zero and does depend on $c$.}
 \label{peaked}
 \end{figure}
 
 \subsection{Diamond Localization via Reflected Wedge Intersection}
 
-Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared divergence previously associated with the unrestricted wedge.
+Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared behavior previously associated with the unrestricted wedge.
 
-The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the beta function in equation (\ref{bogoTC0}) to compute the same inner product using the alternative form of the beta function.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case the mode would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
+The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the other form of the beta function in equation (\ref{bogoTC0}) to compute the same inner product.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case the mode would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
 
 This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section 3. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
 
@@ -433,7 +437,7 @@ D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty  \
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
 
-Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$, but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit, though relative magnitudes may be compared later.   For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
+Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$, but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit. For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
 
 \begin{equation}
   \begin{aligned}
@@ -455,7 +459,7 @@ where $\Sigma_W$ is the Cauchy surface $\eta=0$ on the Rindler wedge $W$,  $x = 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{stokes.png}
-\caption{Trajectory of $z = i q \sigma + \frac{\mu}{\sigma}$ as $\sigma$ interpolates between thermal and localized regimes. As $\sigma \to \infty$, the trajectory approaches the imaginary axis, aligning with the dominant thermal (KMS-like) component of the excitation. As $\sigma \to 0$, the system crosses a Stokes line and transitions into a sharply localized, source-driven configuration, where thermal character disappears. See also corresponding Figure \ref{pcf_sigma_curves}.}
+\caption{Trajectory of $z = i q \sigma + \frac{\mu}{\sigma}$ as $\sigma$ interpolates between thermal and localized regimes. For $\sigma$ starting at $\infty$, the trajectory starts at the positive infinite imaginary axis, aligning with the dominant thermal component of the excitation. As $\sigma \to 0$, the system crosses a Stokes line and transitions into a sharply localized, source-driven configuration, where thermal character disappears. See also corresponding Figure \ref{pcf_sigma_curves}.}
 \label{stokes}
 \end{figure}
 \begin{figure}
