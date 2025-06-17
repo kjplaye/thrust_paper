@@ -25,7 +25,7 @@
 
 %title and author details
 \title{Localization of the Unruh Effect}
-\author[1]{Kevin Player\footnote{kjplaye@gmail.com}}
+\author[1]{Kevin Player\footnote{kplayer@andrew.cmu.edu} \footnote{kjplaye@gmail.com}}
 
 \maketitle
 
@@ -106,7 +106,7 @@ The wave equation retains the same structure as the Minkowski case, up to the ov
 for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover $W$ (the right wedge), these modes are not defined globally in Minkowski space.
 
 \subsection{Unruh Modes}
-To understand how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes, analytic combinations of Rindler modes that correspond to positive-frequency solutions with respect to Minkowski time.
+To review how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes, analytic combinations of Rindler modes that correspond to positive-frequency solutions with respect to Minkowski time.
 
 From now on let $\omega_k = k > 0$. Bogoliubov coefficients satisfy $\alpha_k^2 - \beta_k^2 = 1$, ensuring normalization. The expressions below reflect their standard form and the associated thermal weighting:
 \begin{equation}
@@ -117,14 +117,14 @@ From now on let $\omega_k = k > 0$. Bogoliubov coefficients satisfy $\alpha_k^2 
   \label{alpha_beta}
 \end{equation}
 
-We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\pm t + x) = e^{a(\pm \eta + \xi)}$ and then $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$..} the Rindler modes $r_k$ and $r_{-k}$ into the $(t,x)$ plane, with an $i \epsilon$ prescription\footnote{In the lower-half complex $t$-plane these modes decay at infinity, so they qualify as positive-frequency Minkowski modes on $W$.} which makes them positive frequency modes on $W$
+We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\pm t + x) = e^{a(\pm \eta + \xi)}$ and then $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$..} the Rindler modes $r_k$ and $r_{-k}$ into the $(t,x)$ plane, with an $i \epsilon$ prescription to dictate which branch of the log to take.
 \begin{equation}
   \begin{aligned}
     r_{+k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta - k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a(-t + x + i \epsilon))^{\frac{i \omega_k}{a}} \\
     r_{-k} &= \frac{1}{\sqrt{4 \pi \omega_k}} e^{-i(\omega_k \eta + k \xi)} = \frac{1}{\sqrt{4 \pi \omega_k}} (a( t + x - i \epsilon))^{\frac{-i \omega_k}{a}} \\
   \end{aligned}
 \end{equation}
-Although $r_k$ and $r_{-k}$ are positive-frequency modes with respect to Rindler time $\eta$, analytic continuation across the branch cut into the left wedge reveals that they acquire negative-frequency components with respect to Minkowski time $t$; see the middle column in Figure \ref{unruh_rainbow}.
+These modes are positive-frequency with respect to Rindler time $\eta$ on the wedge $W$, but their analytic continuation is not unique due to the multi-valued nature of the logarithm. See the middle column of Figure \ref{unruh_rainbow} for an illustration: the magnitude shown drops across the branch cut, whereas the alternative conjugate prescription would yield a jump upwards instead.
 
 We recall the standard Minkowski positive-frequency plane wave modes, here with $k>0$:
 \begin{equation}
@@ -145,13 +145,13 @@ We next construct the Unruh modes
 \end{equation}
 Here, the tilde denotes opposite analytic continuation across the logarithmic branch cut, corresponding to the conjugate $i \epsilon$ prescription. Operationally, this captures the mode's behavior in the left wedge and is often written using left Rindler modes $l_k$ and $l_{-k}$, which have opposite sign and live in coordinates related by $t \to -t$, $x \to -x$ .
 
-The functions $\mu^R_k$ and $\mu^L_k$ are positive-frequency Minkowski modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
+The functions $\mu^R_k$ and $\mu^L_k$ are Minkowski modes and the construction is such that the analytic continuation is unique, global, and bounded in the lower half plane $\mathfrak{I}(t) < 0$, so that they are positive frequency modes. They form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Minkowski modes $\varphi_k$ and Unruh modes $\mu_k$ display consistent {\it rainbow} phase structure at $t=0$, reflecting their global positive-frequency character. In contrast, the Rindler modes $r_k$ flip phase across the horizon due to the analytic structure of the logarithm. The left-moving mode $r_k$ corresponds to emission; the right-moving $r_{-k}$ to absorption.}
+\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Rindler modes $r_k$ change magnitude across the log branch due to the interpretation of $\log(-1 \pm \epsilon)$. The left-moving mode $r_k$ corresponds to emission; the right-moving $r_{-k}$ to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
@@ -254,9 +254,9 @@ The $c$ independence is expected in this case since Unruh radiation is translati
 \end{equation}
 This invariance is more surprising than in the Minkowski case, as it implies that
 \begin{equation}
-  \int \dv{q} |\beta^{(c_2 \rightarrow c_1)}_{kq}|^2
+  \int \dv{q} |\beta^{(c_2 \rightarrow c_1)}_{kq}|^2,
 \end{equation}
-the expected number of excitations for a mode $r_k^{(c_2)}$ when expressed in the vacuum of $W{c_1}$, is invariant\footnote{Similar statements are true for reflected (diamond) wedges.} under changes in both $c_1$ and $c_2$.
+the expected number of excitations for a mode $r_k^{(c_2)}$ when expressed in the vacuum of $W_{c_1}$, is invariant\footnote{Similar statements are true for reflected (diamond) wedges.} under changes in both $c_1$ and $c_2$.
 
 More explicitly using the form of the $c$ term in equations (\ref{bogoC0}) and (\ref{bogoTC0}) we have a transform matrix of $\Lambda_c$ from $W_0$ to $W_c$ 
 \begin{equation}
@@ -319,20 +319,20 @@ and more generally we have a one parameter unitary group under the modular param
 \begin{equation}
   \left\{\Lambda_0^x = Q_x \Lambda_0 Q_x^{-1} : x \in \mathbb{R} \right\}.
 \end{equation}
-So these Bogoliubov transformations between shifted wedges form a one-parameter group under translations of the apex, exhibiting a symmetry that parallels modular automorphism flow in algebraic QFT \cite{borchers2000revolutionizing}. In contrast to traditional treatments emphasizing Lorentz boosts within a fixed wedge, this formulation reveals modular structure via spatial translations, highlighting the physical role of dynamical sources localized across different wedges.
+So these Bogoliubov transformations between shifted wedges form a one-parameter group under translations of the apex, exhibiting a symmetry that parallels modular automorphism flow in algebraic QFT \cite{borchers2000revolutionizing}. In contrast to traditional treatments emphasizing Lorentz boosts within a fixed wedge, this formulation reveals modular structure via spatial translations.
 
 Consider a sequence
 \begin{equation}
   W_{c_n} \subseteq \cdots \subseteq W_{c_i} \subseteq \cdots \subseteq W_{c_j} \subseteq W_{c_2} \subseteq W_{c_1}
   \label{chain}
 \end{equation}
-The concluding discovery is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields particle production with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the absolute values of $c_i$ or $c_j$.  We will see this independence in a future section where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independant of the subwedge translation involved, and in the next ``Driving Sources'' section.
+The concluding discovery is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields particle production with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  We will see this independence in a future section where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independant of the subwedge translation involved.
 
 \section{Driving Sources}
 
 We now turn to a foundational question: {\bf ``What, physically, is accelerating the observer?''} Up to this point, acceleration has been introduced as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
-Figure \ref{emit_absorb} illustrates a wave packet composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies. This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes\footnote{The Unruh modes are a specific combination of these two.} are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
 
 The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
 
@@ -362,7 +362,7 @@ The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-ter
 \end{equation}
 and the orthogonality of the mode functions in the Klein-Gordon inner product.
 
-Although the Unruh modes involve both left- and right-moving Rindler components, associated with emission and absorption in the accelerated frame, they are constructed to have purely negative frequency with respect to Minkowski time. This ensures that the source couples to physical creation operators and injects particles into the field in a well-defined way. The resulting excitation respects the correct Minkowski vacuum structure while encoding the full Rindler response.
+Although the (conjugate) Unruh modes involve both left- and right-moving Rindler components, associated with emission and absorption in the accelerated frame, they are constructed to have purely negative frequency with respect to Minkowski time. This ensures that the source couples to physical creation operators and injects particles into the field in a well-defined way. The resulting excitation respects the correct Minkowski vacuum structure while encoding the full Rindler response.
 
 In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J_k^L}Z[J_k^L]|_{J_k^L=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)$ thus projects onto $c_k^{L\dagger}$ and we have
 \begin{equation}
@@ -395,7 +395,7 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{
 
 By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending throughout the wedge.
 
-To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and view \footnote{$|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$}.
+To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and use $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$ to obtain
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \pi \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
@@ -412,7 +412,7 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 
 Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared divergence previously associated with the unrestricted wedge.
 
-The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the beta function in equation (\ref{bogoTC0}) to compute the same inner product using the alternative incomplete beta function.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case the mode would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
+The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the beta function in equation (\ref{bogoTC0}) to compute the same inner product using the alternative form of the beta function.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case the mode would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
 
 This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section 3. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
 
@@ -433,7 +433,7 @@ D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty  \
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
 
-Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$ but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit, though relative magnitudes may be compared later.   For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
+Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$, but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit, though relative magnitudes may be compared later.   For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
 
 \begin{equation}
   \begin{aligned}
