@@ -151,7 +151,7 @@ The functions $\mu^R_k$ and $\mu^L_k$ are Minkowski modes and the construction i
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Rindler modes $r_k$ change magnitude across the log branch due to the interpretation of $\log(-1 \pm \epsilon)$. The left-moving mode $r_k$ corresponds to emission; the right-moving $r_{-k}$ to absorption.}
+\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \varphi_k & r_k & \mu^R_k \\ \varphi_{-k} & r_{-k} & \mu^L_k \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Rindler modes $r_k$ change magnitude across the log branch due to the interpretation of $\log(-1 \pm i\epsilon)$. The left-moving mode $r_k$ corresponds to emission; the right-moving $r_{-k}$ to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
@@ -326,13 +326,13 @@ Consider a sequence
   W_{c_n} \subseteq \cdots \subseteq W_{c_i} \subseteq \cdots \subseteq W_{c_j} \subseteq W_{c_2} \subseteq W_{c_1}
   \label{chain}
 \end{equation}
-The result is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields the same ``amount'' and ``type'' of particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  We will see this independence in a future section where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independent of the sub-wedge translation involved.
+The result is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields the same ``amount'' and ``type'' of particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  We will see this independence in section 4 where the green curve in Figure \ref{peaked}, for the complete beta function, is actually independent of the sub-wedge translation involved.
 
 \section{Driving Sources}
 
 We now turn to a foundational question: {\bf ``What, physically, is accelerating the observer?''} Up to this point, acceleration has been introduced as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
-Figure \ref{emit_absorb} illustrates a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes\footnote{The Unruh modes are a specific combination of these two.} are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes\footnote{The Unruh modes are a specific combination of the emission and absorption modes.} are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
 
 The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
 
@@ -397,7 +397,7 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{
 \label{restrict}
 \end{figure}
 
-By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.}. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending throughout the wedge.
+By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.} of $W_0$. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending throughout the wedge.
 
 To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and use $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$ to obtain
 \begin{equation}
@@ -408,7 +408,7 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The green (complete) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge spacelike inclusion (see Modular Automorphism section 2.4). The incomplete beta function picks out the spectral peak suppressing the peak at zero and does depend on $c$.}
+\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The green (complete) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge spacelike inclusion (see Modular Automorphism section 2.4). The incomplete beta function picks out the spectral peak suppressing the peak at zero and does depend on the endpoint $2c$.}
 \label{peaked}
 \end{figure}
 
