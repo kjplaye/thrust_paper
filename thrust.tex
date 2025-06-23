@@ -176,11 +176,11 @@ This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients f
     \beta_k &    0      &   0      & \alpha_k \\
 \end{array} \right]_{k,q}
 \left[ \begin{array}{l}
-    c^R_q \\
-    c^L_q \\
+    c^R_k \\
+    c^R_{-k} \\
     \hline
-    c^{R\dagger}_q \\
-    c^{L\dagger}_q \\
+    c^{L\dagger}_k \\
+    c^{L\dagger}_{-k} \\
   \end{array} \right]
 \label{diag}
 \end{equation}
@@ -189,13 +189,13 @@ for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
   \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
 \end{equation}
-where we let $q$ take both positive {\it and negative} values $q=\pm k$. So that we can summarize the transform as
+where we have let $q$ take both positive {\it and negative} values $q=\pm k$ and omit the left wedge terms. So that we can summarize the transform as
 \begin{equation}
-  a_k^{(0)} = \alpha_k c_q^R + \beta_k c_q^{L\dagger}
+  a_k^{(0)} = \alpha_k c_k^R + \beta_k c_{-k}^{L\dagger}
 \label{a_in_c}
 \end{equation}
 
-We next compute the more general mixed Bogoliubov transformations.
+We next compute the more general non-diagonal mixed Bogoliubov transformations.
 \begin{equation}
   \begin{array}{rll}
   (c \rightarrow M) : & a^{(c)}_k &= \int \dv{q} \alpha^{(c \rightarrow M)}_{kq} a^{M}_q + \beta^{(c \rightarrow M)}_{kq} a^{(M)\dagger}_q \\
@@ -354,19 +354,19 @@ The source couples linearly to the field and excites a specific mode, thereby pr
 \label{rocket_inertial}
 \end{figure}
 
-The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by Rindler observers. For clarity, we first present the construction for a single positive-frequency $\mu^{L*}_k$-mode. Because the Unruh modes form a complete orthonormal set under the Klein-Gordon inner product, this construction extends linearly and independently to the full family of modes. We encode the effect of a creation operator $c_k^{L \dagger}$ using
+The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by (right wedge) Rindler observers. For clarity, we first present the construction for a single $\mu^{L*}_{-k}$-mode. Because the Unruh modes, and associated Rindler modes, form a complete orthonormal set under the Klein-Gordon inner product, this construction extends linearly and independently to the full family of modes. We encode the effect of a creation operator $c_{-k}^{L \dagger}$ using
 \begin{equation}
-  c _k^{L\dagger} = \left<\phi, \mu_k^{L*}\right>_{KG} = \int \dv{x} \mu_k^{L*}(x) \phi(x)
+  c_{-k}^{L\dagger} = \left<\phi, \mu_{-k}^{L*}\right>_{KG} = \int \dv{x} \mu_{-k}^{L*}(x) \phi(x)
 \end{equation}
 and the orthogonality of the mode functions in the Klein-Gordon inner product.
 
-Although the (conjugate) Unruh modes involve both left- and right-moving Rindler components, associated with emission and absorption in the accelerated frame, they are constructed to have purely negative frequency with respect to Minkowski time. This ensures that the source couples to physical creation operators and injects particles into the field in a well-defined way. The resulting excitation respects the correct Minkowski vacuum structure while encoding the full Rindler response.
+The modes are constructed to have purely negative frequency with respect to right Rindler time $\eta$. This ensures that the source couples to physical creation operators and injects particles into the field in a well-defined way. The resulting excitation respects the correct Minkowski vacuum structure while encoding the full Rindler response.
 
-In the generating functional formalism, setting $J_k^L(x) = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J_k^L}Z[J_k^L]|_{J_k^L=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_k^{L*}(x)$ thus projects onto $c_k^{L\dagger}$ and we have
+In the generating functional formalism, setting $J = -\beta_k u_k^{L*}$ the functional derivative $\frac{\delta}{\delta J}Z[J]|_{J=0}$ inserts $\phi$ into time-ordered correlators. Smearing this field insertion against $\mu_{-k}^{L*}(x)$ thus projects onto $c_{-k}^{L\dagger}$ and we have
 \begin{equation}
 \begin{array}{ll}
-  a_k^{(0)J} &= \alpha_k c_q^R + \beta_k c_q^{L\dagger} -  \beta_k c_q^{L\dagger} \\
-  &= \alpha_k c_q^R
+  a_k^{(0)J} &= \alpha_k c_k^R + \beta_k c_{-k}^{L\dagger} -  \beta_k c_{-k}^{L\dagger} \\
+  &= \alpha_k c_k^R
 \end{array}
 \end{equation}
 
