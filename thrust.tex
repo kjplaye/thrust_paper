@@ -108,7 +108,7 @@ for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``R
 \subsection{Unruh Modes}
 To review how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes\cite{unruh1976notes}, analytic continuations of Rindler modes that are positive-frequency solutions with respect to Minkowski time\footnote{We mean that the modes contain no negative frequency Minkowski components.}. From now on let $\omega_k = k > 0$.
 
-Let $\widetilde{W}$ be the left Rindler wedge\footnote{Coordinates on this wedge are $t = -\frac{1}{a}e^{a\delta} \sinh(a\gamma)$, $x = -\frac{1}{a}e^{a\delta} \cosh(a\gamma)$; and $l_{\pm k} = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i\omega_k(\gamma \pm \delta)}$.}, $x < -|t|$ with Rindler modes $l_{\pm k}$.  We define constants $\alpha_k$ and $\beta_k$ which satisfy $\alpha_k^2 - \beta_k^2 = 1$.  They will show up in future Bogoliubov relations and also in normalizations\footnote{The normalizations come from computing the Klein Gordon inner product on Minkowski space and comparing it to inner products on $W$ and $\widetilde{W}$.}. $\beta_k$ also describes particle creation in terms of $|\beta_k|^2$ which has a thermal character:
+We define constants $\alpha_k$ and $\beta_k$ which satisfy $\alpha_k^2 - \beta_k^2 = 1$
 \begin{equation}
   \begin{aligned}
     \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}}  \\
@@ -116,25 +116,26 @@ Let $\widetilde{W}$ be the left Rindler wedge\footnote{Coordinates on this wedge
   \end{aligned}
   \label{alpha_beta}
 \end{equation}
+They show up throughout in mode normalizations\footnote{The normalizations come from computing the Klein Gordon inner product on Minkowski space and comparing it to inner products on $W$ and $\widetilde{W}$.}, inner products, and resulting Bogoloubov transforms. $\beta_k$ also describes particle creation in terms of $|\beta_k|^2$ which has a thermal character.
 
-We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\pm t + x) = e^{a(\pm \eta + \xi)}$ and then $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$.  Similiar statements hold for the left wedge.} the Rindler modes $r_k$, $r_{-k}$, $l_k$ and $l_{-k}$ into the $(t,x)$ plane, these are the Unruh modes
+Let $\widetilde{W}$ be the left Rindler wedge\footnote{Coordinates on this wedge are $t = -\frac{1}{a}e^{a\delta} \sinh(a\gamma)$, $x = -\frac{1}{a}e^{a\delta} \cosh(a\gamma)$; and $l_{\pm k} = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i\omega_k(\gamma \pm \delta)}$.}, $x < -|t|$ with Rindler modes $l_{\pm k}$.  We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\pm t + x) = e^{a(\pm \eta + \xi)}$ and then $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$.  Similiar statements hold for the left wedge.} the Rindler modes $r_k$, $r_{-k}$, $l_k$ and $l_{-k}$ into the $(t,x)$ plane, these are the Unruh modes
 \begin{equation}
   \begin{array}{ll}
-    \mu^R_{\pm k} = \alpha_k \frac{1}{\sqrt{4 \pi \omega_k}} (a(\mp t + x \pm  i \epsilon))^{\pm \frac{i \omega_k}{a}} & \hspace{20pt}
+    \mu^R_{\pm k} = \frac{\alpha_k }{\sqrt{4 \pi \omega_k}} (a(\mp t + x \pm  i \epsilon))^{\pm \frac{i \omega_k}{a}} & \hspace{20pt}
        {\mu^R_{\pm k}}_{|_W} \rightarrow \alpha_k r_{\pm k} \\
-    \mu^L_{\pm k} = \alpha_k \frac{1}{\sqrt{4 \pi \omega_k}} (a(\mp t - x \pm  i \epsilon))^{\pm \frac{i \omega_k}{a}} & \hspace{20pt}
+    \mu^L_{\pm k} =  \frac{\alpha_k}{\sqrt{4 \pi \omega_k}} (a(\mp t - x \pm  i \epsilon))^{\pm \frac{i \omega_k}{a}} & \hspace{20pt}
     {\mu^L_{\pm k}}_{|_{\widetilde{W}}} \rightarrow \alpha_k l_{\pm k} \\
   \end{array}
 \end{equation}
-We add an $i \epsilon$ prescription to dictate which branch of the log to take so that the modes are analytic and bounded on the $\mathfrak{I}(t) < 0$ half plane.  This makes the modes positive-frequency with respect to $t$.  Then another way of writing the Unruh modes is
+We add an $i \epsilon$ prescription to dictate which branch of the log to take so that the modes are analytic and bounded on the $\mathfrak{I}(t) < 0$ half plane.  This makes the modes positive-frequency with respect to $t$.  Another way of writing the Unruh modes is
 \begin{equation}
 \begin{aligned}
-  \mu^R_k &= \alpha_k r_k + \beta_k l^*_{-k} \\
-  \mu^L_k &= \alpha_k l_k + \beta_k r^*_{-k} \\
+  \mu^R_{\pm k} &= \alpha_k r_{\pm k} + \beta_k l^*_{\mp k} \\
+  \mu^L_{\pm k} &= \alpha_k l_{\pm k} + \beta_k r^*_{\mp k} \\
 \end{aligned}
 \label{unruh_mode_def}
 \end{equation}
-See the right column of Figure \ref{unruh_rainbow} for an illustration: the magnitude shown drops across the branch cut, whereas the alternative conjugate prescription would yield a jump upwards instead.
+where the right and left modes ($r_{\pm k}$ and $l_{\pm k}$) are understood to be zero outside of their respective wedges. See Figure \ref{unruh_rainbow} for an illustration of the Unruh modes. The magnitude shown jumps across the branch cut and conjugates the phase.
 
 The Unruh modes form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$ see the original source Unruh\cite{unruh1976notes}. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
@@ -142,7 +143,7 @@ The Unruh modes form an alternative orthonormal basis of solutions to the Klein-
 \centering
 \includegraphics[scale=0.5]{unruh_mode_rainbow.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \varphi_k & \mu_k \\ \varphi_{-k} & \mu_{-k} \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Unruh modes $\mu_k$ and $\mu_{-k}$ change magnitude across the log branch due to the interpretation of $\log(-1 \pm i\epsilon)$. The left-moving mode $\mu_k$ corresponds to emission; the right-moving $\mu_{-k}$ to absorption.}
+\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \mu^L_{-k} & \varphi_k & \mu^R_k \\ \mu^L_{k} & \varphi_{-k} & \mu^R_{-k} \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Unruh modes change magnitude and conjugate phase across the log branch due to the interpretation of $\log(-1 \pm i\epsilon)$. The left-moving modes (top) correspond to emission in Minkowski space; the right-moving modes (bottom) to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
