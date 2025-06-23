@@ -158,42 +158,34 @@ and a reflected (left) wedge $\widetilde{W}_c$ with apex $(0,c)$
 \end{equation}
 Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W}_c$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion\footnote{In the algebraic formulation of QFT, spacetime regions correspond to operator algebras. Here, we adopt a complementary (though formally contravariant) perspective, whereby shifts in the wedge induce Bogoliubov transformations between operator algebras.} $A \subseteq B$.
 
-This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients from equation (\ref{unruh_mode_def})
-\begin{equation}
-  \left[ \begin{array}{l}
-    a^{(0)}_k \\
-    a^{(0)}_{-k} \\
-    \hline
-    a^{(0)\dagger}_k \\
-    a^{(0)\dagger}_{-k} \\
- \end{array} \right] = 
-  \left[
-\begin{array}{rr|rr}
-    \alpha_k &       0   &  0       & \beta_k \\
-    0        & \alpha_k & \beta_k & 0 \\
-    \hline
-    0        & \beta_k   & \alpha_k & 0 \\
-    \beta_k &    0      &   0      & \alpha_k \\
-\end{array} \right]_{k,q}
-\left[ \begin{array}{l}
-    c^R_k \\
-    c^R_{-k} \\
-    \hline
-    c^{L\dagger}_k \\
-    c^{L\dagger}_{-k} \\
-  \end{array} \right]
-\label{diag}
-\end{equation}
-for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
+This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients from equation (\ref{unruh_mode_def}) for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
 \begin{equation}
   \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
 \end{equation}
-where we have let $q$ take both positive {\it and negative} values $q=\pm k$ and omit the left wedge terms. So that we can summarize the transform as
+We find a 4 by 4 block matrix with blocks of the form
+\begin{equation}
+  \left[ \begin{array}{l}
+      a^{(0)}_k \vspace{10 pt}\\
+    a^{\widetilde{(0)}\dagger}_{-k} \\
+ \end{array} \right] = 
+  \left[
+\begin{array}{cc}
+    \alpha_k &      \beta_k \\
+    \beta_k        & \alpha_k \\
+\end{array} \right]
+\left[ \begin{array}{l}
+    c^R_k \\
+    c^{L\dagger}_{-k} \\
+  \end{array} \right]
+\label{diag}
+\end{equation}
+and three others, where the $a^{\widetilde{(0)}\dagger}_{-k}$ is a left wedge annihilator. We can summarize the transform in the right wedge $W$ as
 \begin{equation}
   a_k^{(0)} = \alpha_k c_k^R + \beta_k c_{-k}^{L\dagger}
 \label{a_in_c}
 \end{equation}
+and three other similar relations for $a_{-k}^{(0)}$, $a_{k}^{(0)\dagger}$, and $a_{-k}^{(0)\dagger}$.
 
 We next compute the more general non-diagonal mixed Bogoliubov transformations.
 \begin{equation}
@@ -326,9 +318,9 @@ We now turn to a foundational question: {\bf ``What, physically, is accelerating
 
 A natural physical interpretation is that a {\it driving source} must exist, both as the cause of the observer’s acceleration, and as a localized field source coupled to the quantum field. In this view, acceleration is not merely a kinematic artifact or coordinate reparameterization, but the result of active, localized interactions along the observer’s worldline. These interactions are responsible for the observer’s motion.
 
-Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$ (Unruh modes restricted to the wedge $W$), effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of restricted Minkowski modes ${\varphi_q}_{|_W}$ , effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
 
-The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
+The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively\footnote{$\varphi_q$ is restricted to $W$ since $r_k$ is supported on $W$.}. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
 
 \begin{figure}[h]
 \centering
@@ -345,7 +337,7 @@ To model this process, we aim to match the effect of a field-theoretic creation 
 \begin{equation}
 \mathscr{L}_{sourced} = \mathscr{L}_{free} + J\phi
 \end{equation}
-The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions $\mu_k(x)$ matches the effect of the creation operator acting on the vacuum.
+The source couples linearly to the field and excites a specific mode, thereby preparing a coherent state whose phase and amplitude are determined by the source profile. In order to replicate the targeted excitation, $J(x)$ must be engineered so that its inner product with the mode functions matches the effect of the creation operator acting on the vacuum.
 
 \begin{figure}[h]
 \centering
@@ -354,7 +346,7 @@ The source couples linearly to the field and excites a specific mode, thereby pr
 \label{rocket_inertial}
 \end{figure}
 
-The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by (right wedge) Rindler observers. For clarity, we first present the construction for a single $\mu^{L*}_{-k}$-mode. Because the Unruh modes, and associated Rindler modes, form a complete orthonormal set under the Klein-Gordon inner product, this construction extends linearly and independently to the full family of modes. We encode the effect of a creation operator $c_{-k}^{L \dagger}$ using
+The field can be expanded as in equation (\ref{c_ladder}), and the $\beta_k$-term in equation (\ref{a_in_c}) is responsible for the thermal particle content of the Minkowski vacuum as seen by (right wedge) Rindler observers. For clarity, we first present the construction for a single $\mu^{L*}_{-k}$-mode. Because the Rindler modes, form a complete orthonormal set under the Klein-Gordon inner product on the right wedge, this construction extends linearly and independently to the full family of modes. We encode the effect of a creation operator $c_{-k}^{L \dagger}$ using
 \begin{equation}
   c_{-k}^{L\dagger} = \left<\phi, \mu_{-k}^{L*}\right>_{KG} = \int \dv{x} \mu_{-k}^{L*}(x) \phi(x)
 \end{equation}
@@ -369,10 +361,11 @@ In the generating functional formalism, setting $J = -\beta_k u_k^{L*}$ the func
   &= \alpha_k c_k^R
 \end{array}
 \end{equation}
+The source is also correlated with the left wedge where we pick up a $\beta_k$ factor times a left annihilator (see equation (\ref{diag})), but we don't see that in the right wedge.  This is a source correlation which is usually thought of as an entangled vacuum.  We are essentially saying that particles found in the right wedge ``come from'' the left wedge or at least some casual past.
 
 In Rindler coordinates, the presence of this source term prepares a modified field state in which the Rindler mode occupation deviates from the thermal distribution that characterizes the Minkowski vacuum. Rather than simply injecting energy into the field, the source introduces a coherent excitation that interferes with the mode structure induced by the Bogoliubov $\beta$-terms. Effectively, the source cancels the thermal contribution of the Bogoliubov $\beta$-term for the targeted mode, allowing construction of a modified field state in which a Rindler detector registers no particles at that frequency.
 \begin{equation}
-  \bra{J_k^L}  b_k^{\dagger} b_k \ket{J_k^L} = \bra{0_M}  b_k^{J_k^L \dagger} b^{J_k^L}_k \ket{0_M} = 0
+  \bra{J}  b_k^{\dagger} b_k \ket{J} = \bra{0_M}  b_k^{J} b^{J}_k \ket{0_M} = 0
 \end{equation}
 Thus, while the spectrum observed by accelerated observers matches that predicted by the thermal Bogoliubov analysis, it is here derived from a definite, localized dynamical cause, not an entangled vacuum. In this perspective, the chain of inclusions in equation (\ref{chain}) is realized as a causal sequence, not of vacuum correlations, but of physically sourced particle injections propagating between shifted wedges. The $c$-independence of the modular automorphism, often taken as a structural symmetry, is then reinterpreted as a manifestation of transitivity among these injections: particle content transmitted from $W_{c_i}$ to $W_{c_j}$ is invariant under intermediate steps.
 
@@ -382,7 +375,7 @@ This construction reproduces the Rindler particle spectrum predicted by the Bogo
 \section{Localization}
 \subsection{Localization via Translated Wedge Inclusion}
 
-Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
+Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode\footnote{From here on we often interchange Rindler and Unruh modes since we are only concerned with the restriction to the right wedge or subsets.} associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
 
 \begin{figure}[h]
   \centering
