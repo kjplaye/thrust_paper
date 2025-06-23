@@ -127,7 +127,7 @@ Let $\widetilde{W}$ be the left Rindler wedge\footnote{Coordinates on this wedge
     {\mu^L_{\pm k}}_{|_{\widetilde{W}}} \rightarrow \alpha_k l_{\pm k} \\
   \end{array}
 \end{equation}
-We add an $i \epsilon$ prescription to dictate which branch of the log to take so that the modes are analytic and bounded on the $\mathfrak{I}(t) < 0$ half plane.  This makes the modes positive-frequency with respect to $t$.  Another way of writing the Unruh modes is
+We added an $i \epsilon$ prescription to dictate which branch of the log to take so that the modes are analytic and bounded on the $\mathfrak{I}(t) < 0$ half plane.  This makes the modes positive-frequency with respect to $t$.  Another way of writing the Unruh modes is
 \begin{equation}
 \begin{aligned}
   \mu^R_{\pm k} &= \alpha_k r_{\pm k} + \beta_k l^*_{\mp k} \\
@@ -158,7 +158,7 @@ and a reflected (left) wedge $\widetilde{W}_c$ with apex $(0,c)$
 \end{equation}
 Let the superscripts $(0)$, $(c)$, $(\widetilde{c})$, and $(M)$ represent the $W_0$, $W_c$, $\widetilde{W}_c$, and Minkowski frames of reference respectively.  Let $(A \rightarrow B)$ represent an open set inclusion\footnote{In the algebraic formulation of QFT, spacetime regions correspond to operator algebras. Here, we adopt a complementary (though formally contravariant) perspective, whereby shifts in the wedge induce Bogoliubov transformations between operator algebras.} $A \subseteq B$.
 
-Since the analytically extended Rindler modes remain solutions of the Klein–Gordon equation, their inner products are preserved under continuation from the wedge to Minkowski space.  This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients from equation (\ref{unruh_mode_def})
+This allows us to directly compute $W_0 \rightarrow M$ Bogoliubov coefficients from equation (\ref{unruh_mode_def})
 \begin{equation}
   \left[ \begin{array}{l}
     a^{(0)}_k \\
@@ -189,7 +189,7 @@ for a change of basis from $a^{(M)}_q$ to $c^R_q$ and $c^L_q$
   \phi = \int \dv{q} \mu_q^R c_q^R + \mu_q^L c_q^L + \text{h.c.}
   \label{c_ladder}
 \end{equation}
-So that we can summarize the transform as
+where we let $q$ take both positive {\it and negative} values $q=\pm k$. So that we can summarize the transform as
 \begin{equation}
   a_k^{(0)} = \alpha_k c_q^R + \beta_k c_q^{L\dagger}
 \label{a_in_c}
@@ -326,7 +326,7 @@ We now turn to a foundational question: {\bf ``What, physically, is accelerating
 
 A natural physical interpretation is that a {\it driving source} must exist, both as the cause of the observer’s acceleration, and as a localized field source coupled to the quantum field. In this view, acceleration is not merely a kinematic artifact or coordinate reparameterization, but the result of active, localized interactions along the observer’s worldline. These interactions are responsible for the observer’s motion.
 
-Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$, effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes. The modes $r_k$ are left-moving, propagating toward the future horizon and interpreted as {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and interpreted as {\bf absorption}. These Rindler modes are constructed as superpositions of Minkowski modes $\varphi_q$ (Unruh modes restricted to the wedge $W$), effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
 
 The mathematical underpinning of this effect is encoded in the Bogoliubov coefficients $\alpha_{kq}^{(c \rightarrow M)}$ and $\beta_{kq}^{(c \rightarrow M)}$, which express the Rindler modes in terms of their Klein-Gordon inner products with Minkowski positive- and negative-frequency modes, $\varphi_q$ and $\varphi_q^*$, respectively. This delocalization in frequency space, rooted in the extended support of the Rindler modes and tied to the observer’s causal horizon, plays a central role in producing the thermal spectrum characteristic of the Unruh effect.
 
