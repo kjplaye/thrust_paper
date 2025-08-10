@@ -24,7 +24,7 @@
 \begin{document}
 
 %title and author details
-\title{Causing the Effect: Localized Driving Sources and the Unruh Phenomenon}
+\title{Causing the Effect: Driving the Unruh Phenomenon}
 \author[1]{Kevin Player\footnote{kplayer@andrew.cmu.edu} \footnote{kjplaye@gmail.com}}
 
 \maketitle
@@ -178,7 +178,7 @@ We find a 4 by 4 block matrix with blocks of the form
   \end{array} \right]
 \label{diag}
 \end{equation}
-and three others, where the $a^{\widetilde{(0)}\dagger}_{-k}$ is a left wedge annihilator. We can summarize the transform in the right wedge $W$ as
+and three others, where the $a^{\widetilde{(0)}\dagger}_{-k}$ is a left wedge creation operator. We can summarize the transform in the right wedge $W$ as
 \begin{equation}
   a_k^{(0)} = \alpha_k c_k^R + \beta_k c_{-k}^{L\dagger}
 \label{a_in_c}
@@ -351,14 +351,14 @@ Physically, Paz introduces a bilocal source $J$
  \mathscr{L}_{sourced} = \mathscr{L}_{free} + J\phi
  \end{array}
 \end{equation}
-This source construction is standard to QFT \cite{Schwinger_1966} \cite{ryder1996quantum} as a coupling of a classical function with the field as an interaction term $J\phi$. In this version $J$ acts coherently on the field modes in both wedges simultaneously, creating correlations that build entanglement at the level of the global quantum state. The product structure reflects this paired excitation, with $f_L$ and $f_R$ defining the mode profiles localized respectively in the left and right Rindler wedges. This is a paired global-coherent version of the usual vacuum squeezing.
+This source construction is standard to QFT \cite{Schwinger_1966} \cite{ryder1996quantum} as a coupling of a classical function with the field as an interaction term $J\phi$. In this version $J$ acts coherently on the field shifting the modes in both wedges simultaneously, creating correlations that build entanglement at the level of a global quantum state. The product structure reflects this paired excitation, with $f_L$ and $f_R$ defining the mode profiles localized respectively in the left and right Rindler wedges. This is a paired global-coherent version of the usual vacuum squeezing.
 
-To analyze a mode $f_R$ in the right wedge, we pair the mode with a complementary mode in the left wedge $f_L$.  This setup is fully compatible with the standard thermal vacuum description\footnote{The form of this vacuum equation can be proven by recursively applying the Bogoliubov relations in equation (\ref{a_in_c}). $\theta_k$ is chosen to match $\alpha_k = \cosh{\theta_k}$ and $\beta_k = \sinh{\theta_k}$ from equation (\ref{alpha_beta}) so $\tanh{\theta_k} = e^{-2\pi\omega_k / a}$.} of the Unruh effect
+To analyze a mode $f_R$ in the right wedge, we pair the mode with a complementary mode in the left wedge $f_L$.  This setup is compatible with the standard thermal vacuum description\footnote{The form of this vacuum equation can be proven by recursively applying the Bogoliubov relations in equation (\ref{a_in_c}). $\theta_k$ is chosen to match $\alpha_k = \cosh{\theta_k}$ and $\beta_k = \sinh{\theta_k}$ from equation (\ref{alpha_beta}) so $\tanh{\theta_k} = \frac{\beta_k}{\alpha_k} = e^{-\pi\omega_k / a}$.} of the Unruh effect
 \begin{equation}
   \ket{0}_M = \prod_{\omega} \frac{1}{\cosh{\theta_k}} \sum_n \tanh^n{\theta_k} \ket{n_\omega}_{L} \ket{n_\omega}_{R}.
   \label{vacuum}
 \end{equation}
-The state prepared by Paz corresponds to a selective excitation with $n=1$ at a fixed $\omega$,
+This state factorizes into correlated excitations in the left (L) and right (R) wedges. The Unruh mode associated with frequency $\omega$ is a specific linear combination of $L$ and $R$ Rindler modes, so that any source $J$ coupling to it will, in general, drive correlated excitations across both wedges. For example, the state prepared by Paz corresponds to a selective $n=1$ excitation at a fixed $\omega$,
 \begin{equation}
   \ket{\Psi_\omega} = \ket{1_\omega}_L \ket{1_\omega}_R,
 \end{equation}
@@ -370,11 +370,11 @@ a controlled realization of one term in the ensemble. Our source singles out the
 \hspace{20 pt}
 \includegraphics[scale=0.235]{paz_bw.png}
 \captionsetup{width=0.7\textwidth}
-\caption{The points marked with black and white dots at (0,1) (Wright) and (-1,0) (Paz) respectively in the left picture lie on the same Unruh mode trajectory; although the mode is infinitely blueshifted at the horizon, the total Doppler effect between these two locations cancels, so the mode represents the same local frequency $\omega_k$. The right figure illustrates a finite time interval of width $\delta$ for the source $J$ to be active.}
+\caption{The points marked with black and white dots at (0,1) (Wright) and (-1,0) (Paz) respectively in the left picture lie on the same Unruh mode trajectory; although the mode is infinitely blue-shifted at the horizon, the total Doppler effect between these two locations cancels, so the mode represents the same local frequency $\omega_k$. The right figure illustrates a finite time interval of width $\delta$ for the source $J$ to be active.}
 \label{paz_freq}
 \end{figure}
 
-This setup is fully compatible with the standard thermal vacuum description of the Unruh effect. In the usual formulation, the Minkowski vacuum can be written as a thermal distribution of Rindler excitations, with each frequency mode $\omega_k$ described by a superposition over occupation numbers. Our construction simply selects the $n_\omega = 1$ sector, a single correlated excitation in each wedge, rather than the full thermal sum. In this sense, the process we describe is a specific ``microstate'' consistent with the broader thermal ensemble, corresponding to the case where exactly one entangled Rindler pair of frequency is present.
+This setup is compatible with the standard thermal vacuum description of the Unruh effect. In the usual formulation, the Minkowski vacuum can be written as a thermal distribution of Rindler excitations, with each frequency mode $\omega_k$ described by a superposition over occupation numbers. Our construction simply selects the $n_\omega = 1$ sector, a single correlated excitation in each wedge, rather than the full thermal sum. In this sense, the process we describe is a specific ``microstate'' consistent with the broader thermal ensemble, corresponding to the case where exactly one entangled Rindler pair of frequency is present.
 
 An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises from intrinsic properties of the vacuum, an effective ignorance of the source's detailed structure and dynamics. In this view, the Unruh effect is not a passive revelation of hidden particles in the vacuum, but a measurable consequence of {\it thrust}.
 
@@ -388,20 +388,20 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 
 \subsection{Physical Details}
 
-The construction of the absorption mode $f_R$ for Wright presents a couple of notable physical challenges.  The first of these is that $J$ is described in the Rindler basis, so Paz will need to couple to an Unruh mode -- the analytically continued Rindler mode (see Section 2). The Rindler mode undergoes an infinite blue shift as it approaches the horizon separating the right and past wedges, but by analytically continuing it as an Unruh mode into the past wedge, we find a corresponding red shift when moving from the horizon to Paz. Figure \ref{paz_freq} (left picture) shows that the points at $(0,1)$ and $(-1,0)$ (Wright and Paz) experience the same local frequency, reflecting this symmetry.  
+The construction of the absorption mode $f_R$ for Wright presents some physical challenges.  The first is that the actual coherent state obtained from $J$ contains terms at higher particle numbers.  We either assume strongly that the state is exactly prepared, or that $\tanh{\theta_k}$ is sufficiently small as to make the higher terms negligible.
 
-Although a single Minkowski photon is not a pure Unruh mode, the analytic continuation inherent in the Unruh basis captures the geometric frequency relationship between Wright and Paz.  A more general construction would place Wright and Paz in a more arbitraty configuration in which the local Fourier structure would not match exactly, there would be an overall finite Doppler shift involved.
+The second challenge is that we are integrating over the entire Minkowski plane.  This challenge is met by noticing that our integral of eternal modes $f_R$ (and $f_L$) can be replaced by a finite time interval $|t + 1| < \delta$ supports around Paz's time $t=-1$ using Stokes' theorem. (see Figure \ref{paz_freq} (right picture)). This is also manifestly evident by the fact that the mode is translation invariant over time and space, $f_R(t,x) = f_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ multiplied by $\delta$ is chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
 
-In subsequent sections, we aim to localize $f_R$ away from the high-frequency, near-horizon behavior typical of thermal modes, making the physical realization of the source $J$ more plausible as a localized wave packet. For the remainder of this note, we focus on the modes $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a globally entangled paired source.
+Another detail is that $J$ is described in the Rindler basis, so Paz will need to couple to an Unruh mode -- the analytically continued Rindler mode (see Section 2). This mode undergoes an infinite blue shift at the horizon, but is more well behaved at Wright and Paz's locations. In subsequent sections, we aim to localize $f_R$ away from the high-frequency, near-horizon behavior typical of thermal modes, making the physical realization of the source $J$ more plausible as a localized wave packet.
 
-The second challenge is that we are integrating over the eternal wedge.  This challenge is met by noticing that our eternal modes $f_R$ and $f_L$ can be replaced by a finite time interval $|t + 1| < \delta$ around Paz's time $t=-1$ using Stokes' theorem (see Figure \ref{paz_freq} (right picture)). The coupling constant $\lambda$ multiplied by $\delta$ is choosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
+For the remainder of this note, we focus on the modes $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a globally entangled paired source.
 
 Finally, we emphasize that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges. 
 
 
 \subsection{Back in Time Story}
 
-An interesting side note is that Lester's proper time is flowing in reverse to Minkowski time (and to Wright's time). (Left wedge Rindler time runs in the opposite direction to Minkowski time.) So we can actually track the story\footnote{We can interchange these emission and absorption stories, Wright emits and Lester absorbs, but we would need to involve an observer in the future at $(t,x) = (1,0)$ for that.} as:
+An interesting side note is that Lester's proper time is flowing in reverse to Minkowski time.  So we can actually track the story\footnote{We can interchange these emission and absorption stories, Wright emits and Lester absorbs, but we would need to involve an observer in the future at $(t,x) = (1,0)$ for that.} as:
 \begin{enumerate}
 \item Lester emits a particle traveling back in time.
 \item Paz receives this particle and reflects it forward in time to Wright.
@@ -410,7 +410,7 @@ An interesting side note is that Lester's proper time is flowing in reverse to M
 The presence of virtual particle-antiparticle pairs in massive scalar fields further enriches this picture, where antiparticles are understood as particles moving ``back in time'', though this extension lies beyond the scope of the present note.
 \subsection{Sub-Wedge Causal Chain}
 
-The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next. In our in construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ from the previous.
+The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge. In our in construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ from the previous.
 
 \section{Localization}
 \subsection{Localization via Translated Wedge Inclusion}
