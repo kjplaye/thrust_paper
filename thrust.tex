@@ -320,14 +320,14 @@ Acceleration has been introduced as a geometric feature, a coordinate choice, wi
 \centering
 \includegraphics[scale=1.0]{emit_absorb.png}
 \captionsetup{width=0.7\textwidth}
-\caption{A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon. We diagram a particle as if it were striking a mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
+\caption{A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon, and red-shifted as $x$ goes to positive infinity. We diagram a particle as if it were striking a mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
 \label{emit_absorb}
 \end{figure}
 
-A natural physical interpretation is that a {\it driving source} must exist, both as the cause of the observer’s acceleration, and as a localized field source coupled to the quantum field. In this view, acceleration is not merely a kinematic artifact or coordinate reparameterization, but the result of active, localized interactions along the observer’s worldline. These interactions are responsible for the observer’s motion.  This plays well with the notion that the observer is not in an isotropic background radiation, but is actually thrusted away from the event horizon, the thrust being intimately correlated with the causal horizon.
+A natural physical interpretation is that a {\it driving source} must exist, both as the cause of the observer’s acceleration, and as a localized source coupled to the quantum field. In this view, acceleration is not merely a kinematic artifact or coordinate reparameterization, but the result of active, localized interactions along the observer’s worldline. These interactions are responsible for the observer’s motion.  This plays well with the notion that the observer is not in an isotropic background radiation, but is actually thrusted away from a thermal event horizon, the thrust being intimately correlated with the causal horizon.
 
 
-Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes on the right wedge. The modes $r_k$ are left-moving, propagating toward the future horizon and associated with {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and are associated with {\bf absorption}. These Rindler modes are constructed as superpositions of restricted Minkowski modes ${\varphi_q}_{|_W}$ , effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, due to the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes on the right wedge. The modes $r_k$ are left-moving, propagating toward the future horizon and associated with {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and are associated with {\bf absorption}. These Rindler modes are constructed as superpositions of restricted Minkowski modes ${\varphi_q}_{|_W}$ effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, compatible with the geometry of the wedge.
 
 \subsection{Construction}
 
@@ -340,9 +340,9 @@ Figure \ref{emit_absorb} illustrates the situation with a particle composed of R
 \end{figure}
 
 
-We motivate a construction of a driving source using an example pictured in Figure \ref{paz}.  The observer on the right at $(t,x) = (0,1)$ is named Wright and we also have an observer on the left at $(0,-1)$ named Lester.  A common causal ancestor exists in the past, Paz at $(-1,0)$. Paz emits an entangled pair of photons with (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
+We motivate our construction of a driving source using a running example pictured in Figure \ref{paz}.  The observer on the right at $(t,x) = (0,1)$ is named Wright and we also have an observer on the left at $(0,-1)$ named Lester.  A common causal ancestor exists in the past, Paz at $(-1,0)$. Paz emits an entangled pair of photons with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
 
-Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field. This inversion of effect and cause, of detector and thruster, is at the heart of our construction. Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will make sense of a {\it guaranteed} observation of a ``thrust particle'' with fixed peaked momentum $\omega_{-k}$. Wright’s detection is entangled with Lester’s, so Lester will also observe a particle with momentum $\omega_k$, measurement induced correlation.
+Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field. This inversion of effect and cause, of detector and thruster, is at the heart of our construction. Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will make sense of a {\it guaranteed} observation of a ``thrust particle'' with fixed peaked right moving momentum $-k$. Wright’s detection is entangled with Lester’s, so Lester will also observe a particle with left moving momentum $k$; measurement induced correlation.
 
 Physically, Paz introduces a bilocal source $J$
 \begin{equation}
@@ -352,20 +352,21 @@ Physically, Paz introduces a bilocal source $J$
  \end{array}
  \label{bilocal}
 \end{equation}
-This source construction is standard to QFT \cite{Schwinger_1966} \cite{ryder1996quantum} as a coupling of a classical function with the field as an interaction term $J\phi$. In this version $J$ acts coherently on the field shifting the modes in both wedges simultaneously, creating correlations that build entanglement at the level of a global quantum state. The product structure reflects this paired excitation, with $f_L$ and $f_R$ defining the mode profiles localized respectively in the left and right Rindler wedges. This is a paired global-coherent version of the usual vacuum squeezing.
+This source construction is based on the standard classical source construction from QFT \cite{Schwinger_1966} \cite{ryder1996quantum}; It is a coupling of a classical function with the field as an interaction term $J\phi$. In this version $J$ acts coherently on the field shifting the modes in both wedges simultaneously, creating correlations that build entanglement at the level of a global quantum state. The product structure reflects this paired excitation, with $f_L$ and $f_R$ defining the mode profiles localized respectively in the left and right Rindler wedges. This is a paired global-coherent version of the usual vacuum squeezing.
 
-To analyze a mode $f_R$ in the right wedge, we pair the mode with a complementary mode in the left wedge $f_L$.  This setup is compatible with the standard thermal vacuum description\footnote{The form of this vacuum equation can be proven by recursively applying the Bogoliubov relations in equation (\ref{a_in_c}). $\theta_k$ is chosen to match $\alpha_k = \cosh{\theta_k}$ and $\beta_k = \sinh{\theta_k}$ from equation (\ref{alpha_beta}) so $\tanh{\theta_k} = \frac{\beta_k}{\alpha_k} = e^{-\pi\omega_k / a}$.} of the Unruh effect
+To come up with the functions $f_L$ and $f_R$, we consider a setup compatible with the standard thermal vacuum description\footnote{The form of this vacuum equation can be proven by recursively applying the Bogoliubov relations in equation (\ref{a_in_c}). $\theta_k$ is chosen to match $\alpha_k = \cosh{\theta_k}$ and $\beta_k = \sinh{\theta_k}$ from equation (\ref{alpha_beta}) so $\tanh{\theta_k} = \frac{\beta_k}{\alpha_k} = e^{-\pi\omega_k / a}$.} of the Unruh effect
 \begin{equation}
   \ket{0}_M = \prod_{\omega} \frac{1}{\cosh{\theta_k}} \sum_n \tanh^n{\theta_k} \ket{n_\omega}_{L} \ket{n_\omega}_{R}.
   \label{vacuum}
 \end{equation}
-This state factorizes into correlated excitations in the left (L) and right (R) wedges. The Unruh mode associated with frequency $\omega$ is a specific linear combination of $L$ and $R$ Rindler modes, so that any source $J$ coupling to it will, in general, drive correlated excitations across both wedges. For example, the state prepared by Paz corresponds to a selective $n=1$ excitation at a fixed $\omega$,
+A state that factorizes into correlated excitations in the left (L) and right (R) wedges. The Unruh modes associated with frequency $\omega$ are specific linear combination of these $L$ and $R$ Rindler modes, so that any source $J$ coupling to it will, in general, drive correlated excitations across both wedges. For example, the state prepared by Paz corresponds to a selective $n=1$ excitation at a fixed $\omega$,
 \begin{equation}
   \ket{\Psi_\omega} = \ket{1_\omega}_L \ket{1_\omega}_R + \text{O(higher terms)},
+  \label{one_fock}
 \end{equation}
 a controlled approximation of one term in the ensemble. Our source singles out the $n_\omega=1$ term, giving a selected ``slice'' of the full thermal ensemble. The source $J(x,y)$ does not contradict the thermal interpretation, but rather describes a specific ``microstate'' consistent with the broader thermal ensemble.
 
-An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises from intrinsic properties of the vacuum, an effective ignorance of the source's detailed structure and dynamics. In this view, the Unruh effect is not a passive revelation of hidden particles in the vacuum, but a measurable consequence of {\it thrust}.
+An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises from intrinsic properties of the vacuum, an effective ignorance of the source's detailed structure and dynamics. In the sourced view, the Unruh effect is not a passive revelation of hidden particles in the vacuum, but a measurable consequence of {\it thrust}.
 
 
 \begin{figure}[h]
@@ -377,9 +378,9 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 
 \subsection{Physical Details}
 
-The construction of the absorption function $f_R$ for Wright presents some physical challenges.  The first is that the actual coherent state obtained from $J$ contains terms at higher particle numbers.  We either assume strongly that the state is exactly prepared, or that $\tanh{\theta_k}$ is sufficiently small as to make the higher terms negligible.
+The construction of the absorption function $f_R$ for Wright presents some physical challenges.  The first is that the actual coherent state obtained from $J$ contains terms at higher particle numbers, see equation (\ref{one_fock}).  We either assume strongly that the state is exactly prepared with no higher terms, or that $\tanh{\theta_k}$ is sufficiently small as to make the higher terms negligible.
 
-The second challenge is that we are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that our integral of eternal modes $f_R$ (and $f_L$) can be replaced by an integral over a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$.  These two integrals are seen to be proportional using Stokes' theorem, see Figure \ref{paz_freq} (right picture). It is also manifestly evident that the integrals are proportional by the fact that the mode is translation invariant over time and space, $f_R(t,x) = f_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
+The second challenge is that we are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that our eternal modes $f_R$ (and $f_L$) can be restricted and scaled on a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$ to give the same result, see Figure \ref{paz_freq} (right picture). This is because we can write the integral as a foliation over equal time Cauchy surfaces, which each have the same integral by Stokes' theorem. It is also manifestly evident by the fact that the mode is translation invariant over time and space, $f_R(t,x) = f_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
 
 \begin{figure}[h]
 \centering
@@ -387,16 +388,14 @@ The second challenge is that we are integrating over the entire Minkowski space 
 \hspace{20 pt}
 \includegraphics[scale=0.235]{paz_bw.png}
 \captionsetup{width=0.7\textwidth}
-\caption{The points marked with black and white dots at (0,1) (Wright) and (-1,0) (Paz) respectively in the left picture lie on the same Unruh mode trajectory; although the mode is infinitely blue-shifted at the horizon, the total Doppler effect between these two locations cancels, so the mode represents the same local frequency $\omega$. The right figure illustrates a finite time interval of width $\delta$ for the source $J$ to be active.}
+\caption{The points marked with black and white dots at (0,1) (Wright) and (-1,0) (Paz) respectively in the left picture lie on the same Unruh mode trajectory; although the mode is infinitely blue-shifted at the horizon, it settles down at Wright and Paz's locations. The right figure illustrates a finite time interval of width $\delta$ for the source $J$ to be active.}
 \label{paz_freq}
 \end{figure}
 
 
-Another detail is that $J$ is described in the Rindler basis, so Paz will need to couple to an Unruh mode -- the analytically continued Rindler mode (see Section 2). This mode undergoes an infinite blue shift at the horizon, but is more well behaved at Wright and Paz's locations. In subsequent sections, we aim to localize $f_R$ away from the high-frequency, near-horizon behavior typical of thermal modes, making the physical realization of the source $J$ more plausible as a localized wave packet.
+Another detail is that $J$ is described in the Rindler wedge, not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes (see Section 2).  We actually form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get a function supported on just the right wedge, see equation (\ref{unruh_mode_def}). The Unruh modes undergo an infinite blue shift at the horizon, but are more well behaved at Wright and Paz's locations\footnote{Strangely, and unlike the component Unruh modes, $f_R$ is actually zero on the past wedge. As such, we just study the localization of functions on the right wedge in subsequent sections.}. In subsequent sections, we aim to localize $f_R$ away from the high-frequency, near-horizon behavior typical of thermal modes, making the physical realization of the source $J$ more plausible as a localized wave packet.
 
-Finally, we emphasize that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges. 
-
-For the remainder of this note, we focus on the modes $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a globally entangled paired source.
+Finally, we emphasize that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges. For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a globally entangled paired source.
 
 
 
