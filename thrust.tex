@@ -31,7 +31,7 @@
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We present a framework that connects the thermal Unruh effect to a localized, non-thermal excitation picture. Using modular automorphisms, we track mode localization across nested Rindler wedges and construct compact wave-packet approximations via parabolic cylinder functions. This yields a smooth transition from global Rindler modes to fully localized excitations, supporting a causal, source-based interpretation in which the Unruh response arises from thrust, a directed, localized energy input, rather than passive detection of pre-existing vacuum correlations.}
+\abstract{We present a framework that connects the thermal Unruh effect to a localized, non-thermal excitation picture. Using modular automorphisms, we track mode localization across nested Rindler wedges and construct compact wave-packet approximations via parabolic cylinder functions. This yields a smooth transition from global Rindler modes to fully localized excitations, supporting a view that links the Unruh response to both pre-existing vacuum correlations along with the influence of localized, directed energy inputs.}
 
 \section{Introduction}
 The Unruh effect\cite{unruh1976notes} shows that uniformly accelerated observers perceive the Minkowski vacuum as a thermal state filled with particles. In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the field. In Section 2, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction to inject particles into the field.
@@ -42,7 +42,7 @@ These results suggest a complementary interpretation: The Unruh effect arises fr
 
 \section{Preliminaries}
 
-We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh}. Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, so we restrict to the (t,x) plane where the boost is occurring.  We only consider free scalar fields in this note.
+We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh}. Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, and 1+1 lets us focus on the essential structure of mode localization without transverse momentum complications; so we restrict to the (t,x) plane where the boost is occurring.  We only consider free scalar fields in this note.
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
@@ -62,7 +62,7 @@ where $\Box = \eta^{\mu\nu} \partial_\mu \partial_\nu$. We expand $\phi$ in term
 where
 
 \begin{equation}
-  \varphi(x,t) = \frac{1}{\sqrt{4\pi\omega_k}} e^{i(kx - \omega_k t)}.
+  \varphi_k(x,t) = \frac{1}{\sqrt{4\pi\omega_k}} e^{i(kx - \omega_k t)}.
 \label{amode}
 \end{equation}
 are pure Minkowkski positive frequency waves normalized with respect to the Klein-Gordon inner product over a Cauchy surface $\Sigma$ (usually $t = 0$)
@@ -106,7 +106,7 @@ for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``R
 \subsection{Unruh Modes}
 To review how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes\cite{unruh1976notes}, analytic continuations of Rindler modes that are positive-frequency solutions with respect to Minkowski time\footnote{We mean that the modes contain no negative frequency Minkowski components.}. From now on let $\omega_k = k > 0$.
 
-We define constants $\alpha_k$ and $\beta_k$ which satisfy $\alpha_k^2 - \beta_k^2 = 1$
+We define constants $\alpha_k$ and $\beta_k$, directly tied the the thermal description, which satisfy $\alpha_k^2 - \beta_k^2 = 1$
 \begin{equation}
   \begin{aligned}
     \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}}  \\
