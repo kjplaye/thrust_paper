@@ -24,25 +24,25 @@
 \begin{document}
 
 %title and author details
-\title{Causing the Effect: Driving the Unruh Phenomenon}
+\title{Causing the Effect: Driving the Unruh Response}
 \author[1]{Kevin Player\footnote{kplayer@andrew.cmu.edu} \footnote{kjplaye@gmail.com}}
 
 \maketitle
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We present a framework that connects the thermal Unruh effect to a localized, non-thermal excitation picture. Using modular automorphisms, we track mode localization across nested Rindler wedges and construct compact wave-packet approximations via parabolic cylinder functions. This yields a smooth transition from global Rindler modes to fully localized excitations, supporting a view that links the Unruh response to both pre-existing vacuum correlations along with the influence of localized, directed energy inputs.}
+\abstract{We present a framework that connects the thermal Unruh effect to a localized, non-thermal excitation picture. Using modular automorphisms, we track mode localization across nested Rindler wedges and construct compact wave-packet approximations via parabolic cylinder functions. This yields a smooth transition from global Rindler modes to fully localized excitations, supporting a view that connects vacuum correlations with localized, directed excitations.}
 
 \section{Introduction}
-The Unruh effect\cite{unruh1976notes} shows that uniformly accelerated observers perceive the Minkowski vacuum as a thermal state filled with particles. In this work, we develop a complementary viewpoint by examining how localization affects the thermal character of the field. In Section 2, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section 3, we apply a classical source construction to inject particles into the field.
+The Unruh effect\cite{unruh1976notes} shows how uniformly accelerated observers perceive the Minkowski vacuum as a thermal bath of particles. In this work, we develop a complementary viewpoint by examining, within our model, how localization can affect the thermal character of the field. In Section \ref{sec:prelim}, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section \ref{sec:drive}, we apply a classical source construction to inject particles into the field.
 
-Section 4 explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Section 5, we interpret the implications of our construction.
+Section \ref{sec:loc} explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Sections \ref{sec:future} and \ref{sec:conc}, we recommend future research and interpret the implications of our construction.
 
-These results suggest a complementary interpretation: The Unruh effect arises from localized, non-thermal excitations, akin to a thrust driving the field.
+These results suggest that the Unruh effect can partially arise from localized, non-thermal excitations.
 
-\section{Preliminaries}
+\section{Preliminaries} \label{sec:prelim}
 
-We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh}. Let $\hbar$ = $c$ = 1. We consider a uniformly accelerating observer in 1+1 dimensional Minkowski spacetime with metric signature $\eta=(-1,+1)$. The extension to 1+3 dimensions does not affect the key physics of the Unruh effect, and 1+1 lets us focus on the essential structure of mode localization without transverse momentum complications; so we restrict to the (t,x) plane where the boost is occurring.  We only consider free scalar fields in this note.
+We draw notation and standard results from Frodden and Vald{\'{e}}s \cite{frodden2018unruh}. Let $\hbar$ = $c$ = 1. We follow the standard practice of working in 1+1 dimensional Minkowski spacetime with free, massless scalar fields, which isolates the essential features of the Unruh effect without the technical overhead of higher dimensions or interactions. These simplifications do not alter the key physics, but make the structure of mode localization transparent.
 
 Consider the free scalar massless Lagrangian
 \begin{equation}
@@ -70,7 +70,7 @@ are pure Minkowkski positive frequency waves normalized with respect to the Klei
   \left<f, g\right>_{KG} = i \int_\Sigma \diff x (f^* \partial_t g - \partial_t f^* g).
 \end{equation}
 
-\subsection{Rindler Coordinates}
+\subsection{Rindler Coordinates} 
 
 To describe the physics from the point of view of a uniformly accelerating observer, we introduce Rindler coordinates \cite{frodden2018unruh,rindler1966kruskal} covering a right wedge 
 \begin{equation}
@@ -84,7 +84,7 @@ with apex at the origin, pictured\footnote{All diagrams follow the convention of
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-The constant acceleration parameter $a$ is introduced explicitly to make the dependence of the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with world-lines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
+The constant acceleration parameter $a$ is introduced explicitly to make the dependence on the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with world-lines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
 
 \begin{figure}[h]
 \centering
@@ -104,17 +104,17 @@ The wave equation retains the same structure as the Minkowski case, up to the ov
 for each wave number $k$ and positive frequency $\omega_k = |k| > 0$.  These ``Rindler modes'' are in terms of $\eta$ and $\xi$ and are thus confined to the Rindler wedge $W$.  Since Rindler coordinates only cover $W$ (the right wedge), these modes are not defined globally in Minkowski space.
 
 \subsection{Unruh Modes}
-To review how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes\cite{unruh1976notes}, analytic continuations of Rindler modes that are positive-frequency solutions with respect to Minkowski time\footnote{We mean that the modes contain no negative frequency Minkowski components.}. From now on let $\omega_k = k > 0$.
+To review how a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath, we construct the Unruh modes\cite{unruh1976notes}, analytic continuations of Rindler modes that are positive-frequency solutions with respect to Minkowski time\footnote{The modes contain no negative frequency Minkowski components.}. From now on let $\omega_k = k > 0$.
 
 We define constants $\alpha_k$ and $\beta_k$, directly tied the the thermal description, which satisfy $\alpha_k^2 - \beta_k^2 = 1$
 \begin{equation}
   \begin{aligned}
-    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}}  \\
-    \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}} \quad \text{(thermal form)} \\
+    \alpha_k &= \frac{e^{\frac{\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{1 - e^{-2\pi\omega_k / a}}} = \sinh \theta_k \\
+    \beta_k &= \frac{e^{\frac{-\pi\omega_k}{2a}}}{\sqrt{2 \sinh \frac{\pi \omega_k}{a}}} = \sqrt{\frac{1}{e^{2\pi\omega_k / a} - 1}} = \cosh \theta_k \quad \text{(thermal form)} \\
   \end{aligned}
   \label{alpha_beta}
 \end{equation}
-They show up throughout in mode normalizations\footnote{The normalizations come from computing the Klein Gordon inner product on Minkowski space and comparing it to inner products on $W$ and $\widetilde{W}$.}, inner products, and resulting Bogoliubov transforms. $\beta_k$ also describes particle creation in terms of $|\beta_k|^2$ which has a thermal character, matching a Planck distribution at temperature $T = \frac{a}{2\pi}$.
+where $\theta_k$ is defined so that $\tanh{\theta_k} = \frac{\beta_k}{\alpha_k} = e^{-\pi\omega_k / a}$. These show up throughout in mode normalizations\footnote{The normalizations come from computing the Klein Gordon inner product on Minkowski space and comparing it to inner products on $W$ and $\widetilde{W}$.}, inner products, and resulting Bogoliubov transforms. $\beta_k$ also describes particle creation in terms of $|\beta_k|^2$ which has a thermal character, matching a Planck distribution at temperature $T = \frac{a}{2\pi}$.
 
 Let $\widetilde{W}$ be the left Rindler wedge\footnote{Coordinates on this wedge are $t = -\frac{1}{a}e^{a\delta} \sinh(a\gamma)$, $x = -\frac{1}{a}e^{a\delta} \cosh(a\gamma)$; and $l_{\pm k} = \frac{1}{\sqrt{4 \pi \omega_k}} e^{i\omega_k(\gamma \pm \delta)}$.}, $x < -|t|$ with Rindler modes $l_{\pm k}$.  We analytically continue\footnote{From the definitions and properties of $\sinh$ and $\cosh$, it follows that $a(\pm t + x) = e^{a(\pm \eta + \xi)}$ and then $r_{\pm k} = e^{\pm \frac{i \omega_k}{a}\log a(\mp t + x \pm i\epsilon)}$.  Similar statements hold for the left wedge.} the Rindler modes $r_k$, $r_{-k}$, $l_k$ and $l_{-k}$ into the $(t,x)$ plane, these are the Unruh modes
 \begin{equation}
@@ -133,15 +133,15 @@ We added an $i \epsilon$ prescription to dictate which branch of the log to take
 \end{aligned}
 \label{unruh_mode_def}
 \end{equation}
-where the right and left modes ($r_{\pm k}$ and $l_{\pm k}$) are understood to be zero outside of their respective wedges. See Figure \ref{unruh_rainbow} for an illustration of the Unruh modes. The magnitude shown jumps across the branch cut and conjugates the phase.  Also, note that we have ``twice as many'' Unruh modes as we have Rindler modes; we double count each $r_k$ with two analytic extensions $\mu^R_k$ and $\mu^{L*}_{-k}$, and similarly for the left modes.
+where the right and left modes ($r_{\pm k}$ and $l_{\pm k}$) are understood to be zero outside of their respective wedges. See Figure \ref{unruh_rainbow} for an illustration of the various modes. The magnitude shown jumps across the branch cut and conjugates the phase.  Also, note that we have ``twice as many'' Unruh modes as we have Rindler modes; we double count each $r_k$ with two analytic extensions $\mu^R_k$ and $\mu^{L*}_{-k}$, and similarly for the left modes.
 
 The Unruh modes form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$ see the original source Unruh\cite{unruh1976notes}. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{unruh_mode_rainbow.png}
+\includegraphics[scale=0.3]{unruh_mode_rainbow.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \mu^L_{-k} & \varphi_k & \mu^R_k \\ \mu^L_{k} & \varphi_{-k} & \mu^R_{-k} \end{array} \right]$. Color encodes the phase; brightness indicates magnitude. The Unruh modes change magnitude and conjugate phase across the log branch due to the interpretation of $\log(-1 \pm i\epsilon)$. The left-moving modes (top) correspond to emission in Minkowski space; the right-moving modes (bottom) to absorption.}
+\caption{Spacetime diagrams of the $k>0$ mode functions $\left[\begin{array}{ccc} \mu^L_{-k} & \varphi_k & \mu^R_k \\ \mu^L_{k} & \varphi_{-k} & \mu^R_{-k} \end{array} \right]$ where $\mu$ and $\varphi$ are Unruh modes and Minkowski mode respectively. Color encodes the phase; brightness indicates magnitude. The Unruh modes change magnitude and conjugate phase across the log branch due to the interpretation of $\log(-1 \pm i\epsilon)$. The left-moving modes (top) correspond to emission in Minkowski space; the right-moving modes (bottom) to absorption.}
 \label{unruh_rainbow}
 \end{figure}
 
@@ -218,7 +218,7 @@ The reflected diamond wedge version also yields a beta function, but with a diff
   \label{bogoTC0}
 \end{equation}
 
-\subsection{Modular Automorphisms}
+\subsection{Modular Automorphisms} \label{sec:mod}
 
 We can compare absolute magnitudes for $M$ v.s. $W_c$ and see that they don't depend on $c$
 \begin{equation}
@@ -308,26 +308,26 @@ Consider a sequence
   W_{c_n} \subseteq \cdots \subseteq W_{c_i} \subseteq \cdots \subseteq W_{c_j} \subseteq W_{c_2} \subseteq W_{c_1}
   \label{chain}
 \end{equation}
-The result is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields the same ``amount'' and ``type'' of particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  
+The result is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields the same ``amount'' and ``type'' of particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, implying that the expected number of particles remains constant across all nested wedge pairs, independent of the actual values of $c_i$ or $c_j$.  We will briefly revisit this chain in Section \ref{sec:chain_sources}.
 
-\section{Driving Sources}
+\section{Driving Sources} \label{sec:drive}
 
 We now turn to a foundational question: {\bf ``What, physically, is accelerating the observer?''} In standard Unruh-effect derivations, the acceleration is treated as given; here we supply a concrete, physical mechanism in the form of a localized, entangled source.
 
-Acceleration has been introduced as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
+In Section \ref{sec:prelim} we introduced acceleration as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1.0]{emit_absorb.png}
 \captionsetup{width=0.7\textwidth}
-\caption{A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon, and red-shifted as $x$ goes to positive infinity. We diagram a particle as if it were striking a mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
+\caption{A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon, and red-shifted as $x$ goes to positive infinity. We diagram a particle as if it were striking a moving mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
 \label{emit_absorb}
 \end{figure}
 
 A natural physical interpretation is that a {\it driving source} must exist, both as the cause of the observer’s acceleration, and as a localized source coupled to the quantum field. In this view, acceleration is not merely a kinematic artifact or coordinate reparameterization, but the result of active, localized interactions along the observer’s worldline. These interactions are responsible for the observer’s motion.  This plays well with the notion that the observer is not in an isotropic background radiation, but is actually thrusted away from a thermal event horizon, the thrust being intimately correlated with the causal horizon.
 
 
-Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes on the right wedge. The modes $r_k$ are left-moving, propagating toward the future horizon and associated with {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and are associated with {\bf absorption}. These Rindler modes are constructed as superpositions of restricted Minkowski modes ${\varphi_q}_{|_W}$ effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, compatible with the geometry of the wedge.
+Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes on the right wedge. The modes $r_k$ are left-moving, propagating toward the future horizon and associated with {\bf emission}; the $r_{-k}$ modes are right-moving, originating from the past horizon and are associated with {\bf absorption}. These Rindler modes are constructed as superpositions of restricted Minkowski modes ${\varphi_q}_{|_W}$ effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, reflecting the geometry of the wedge.
 
 \subsection{Construction}
 
@@ -342,7 +342,7 @@ Figure \ref{emit_absorb} illustrates the situation with a particle composed of R
 
 We motivate our construction of a driving source using an Alice and Bob style example pictured in Figure \ref{paz}; we use the names Wright, Lester, and Paz to represent Right, Left, and Past observers at locations (t,x) = (0,1), (0,-1) and (-1,0) respectively. Paz serves as a common causal ancestor.  Paz emits an entangled pair of photons with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are in our model the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
 
-Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} or a moving mirror\footnote{While a moving mirror can be interpreted as a type of thruster that reshapes the field through boundary acceleration, here we isolate the thruster from the detector role.} \cite{fulling1976radiation} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field. This inversion of effect and cause, of detector and thruster, is at the heart of our construction. Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will make sense of a {\it guaranteed} observation of a ``thrust particle'' with fixed peaked right moving momentum $-k$. Wright’s detection is entangled with Lester’s, so Lester will also observe a particle with left moving momentum $k$; measurement induced correlation.
+Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} or a moving mirror\footnote{While a moving mirror can be interpreted as a type of thruster that reshapes the field through boundary acceleration, here we isolate the thruster from the detector role. Incorporating the moving mirror timeline localizations into our model is left for future research.} \cite{fulling1976radiation} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field in the past. This inversion of effect and cause, of detector and thruster, is at the heart of our construction. Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will make sense of a {\it guaranteed} observation of a ``thrust particle'' with fixed peaked right moving momentum $-k$. Wright’s detection is entangled with Lester’s, so Lester will also observe a particle with left moving momentum $k$; measurement induced correlation.
 
 Physically, Paz introduces a bilocal source $J$
 \begin{equation}
@@ -352,9 +352,9 @@ Physically, Paz introduces a bilocal source $J$
  \end{array}
  \label{bilocal}
 \end{equation}
-with coupling constant $\lambda$ and normalized mode profiles $f_L$ and $f_R$ supported on the left and right wedges respectively. This source construction is based on the standard classical source construction from QFT \cite{Schwinger_1966} \cite{ryder1996quantum}; It is a coupling of a classical function with the field as an interaction term $J\phi$. In this version $J$ acts coherently on the field shifting the modes in both wedges simultaneously, creating correlations that build entanglement at the level of a global quantum state. The product structure reflects this paired excitation. This is a paired global-coherent version of the usual vacuum squeezing.
+with coupling constant $\lambda$ and normalized mode profiles $f_L$ and $f_R$ supported on the left and right wedges respectively. This source construction is based on the standard classical source construction from QFT \cite{Schwinger_1966} \cite{ryder1996quantum}; it is a coupling of a classical function with the field as an interaction term $J\phi$. In this version $J$ acts coherently on the field shifting the modes in both wedges simultaneously, creating correlations that build entanglement at the level of a global quantum state. The product structure reflects this paired excitation. This is a paired global-coherent version of the usual vacuum squeezing.
 
-To come up with the functions $f_L$ and $f_R$, we consider a setup compatible with the standard thermal vacuum description\footnote{The form of this vacuum equation can be proven by recursively applying the Bogoliubov relations in equation (\ref{a_in_c}). $\theta_k$ is chosen to match $\alpha_k = \cosh{\theta_k}$ and $\beta_k = \sinh{\theta_k}$ from equation (\ref{alpha_beta}) so $\tanh{\theta_k} = \frac{\beta_k}{\alpha_k} = e^{-\pi\omega_k / a}$.} of the Unruh effect
+To come up with the functions $f_L$ and $f_R$, we consider a setup compatible with the standard thermal vacuum description\footnote{The form of this vacuum equation can be proven by recursively applying the Bogoliubov relations in equation (\ref{a_in_c}).} of the Unruh effect
 \begin{equation}
   \ket{0}_M = \prod_{\omega} \frac{1}{\cosh{\theta_k}} \sum_n \tanh^n{\theta_k} \ket{n_\omega}_{L} \ket{n_\omega}_{R}.
   \label{vacuum}
@@ -376,11 +376,11 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 \label{rocket_inertial}
 \end{figure}
 
-\subsection{Physical Details}
+\subsection{Physical Details} \label{sec:drive_phy}
 
-The construction of the absorption function $f_R$ for Wright presents some physical challenges. The first starts with a note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_k$ from Section 2. The $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_k$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).
+The construction of the absorption function $f_R$ for Wright presents some physical challenges. The first starts with a note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_k$ from Section \ref{sec:prelim}. The $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_k$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).
 
-The second issue is that the actual coherent state obtained from $J$ contains terms at higher particle numbers, see equation (\ref{one_fock}).  We either assume strongly that the state is exactly prepared with no higher terms, or that $\tanh{\theta_k}$ is sufficiently small as to make the higher terms negligible.
+The second issue is that the actual coherent state obtained from $J$ contains terms at higher particle numbers, see equation (\ref{one_fock}).  We either assume strongly that the state is exactly prepared with no higher terms, or that $\tanh{\theta_k}$ is sufficiently small, for high frequencies, as to make the higher terms negligible.
 
 The third challenge is that we are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that our eternal modes $f_R$ (and $f_L$) can be restricted and scaled on a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$ to give the same result, see Figure \ref{paz_freq} (right picture). This is because we can write the integral as a foliation over equal time Cauchy surfaces, which each have the same integral by Stokes' theorem. It is also manifestly evident by the fact that the mode is translation invariant over time and space, $f_R(t,x) = f_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
 
@@ -397,24 +397,27 @@ The third challenge is that we are integrating over the entire Minkowski space i
 
 A fourth note is that the Unruh modes undergo an infinite blue shift at the horizon, but are more well behaved at Wright and Paz's locations. Strangely, and unlike the component Unruh modes, $f_R$ is actually zero at Paz and in fact on the entire past wedge. We study the localization of functions on the right wedge in subsequent sections where we aim to localize $f_R$ away from the high-frequency, near-horizon behavior typical of thermal modes, making the physical realization of the source $J$ more plausible as a localized wave packet.
 
-Finally, we emphasize that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, one could replace the entangled pair emission by a process in which the source itself remains entangled with a single emitted quantum, a scenario whose time-reverse counterpart naturally corresponds to a future-wedge observer, though these cases involve additional complications beyond the scope of our note.
+Finally, we emphasize that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, one could replace the entangled pair emission by a process in which the source itself remains entangled with a single emitted quantum and moves into the left wedge. These cases involve additional complications beyond the scope of our note and are a topic of future research.
 
 For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a globally entangled paired source.
 
 \subsection{Back in Time Story}
 
-An interesting side note is that Lester's proper time (Rindler time) in the left wedge is flowing in reverse to Minkowski time.  So we can actually track the story\footnote{We can interchange these emission and absorption stories, Wright emits and Lester absorbs, but we would need to involve an observer in the future at $(t,x) = (1,0)$ for that.} as:
+An interesting side note is that Lester's proper time (Rindler time) in the left wedge is flowing in reverse to Minkowski time.  So we can actually track the story as:
 \begin{enumerate}
 \item Lester emits a particle traveling back in time.
 \item Paz receives this particle and reflects it forward in time to Wright.
 \item Wright then absorbs the particle.
 \end{enumerate}
 The presence of virtual particle-antiparticle pairs in massive scalar fields further enriches this picture, where antiparticles are understood as particles moving ``back in time'', though this extension lies beyond the scope of this present note.
-\subsection{Sub-Wedge Causal Chain}
+
+We can interchange these emission and absorption stories, Wright emits and Lester absorbs, but we would need to involve an observer in the future at $(t,x) = (1,0)$ for that.
+
+\subsection{Sub-Wedge Causal Chain} \label{sec:chain_sources}
 
 The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge. In our in construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ from the previous. 
 
-\section{Localization}
+\section{Localization} \label{sec:loc}
 \subsection{Localization via Translated Wedge Inclusion}
 
 Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode\footnote{From here on we often interchange Rindler and Unruh modes since we are only concerned with the restriction to the right wedge or subsets.} associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
@@ -422,7 +425,7 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.4]{wedge_in_wedge.png}
-\caption{A Wedge $W_c$ (blue) inside of the wedge $W_0$ (white). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c$ (rainbow).}
+\caption{A Wedge $W_c$ (cyan) inside of the wedge $W_0$ (white). Rindler mode $r_q$ of $W_0$ (gray-scale) restricted to $W_c$ (rainbow).}
 \label{restrict}
 \end{figure}
 
@@ -447,7 +450,7 @@ Further localization is achieved by intersecting $W_c$ with a reflected wedge $\
 
 The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the other form of the beta function in equation (\ref{bogoTC0}) to compute the same inner product.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since the analytic continuation of the diamond would be to all of $W_c$, or all of $\widetilde{W}_{2c}$, in which case the mode would no longer be localized to the diamond.  So it is no longer invariant to integrate along a Cauchy surface for the inner product; this construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes.
 
-This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section 3. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The green (complete) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see Modular Automorphism Section 2.4). In contrast, the incomplete beta function curve (magenta) does depend on the endpoint ($2c$ is shown).} in Figure \ref{peaked}.
+This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The green (complete) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (magenta) does depend on the endpoint ($2c$ is shown).} in Figure \ref{peaked}.
 
 
 The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
@@ -461,7 +464,7 @@ The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, 
 
 
 \subsection{Thermal to Localized Interpolation}
-To further probe how global thermal structure transitions into a localized excitation profile, we consider the behavior of Rindler-to-Minkowski Bogoliubov coefficients when weighted by a Gaussian envelope. This allows us to interpolate between de-localized (thermal) and localized (spectrally peaked) behavior. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
+To further probe how global thermal structure transitions into a localized excitation, we consider the behavior of Rindler-to-Minkowski Bogoliubov coefficients when weighted by a Gaussian envelope. This allows us to interpolate between de-localized (thermal) and localized (spectrally peaked) behavior. We use parabolic cylinder functions \cite{AbramowitzStegun1964,Olver1959UniformAE} which are the analytic continuation of 
 
 \begin{equation}
 D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty  \dv{s} e^{zs} s^{-\nu - 1} e^{-\frac{1}{2} s^2}, \mathfrak{R}\nu < 0,
@@ -530,14 +533,22 @@ which we expect by construction. For the localized part that comes from the $e^{
 \end{equation}
 where the thermal pole at zero has disappeared. While the precise asymptotic form is not critical, we can control the ultraviolet behavior by taking $z$ to $(1+i\epsilon)\infty$ which remains within in the localized Stokes region. This introduces a regulating factor of the form $e^{-2\epsilon \omega_k / a}$, which suppresses high-frequency contributions. 
 
-We should stop short of $\sigma$ actually reaching zero, since that is a localization to an extreme, where $N_{\mu,\sigma}$ shrinks to a bump with infinitesimal width; This is not a delta function, it is a vanishing source. We focus on the small-but-nonzero $\sigma$ regime where the thermal character has already disappeared. See Figure \ref{pcf_sigma_curves} for representative plots across varying values of $\sigma$.
+We should stop short of $\sigma$ actually reaching zero, since that is a localization to an extreme, where $N_{\mu,\sigma}$ shrinks to a bump with infinitesimal width; this is not a delta function, it is a vanishing source. We focus on the small-but-nonzero $\sigma$ regime where the thermal character has already disappeared. See Figure \ref{pcf_sigma_curves} for representative plots across varying values of $\sigma$.
 
+\section{Future Research} \label{sec:future}
 
-\section{Conclusion}
+Several directions naturally extend the present work:
+\begin{itemize}
+\item {\bf Moving Mirrors}. While a moving mirror can be interpreted as a type of thruster that reshapes the field through boundary acceleration, here we isolated the thruster from the detector role. Incorporating moving mirror timeline localizations into this framework remains an open task.
 
-This work examined the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated and reflected wedges, and their intersections, we showed that the apparent thermal behavior can be partially eliminated. As these modes become localized, the traditional detector response, typically interpreted as a thermal signature of entanglement across a causal horizon, is here reinterpreted as the spectral imprint of a localized, dynamically sourced excitation. We then showed that the mixed Bogoliubov inner product between Minkowski and Rindler modes provides a smooth interpolation from global thermality to a localized spectral structure, with parabolic cylinder functions encoding this transition in analytic form.
+\item {\bf Mode Pairing}. The construction of $f_L$ in Section \ref{sec:drive} was left aside in our treatments in Section \ref{sec:loc}. A more systematic analysis of the pairing between $f_L$ and $f_R$ would allow us to track correlations in greater generality.
 
-Our approach complements the traditional detector-based interpretation by highlighting the role of the physical agent causing acceleration as an active source of field excitations. This perspective does not contradict the well-known thermality arising from entanglement but offers a localized, dynamical viewpoint that may better capture realistic scenarios.
+\item {\bf Alternative Driving Sources}. Beyond entangled emission, one may consider models involving single-photon sources or even time-reversed scenarios (see Section \ref{sec:drive_phy}), which could offer finer control over the entanglement structure.
+
+\item {\bf Massive Fields}. Extending the analysis to massive scalar fields would open the possibility of studying localized virtual particle–antiparticle pair production, complementing the massless case.
+
+\item {\bf Curved Spacetimes}. While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway to curved geometries. In particular, applications to Hawking radiation could be explored by modeling localized excitations near black hole horizons. Figure \ref{rocket} illustrates this direction, highlighting a shift from thermal emission to localized, physically sourced excitations in the near-horizon region.
+\end{itemize}
 
 \begin{figure}[h]
 \centering
@@ -546,10 +557,12 @@ Our approach complements the traditional detector-based interpretation by highli
 \label{rocket}
 \end{figure}
 
-While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway for extending this framework to curved geometries. In particular, future work could explore applications to Hawking radiation by modeling localized excitations near black hole horizons. Figure \ref{rocket} offers a schematic illustration of this idea, emphasizing a shift from thermal emission to localized, physically sourced excitations in the near-horizon region.
+\section{Conclusion} \label{sec:conc}
 
+This work examined the Unruh phenomenon from a localized perspective, emphasizing its manifestation as a physically driven effect rather than a purely thermal one. By restricting Rindler modes to translated and reflected wedges, and their intersections, we showed that the apparent thermal behavior can be partially eliminated. As these modes become localized, the traditional detector response, typically interpreted as a thermal signature of entanglement across a causal horizon, is here reinterpreted as the spectral imprint of a localized, dynamically sourced excitation. We then showed that the mixed Bogoliubov inner product between Minkowski and Rindler modes provides a smooth interpolation from global thermality to a localized spectral structure, with parabolic cylinder functions encoding this transition in analytic form.
 
-Finally, within the framework presented here, the thermal signature observed in the Unruh effect can be interpreted as arising from a causal source in the constructed scenario. Experimentally, within the context of the present construction, this implies that the Unruh-like response could be associated with specific, identifiable, accelerating ``thrust particles'', rather than appearing isotropic and random. Conversely, the absence of a thermal Unruh signal in scenarios where a known accelerating source exists would provide experimental evidence supporting this framework.
+Our approach complements the traditional detector-based interpretation by highlighting the role of the physical agent behind acceleration as an active source of field excitations. This perspective does not contradict the well-known thermality arising from entanglement but offers a localized, dynamical viewpoint that may better capture future experimental scenarios.  In this picture, the Unruh response may be linked in part to accelerating ``thrust particles'' potentially contributing to an attenuation of the isotropic random signal."
+
 
 \section{Acknowledgments}
 I thank Frodden and Valdés for their excellent exposition \cite{frodden2018unruh}, and Beisert for his insightful lecture notes \cite{beisert2012quantum}. I'm also grateful to Ben Commeau, Daniel Justice, Edward Randtke, and ChatGPT for helpful discussions.
