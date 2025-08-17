@@ -27,3 +27,5 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+code
+misc
