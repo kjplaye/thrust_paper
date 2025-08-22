@@ -312,7 +312,7 @@ The result is that each inclusion $W_{c_i} \subseteq W_{c_j}$ yields the same ``
 
 \section{Driving Sources} \label{sec:drive}
 
-We now turn to a foundational question: {\bf ``What, physically, is accelerating the observer?''} In standard Unruh-effect derivations, the acceleration is treated as given; here we supply a concrete, physical mechanism in the form of a localized, entangled source.
+We now turn to a foundational question: {\bf What, physically, is accelerating the observer?''} In standard Unruh-effect derivations, the acceleration is treated as given; here we supply a concrete mechanism in the form of a localized, entangled source, thereby shifting from kinematic bookkeeping to a dynamical, source-based picture.
 
 In Section \ref{sec:prelim} we introduced acceleration as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
@@ -340,7 +340,9 @@ Figure \ref{emit_absorb} illustrates the situation with a particle composed of R
 \end{figure}
 
 
-We begin our construction of a driving source using an Alice and Bob style example pictured in Figure \ref{paz}, using the names Wright(R), Lester(L), and Paz(P) to represent Right, Left, and Past observers at locations (t,x) = (0,1), (0,-1) and (-1,0) respectively. Paz serves as a common causal ancestor to Wright and Lester.  Paz emits an entangled pair of photons with momentum\footnote{The balanced nature of this momentum corresponds to a situation with no back reaction. This is a kinematic feature of our basic model; generalizations would include single-particle sources that encode back reaction through entanglement, see also Section \ref{sec:drive_phy}.} $\pm k$ and (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are in our model the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
+We begin our construction of a driving source using an Alice and Bob style example pictured in Figure \ref{paz}, using the names Wright(R), Lester(L), and Paz(P) to represent Right, Left, and Past observers at locations (t,x) = (0,1), (0,-1) and (-1,0) respectively. Paz serves as a common causal ancestor to Wright and Lester.  Paz emits an entangled pair of photons with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are in our model the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
+
+Because the emitted photons carry perfectly balanced momenta, our basic model exhibits no back reaction. This simplification is purely kinematic; in more general models, single-particle sources would encode back reaction through their entanglement structure (see Section \ref{sec:drive_phy} and Figure \ref{back_react}).”
 
 Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} or a moving mirror\footnote{While a moving mirror can be interpreted as a type of thruster that reshapes the field through boundary acceleration, here we isolate the thruster from the detector role. Incorporating the moving mirror timeline localizations into our model is left for future research.} \cite{fulling1976radiation} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field in the past. This inversion of effect and cause, of detector and thruster, is at the heart of our construction; we deliberately invert the usual order, instead of positing acceleration and deriving entanglement, we posit an entangled source and derive acceleration. 
 
@@ -374,8 +376,8 @@ Type & Source & Projection & Operator & State (1st order)\\ [0.5ex] % inserts ta
 \hline % inserts single horizontal line
 General Left & $f_L$ & $g_L$ & $q_{k}^{L\dagger}$ & $\ket{\psi}_{L}$\\
 General Right & $f_R$ & $g_R$ & $q_{-k}^{R\dagger}$  & $\ket{\psi}_{R}$\\
-Unurh/Rindler Left & $l_{k}$ & $\mu_{k}^L$ & $c_{k}^{L\dagger}$ & $\ket{1_\omega}_{L}$\\
-Unurh/Rindler Right & $r_{-k}$ & $\mu_{-k}^R$ & $c_{-k}^{R\dagger}$ & $\ket{1_\omega}_{R}$\\
+Unruh/Rindler Left & $l_{k}$ & $\mu_{k}^L$ & $c_{k}^{L\dagger}$ & $\ket{1_\omega}_{L}$\\
+Unruh/Rindler Right & $r_{-k}$ & $\mu_{-k}^R$ & $c_{-k}^{R\dagger}$ & $\ket{1_\omega}_{R}$\\
 \hline %inserts single line
 \end{tabular}
 \label{table:modes}
@@ -453,6 +455,9 @@ We can interchange these emission and absorption stories, Wright emits and Leste
 The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge. In our in construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ from the previous. 
 
 \section{Localization} \label{sec:loc}
+
+Up to now, our modes have been perfectly sharp in Rindler frequency, which is nonphysical. We now construct localized packets to show the source picture survives realistic smearing. Also, from here on we often interchange ``Rindler'' and ``Unruh'' modes when referring to their restriction to a single wedge, since our focus is on the localized support rather than global analyticity.
+
 \subsection{Localization via Translated Wedge Inclusion}
 
 Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode\footnote{From here on we often interchange Rindler and Unruh modes since we are only concerned with the restriction to the right wedge or subsets.} associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
@@ -583,6 +588,9 @@ Several directions naturally extend the present work:
 \item {\bf Massive Fields}. Extending the analysis to massive scalar fields would open the possibility of studying localized virtual particle–antiparticle pair production, complementing the massless case.
 
 \item {\bf Curved Spacetimes}. While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway to curved geometries. In particular, applications to Hawking radiation could be explored by modeling localized excitations near black hole horizons. Figure \ref{rocket} illustrates this direction, highlighting a shift from thermal emission to localized, physically sourced excitations in the near-horizon region.
+
+\item {\bf Stress-energy} A natural next step would be to evaluate stress–energy expectation values in the sourced state, to quantify the thrust mechanism more precisely.
+  
 \end{itemize}
 
 \begin{figure}[h]
