@@ -40,7 +40,7 @@ The Unruh effect\cite{unruh1976notes} shows how uniformly accelerated observers 
 
 In Section \ref{sec:prelim}, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section \ref{sec:drive}, we construct a bilocal source term, motivated by squeezed-state interactions in quantum optics, that injects correlated excitations into the field. Section \ref{sec:loc} explores partial localization by considering sub-regions of the Rindler wedge related through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Sections \ref{sec:future} and \ref{sec:conc}, we recommend future research and interpret the implications of our construction.
 
-These results show how localized excitations can provide microstate realizations consistent with the thermal Unruh ensemble.
+These results show how localized excitations can provide microstates consistent with the thermal Unruh ensemble.
 
 \section{Preliminaries} \label{sec:prelim}
 
@@ -86,7 +86,7 @@ with apex at the origin, pictured\footnote{All diagrams follow the convention of
 \begin{equation}
 x = \frac{1}{a}e^{a\xi}\cosh{(a\eta)}
 \end{equation}
-The constant acceleration parameter $a$ is introduced explicitly to make the dependence on the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the proper time and position in the frame of a uniformly accelerating observer, with world-lines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
+The constant acceleration parameter $a$ is introduced explicitly to make the dependence on the Unruh temperature, $T = \frac{a}{2\pi}$, manifest in subsequent expressions. The coordinates ($\eta$, $\xi$) describe the time and position in the frame of a uniformly accelerating observer, with world-lines of constant $\xi$ corresponding to hyperbolic trajectories in Minkowski spacetime.
 
 \begin{figure}[h]
 \centering
@@ -304,7 +304,7 @@ and more generally we have a one parameter unitary group under the modular param
 \begin{equation}
   \left\{\Lambda_1^x = Q_x \Lambda_1 Q_x^{-1} : x \in \mathbb{R} \right\}.
 \end{equation}
-So these Bogoliubov transformations between shifted wedges form a one-parameter group under translations of the apex, exhibiting a symmetry that parallels modular automorphism flow in algebraic QFT \cite{borchers2000revolutionizing}. In contrast to traditional treatments emphasizing Lorentz boosts within a fixed wedge, this formulation reveals modular structure via spatial translations.
+So these Bogoliubov transformations between shifted wedges form a one-parameter group under translations of the apex, exhibiting a symmetry that parallels modular automorphism flow in algebraic QFT \cite{borchers2000revolutionizing}. In contrast to traditional treatments emphasizing Lorentz boosts within a fixed wedge, this formulation reveals modular structure via spatially translated wedges.
 
 Consider a sequence
 \begin{equation}
@@ -323,7 +323,7 @@ In Section \ref{sec:prelim} we introduced acceleration as a geometric feature, a
 \centering
 \includegraphics[scale=1.0]{emit_absorb.png}
 \captionsetup{width=0.7\textwidth}
-\caption{A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon, and red-shifted as $x$ goes to positive infinity. We diagram a particle as if it were striking a moving mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
+\caption{A Rindler mode's frequency is smeared out in Minkowski space, blue-shifted near the horizon, and red-shifted as $x$ goes to positive infinity. We diagram a particle as if it were striking a mirror at the rear of a rocket, where its reflection emerges as a combination of emission and absorption processes in the Rindler frame.}
 \label{emit_absorb}
 \end{figure}
 
@@ -343,11 +343,11 @@ Figure \ref{emit_absorb} illustrates the situation with a particle composed of R
 \end{figure}
 
 
-We begin our construction of a driving source by following an Alice-and-Bob style naming convention, we use the names Wright (R), Lester (L), and Paz (P) to represent observers at $(t,x)$ = $(0,1)$, $(0,-1)$, and $(-1,0)$, respectively. These names are chosen to evoke Right, Left, and Past, providing a mnemonic for their positions in spacetime. Paz serves as a common causal ancestor to Wright and Lester.  Paz emits an entangled pair of photons with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are in our model the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
+We begin our construction of a driving source by following an Alice-and-Bob style naming convention, we use the names Wright (R), Lester (L), and Paz (P) to represent observers at $(t,x)$ = $(0,1)$, $(0,-1)$, and $(-1,0)$, respectively. These names are chosen to evoke Right, Left, and Past, providing a mnemonic for their positions in spacetime. Paz serves as a common causal ancestor to Wright and Lester, and she emits an entangled pair of photons with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_{\pm k}$ as part of a stream of photons that are in our model the source, and cause, of the acceleration of Wright and of Lester.  The accelerations are thus correlated.
 
 Because the emitted photons carry perfectly balanced momenta, our basic model exhibits no back reaction -- this is a simplification -- in more general models, single-particle sources would encode back reaction through their entanglement structure, see Section \ref{sec:drive_phy} and Figure \ref{back_react}.
 
-Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} or a moving mirror\footnote{While a moving mirror can be interpreted as a type of thruster that reshapes the field through boundary acceleration, here we isolate the thruster from the detector role, a seperation in time between the cause and the effect. Incorporating the moving mirror timeline localizations into our model is a subject for future research.} \cite{fulling1976radiation} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field in the past. This inversion of effect and cause, of detector and thruster, is at the heart of our construction; we deliberately invert the usual order, instead of positing acceleration and deriving entanglement, we posit an entangled source and derive acceleration. 
+Now where we usually would create a localized detector for Wright, such as an Unruh-DeWitt detector \cite{unruh1976notes} \cite{einstein1979general} or a moving mirror\cite{fulling1976radiation} interacting with the field, we instead seek to model the situation where Paz, a {\it thruster}, is coupled to the field in the past. This inversion of effect and cause, of detector and thruster, is at the heart of our construction; we deliberately invert the usual order, instead of positing acceleration and deriving entanglement, we posit an entangled source and derive acceleration. 
 
 Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will make sense of a {\it guaranteed} observation of a ``thrust particle'' with fixed peaked right moving momentum $-k$. Wright’s detection is entangled with Lester’s, and Lester will also observe a particle with left moving momentum $k$; measurement induced correlation.  
 
@@ -362,12 +362,12 @@ Physically, Paz introduces a bilocal source
 \end{equation}
 with coupling constant $\lambda$, normalized mode profiles $f_L$ and $f_R$ supported on the left and right wedges respectively, creation operators $q_{k}^{L\dagger}$ and $q_{-k}^{R\dagger}$, and $\phi_+$ as the positive frequency (annihilator) part of $\phi$. The last part of equation (\ref{bilocal}) is the squeezing interaction for frequency $\omega$, so that the bilocal source creates entangled particles in the Rindler basis within the wedges.
 
-This source construction is a straightforward quadratic generalization of the usual linear source term \cite{Schwinger_1966} \cite{ryder1996quantum} and is motivated by quadrature squeezed light generation in quantum optics \cite{gerry2023introductory}; it is a coupling of a classical function $J$ with the field as an interaction term smeared over $x$ and $y$. In this version $J$ squeezes the field creating correlations that manifest as entanglement at the level of a global quantum state. The product structure reflects this paired excitation.
+This source construction is a quadratic generalization of the usual linear source term \cite{Schwinger_1966} \cite{ryder1996quantum} and is motivated by quadrature squeezed light generation in quantum optics \cite{gerry2023introductory}; it is a coupling of a classical function $J$ with the field as an interaction term smeared over $x$ and $y$. In this version $J$ squeezes the field creating correlations that manifest as entanglement at the level of a global quantum state. The product structure reflects this paired excitation.
 
 We consider the case where $f_L$ and $f_R$ are absorptions, or made up of left moving and right moving Minkowkski modes respectively; the emission case is similar see Section {\ref{sec:back_in_time}. In this picture, the bilocal source is not just a mathematical device but the physical mechanism by which acceleration is generated: the entangled pair created by $J(x,y)$ supplies the correlated excitations that are experienced as thrust by the Rindler observers.
 
 
-Smearing with $\phi_+$ projects $f_L$ and $f_R$ onto their positive frequency parts which we call $g_L$ and $g_R$ respectively. In particular we can choose $f_L$ and $f_R$ to be Rindler modes\footnote{See Section \ref{sec:prelim} equations (\ref{rindler_mode_def}), (\ref{unruh_mode_def}), and (\ref{c_ladder}).} $l_k$ and $r_{-k}$ in which case the projection is onto the corresponding Unruh modes $\mu_k$ and $\mu_{-k}$, so that $q_{k}^{L\dagger}$ and $q_{-k}^{R\dagger}$ are the corresponding Unruh operators $c_{k}^{L\dagger}$ and $c_{-k}^{R\dagger}$.  
+Smearing with $\phi_+$ projects $f_L$ and $f_R$ onto their positive frequency parts which we call $g_L$ and $g_R$ respectively. In particular we can choose $f_L$ and $f_R$ to be Rindler modes $l_k$ and $r_{-k}$ in which case the projection is onto the corresponding Unruh modes $\mu_k$ and $\mu_{-k}$, so that $q_{k}^{L\dagger}$ and $q_{-k}^{R\dagger}$ are the corresponding Unruh operators $c_{k}^{L\dagger}$ and $c_{-k}^{R\dagger}$\footnote{See Section \ref{sec:prelim} equations (\ref{rindler_mode_def}), (\ref{unruh_mode_def}), and (\ref{c_ladder}).}.  
 
 \begin{table}[ht]
 \caption{Bilocal Source -- Modes, Operators, and States}
@@ -413,7 +413,7 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 The construction of a right moving absorption function $f_R$ for Wright presents some physical challenges.
 
 \begin{itemize}
-\item {\bf Mode Projection}. We note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_{-k}$ from Section \ref{sec:prelim}. The $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_{-k}$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).  The projection in equation (\ref{bilocal}) encodes this relation by projecting the Rindler modes onto Unruh modes or in more generality by projecting $f_L$ and $f_R$ onto positive frequency $g_L$ and $g_R$.
+\item {\bf Mode Projection}. We note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_{-k}$ from Section \ref{sec:prelim}. The source $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_{-k}$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).  The projection in equation (\ref{bilocal}) encodes this relation by projecting the Rindler modes onto Unruh modes or in more generality by projecting $f_L$ and $f_R$ onto positive frequency $g_L$ and $g_R$.
 
 \item{\bf Source over Finite Time}. We are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that the projected positive frequency modes $g_L$ and $g_R$ can be restricted and scaled on a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$ to give the same result, see Figure \ref{paz_freq} (right picture). This is because the integral over $x$ is independant of $t$. This is manifestly evident by the fact that the mode is translation invariant over time and space, $g_R(t,x) = g_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
 
@@ -440,7 +440,7 @@ The construction of a right moving absorption function $f_R$ for Wright presents
 
 \item {\bf Single Photon Models}. We mention that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, in our symmetric two–mode setup, the momenta are balanced and the source does not experience recoil, so there is no back reaction. By contrast, if Paz emitted a single particle, as in Figure \ref{back_react}, the emitted mode would necessarily be entangled with Paz’s internal state and/or recoil momentum, producing back reaction as field–source entanglement. Tracing out the source would leave Wright with a mixed state, and the apparent thermality would then arise from this entanglement with the thruster’s degrees of freedom. Our choice of a balanced bilocal source thus isolates the thrust mechanism while postponing the additional complication of explicit source recoil for future research.
 
-\item {\bf Emission} We also could study the emission case (we have been studying the absorption case); where $f_L$ and $f_R$ are made up of right moving and left moving Minkowski modes respectively.  These would posit a common observer in the future. The moving mirror exemplifies aspects of both the ``Emission'' and ``Single Photon Model'' cases. These cases involve additional complications beyond the scope of our note and are a topic of future research.
+\item {\bf Emission} We could also study the emission case (we have been studying the absorption case); where $f_L$ and $f_R$ are made up of right moving and left moving Minkowski modes respectively.  These would posit a common observer in the future. The moving mirror exemplifies aspects of both the ``Emission'' and ``Single Photon Model'' cases. These cases involve additional complications beyond the scope of our note and are a topic of future research.
 \end{itemize}
 
 For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a globally entangled paired source.
@@ -486,7 +486,7 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The incomplete beta function picks out the spectral peak suppressing the peak at zero.}
+\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The incomplete beta function strengthens the spectral peak and suppresses the peak at zero.}
 \label{peaked}
 \end{figure}
 
@@ -496,7 +496,7 @@ Further localization is achieved by intersecting $W_c$ with a reflected wedge $\
 
 The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the other form of the beta function in equation (\ref{bogoTC0}) to compute the same inner product.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since we restrict the support to the diamond. So the construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes on the entire wedge.
 
-This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The green (complete) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (magenta) does depend on the endpoint ($2c$ is shown).} in Figure \ref{peaked}.
+This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The complete (red) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (blue) does depend on the endpoint ($2c$ is shown).} in Figure \ref{peaked}.
 
 
 The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
