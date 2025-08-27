@@ -416,7 +416,7 @@ The construction of a right moving absorption function $f_R$ for Wright presents
 \begin{itemize}
 \item {\bf Mode Projection}. We note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_{-k}$ from Section \ref{sec:prelim}. The source $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_{-k}$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).  The projection in equation (\ref{bilocal}) encodes this relation by projecting the Rindler modes onto Unruh modes or in more generality by projecting $f_L$ and $f_R$ onto positive frequency $g_L$ and $g_R$.
 
-\item{\bf Source over Finite Time}. We are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that the projected positive frequency modes $g_L$ and $g_R$ can be restricted and scaled on a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$ to give the same result, see Figure \ref{paz_freq} (right picture). This is because the integral over $x$ is independant of $t$. This is manifestly evident by the fact that the mode is translation invariant over time and space, $g_R(t,x) = g_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
+\item{\bf Source over Finite Time}. We are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that the projected positive frequency modes $g_L$ and $g_R$ can be restricted and scaled on a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$ to give the same result, see Figure \ref{paz_freq} (right picture). This is because the integral over $x$ is independent of $t$. This is manifestly evident by the fact that the mode is translation invariant over time and space, $g_R(t,x) = g_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at $n_\omega = 1$.
 
 \begin{figure}[h]
 \centering
@@ -459,7 +459,7 @@ We can interchange these emission and absorption stories, see ``Emission'' in Se
 
 \subsection{Sub-Wedge Causal Chain} \label{sec:chain_sources}
 
-The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge, and each subwedge has vacuum particle expectations of the same ``amount'' and ``type''. In our construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ and $f_R$ from the previous. 
+The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge, and each sub-wedge has vacuum particle expectations of the same ``amount'' and ``type''. In our construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ and $f_R$ from the previous. 
 
 \section{Localization} \label{sec:loc}
 
@@ -467,7 +467,7 @@ Up to now, our modes have been perfectly sharp in Rindler frequency. We now cons
 
 \subsection{Localization via Translated Wedge Inclusion}
 
-Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
+Consider the two nested Rindler wedges $W_c \subsetneq W_0$ shown in Figure \ref{restrict}. Let $r_q$ denote a Rindler mode associated with $W_0$, analytically continued to the entire Minkowski space. The gray-scale region indicates the full support of $r_q$, while the rainbow-colored segment shows its restriction to the sub-wedge $W_c$.
 
 \begin{figure}[h]
   \centering
@@ -478,29 +478,32 @@ Consider the two nested Rindler wedges $W_c \subseteq W_0$ shown in Figure \ref{
 
 By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.} of $W_0$. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending as $x \rightarrow \infty$.
 
-To further study the situation, consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}).  We fix $q$ and use $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$ to obtain
+To further study the situation we first review the Minkowski/Rindler situation by fixing $q$ and considering the modulus squared inner product $\left|\left<\varphi_q, r_k^{(c)} \right>\right|^2$ also known as the Bogoliubov $\left|\alpha^{(0 \rightarrow M)}_{kq}\right|^2$, from equation (\ref{bogoCM}) . Using $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$ we obtain the thermal response coming from the $\alpha_k$ term in
+\begin{equation}
+  \left|\left<\varphi_q, r_k^{(c)} \right>\right|^2 = \frac{1}{2\pi\omega_q} \left(\frac{1}{1 - e^{-\frac{2 \pi \omega_k}{a}}}\right)
+\end{equation}
+We graph a scaled version of this response as the red curve in Figure \ref{peaked}.
+
+In contrast we next consider the modulus squared inner product $\left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2$, also known as the Bogoliubov $\left|\alpha^{(c \rightarrow 0)}_{kq}\right|^2$, from equation (\ref{bogoC0}). We obtain
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \pi \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked feature, see Figure $\ref{peaked}$. Although the $\sinh$ terms encode aspects of the familiar thermal distribution, especially broadening near $\omega_k = 0$, the existence of the peak itself at $\omega_k = \omega_q$ originates from the geometric restriction, not from a detector’s passive response to the vacuum, but as the active spectral footprint of a localized source.
+as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked feature, see the ``complete Beta'' green curve in Figure \ref{peaked}. Although the $\sinh$ terms encode aspects of the familiar thermal distribution, especially broadening near $\omega_k = 0$, the existence of the peak itself at $\omega_k = \omega_q$ originates from the geometric restriction, a feature not found in the Minkowski/Rindler overlap.
 
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.6]{peaked.png}
-\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$. The incomplete beta function strengthens the spectral peak and suppresses the peak at zero.}
+\caption{The Rindler modes $r_k$ of $W_c$ show a peaked spectral overlap with $r_q$ at $\omega_k = \omega_q$ (green). The incomplete beta function (blue) strengthens the spectral peak and suppresses the peak at zero. Compare with purely thermal Minkowski/Rindler (red) curve.}
 \label{peaked}
 \end{figure}
 
 \subsection{Diamond Localization via Reflected Wedge Intersection}
 
-Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, as shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared behavior previously associated with the unrestricted wedge.
+Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared behavior previously associated with the unrestricted wedge.
 
 The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the other form of the beta function in equation (\ref{bogoTC0}) to compute the same inner product.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since we restrict the support to the diamond. So the construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes on the entire wedge.
 
-This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The complete (red) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (blue) does depend on the endpoint ($2c$ is shown).} in Figure \ref{peaked}.
-
-
-The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
+This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The complete (green) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (blue) does depend on the endpoint ($2c$ is shown).} as the blue curve in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
 
 \begin{figure}[h]
   \centering
