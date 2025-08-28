@@ -465,7 +465,7 @@ The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting in
 
 \section{Localization} \label{sec:loc}
 
-Up to now, our modes have been perfectly sharp in Rindler frequency. We now construct various localization techniques. From here on we often interchange Rindler and Unruh modes when referring to their restriction to a single wedge, since our focus is on the localized support.
+Up to now, our modes have been perfectly sharp in Rindler frequency. We now construct various localization techniques. From this point we use ``Rindler'' and ``Unruh'' modes interchangeably when restricted to a single wedge, as our focus is the localized support.
 
 \subsection{Localization via Translated Wedge Inclusion}
 
@@ -478,7 +478,7 @@ Consider the two nested Rindler wedges $W_c \subsetneq W_0$ shown in Figure \ref
 \label{restrict}
 \end{figure}
 
-By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction effectively cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.} of $W_0$. The resulting mode still spans the full spatial extent of $W_c$, but it is now insulated from the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending as $x \rightarrow \infty$.
+By considering the restriction of $r_q$ to $W_c$, we have partially localized the observer and the mode. The restriction cuts off the high-frequency content of $r_q$ near the future horizon\footnote{Similarly, $r_{-q}$ experiences suppression near the past horizon.} of $W_0$. The resulting mode still spans the full spatial extent of $W_c$, but avoids the highly oscillatory behavior near the horizons of $W_0$.  The localization is not complete however, the observer can still be anywhere within the wedge $W_c$, and the corresponding modes $r_k$ still exhibit thermal characteristics because of low-frequency oscillations extending as $x \rightarrow \infty$.
 
 To further study the situation we first review the Minkowski/Rindler situation by fixing $q$ and considering the modulus squared inner product $\left|\left<\varphi_q, r_k^{(c)} \right>\right|^2$ also known as the Bogoliubov $\left|\alpha^{(0 \rightarrow M)}_{kq}\right|^2$, from equation (\ref{bogoCM}) . Using $|\Gamma(ib)|^2 = \frac{\pi}{b \sinh \pi b}$ we obtain the thermal response coming from the $\alpha_k$ term in
 \begin{equation}
@@ -490,7 +490,7 @@ In contrast we next consider the modulus squared inner product $\left|\left<r_q^
 \begin{equation}
   \left|\left<r_q^{(0)}, r_k^{(c)} \right>\right|^2 = \frac{\sinh \frac{\pi \omega_q}{a}}{4\pi a (\omega_q - \omega_k) \sinh \pi \frac{\omega_q - \omega_k}{a} \sinh \frac{\pi \omega_k}{a}}
 \end{equation}
-as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked feature, see the ``complete Beta'' green curve in Figure \ref{peaked}. Although the $\sinh$ terms encode aspects of the familiar thermal distribution, especially broadening near $\omega_k = 0$, the existence of the peak itself at $\omega_k = \omega_q$ originates from the geometric restriction, a feature not found in the Minkowski/Rindler overlap.
+as a function of $\omega_k$. The function exhibits a second-order pole at $\omega_k = \omega_q$, resulting in a sharply peaked feature, see the ``complete Beta'' green curve in Figure \ref{peaked}. Although the $\sinh$ terms encode aspects of the familiar thermal distribution, especially broadening near $\omega_k = 0$, the existence of the peak itself at $\omega_k = \omega_q$ originates from the geometric restriction, absent in the Minkowski/Rindler overlap.
 
 \begin{figure}[h]
   \centering
@@ -501,11 +501,11 @@ as a function of $\omega_k$. The function exhibits a second-order pole at $\omeg
 
 \subsection{Diamond Localization via Reflected Wedge Intersection}
 
-Further localization is achieved by intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared behavior previously associated with the unrestricted wedge.
+Further localization results from intersecting $W_c$ with a reflected wedge $\widetilde{W}_{2c}$. This defines a more tightly localized diamond-shaped region, shown in Figure \ref{diamond}. The mode $r_q$ is now restricted to the intersection $W_c \cap \widetilde{W}_{2c}$, which eliminates much of the infrared behavior previously associated with the unrestricted wedge.
 
 The Klein Gordon inner product at $t=0$ now takes the form of an incomplete version of the beta function from equation (\ref{bogoC0}), corresponding to an integral\footnote{We could also use the other form of the beta function in equation (\ref{bogoTC0}) to compute the same inner product.} evaluated from $c$ to $2c$ rather than extending to infinity. This inner product does not however correspond to a mode expansion of the field, since we restrict the support to the diamond. So the construction does not define a complete orthonormal set, and cannot be used to build a full basis of field modes on the entire wedge.
 
-This motivates a shift in perspective: rather than interpreting $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The complete (green) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (blue) does depend on the endpoint ($2c$ is shown).} as the blue curve in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
+Accordingly we instead interpret $r_q$ as part of a global mode expansion, we regard it as a compactly supported, non-invariant test function, i.e., a driving source localized to the diamond region, consistent with the source framework introduced in Section \ref{sec:drive}. We turn on $r_q$ exactly for a fixed period of $x-t$ (or $x+t$ for $r_{-q}$). The resulting spectral response in the diamond, computed from this truncated integral, is shown\footnote{The complete (green) beta function curve is actually independent of the choice of translation $c$, it is the same curve for any sub-wedge space-like inclusion (see modular automorphism Section \ref{sec:mod}). In contrast, the incomplete beta function curve (blue) does depend on the endpoint ($2c$ is shown).} as the blue curve in Figure \ref{peaked}. The plot reveals that the main spectral peak at $\omega_k = \omega_q$ persists, while the thermal contribution near $\omega = 0$ is significantly attenuated.
 
 \begin{figure}[h]
   \centering
@@ -524,7 +524,7 @@ D_\nu(-z) = \frac{e^{-\frac{1}{4}z^2}}{\Gamma\left(-\nu\right)} \int_0^\infty  \
 where we use $-z$ instead of the usual $z$ so that future equations become simpler.
 
 
-Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$, but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. A key aspect of this construction is that the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit. For clarity, since this setup may be non-standard, we carry out the calculations explicitly in this section.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
+Without loss of generality, let $N_{\mu, \sigma} = e^{-\frac{1}{2} \frac{(x-t-\mu)^2}{\sigma^2}}$ be a (left-moving) Gaussian kernel with fixed $\mu$. We will multiply $\varphi_q^*$ by $N_{\mu, \sigma}$, but we could just as easily multiply $r_k$ by $N_{\mu, \sigma}$ for the same effect. Here the resulting Minkowski modes are treated as driving sources rather than elements of an orthonormal mode expansion. Since we are not working within an orthonormal mode expansion, the normalization of $N_{\mu, \sigma}$ is left implicit. Since this setup is non-standard, we give the explicit calculations.  We will examine the $N_{\mu,\sigma}$ modification of $\beta^{(c \rightarrow M)}_{kq}$ in  equation (\ref{bogoCM})
 
 \begin{equation}
   \begin{aligned}
@@ -583,21 +583,23 @@ which we expect by construction. For the localized part that comes from the $e^{
     &\to \frac{\omega_k}{a} e^{\frac{-2\epsilon\omega_k}{a}} f(\sigma,\mu) \\
   \end{aligned}
 \end{equation}
-where the thermal pole at zero has disappeared. While the precise asymptotic form is not critical, we can control the ultraviolet behavior by taking $z$ to $(1+i\epsilon)\infty$ which remains within in the localized Stokes region. This introduces a regulating factor of the form $e^{-2\epsilon \omega_k / a}$, which suppresses high-frequency contributions. 
+where the thermal pole at zero has disappeared. While the precise asymptotic form is not critical, we can control the ultraviolet behavior by taking $z$ to $(1+i\epsilon)\infty$ which remains within in the localized Stokes region. This introduces a regulating factor of the form $e^{-2\epsilon \omega_k / a}$, which suppresses high-frequency contributions.
 
-We should stop short of $\sigma$ actually reaching zero, since that is a localization to an extreme, where $N_{\mu,\sigma}$ shrinks to a bump with infinitesimal width; this is not a delta function, it is a vanishing source. We focus on the small-but-nonzero $\sigma$ regime where the thermal character has already disappeared. See Figure \ref{pcf_sigma_curves} for representative plots across varying values of $\sigma$.
+We restrict attention to small but finite $\sigma$, and $\sigma \rightarrow 0$ corresponds to a vanishing source rather than a delta function. We focus on the small-but-nonzero $\sigma$ regime where the thermal character is already suppressed. See Figure \ref{pcf_sigma_curves} for representative plots across varying values of $\sigma$.
 
 \section{Future Research} \label{sec:future}
 
 Several directions naturally extend the present work:
 \begin{itemize}
-\item {\bf Moving Mirrors}. While a moving mirror can be interpreted as a type of ``thruster'', as in Section \ref{sec:drive}, that reshapes the field through boundary acceleration, here we isolated the thruster from the detector role. Incorporating moving mirror timeline localizations into this framework remains an open task.
+\item {\bf Moving Mirrors}.
 
-\item {\bf Mode Pairing}. The construction of $f_L$ in Section \ref{sec:drive} was left aside in our treatments in Section \ref{sec:loc}. A more systematic analysis of the pairing between $f_L$ and $f_R$ would allow us to track correlations in greater generality.
+A moving mirror can be viewed as both a detector and a ``thruster'' (Section \ref{sec:drive}); in this work the thruster and detector roles were treated separately. Extending the framework to include moving mirror timeline localizations remains open.
 
-\item {\bf Alternative Driving Source Models}. Beyond entangled emission, one may consider models involving single-photon sources or even time-reversed scenarios (see Section \ref{sec:drive_phy}), which could offer finer control over the entanglement structure.
+\item {\bf Mode Pairing}. The construction of $f_L$ in Section \ref{sec:drive} was not pursued in Section \ref{sec:loc}. A systematic analysis of the $f_L$–$f_R$ pairing could clarify correlation structures more generally.
 
-\item {\bf Massive Fields}. Extending the analysis to massive scalar fields would open the possibility of studying localized virtual particle–antiparticle pair production, complementing the massless case.
+\item {\bf Alternative Driving Source Models}. Beyond entangled emission, models with single-photon sources or time-reversed scenarios (Section \ref{sec:drive_phy}) may provide finer control over entanglement structure.
+
+\item {\bf Massive Fields}. Extending the analysis to massive scalar fields would enable the study of localized virtual particle–antiparticle pair production, complementing the massless case.
 
 \item {\bf Curved Spacetimes}. While our analysis is grounded in flat spacetime, the equivalence principle offers a natural pathway to curved geometries. In particular, applications to Hawking radiation could be explored by modeling localized excitations near black hole horizons. Figure \ref{rocket} illustrates this direction, highlighting a shift from thermal emission to localized, physically sourced excitations in the near-horizon region.
 
@@ -613,9 +615,9 @@ Several directions naturally extend the present work:
 
 \section{Conclusion} \label{sec:conc}
 
-We have presented a framework connecting the Unruh effect to localized field excitations. Using a bilocal source and wedge-restricted Rindler/Unruh modes, we realize individual microstates of the thermal ensemble as physically localized, source-driven excitations, making the role of acceleration explicit rather than purely kinematic. We then construct compact wave-packets via parabolic cylinder functions, providing a smooth interpolation between global Rindler modes and localized spectral structures.
+We have presented a framework connecting the Unruh effect to localized field excitations. Using a bilocal source, we realize individual microstates of the thermal ensemble as physically localized, source-driven excitations, making the role of acceleration explicit rather than purely kinematic.  We consider localization via wedge-restricted Rindler/Unruh modes and then construct compact wave-packets via parabolic cylinder functions. This provides a smooth interpolation between global Rindler modes and localized spectral structures.
 
-Our construction complements the standard detector-based interpretation by showing how apparent thermality can coexist with microstate-level localization. The framework also opens several directions for further investigation, including systematic mode pairing, moving mirror analogues, generalizations to massive fields, and potential extensions to curved spacetime geometries, with applications to near-horizon excitations in black hole physics.
+Our construction complements the standard detector-based interpretation by showing how apparent thermality can coexist with microstate-level descriptions. The framework also opens several directions for further investigation, including systematic mode pairing, moving mirror analogues, generalizations to massive fields, and potential extensions to curved spacetime geometries, with applications to near-horizon excitations in black hole physics.
 
 \section{Acknowledgments}
 I thank Frodden and Valdés for their excellent exposition \cite{frodden2018unruh}, and Beisert for his insightful lecture notes \cite{beisert2012quantum}. I'm also grateful to Ben Commeau, Daniel Justice, Edward Randtke, and ChatGPT for helpful discussions.
