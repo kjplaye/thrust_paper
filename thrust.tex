@@ -25,7 +25,7 @@
 \begin{document}
 
 %title and author details
-\title{Driving the Unruh Response: Causing the Effect}
+\title{Driving the Unruh Response: Entangled Excitations from Bilocal Sources}
 \author[ ]{Kevin Player}
 \affil[ ]{Software Engineering Institute}
 \affil[ ]{Carnegie Mellon University}
@@ -35,16 +35,19 @@
 
 \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-
-\abstract{We present a construction that connects the Unruh effect to localized excitations produced by a bilocal driving source. Using modular automorphisms, we track mode and observer localization across nested Rindler wedges and construct compact wave-packet approximations with parabolic cylinder functions. This provides a smooth interpolation from global Rindler modes to fully localized excitations, showing how vacuum correlations can appear as source-driven responses within the field.}
+\abstract{We present a simple model that connects the Unruh effect to non-thermal entangled excitations produced from a bilocal driving source motivated by squeezing interactions in quantum optics. These paired excitations can be thought of as an inertial microstates in the accelerated thermal Unruh ensemble. The model reverses the usual story; rather than entanglement being a consequence of acceleration, we demonstrate how an acceleration response can itself be engineered. We then construct localized driving modes that avoid the asymptotic Doppler tails responsible for thermality. Using modular automorphisms, we track mode and observer localizations across nested Rindler wedges and construct compact wave-packet approximations with parabolic cylinder functions. These provide a smooth interpolation from global thermal Rindler modes to fully localized nonthermal excitations, and outline a program for understanding vacuum correlations as causally driven, nonthermal responses of the field.}
 
 \section{Introduction}
-The Unruh effect\cite{unruh1976notes} shows how uniformly accelerated observers perceive the  Minkowski vacuum as a thermal bath of particles. In this work, we develop a complementary viewpoint by examining a source-based construction in which excitations can arise from localized entangled emissions that act as a source for the field.
 
+The Unruh effect \cite{unruh1976notes} reveals that uniformly accelerated observers describe the Minkowski vacuum not as empty, but as a thermal bath of excitations. This apparent thermality reflects the deep entanglement structure of the vacuum: for inertial observers the Minkowski vacuum is pure and non-thermal, while for accelerated observers it appears as a mixed thermal state. Geometrically, uniform acceleration divides spacetime into left and right Rindler wedges, separated by an event horizon. The vacuum can be expressed as an entangled product of excitations across these wedges, so that tracing out one side yields a thermal description of the other. Local measurements in one wedge therefore have non-local implications for the other.
 
-In Section \ref{sec:prelim}, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section \ref{sec:drive}, we construct a bilocal source term, motivated by squeezed-state interactions in quantum optics, that injects correlated excitations into the field. Section \ref{sec:loc} explores partial localization by considering sub-regions of the Rindler wedge connected through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Sections \ref{sec:future} and \ref{sec:conc}, we outline directions for future research and interpret the implications of our construction.
+Recent work has explored the subtlety of this thermality, examining detector locality, causal structure, and the entanglement-information tradeoffs that underpin Unruh correlations. Anastopoulos and Savvidou \cite{anastopoulos2012coherences} showed that while a single uniformly accelerated Unruh–DeWitt detector exhibits thermal fluctuations, correlations between two spatially separated detectors with the same acceleration are nonthermal. This indicates that the Unruh effect is fundamentally local, with information encoded in correlations between distant observers. Foo, Onoe, and Zych \cite{foo2020unruh} studied detectors in quantum superpositions of classical trajectories. Although each trajectory individually yields a thermal response, the superposed detector does not thermalize, demonstrating the importance of causal relations rather than acceleration alone.
 
-These results show how localized excitations can be interpreted as microstates consistent with the thermal Unruh ensemble.
+Svidzinsky, Scully, and Unruh \cite{Svidzinsky2024MinkowskiVEA} analyzed causal chains of harmonic oscillators spanning both wedges. They found that the entanglement of the Minkowski vacuum transfers directly to the entanglement of oscillators interacting with the field, reinforcing the causal underpinning of Unruh correlations. Han, Olson, and Dowling \cite{han2008generating} examined the role of measurement, showing that when an accelerating observer performs a projection-valued measurement (PVM), the field is driven out of its thermal character. For inertial observers the field is no longer vacuum, but contains real photons with nonzero energy–momentum, so the accelerated PVM acts as a process that injects energy and momentum through the accelerating agent itself.
+
+In this work we develop a complementary viewpoint that inverts the usual narrative. Rather than acceleration generating entanglement, we construct a simple source-based model in which localized entangled emissions act as the causal origin of an acceleration response. These driven excitations provide concrete microstates consistent with the thermal Unruh ensemble, offering a minimal construction of how entanglement can manifest as accelerated dynamics. We also map out generalizations by considering backreaction, reversed emission and absorption, and related extensions.
+
+In Section \ref{sec:prelim}, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section \ref{sec:drive}, we construct a bilocal source term, motivated by squeezed-state interactions in quantum optics, that injects correlated excitations into the field. Section \ref{sec:loc} explores partial localization by considering sub-regions of the Rindler wedge connected through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized modes. Finally, in Section \ref{sec:future} we outline directions for future research, and in Section \ref{sec:conc} we discuss connections to other research, and interpret the implications of our construction.
 
 \section{Preliminaries} \label{sec:prelim}
 
@@ -317,7 +320,7 @@ Consider a sequence
   W_{c_n} \subsetneq \cdots \subsetneq W_{c_i} \subsetneq \cdots \subsetneq W_{c_j} \subsetneq W_{c_2} \subsetneq W_{c_1}
   \label{chain}
 \end{equation}
-Each inclusion $W_{c_i} \subsetneq W_{c_j}$ yields the same particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, so the expected number of particles remains constant across all nested wedge pairs, independent of the specific values of $c_i$ or $c_j$. We will briefly revisit this chain in Section \ref{sec:chain_sources}.
+Each inclusion $W_{c_i} \subsetneq W_{c_j}$ yields the same particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, so the expected number of particles remains constant across all nested wedge pairs, independent of the specific values of $c_i$ or $c_j$. We will briefly revisit this chain in Section \ref{sec:chain_sources}.  Also this is related to \cite{Svidzinsky2024MinkowskiVEA} where we also see casual chains which are of a similar nature.
 
 \section{Driving Sources} \label{sec:drive}
 
@@ -402,7 +405,7 @@ A state that factorizes into correlated excitations in the left (L) and right (R
   \ket{\Psi_\omega}_M = \ket{1_\omega}_L \ket{1_\omega}_R + \text{O(higher terms)},
   \label{one_fock}
 \end{equation}
-a controlled realization of one term in the ensemble coming from the Rindler/Unruh modes. Our source projects the state onto the $\omega$ term through the act of observation, i.e. by a PVM projection in the standard quantum-measurement sense, so that Wright’s guaranteed detection is modeled as the measurement-induced selection of a specific component of the thermal ensemble. The source $J(x,y)$ does not contradict the thermal interpretation, but rather describes a specific ``microstate'' consistent with the broader thermal ensemble.
+a controlled realization of one term in the ensemble coming from the Rindler/Unruh modes. Our source projects the state onto the $\omega$ term through the act of observation, i.e. by a PVM projection in the standard quantum-measurement sense (see also \cite{han2008generating}), so that Wright’s guaranteed detection is modeled as the measurement-induced selection of a specific component of the thermal ensemble. The source $J(x,y)$ does not contradict the thermal interpretation, but rather describes a specific ``microstate'' consistent with the broader thermal ensemble.
 
 An illustration of this setup is shown in Figure \ref{rocket_inertial}. From this perspective, the apparent thermality arises from intrinsic properties of the vacuum, an effective ignorance of the source's detailed structure and dynamics. In the sourced view, the Unruh effect is not a passive revelation of hidden particles in the vacuum, but a measurable consequence of {\it thrust}.
 
@@ -464,7 +467,7 @@ We can interchange these emission and absorption stories, see ``Emission'' in Se
 
 \subsection{Sub-Wedge Causal Chain} \label{sec:chain_sources}
 
-The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge, and each sub-wedge has vacuum particle expectations of the same character. In our construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ and $f_R$ from the previous. 
+The sub-wedge sequence mentioned in equation (\ref{chain}) has an interesting interpretation.  The vacuums are entangled from each wedge to the next sub-wedge, and each sub-wedge has vacuum particle expectations of the same character. In our construction, this is understood as a causal chain from Paz to Wright.  Each sub-wedge inherits a source $J$ and $f_R$ from the previous. This is also related to \cite{Svidzinsky2024MinkowskiVEA} where we also study causal chains from a common source.
 
 \section{Localization} \label{sec:loc}
 
@@ -618,9 +621,11 @@ A moving mirror can be viewed as both a detector and a ``thruster'' (Section \re
 
 \section{Conclusion} \label{sec:conc}
 
-We have presented a framework connecting the Unruh effect to localized field excitations. Using a bilocal source, we realize individual microstates of the thermal ensemble as physically localized, source-driven excitations, making the role of acceleration explicit rather than purely kinematic.  We consider localization via wedge-restricted Rindler/Unruh modes and then construct compact wave-packets via parabolic cylinder functions. This provides a smooth interpolation between global Rindler modes and localized spectral structures.
+We have presented a framework in which individual microstates of the thermal Unruh ensemble are realized as physically localized, source-driven excitations, making the role of acceleration explicit rather than purely kinematic. We consider localization via wedge-restricted Rindler/Unruh modes and then construct compact wave-packets via parabolic cylinder functions. This provides a smooth interpolation between global Rindler modes and localized spectral structures.
 
-Our construction complements the standard detector-based interpretation by showing how apparent thermality can coexist with microstate-level descriptions. The framework also opens several directions for further investigation, including systematic mode pairing, moving mirror analogues, generalizations to massive fields, and potential extensions to curved spacetime geometries, with applications to near-horizon excitations in black hole physics.
+Our construction complements the standard detector-based interpretation by showing how apparent thermality can coexist with microstate-level descriptions.
+
+The framework suggests several directions for further investigation, including systematic mode pairing, moving mirror analogues, generalizations to massive fields, and potential extensions to curved spacetimes, with applications to near-horizon excitations in black hole physics.
 
 \section{Acknowledgments}
 I thank Frodden and Valdés for their excellent exposition \cite{frodden2018unruh}, and Beisert for his insightful lecture notes \cite{beisert2012quantum}. I'm also grateful to Ben Commeau, Daniel Justice, Edward Randtke, and ChatGPT for helpful discussions.
