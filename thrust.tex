@@ -34,7 +34,7 @@
 
 % \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We connect the thermal Unruh effect to entangled, non-thermal excitations produced by a bilocal driving source modeled on squeezing interactions from quantum optics. These paired excitations can be thought of as inertial microstates in the accelerated thermal Unruh ensemble. Our construction reverses the usual narrative: instead of beginning with an accelerated observer and finding entangled excitations, we show how entangled emissions from a bilocal source can dynamically generate a portion of the accelerated response. We then form localized driving modes that avoid the asymptotic Doppler tails responsible for thermality. Using modular automorphisms, we track mode and observer localizations across nested Rindler wedges and construct compact wave-packet approximations with parabolic cylinder functions. These provide a smooth interpolation from wedge-supported thermal Rindler modes to fully localized non-thermal excitations, and outline a program for interpreting portions of the Unruh effect as source-driven, non-thermal responses.}
+\abstract{We connect the thermal Unruh effect to entangled, non-thermal excitations produced by a bilocal driving source, modeled on squeezing interactions from quantum optics. These paired excitations can be thought of as inertial microstates in the accelerated thermal Unruh ensemble, dynamically generating a portion of the accelerated response. We then form localized driving modes that avoid the asymptotic Doppler tails responsible for thermality. Using modular automorphisms, we track mode and observer localizations across nested Rindler wedges and construct compact wave-packet approximations with parabolic cylinder functions. These provide a smooth interpolation from wedge-supported thermal Rindler modes to fully localized non-thermal excitations, and outline a program for interpreting portions of the Unruh effect as source-driven.}
 
 \section{Introduction}
 
@@ -144,7 +144,7 @@ An $i \epsilon$ prescription selects the branch of the logarithm that renders th
 \end{aligned}
 \label{unruh_mode_def}
 \end{equation}
-where the right and left modes ($r_{\pm k}$ and $l_{\pm k}$) are understood to be zero outside of their respective wedges. See Figure \ref{unruh_rainbow} for an illustration of the various modes. The magnitude shown jumps across the branch cut and conjugates the phase. There are twice as many Unruh modes as Rindler modes, since each $r_k$ appears with two analytic extensions, $\mu^R_k$ and $\mu^{L*}_{-k}$, with a similar duplication for the left modes.
+where the right and left modes ($r_{\pm k}$ and $l_{\pm k}$) are understood to be zero outside of their respective wedges. See Figure \ref{unruh_rainbow} for an illustration of the various modes. The magnitude shown jumps across the branch cut and conjugates the phase. There are ``twice as many'' Unruh modes as Rindler modes, since each $r_k$ appears with two analytic extensions, $\mu^R_k$ and $\mu^{L*}_{-k}$, with a similar duplication for the left modes.
 
 
 The Unruh modes form an alternative orthonormal basis of solutions to the Klein-Gordon equation, distinct from the plane waves $\varphi_{\pm k}$ see the original source Unruh\cite{unruh1976notes}. The Unruh modes diagonalize (we will see in equation (\ref{diag})) the Minkowski vacuum in terms of Rindler particle states and thus provide the natural framework for describing the Unruh effect and the thermal response perceived by uniformly accelerated observers.
@@ -320,11 +320,11 @@ Consider a sequence
   W_{c_n} \subsetneq \cdots \subsetneq W_{c_i} \subsetneq \cdots \subsetneq W_{c_j} \subsetneq W_{c_2} \subsetneq W_{c_1}
   \label{chain}
 \end{equation}
-Each inclusion $W_{c_i} \subsetneq W_{c_j}$ yields the same particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, so the expected number of particles remains constant across all nested wedge pairs, independent of the specific values of $c_i$ or $c_j$. We will briefly revisit this chain in Section \ref{sec:chain_sources}.  Also this is related to \cite{Svidzinsky2024MinkowskiVEA} where we also see casual chains within the wedge.
+Each inclusion $W_{c_i} \subsetneq W_{c_j}$ yields the same particle production, with fixed squared Bogoliubov magnitude $|\beta_{kq}|^2$, so the expected number of particles remains constant across all nested wedge pairs, independent of the specific values of $c_i$ or $c_j$. We will briefly revisit this chain in Section \ref{sec:chain_sources}. This structure is closely related to the casual chains within the wedges discussed in \cite{Svidzinsky2024MinkowskiVEA}.
 
 \section{Driving Sources} \label{sec:drive}
 
-We now turn to a foundational question -- {\it what, physically, accelerates the observer?} In standard Unruh-effect derivations, the acceleration is treated as given; here we supply a concrete mechanism in the form of a localized entangled source, thereby shifting from a purely kinematic description to a dynamical, source-based picture
+We now turn to a foundational question -- {\it what, physically, accelerates the observer?} In many standard Unruh-effect derivations, the acceleration is treated as given; here we supply a concrete mechanism in the form of a localized entangled source, thereby shifting from a purely kinematic description to a dynamical, source-based picture
 
 In Section \ref{sec:prelim} we introduced acceleration as a geometric feature, a coordinate choice, without reference to any underlying dynamical mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, a feature that contributes to the apparent thermality observed in the Unruh effect.
 
@@ -455,7 +455,7 @@ The construction of a right moving absorption function $f_R$ for Wright presents
 For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a entangled paired source in Minkowski space.
 
 \subsection{Heuristic Time-Reversed Narrative} \label{sec:back_in_time}
-The following discussion should be read as a heuristic narrative rather than a literal dynamical account; it illustrates how the time orientation of Rindler wedges lends itself to a “back in time” story that mirrors the entanglement structure.  Wright's proper time (Right Rindler time) is by convention set up to be in the same direction\footnote{since $\partial_\eta = a(t \partial_x + x \partial_t )$} as Minkowski time. By contrast, Lester's proper time (Left Rindler time) in the left wedge is flowing in a direction\footnote{since $\partial_\gamma = -a(t \partial_x + x \partial_t )$} reverse to Minkowski time. This can be heuristically described as:
+The following discussion should be read as a heuristic narrative rather than a literal dynamical account; it illustrates how the time orientation of Rindler wedges lends itself to a “back in time” retrocausality story that mirrors the entanglement structure.  Wright's proper time (Right Rindler time) is by convention set up to be in the same direction\footnote{since $\partial_\eta = a(t \partial_x + x \partial_t )$} as Minkowski time. By contrast, Lester's proper time (Left Rindler time) in the left wedge is flowing in a direction\footnote{since $\partial_\gamma = -a(t \partial_x + x \partial_t )$} reverse to Minkowski time. This can be heuristically described as:
 \begin{enumerate}
 \item Lester emits a particle traveling back in time.
 \item Paz receives this particle and reflects it forward in time to Wright.
