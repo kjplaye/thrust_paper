@@ -46,12 +46,6 @@ H.~J. Borchers, ``On revolutionizing quantum field theory with tomita’s
 A.~Einstein, {\em General Relativity: An Einstein Centenary Survey}.
 \newblock Cambridge University Press, 1979.
 
-\bibitem{fulling1976radiation}
-S.~A. Fulling and P.~C. Davies, ``Radiation from a moving mirror in two
-  dimensional space-time: conformal anomaly,'' {\em Proceedings of the Royal
-  Society of London. A. Mathematical and Physical Sciences}, vol.~348,
-  no.~1654, pp.~393--414, 1976.
-
 \bibitem{Schwinger_1966}
 J.~Schwinger, ``Particles and sources,'' {\em Physical Review}, vol.~152,
   p.~1219â€“1226, Dec. 1966.
@@ -63,6 +57,16 @@ L.~H. Ryder, {\em Quantum field theory}.
 \bibitem{gerry2023introductory}
 C.~C. Gerry and P.~L. Knight, {\em Introductory quantum optics}.
 \newblock Cambridge university press, 2023.
+
+\bibitem{fulling1976radiation}
+S.~A. Fulling and P.~C. Davies, ``Radiation from a moving mirror in two
+  dimensional space-time: conformal anomaly,'' {\em Proceedings of the Royal
+  Society of London. A. Mathematical and Physical Sciences}, vol.~348,
+  no.~1654, pp.~393--414, 1976.
+
+\bibitem{sutherland2017retrocausality}
+R.~Sutherland, ``How retrocausality helps,'' {\em arXiv preprint
+  arXiv:1706.02290}, 2017.
 
 \bibitem{AbramowitzStegun1964}
 M.~Abramowitz and I.~A. Stegun, eds., {\em Handbook of Mathematical Functions
