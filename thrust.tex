@@ -27,14 +27,14 @@
 \begin{document}
 
 %title and author details
-\title{Driving the Unruh Response: Causing the Effect}
+\title{Driving the Unruh Response: Entangled Sources and Non-Thermal Excitations}
 \author[ ]{Kevin Player\footnote{\textit{kplayer@andrew.cmu.edu}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
 
 % \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We connect the thermal Unruh effect to entangled, non-thermal excitations produced by a bilocal driving source, modeled on squeezing interactions from quantum optics. These paired excitations can be thought of as inertial microstates in the accelerated thermal Unruh ensemble, dynamically generating a portion of the accelerated response. We then form localized driving modes that avoid the asymptotic Doppler tails responsible for thermality. Using modular automorphisms, we track mode and observer localizations across nested Rindler wedges and construct compact wave-packet approximations with parabolic cylinder functions. These provide a smooth interpolation from wedge-supported thermal Rindler modes to fully localized non-thermal excitations, and outline a program for interpreting portions of the Unruh effect as source-driven.}
+\abstract{We connect the thermal Unruh effect to entangled, non-thermal excitations produced by a bilocal driving source, modeled on squeezing interactions from quantum optics. These paired excitations can act as inertial microstates in the accelerated thermal Unruh ensemble, dynamically generating a portion of the accelerated response. We then form localized driving modes that avoid the asymptotic Doppler tails responsible for thermality. Using modular automorphisms, we track mode and observer localizations across nested Rindler wedges and construct compact wave-packet approximations with parabolic cylinder functions. These provide a smooth interpolation from wedge-supported thermal Rindler modes to fully localized non-thermal excitations, and outline a program that interprets portions of the Unruh effect as source-driven.}
 
 \section{Introduction}
 
@@ -45,7 +45,7 @@ Recent work has refined the picture of Unruh thermality, highlighting how its fo
 
 Svidzinsky, Scully, and Unruh \cite{Svidzinsky2024MinkowskiVEA} analyzed causal chains of harmonic oscillators spanning both wedges. They found that the entanglement of the Minkowski vacuum transfers directly to the entanglement of oscillators interacting with the field, reinforcing the causal underpinning of Unruh correlations. Han, Olson, and Dowling \cite{han2008generating} examined the role of measurement, showing that when an accelerating observer performs a projection-valued measurement (PVM), the field is driven out of its thermal character. For inertial observers the field is no longer vacuum, but contains real photons with nonzero energy–momentum, so the accelerated PVM acts as a process that injects energy and momentum through the accelerating agent itself.
 
-In this work we develop a complementary viewpoint: instead of treating acceleration as the origin of entanglement, we model entangled emissions as the dynamical driver of an accelerated response. These driven excitations provide explicit examples of microstates consistent with the thermal Unruh ensemble, offering a minimal construction of how entanglement can manifest as accelerated dynamics. We also map out generalizations by considering back-reaction, reversed emission and absorption, and related extensions.
+In this work we develop a complementary viewpoint: rather than acceleration being the sole generator of correlations, we treat entangled emissions as the driver of an accelerated response. These driven excitations provide explicit examples of microstates consistent with the thermal Unruh ensemble, offering a minimal construction of how entanglement can manifest as accelerated dynamics. We also map out generalizations by considering back-reaction, reversed emission and absorption, and related extensions.
 
 In Section \ref{sec:prelim}, we review the Unruh effect, including the relevant mode expansions and Bogoliubov transformations. In Section \ref{sec:drive}, we construct a bilocal source, motivated by squeezed-state interactions in quantum optics, that injects correlated excitations into the field. Section \ref{sec:loc} explores partial localization by considering sub-regions of the Rindler wedge connected through space-like translations and reflections, transformations that correspond to modular automorphisms in the associated operator algebras. We then use parabolic cylinder functions to construct a smooth interpolation between eternal Rindler modes and fully localized excitations. Finally, in Section \ref{sec:future} we outline directions for future research, and in Section \ref{sec:conc} we interpret the implications of our construction.
 
@@ -324,7 +324,7 @@ Each inclusion $W_{c_i} \subsetneq W_{c_j}$ yields the same particle production,
 
 \section{Driving Sources} \label{sec:drive}
 
-We now turn to a foundational question -- {\it what, physically, accelerates the observer?} In most treatments, including our own preliminaries in Section \ref{sec:prelim}, acceleration enters as a geometric input, a coordinate choice, with no reference to an underlying driving mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, features that contributes to the apparent thermality observed in the Unruh effect.
+We now turn to a foundational question -- {\it what, physically, accelerates the observer?} In most treatments, including our own preliminaries in Section \ref{sec:prelim}, acceleration enters as a geometric input, a coordinate choice, with no reference to an underlying driving mechanism. Moreover, we have left unspecified both the observer’s precise location within the Rindler wedge and the spatial origin of the detected excitations. These omissions reflect an effective coarse-graining over the details of the observer and their interaction with the field, features that contribute to the apparent thermality observed in the Unruh effect.
 
 \begin{figure}[h]
 \centering
@@ -335,7 +335,7 @@ We now turn to a foundational question -- {\it what, physically, accelerates the
 \end{figure}
 
 
-A natural physical interpretation is that a driving source must exist, both as the cause of the observer’s acceleration, and as a localized source coupled to the quantum field, thereby shifting from a purely kinematic description to a dynamical, source-based picture. The source results in active, localized interactions along the observer’s worldline, responsible for the observer’s motion.  This plays well with the notion that the observer is not in an isotropic background radiation, but is actually accelerated away from a thermal event horizon, the thrust being intimately correlated with the causal horizon.
+A natural physical interpretation is that a driving source must exist, both as the cause of the observer’s acceleration, and as a localized source coupled to the quantum field, thereby shifting from a purely kinematic description to a dynamical, source-based picture. The source results in active, localized interactions along the observer’s worldline, responsible for the observer’s motion.  This aligns with the idea that the observer is not in an isotropic background radiation, but is actually accelerated away from a thermal event horizon, the thrust being intimately correlated with the causal horizon.
 
 
 Figure \ref{emit_absorb} illustrates the situation with a particle composed of Rindler modes on the right wedge. The modes $r_k$ are left-moving, propagating toward the future horizon and associated with emission; the $r_{-k}$ modes are right-moving, originating from the past horizon and are associated with absorption. These Rindler modes are constructed as superpositions of restricted Minkowski modes ${\varphi_q}_{|_W}$ effectively smeared across a range of frequencies.  This frequency mixing is evident in Figure \ref{unruh_rainbow}, where the modes blue-shift infinitely near the horizons and red-shift infinitely at spatial infinity, reflecting the geometry of the wedge.
@@ -358,7 +358,7 @@ Because the emitted photons carry perfectly balanced momenta, our basic model ex
 
 We adopt an inversion of the usual logic: rather than coupling an Unruh–DeWitt detector\cite{unruh1976notes,einstein1979general} to a pre-existing acceleration, we place a source in the past that injects entangled excitations into the field. In this construction, the observer’s accelerated response arises from these source-driven excitations. Conceptually, this inverts the roles of detector and source: entanglement acts as the causal origin of part of the acceleration, but does not contradict or diminish detector-based approaches. Instead, it provides a complementary perspective on how the Unruh effect can manifest dynamically by moving the field interaction from the detector to the source.
 
-Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will necessarily detect a particle with peaked right-moving momentum $-k$. Wright’s detection is entangled with Lester’s, and Lester will also observe a particle with left moving momentum $k$. Physically, Paz introduces a bilocal source 
+Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will necessarily detect a particle with peaked right-moving momentum $-k$. Wright’s detection is entangled with Lester’s, and Lester will also observe a particle with left moving momentum $k$. In this picture, Paz's emission acts as a bilocal source 
 \begin{equation}
   \begin{aligned}
     J(x,y) &= \lambda f_L(x)f_R(y)\\
@@ -445,18 +445,18 @@ The construction of a right moving absorption function $f_R$ for Wright presents
 \label{back_react}
 \end{figure}
 
-\item {\bf Single Photon Models}. We mention that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, in our symmetric two–mode setup, the momenta are balanced and the source does not experience recoil, so there is no back reaction. By contrast, if Paz emitted a single particle, as in Figure \ref{back_react}, the emitted mode would necessarily be entangled with Paz’s internal state and/or recoil momentum, producing back reaction as field–source entanglement. Tracing out the source would leave Wright with a mixed state, and the apparent thermality would then arise from this entanglement with the source’s degrees of freedom. Our choice of a balanced bilocal source thus isolates the thrust mechanism while postponing the additional complication of explicit source recoil for future research.
+\item {\bf Single Photon Models}. We mention that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, in our symmetric two-mode setup, the momenta are balanced and the source does not experience recoil, so there is no back reaction. By contrast, if Paz emitted a single particle, as in Figure \ref{back_react}, the emitted mode would necessarily be entangled with Paz’s internal state and/or recoil momentum, producing back reaction as field–source entanglement. Tracing out the source would leave Wright with a mixed state, and the apparent thermality would then arise from this entanglement with the source’s degrees of freedom. Our choice of a balanced bilocal source thus isolates the thrust mechanism while postponing the additional complication of explicit source recoil for future research.
 
 \item {\bf Emission} We could also study the emission case (we have been studying the absorption case); where $f_L$ and $f_R$ are made up of right moving and left moving Minkowski modes respectively.  These would posit a common observer in the future. The moving mirror \cite{fulling1976radiation} exemplifies aspects of both the ``Emission'' and ``Single Photon Model'' cases. These cases involve additional complications beyond the scope of our short note and are a topic of future research.
 \end{itemize}
 
-For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from a entangled paired source in Minkowski space.
+For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from an entangled paired source in Minkowski space.
 
 \subsection{Back in Time Story} \label{sec:back_in_time}
 
 The entanglement structure between left and right Rindler wedges admits a suggestive retrocausal reading. Wright's proper time (Right Rindler time) is by convention set up to be in the same direction\footnote{since $\partial_\eta = a(t \partial_x + x \partial_t )$} as Minkowski time. By contrast, Lester's proper time (Left Rindler time) in the left wedge is flowing in a direction\footnote{since $\partial_\gamma = -a(t \partial_x + x \partial_t )$} reverse to Minkowski time. This can be heuristically described as:
 \begin{enumerate}
-\item Lester emits a particle traveling back in time.
+\item Heuristically, one can view Lester as emitting a particle traveling back in time.
 \item Paz receives this particle and reflects it forward in time to Wright.
 \item Wright then absorbs the particle.
 \end{enumerate}
