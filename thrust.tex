@@ -358,7 +358,8 @@ We begin our construction of a driving source by following an Alice-and-Bob styl
 Because the emitted photons carry perfectly balanced momenta, our basic model exhibits no back reaction -- this is a simplification -- in more general models, single-particle sources would encode back reaction through their entanglement structure, see Section \ref{sec:drive_phy} and Figure \ref{back_react}.
 
 
-We adopt an inversion of the usual logic: rather than coupling an Unruh–DeWitt detector\cite{unruh1976notes,einstein1979general} to a pre-existing acceleration, we place a source in the past that injects entangled excitations into the field. In this construction, the observer’s accelerated response arises from these source-driven excitations. Conceptually, this inverts the roles of detector and source: entanglement acts as the causal origin of part of the acceleration, but does not contradict or diminish detector-based approaches. Instead, it provides a complementary perspective on how the Unruh effect can manifest dynamically by moving the field interaction from the detector to the source.
+We invert the usual logic: rather than coupling an Unruh-DeWitt detector \cite{unruh1976notes,einstein1979general} to a pre-existing acceleration, we introduce a source in the past that injects entangled excitations into the field. In this picture, the observer’s accelerated response arises from source-driven excitations rather than detector readout. This does not contradict detector-based approaches but offers a complementary perspective in which entanglement provides the causal origin of part of the acceleration. A systematic comparison with detector response functions is left for future work.
+
 
 Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will necessarily detect a particle with peaked right-moving momentum $-k$. Wright’s detection is entangled with Lester’s, and Lester will also observe a particle with left moving momentum $k$. In this picture, Paz's emission acts as a bilocal source 
 \begin{equation}
@@ -413,7 +414,7 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{rocket_inertial.png}
-\caption{Conceptual illustration contrasting thermal acceleration (left) with localized, source-driven acceleration (right). A portion of the rocket's acceleration arises from spatially localized driving sources rather than diffuse thermal effects. Compare with Figure \ref{rocket}.}
+\caption{Conceptual illustration contrasting thermal acceleration (left) with localized, source-driven acceleration (right). A portion of the rocket's acceleration arises from spatially localized driving sources rather than diffuse thermal effects.}
 \label{rocket_inertial}
 \end{figure}
 
@@ -422,6 +423,8 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 The construction of a right moving absorption function $f_R$ for Wright presents some physical challenges.
 
 \begin{itemize}
+\item {\bf Detector Modeling}. In standard treatments, thermal features are inferred from the response of an Unruh--DeWitt detector coupled to the field. In the present framework, excitations are instead injected directly at the source. A systematic comparison of source-driven excitations with detector-based response functions could clarify how localized driving modifies, complements, or reproduces thermal detector statistics, but for now it is beyond the scope of this paper.
+  
 \item {\bf Mode Projection}. We note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_{-k}$ from Section \ref{sec:prelim}. The source $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_{-k}$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).  The projection in equation (\ref{bilocal}) encodes this relation by projecting the Rindler modes onto Unruh modes or in more generality by projecting $f_L$ and $f_R$ onto positive frequency $g_L$ and $g_R$.
 
 \item{\bf Source over Finite Time}. We are integrating over the entire Minkowski space instead of over a short time period as normally desired for a source $J$.  This challenge is met by noticing that the projected positive frequency modes $g_L$ and $g_R$ can be restricted and scaled to a small time interval $|t + 1| < \delta$ around Paz's time $t=-1$ to give the same result, see Figure \ref{paz_freq} (right picture). This is because the integral over $x$ is independent of $t$. This is manifestly evident by the fact that the mode is translation invariant over time and space, $g_R(t,x) = g_R(-1,x+t+1)$, since it is a sum of right moving Minkowski modes. The coupling constant $\lambda$ in equation (\ref{bilocal}), along with $\delta$, can be chosen to match the vacuum equation (\ref{vacuum}) at a fixed $\omega$.
@@ -623,7 +626,7 @@ Several directions naturally extend the present work:
 
 \section{Conclusion} \label{sec:conc}
 
-We have presented a framework in which individual microstates of the thermal Unruh ensemble can be realized as physically localized source-driven excitations, making the role of acceleration explicit through specific microstate constructions rather than purely kinematic descriptions. Our construction complements the standard detector-based interpretation by showing how some apparent thermality can coexist with the microstate-level descriptions. We analyzed the wedge-restricted Rindler/Unruh modes, which reveal a mixture of thermal and non-thermal features.  Finally, we studied compact wave-packets via parabolic cylinder functions providing a smooth interpolation between global thermal Rindler modes and localized non-thermal excitations. 
+We have presented a framework in which individual microstates of the thermal Unruh ensemble can be realized as physically localized source-driven excitations, making the role of acceleration explicit through specific microstate constructions rather than purely kinematic descriptions. Our construction complements the standard detector-based interpretation by showing how some apparent thermality can coexist with the microstate-level descriptions. We analyzed the wedge-restricted Rindler/Unruh modes, which reveal a mixture of thermal and non-thermal features.  Finally, we studied compact wave-packets via parabolic cylinder functions providing a smooth interpolation between global thermal Rindler modes and localized non-thermal excitations.
 
 The framework suggests several directions for further investigation, including systematic mode pairing, moving mirror analogues, generalizations to massive fields, and potential extensions to curved spacetimes, with applications to near-horizon excitations in black hole physics.
 
