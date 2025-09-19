@@ -348,17 +348,17 @@ Figure \ref{emit_absorb} illustrates the situation with a particle composed of R
 \centering
 \includegraphics[scale=0.75]{paz.png}
 \captionsetup{width=0.7\textwidth}
-\caption{A source in the past, Paz(P), emits an entangled photon pair that accelerates Wright(R) (to the right) and Lester(L) (to the left).}
+\caption{A source in the past, Paz(P), emits an entangled particle pair that accelerates Wright(R) (to the right) and Lester(L) (to the left).}
 \label{paz}
 \end{figure}
 
-As a minimial illustrative construction we adopt an Alice-and-Bob style naming convention and use the names Wright (R), Lester (L), and Paz (P) to represent observers at $(t,x)$ = $(0,1)$, $(0,-1)$, and $(-1,0)$, respectively, see Figure \ref{paz}. These labels indicate Right, Left, and Past, serving as a mnemonic for their positions in spacetime. Paz serves as a common causal ancestor to Wright and Lester, and she emits an entangled pair of photons\footnote{Strictly speaking, these are spin 0 massless scalar quanta.} with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_k$ as part of a stream that, in our model, provides the correlated accelerations of Wright and Lester.  Note that we purposefully pick a single peaked $k$ and do not sample it from a thermal distribution.
+As a minimial illustrative construction we adopt an Alice-and-Bob style naming convention and use the names Wright (R), Lester (L), and Paz (P) to represent observers at $(t,x)$ = $(0,1)$, $(0,-1)$, and $(-1,0)$, respectively, see Figure \ref{paz}. These labels indicate Right, Left, and Past, serving as a mnemonic for their positions in spacetime. Paz serves as a common causal ancestor to Wright and Lester, and she emits an entangled pair of particles\footnote{Strictly speaking, these are spin 0 massless scalar quanta.} with momentum $\pm k$ and (Rindler) frequency $\omega = \omega_k$ as part of a stream that, in our model, provides the correlated accelerations of Wright and Lester.  Note that we purposefully pick a single peaked $k$ and do not sample it from a thermal distribution.
 
-Because the emitted photons carry perfectly balanced momenta, our basic model exhibits no back reaction -- this is a simplification -- in more general models, single-particle sources would encode back reaction through their entanglement structure, see Section \ref{sec:drive_phy} and Figure \ref{back_react}.
+Because the emitted particles carry perfectly balanced momenta, our basic model exhibits no back reaction -- this is a simplification -- in more general models, single-particle sources would encode back reaction through their entanglement structure, see Section \ref{sec:drive_phy} and Figure \ref{back_react}.
 
-We next invert the usual logic: rather than coupling an Unruh–DeWitt detector \cite{unruh1976notes,einstein1979general} to a pre-existing acceleration and deriving a thermal profile, we instead place an interaction in the past, where a source injects non-thermal entangled excitations into the field. The setup is prescriptive: by construction, the detector is guaranteed to respond to the momentum-$k$ particle, rather than arising from thermal sampling. In this picture, the observer’s accelerated response is driven by these source-induced excitations. This perspective does not contradict detector-based approaches but complements them, highlighting entangled emissions as a causal origin for part of the Unruh response. 
+We next invert the usual logic: rather than coupling a detector to a pre-existing acceleration and deriving a thermal profile, we instead place an interaction in the past, where a source injects non-thermal entangled excitations into the field. The setup is prescriptive: by construction, the detector is guaranteed to respond to the momentum $-k$ particle. In this picture, the observer’s accelerated response is driven by these source-induced excitations. This perspective does not contradict detector-based approaches but complements them, highlighting entangled emissions as a causal origin for part of the Unruh response. 
 
-In this way, Paz's emission makes the source of the acceleration manifest as particle injection, so that Wright will necessarily detect a particle with peaked right-moving momentum $-k$. Wright’s detection is entangled with Lester’s, and Lester can also observe a particle with left moving momentum $k$. In this picture, Paz's emission acts as a bilocal source 
+In this way, Paz's emission makes the source of the acceleration manifest through particle injection, so that Wright will necessarily detect a particle with peaked right-moving momentum $-k$. Wright’s detection is entangled with Lester’s, and Lester can also observe a particle with left moving momentum $k$. In this picture, Paz's emission acts as a bilocal source 
 \begin{equation}
   \begin{aligned}
     J(x,y) &= \lambda f_L(x)f_R(y)\\
@@ -369,7 +369,7 @@ In this way, Paz's emission makes the source of the acceleration manifest as par
 \end{equation}
 with coupling constant $\lambda$, normalized mode profiles $f_L$ and $f_R$ supported on the left and right wedges respectively, creation operators $q_{k}^{L\dagger}$ and $q_{-k}^{R\dagger}$, and $\phi_+$ as the positive frequency (annihilator) part of $\phi$. The last part of equation (\ref{bilocal}) is the squeezing interaction for frequency $\omega$, so that the bilocal source creates entangled particles in the Rindler basis within the wedges.
 
-This source construction is a quadratic generalization of the usual linear source term \cite{Schwinger_1966} \cite{ryder1996quantum} and is motivated by quadrature squeezed light generation in quantum optics \cite{gerry2023introductory}; it is a coupling of a classical function $J$ with the field as an interaction term smeared over $x$ and $y$. In this model $J$ squeezes the field creating correlations that manifest as entanglement at the level of a global quantum state. The product structure reflects this paired excitation.
+This source construction is a quadratic generalization of the usual linear source in QFT \cite{Schwinger_1966} \cite{ryder1996quantum} and is motivated by quadrature squeezed light generation in quantum optics \cite{gerry2023introductory}; it is a coupling of a classical function $J$ with the field as an interaction term smeared over $x$ and $y$. In this model $J$ squeezes the field creating correlations that manifest as entanglement at the level of a global quantum state. The product structure reflects this paired excitation.
 
 We consider the case where $f_L$ and $f_R$ are absorptions, or made up of left moving and right moving Minkowski modes respectively; the emission case is similar see Section {\ref{sec:drive_phy}. In this picture, the bilocal source is not just a mathematical device but the physical mechanism by which acceleration is generated: the entangled pair created by $J(x,y)$ supplies the correlated excitations that are experienced as thrust by the Rindler observers.
 
@@ -398,7 +398,7 @@ We next consider the standard thermal vacuum description\footnote{The form of th
   \ket{0}_M = \prod_{\omega} \frac{1}{\cosh{\theta_k}} \sum_n \tanh^n{\theta_k} \ket{n_\omega}_{L} \ket{n_\omega}_{R}.
   \label{vacuum}
 \end{equation}
-A state that factorizes into correlated excitations in the left (L) and right (R) wedges. The Unruh modes associated with frequency $\omega$ are specific linear combination of these $L$ and $R$ Rindler modes, so that any source $J$ coupling to it will, in general, drive correlated excitations across both wedges. For example, the state prepared by Paz with Rindler modes corresponds to a selective excitation at a fixed $\omega$,
+A state that factorizes into correlated excitations in the left (L) and right (R) wedges. The Unruh modes associated with fixed frequency $\omega$ are specific linear combination of these $L$ and $R$ Rindler modes, so that any source $J$ coupling to it will, in general, drive correlated excitations across both wedges. For example, the state prepared by Paz with Rindler modes corresponds to a selective excitation at a fixed $\omega$,
 \begin{equation}
   \ket{\Psi_\omega}_M = \ket{1_\omega}_L \ket{1_\omega}_R + \text{O(higher terms)},
   \label{one_fock}
@@ -420,7 +420,7 @@ An illustration of this setup is shown in Figure \ref{rocket_inertial}. From thi
 The construction of a right moving absorption function $f_R$ for Wright presents some physical challenges.
 
 \begin{itemize}
-\item {\bf Detector Modeling}. In standard treatments, thermal features are inferred from the response of an Unruh--DeWitt detector coupled to the field. In the present framework, excitations are instead injected directly at the source. A systematic comparison of source-driven excitations with detector-based response functions could clarify how localized driving modifies, complements, or modulates thermal detector statistics, but for now it is beyond the scope of this paper.
+\item {\bf Detector Modeling}. In standard treatments, thermal features are inferred from the response of an Unruh--DeWitt detector \cite{unruh1976notes,einstein1979general} coupled to the field. In the present framework, excitations are instead injected directly at the source. A systematic comparison of source-driven excitations with detector-based response functions could clarify how localized driving modifies, complements, or modulates thermal detector statistics, but for now it is beyond the scope of this paper.
   
 \item {\bf Mode Projection}. We note that the $f_L$ and $f_R$ that match equation (\ref{one_fock}) are exactly the Rindler modes $l_k$ and $r_{-k}$ from Section \ref{sec:prelim}. The source $J$ is described in the Rindler wedges, and not immediately on the past wedge, so Paz will need to couple to Unruh modes -- the analytically continued Rindler modes.  We form $f_R$ out of a linear combination of a left Unruh mode $\mu^{L*}_{k}$ and right Unruh mode $\mu^R_{-k}$ to get $r_{-k}$ supported on just the right wedge, see equation (\ref{unruh_mode_def}).  The projection in equation (\ref{bilocal}) encodes this relation by projecting the Rindler modes onto Unruh modes or in more generality by projecting $f_L$ and $f_R$ onto positive frequency $g_L$ and $g_R$.
 
@@ -443,13 +443,13 @@ The construction of a right moving absorption function $f_R$ for Wright presents
 \centering
 \includegraphics[scale=0.75]{back_reaction.png}
 \captionsetup{width=0.7\textwidth}
-\caption{Paz emits a single photon and experiences a back reaction pushing her toward the left wedge. Through recoil she becomes entangled with the emitted particle, effectively taking on the role that Lester played in the symmetric construction.}
+\caption{Paz emits a single particle and experiences a back reaction pushing her toward the left wedge. Through recoil she becomes entangled with the emitted particle, effectively taking on the role that Lester played in the symmetric construction.}
 \label{back_react}
 \end{figure}
 
-\item {\bf Single Photon Models}. We mention that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, in our symmetric two-mode setup, the momenta are balanced and the source does not experience recoil, so there is no back reaction. By contrast, if Paz emitted a single particle, as in Figure \ref{back_react}, the emitted mode would necessarily be entangled with Paz’s internal state and/or recoil momentum, producing back reaction as field–source entanglement. Tracing out the source would leave Wright with a mixed state, and the apparent thermality would then arise from this entanglement with the source’s degrees of freedom. Our choice of a balanced bilocal source thus isolates the thrust mechanism while postponing the additional complication of explicit source recoil for future research.
+\item {\bf Single Particle Models}. We mention that our running example represents just one of many possible mechanisms for exchanging energy and correlations between wedges; for example, in our symmetric two-mode setup, the momenta are balanced and the source does not experience recoil, so there is no back reaction. By contrast, if Paz emitted a single particle, as in Figure \ref{back_react}, the emitted mode would necessarily be entangled with Paz’s internal state and/or recoil momentum, producing back reaction as field–source entanglement. Tracing out the source would leave Wright with a mixed state, and the apparent thermality would then arise from this entanglement with the source’s degrees of freedom. Our choice of a balanced bilocal source thus isolates the thrust mechanism while postponing the additional complication of explicit source recoil for future research.
 
-\item {\bf Emission} We could also study the emission case (we have been studying the absorption case); where $f_L$ and $f_R$ are made up of right moving and left moving Minkowski modes respectively.  These would posit a common observer in the future. The moving mirror \cite{fulling1976radiation} exemplifies aspects of both the ``Emission'' and ``Single Photon Model'' cases. These cases involve additional complications beyond the scope of our short note and are a topic of future research.
+\item {\bf Emission} We could also study the emission case (we have been studying the absorption case); where $f_L$ and $f_R$ are made up of right moving and left moving Minkowski modes respectively.  These would posit a common observer in the future. The moving mirror \cite{fulling1976radiation} exemplifies aspects of both the ``Emission'' and ``Single Particle Model'' cases. These cases involve additional complications beyond the scope of our short note and are a topic of future research.
 \end{itemize}
 
 For the remainder of this note, we focus on the function $f_R$ in the right wedge without explicit reference to $f_L$, operating under the assumption that the localized driving source in the right wedge arises from an entangled paired source in Minkowski space.
@@ -605,7 +605,7 @@ Several directions naturally extend the present work:
 
 \item {\bf Mode Pairing}. The construction of $f_L$ in Section \ref{sec:drive} was not pursued in Section \ref{sec:loc}. A systematic analysis of the $f_L$–$f_R$ pairing could clarify correlation structures more generally.
 
-\item {\bf Alternative Driving Source Models}. Beyond entangled emission, models with single-photon sources or time-reversed scenarios (Section \ref{sec:drive_phy}) may provide finer control over entanglement structure.
+\item {\bf Alternative Driving Source Models}. Beyond entangled emission, models with single-particle sources or time-reversed scenarios (Section \ref{sec:drive_phy}) may provide finer control over entanglement structure.
 
 \item {\bf Massive Fields}. Extending the analysis to massive fields would enable the study of localized virtual particle–antiparticle pair production, complementing the massless case.
 
