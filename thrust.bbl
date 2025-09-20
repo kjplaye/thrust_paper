@@ -9,6 +9,11 @@ C.~Anastopoulos and N.~Savvidou, ``Coherences of accelerated detectors and the
   local character of the unruh effect,'' {\em Journal of mathematical physics},
   vol.~53, no.~1, 2012.
 
+\bibitem{einstein1979general}
+S.~Hawking and W.~Israel, {\em General Relativity: An Einstein Centenary
+  Survey}.
+\newblock Cambridge University Press, 1979.
+
 \bibitem{foo2020unruh}
 J.~Foo, S.~Onoe, and M.~Zych, ``Unruh-dewitt detectors in quantum
   superpositions of trajectories,'' {\em Physical Review D}, vol.~102, no.~8,
@@ -41,10 +46,6 @@ R.~Bracewell and P.~B. Kahn, ``The fourier transform and its applications,''
 H.~J. Borchers, ``On revolutionizing quantum field theory with tomita’s
   modular theory,'' {\em Journal of mathematical Physics}, vol.~41, no.~6,
   pp.~3604--3673, 2000.
-
-\bibitem{einstein1979general}
-A.~Einstein, {\em General Relativity: An Einstein Centenary Survey}.
-\newblock Cambridge University Press, 1979.
 
 \bibitem{Schwinger_1966}
 J.~Schwinger, ``Particles and sources,'' {\em Physical Review}, vol.~152,
